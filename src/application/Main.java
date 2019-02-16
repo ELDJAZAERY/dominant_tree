@@ -1,5 +1,6 @@
 package application;
 
+import data.representation.Graph;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -42,11 +43,11 @@ public class Main extends Application {
         hash.put(n4,6);
         hash.put(n5,5);
 
-        n1.addNeighbor(n3,3);
-        n1.addNeighbor(n4,34);
-        n1.addNeighbor(n5,345);
+        n1.addNeighbor(n3,3.);
+        n1.addNeighbor(n4,34.);
+        n1.addNeighbor(n5,345.);
 
-        n4.addNeighbor(n5,34);
+        n4.addNeighbor(n5,34.);
 
         for(Node  n : hash.keySet()){
             System.out.println(n+" --- "+hash.get(n));
@@ -69,7 +70,7 @@ public class Main extends Application {
     }
 
     private static void testRead(){
-        data.read.BenchToGraph.convert("bench marks\\Range_100\\ins_500_1.txt");
+        Graph graph = new Graph("bench marks\\Range_100\\ins_500_1.txt");
     }
 
 }

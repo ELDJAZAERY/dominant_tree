@@ -14,7 +14,7 @@ public class BenchToGraph {
     public static int nbArcs;
 
 
-    private static ArrayList<Node> tempNodes = new ArrayList<>();
+    public static ArrayList<Node> tempNodes = new ArrayList<>();
 
 
     public static ArrayList<Node> convert(String path){
@@ -26,8 +26,7 @@ public class BenchToGraph {
         nbArcs  = Integer.valueOf(info[1]);
 
         initNodes();
-        initArcs();
-
+        initArcs(lines);
         return tempNodes;
     }
 
@@ -38,8 +37,20 @@ public class BenchToGraph {
         }
     }
 
-    private static void initArcs(){
+    private static void initArcs(String[] lines){
+        String[] row;
+        Node n1 , n2 ;
+        double weight;
 
+        for(int i = 1 ; i < nbArcs ; i++) {
+            row = lines[i].split(" ");
+
+            n1 = tempNodes.get(Integer.valueOf(row[0]));
+            n2 = tempNodes.get(Integer.valueOf(row[1]));
+            weight = Double.valueOf(row[2]);
+
+            n1.addNeighbor(n2,weight);
+        }
     }
 
     private static String[] readFile(String path) {

@@ -8,7 +8,7 @@ public class Node implements Comparable {
 
     private int index;
     private String name ;
-    private HashMap<Node , Integer> neighbors = new HashMap<>();
+    private HashMap<Node , Double> neighbors = new HashMap<>();
 
     public Node(String name) {
         this.name = name;
@@ -22,8 +22,7 @@ public class Node implements Comparable {
     }
     public int getIndex() { return  index; }
 
-
-    public HashMap<Node, Integer> getNeighbors() {
+    public HashMap<Node, Double> getNeighbors() {
         return neighbors;
     }
 
@@ -46,10 +45,17 @@ public class Node implements Comparable {
 
 
     // @ setters
-    public void addNeighbor(Node neighbor , int weight){
+    public void addNeighbor(Node neighbor , Double weight){
         neighbors.put(neighbor,weight);
         neighbor.getNeighbors().put(this,weight);
     }
+
+
+    // @ functions
+    public Boolean isNeighbor(Node n){
+        return neighbors.containsKey(n);
+    }
+
 
 
 
@@ -72,7 +78,14 @@ public class Node implements Comparable {
 
     @Override
     public String toString() {
-        return name;
+        String out = "";
+        out += "\n#######################\n";
+        out += "###### Node: @"+name+" { "+neighbors.keySet().size()+" Arcs }\n";
+        for(Node n:neighbors.keySet()){
+            out+= "###### ---"+neighbors.get(n)+"---->  "+n.name+"\n";
+        }
+        out += "#######################\n\n";
+        return out;
     }
 
 }
