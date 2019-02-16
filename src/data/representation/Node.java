@@ -1,18 +1,22 @@
 package data.representation;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Objects;
+import java.util.Set;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Node implements Comparable {
 
-    private int index;
+
     private String name ;
     private HashMap<Node , Double> neighbors = new HashMap<>();
+    private ArrayList<Node> neighborsNodes = new ArrayList<>();
+
 
     public Node(String name) {
         this.name = name;
-        index = Integer.valueOf(name);
+        //index = Integer.valueOf(name);
     }
 
 
@@ -20,33 +24,83 @@ public class Node implements Comparable {
     public String getName() {
         return name;
     }
-    public int getIndex() { return  index; }
+    //public int getIndex() { return  index; }
 
     public HashMap<Node, Double> getNeighbors() {
         return neighbors;
     }
+    public ArrayList<Node> getNeighborsNodes(){return neighborsNodes; }
 
     public Node getRandomNeighbor(){
         int nbNeighbors = neighbors.keySet().size();
 
-        int randomNum = 0 ;
+        int randomIndx = 0 ;
         if(nbNeighbors > 0)
-            randomNum = ThreadLocalRandom.current()
+            randomIndx = ThreadLocalRandom.current()
                     .nextInt(0, nbNeighbors);
 
-        int i=0;
-        for(Node n :neighbors.keySet()){
-            if(randomNum == i) return n;
-            i++;
-        }
+        if(randomIndx < neighborsNodes.size())
+            return neighborsNodes.get(randomIndx);
 
         return null;
     }
 
+    public Node getRandomNeighbor(ArrayList<Node> exploredNodes){
+
+        if(exploredNodes.containsAll(neighborsNodes)) return null;
+        Node randNode = getRandomNeighbor();
+        if(randNode == null) return null;
+        if( !exploredNodes.contains(randNode)) return randNode;
+
+        for(Node n:neighborsNodes){
+            if(!exploredNodes.contains(n))
+                return n;
+        }
+
+        // return null if all neighbors are explored
+        return null;
+    }
+
+    private Node getMinNeighbor(ArrayList<Node> exploredNodes){
+        if(exploredNodes.containsAll(neighborsNodes)) return null;
+
+        Node minNeighbor = neighborsNodes.get(0);
+        for(Node n:neighborsNodes){
+            if(!exploredNodes.contains(n))
+                minNeighbor = n;
+        }
+        if(exploredNodes.contains(minNeighbor))
+            return null;
+
+        double minFit = neighbors.get(minNeighbor);
+
+        for(Node n:neighborsNodes){
+            if(!exploredNodes.contains(n) &&
+                    minFit > neighbors.get(n)){
+                minNeighbor = n;
+                minFit = neighbors.get(n);
+            }
+        }
+
+        System.err.println("--- Min neighbor default solution method ---");
+        return minNeighbor;
+    }
+
+
+    public double weight(Node neighbor){
+        try{
+            return neighbors.get(neighbor);
+        }catch (Exception e) {
+            return 0;
+        }
+    }
 
     // @ setters
     public void addNeighbor(Node neighbor , Double weight){
+        neighborsNodes.add(neighbor);
         neighbors.put(neighbor,weight);
+
+        neighbor.neighborsNodes.add(this);
         neighbor.getNeighbors().put(this,weight);
     }
 
@@ -67,6 +121,7 @@ public class Node implements Comparable {
 
     @Override
     public boolean equals(Object o) {
+        if(this == o) return true;
         if( o == null  || !(o instanceof Node) ) return false;
         return ((Node) o) .name == name ;
     }

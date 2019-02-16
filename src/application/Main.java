@@ -1,6 +1,7 @@
 package application;
 
 import data.representation.Graph;
+import data.representation.Solution;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,7 +11,7 @@ import data.representation.Node;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.ThreadLocalRandom;
+
 
 public class Main extends Application {
 
@@ -25,6 +26,7 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         //launch(args);
+        //test();
         testRead();
     }
 
@@ -50,7 +52,7 @@ public class Main extends Application {
         n4.addNeighbor(n5,34.);
 
         for(Node  n : hash.keySet()){
-            System.out.println(n+" --- "+hash.get(n));
+            System.out.println(n.getName()+" --- "+hash.get(n));
         }
 
         System.out.println(n4.getRandomNeighbor());
@@ -70,7 +72,11 @@ public class Main extends Application {
     }
 
     private static void testRead(){
-        Graph graph = new Graph("bench marks\\Range_100\\ins_500_1.txt");
+        //Graph graph = new Graph("bench marks\\Range_100\\ins_050_1.txt");
+        Graph graph = new Graph("bench marks\\Range_150\\ins_500_2.txt");
+        //Solution s = new Solution();
+        //System.out.println(s);
+        methas.VNS.VNS_Algo.Exec(10,100);
     }
 
 }

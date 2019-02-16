@@ -15,13 +15,15 @@ public class BenchToGraph {
 
 
     public static ArrayList<Node> tempNodes = new ArrayList<>();
-
+    public static String[] StringValue;
 
     public static ArrayList<Node> convert(String path){
 
         String[] lines = readFile(path);
+        StringValue = lines;
 
         String[] info = lines[0].split(" ");
+
         nbNodes = Integer.valueOf(info[0]);
         nbArcs  = Integer.valueOf(info[1]);
 
