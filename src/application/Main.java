@@ -73,10 +73,10 @@ public class Main extends Application {
 
     private static void testRead(){
         //Graph graph = new Graph("bench marks\\Range_100\\ins_050_1.txt");
-        Graph graph = new Graph("bench marks\\Range_150\\ins_500_2.txt");
+        Graph graph = new Graph("bench marks\\Range_100\\ins_200_1.txt");
         //Solution s = new Solution();
         //System.out.println(s);
-        methas.VNS.VNS_Algo.Exec(10,100);
+        methas.VNS.VNS_Algo.Exec(15,10);
     }
 
 }

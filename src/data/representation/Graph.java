@@ -4,6 +4,8 @@ import data.read.BenchToGraph;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.Set;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -68,10 +70,26 @@ public class Graph {
     }
 
 
+    public static Node getRandomNode(LinkedList<Node> exploredNodes){
+        return getRandomNode(new LinkedList<>(exploredNodes));
+    }
+
 
     public static boolean isExplored(Set<Node> nodesExplored){
         return nodesExplored.containsAll(Nodes);
     }
 
+
+    public static boolean isDomiTree(ArrayList<Node> nodes){
+        Set<Node> exploredNodes = new HashSet<>();
+        for(Node n:nodes){
+            exploredNodes.addAll(n.getNeighborsNodes());
+        }
+        return isExplored(exploredNodes);
+    }
+
+    public static boolean isDomiTree(LinkedList<Node> nodes){
+        return  isDomiTree(new ArrayList<>(nodes));
+    }
 
 }

@@ -1,20 +1,122 @@
 package data.representation;
 
-
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
 
 
 public class Solution implements Comparable , Cloneable  {
 
-    private ArrayList<Node> dominoTree = new ArrayList<>();
+    private LinkedList<Node> dominoTree = new LinkedList<>();
     private double fitness;
-    private boolean solution = false;
+    protected boolean solution = false;
 
+    private Set<Node> ExploredNode = new HashSet<>();
 
     // @ Generate Default Random Solution
+    public Solution(){
+
+        // initialisation phase
+        Set<Node> nodes_init = new HashSet<>();
+
+        // Nodes initial
+        Node  NextNode , tempNode , CurrentNode = null;
+
+
+        // escape an infinity loop when pop out dominate tree
+        int faildNodesCachMemoryTimer = 0;
+        ArrayList<Node> failedNode = new ArrayList<>();
+
+
+        // while we don't find solution and there is more Nodes
+        // in graph to start with DO
+        while(!nodes_init.containsAll(Graph.Nodes)){
+
+            if(CurrentNode == null){
+                // re-Initialisation phase
+                ExploredNode = new HashSet<>();
+                dominoTree   = new LinkedList<>();
+                CurrentNode  = Graph.getRandomNode(nodes_init);
+                /* ### explore all Node without find Solution ### */
+                if(CurrentNode == null) {
+                    System.err.println("### Can't find Solution ###");
+                    System.exit(-1);
+                }
+                nodes_init.add(CurrentNode);
+            }
+
+            ExploredNode.add(CurrentNode);
+            dominoTree.add(CurrentNode);
+
+
+            // Check if next Node selected is available or not
+            NextNode = getNextNode(CurrentNode,failedNode);
+
+            while(NextNode == null ){
+                dominoTree.remove(CurrentNode);
+                if(dominoTree.size() == 0) { CurrentNode = null ; continue;}
+                CurrentNode = dominoTree.pop();
+                failedNode.add(CurrentNode);
+                faildNodesCachMemoryTimer++;
+                // TODO check Complexity Cost
+                MAJ_NodeExplored();
+
+                NextNode = getNextNode(CurrentNode,failedNode);
+
+                // Dominate tree back empty
+                if(CurrentNode == null) break;
+            }
+
+            // Dominate tree back empty
+            if(CurrentNode == null) continue;
+
+            // TODO Graph.isDominate tree in place of explored
+            ExploredNode.addAll(CurrentNode.getNeighborsNodes());
+            if(Graph.isExplored(ExploredNode)){
+                solution = true;
+                MAJ_Fitness();
+                return;
+            }
+
+            CurrentNode = NextNode;
+
+            if(faildNodesCachMemoryTimer < 0){
+                failedNode.clear();
+            }else faildNodesCachMemoryTimer--;
+
+        }
+
+    }
+
+
+    public Node getNextNode(Node CurrentNode , ArrayList<Node> faildNodes){
+        if(CurrentNode == null) return null;
+
+        ArrayList<Node> neighbors = (ArrayList<Node>) CurrentNode.getNeighborsNodes().clone();
+        if(neighbors.isEmpty()) return null;
+
+        Node neighbor ;
+        int randomIndex ;
+
+        while(neighbors.size() > 1){
+            randomIndex = ThreadLocalRandom.current()
+                    .nextInt(0, neighbors.size()-1);
+            neighbor = neighbors.get(randomIndex);
+            if( !dominoTree.contains(neighbor) && !faildNodes.contains(neighbor))
+                return neighbor;
+
+            neighbors.remove(randomIndex);
+        }
+
+        neighbor = neighbors.get(0);
+        if( !dominoTree.contains(neighbor) && !faildNodes.contains(neighbor))
+            return neighbor;
+
+
+        return null;
+    }
+
+
+/*
     public Solution(){
 
         Set<Node> exploredNodes = new HashSet<>();
@@ -27,7 +129,7 @@ public class Solution implements Comparable , Cloneable  {
             return;
         }
 
-        int itter = 0 , maxIteration = 50 ;
+        int itter = 0 , maxIteration = 500 ;
 
         while(!stop){
             // for each Node choose one random of her neighbors
@@ -86,16 +188,19 @@ public class Solution implements Comparable , Cloneable  {
 
             // infinity loop control
             itter++;
-            if(itter == maxIteration)
-                System.err.println(" ------- Default Solution : Max iteration overflow ------ ");
+            if(itter == maxIteration){
+                //System.err.println(" ------- Default Solution : Max iteration overflow ------ ");
+            }
         }
 
 
     }
 
+*/
+
 
     // @ getters
-    public ArrayList<Node> getDominoTree(){
+    public LinkedList<Node> getDominoTree(){
         return dominoTree;
     }
 
@@ -107,8 +212,54 @@ public class Solution implements Comparable , Cloneable  {
         return solution;
     }
 
+    public void setFitness(double fitness){
+        this.fitness = fitness;
+    }
+
+    public int cardinal(){
+        return dominoTree.size();
+    }
+
+    public static int getRandomIndex(int bound1 , int bound2){
+        if(bound1 >= bound2) return 0;
+        return ThreadLocalRandom.current()
+                .nextInt(bound1, bound2);
+    }
+
+
+    public void setDominoTree(LinkedList<Node> dominoTree){
+        this.dominoTree = new LinkedList<>(dominoTree);
+    }
+
+    public void setDominoTree(ArrayList<Node> dominoTree){
+        this.dominoTree = new LinkedList<>(dominoTree);
+    }
+
+    public void MAJ_sol(){
+        ExploredNode = new HashSet<>();
+        LinkedList<Node> tempDominTree = new LinkedList<>();
+
+        fitness = 0;
+        solution = false;
+        if(dominoTree.size() == 0) return;
+        Node tempNode = dominoTree.get(0);
+        for(Node n:dominoTree){
+            // TODO check complexity cost
+            tempDominTree.add(n);
+            if(Graph.isDomiTree(tempDominTree)){
+                dominoTree = tempDominTree;
+                return;
+            }
+            ExploredNode.addAll(n.getNeighborsNodes());
+            fitness += tempNode.weight(n);
+            tempNode = n;
+        }
+    }
+
+
     public void MAJ_Fitness(){
         fitness = 0;
+        if(dominoTree.size() == 0) return;
         Node tempNode = dominoTree.get(0);
         for(Node n:dominoTree){
             fitness += tempNode.weight(n);
@@ -116,9 +267,14 @@ public class Solution implements Comparable , Cloneable  {
         }
     }
 
-    public void setFitness(double fitness){
-        this.fitness = fitness;
+    public void MAJ_NodeExplored(){
+        ExploredNode = new HashSet<>();
+        for(Node n:dominoTree){
+            ExploredNode.addAll(n.getNeighborsNodes());
+        }
     }
+
+
 
     @Override
     public int compareTo(Object o) {
@@ -168,7 +324,7 @@ public class Solution implements Comparable , Cloneable  {
         Solution clone = null;
         try{
             clone = (Solution) super.clone();
-            clone.dominoTree = new ArrayList(dominoTree);
+            clone.dominoTree = new LinkedList(dominoTree);
             clone.fitness = fitness;
             clone.solution = solution;
             return clone;

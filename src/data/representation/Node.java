@@ -1,9 +1,10 @@
 package data.representation;
 
+
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Objects;
-import java.util.Set;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Node implements Comparable {
@@ -32,20 +33,20 @@ public class Node implements Comparable {
     public ArrayList<Node> getNeighborsNodes(){return neighborsNodes; }
 
     public Node getRandomNeighbor(){
-        int nbNeighbors = neighbors.keySet().size();
+        int nbNeighbors = neighborsNodes.size();
 
-        int randomIndx = 0 ;
+        int randomIndex = 0 ;
         if(nbNeighbors > 0)
-            randomIndx = ThreadLocalRandom.current()
+            randomIndex = ThreadLocalRandom.current()
                     .nextInt(0, nbNeighbors);
 
-        if(randomIndx < neighborsNodes.size())
-            return neighborsNodes.get(randomIndx);
+        if(randomIndex < neighborsNodes.size())
+            return neighborsNodes.get(randomIndex);
 
         return null;
     }
 
-    public Node getRandomNeighbor(ArrayList<Node> exploredNodes){
+    public Node getRandomNeighbor(LinkedList<Node> exploredNodes){
 
         if(exploredNodes.containsAll(neighborsNodes)) return null;
         Node randNode = getRandomNeighbor();
@@ -61,29 +62,9 @@ public class Node implements Comparable {
         return null;
     }
 
-    private Node getMinNeighbor(ArrayList<Node> exploredNodes){
-        if(exploredNodes.containsAll(neighborsNodes)) return null;
-
-        Node minNeighbor = neighborsNodes.get(0);
-        for(Node n:neighborsNodes){
-            if(!exploredNodes.contains(n))
-                minNeighbor = n;
-        }
-        if(exploredNodes.contains(minNeighbor))
-            return null;
-
-        double minFit = neighbors.get(minNeighbor);
-
-        for(Node n:neighborsNodes){
-            if(!exploredNodes.contains(n) &&
-                    minFit > neighbors.get(n)){
-                minNeighbor = n;
-                minFit = neighbors.get(n);
-            }
-        }
-
-        System.err.println("--- Min neighbor default solution method ---");
-        return minNeighbor;
+    public Node getRandomNeighbor(ArrayList<Node> exploredNodes){
+        LinkedList<Node> linkedlist = new LinkedList<>(exploredNodes);
+        return getRandomNeighbor(linkedlist);
     }
 
 
