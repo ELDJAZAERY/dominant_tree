@@ -14,15 +14,6 @@ public class VNSolution extends Solution implements Comparable ,Cloneable {
 
 
     public VNSolution(){}
-    public VNSolution(VNSolution sol){
-        VNSolution cloned = (VNSolution) sol.clone();
-
-        Collections.shuffle(cloned.getDominoTree());
-        cloned = correction(cloned);
-        getDominoTree().addAll(cloned.getDominoTree());
-        setFitness(cloned.fitness());
-        solution = cloned.solution;
-    }
 
     public VNSolution shaking(int K) {
 
@@ -41,14 +32,14 @@ public class VNSolution extends Solution implements Comparable ,Cloneable {
             }
         }
 
-        sol = correction(sol);
+        sol.correction();
         sol.MAJ_sol();
 
         return sol;
     }
 
 
-
+/*
 
     public static VNSolution correction(VNSolution sol){
 
@@ -102,6 +93,7 @@ public class VNSolution extends Solution implements Comparable ,Cloneable {
         return correctionPerAddNodes(sol);
     }
 
+*/
 
     public static VNSolution correctionPerAddNodes(VNSolution sol){
         // TODO @ correction per add Nodes

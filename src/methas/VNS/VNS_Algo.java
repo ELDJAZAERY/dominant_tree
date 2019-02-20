@@ -28,15 +28,20 @@ public class VNS_Algo {
                 tempSolution = tempSolution.LocalSearch(k);
                 if(!Graph.isDomiTree(tempSolution.getDominoTree()))
                     continue;
+                if(!tempSolution.isConnexe())
+                    continue;
                 if(BestSolution.compareTo(tempSolution)>0){
                     BestSolution = (VNSolution) tempSolution.clone();
                     currentSolution = (VNSolution) tempSolution.clone();
                     k = 2;
                     System.out.println("Best Sol ---> "+BestSolution.fitness());
-                    System.out.println("Best Sol ---> "+ Graph.isDomiTree(BestSolution.getDominoTree()));
-
+                    //System.out.println("is Solution ? "+
+                    //Graph.isDomiTree(BestSolution.getDominoTree()));
+                    System.out.println("nombre of nodes :" + Graph.Nodes.size());
+                    System.out.println("size of solution "+BestSolution.getDominoTree().size());
+                    //System.out.println(" solution \n"+BestSolution);
+                    //System.out.println("is Connex ? :"+BestSolution.isConnexe());
                 }
-
                 k++;
             }
         }

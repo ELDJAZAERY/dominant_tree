@@ -31,9 +31,9 @@ public class Graph {
 
     public static Node getRandomNode(){
         if(Nodes.size() > 0){
-            int randomIndx = ThreadLocalRandom.current()
+            int randomIndex = ThreadLocalRandom.current()
                     .nextInt(0, Nodes.size());
-            return Nodes.get(randomIndx);
+            return Nodes.get(randomIndex);
         }
 
         return null;
@@ -74,6 +74,31 @@ public class Graph {
         return getRandomNode(new LinkedList<>(exploredNodes));
     }
 
+    public static Node getRandomNeighborNode(ArrayList<Node> dominateTree){
+        if(dominateTree.containsAll(Nodes)) return null;
+
+        Node RandNode = null;
+        int i = 5;
+        while(RandNode != null && i != 0 ){
+            RandNode = getRandomNode();
+            if(RandNode != null){
+                if(!dominateTree.contains(RandNode) &&
+                        RandNode.isNeighbor(dominateTree))
+                    return RandNode;
+
+                RandNode = null;
+            }
+        }
+
+        for(Node n:Nodes){
+            if(!dominateTree.contains(n) &&
+                    n.isNeighbor(dominateTree))
+                return n;
+        }
+
+        return null;
+    }
+
 
     public static boolean isExplored(Set<Node> nodesExplored){
         return nodesExplored.containsAll(Nodes);
@@ -81,6 +106,7 @@ public class Graph {
 
 
     public static boolean isDomiTree(ArrayList<Node> nodes){
+
         Set<Node> exploredNodes = new HashSet<>();
         for(Node n:nodes){
             exploredNodes.addAll(n.getNeighborsNodes());

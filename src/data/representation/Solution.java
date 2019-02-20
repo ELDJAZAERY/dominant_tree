@@ -13,6 +13,51 @@ public class Solution implements Comparable , Cloneable  {
     private Set<Node> ExploredNode = new HashSet<>();
 
     // @ Generate Default Random Solution
+
+
+
+    public Solution(){
+
+        // Nodes initial
+        Node  NextNode , tempNode , CurrentNode = null;
+
+
+        // while we don't find solution and there is more Nodes
+        ExploredNode = new HashSet<>();
+        dominoTree   = new LinkedList<>();
+        dominoTree.add(Graph.getRandomNode());
+
+        while(true){
+
+            // TODO Arraylist not linkedlist
+            CurrentNode  = Graph.getRandomNeighborNode(new ArrayList<>(dominoTree));
+            /* ### explore all Node without find Solution ### */
+            if(CurrentNode == null) {
+                System.err.println("### No Solution -- Graph Non Connexe ###");
+                System.exit(-1);
+            }
+
+            ExploredNode.add(CurrentNode);
+            dominoTree.add(CurrentNode);
+            ExploredNode.addAll(CurrentNode.getNeighborsNodes());
+
+
+            if(Graph.isExplored(ExploredNode)){
+                solution = true;
+                MAJ_Fitness();
+                return;
+            }
+
+        }
+
+    }
+
+
+
+
+
+/*
+
     public Solution(){
 
         // initialisation phase
@@ -36,7 +81,9 @@ public class Solution implements Comparable , Cloneable  {
                 ExploredNode = new HashSet<>();
                 dominoTree   = new LinkedList<>();
                 CurrentNode  = Graph.getRandomNode(nodes_init);
-                /* ### explore all Node without find Solution ### */
+                */
+/* ### explore all Node without find Solution ### *//*
+
                 if(CurrentNode == null) {
                     System.err.println("### Can't find Solution ###");
                     System.exit(-1);
@@ -87,6 +134,7 @@ public class Solution implements Comparable , Cloneable  {
 
     }
 
+*/
 
     public Node getNextNode(Node CurrentNode , ArrayList<Node> faildNodes){
         if(CurrentNode == null) return null;
@@ -211,6 +259,33 @@ public class Solution implements Comparable , Cloneable  {
     public boolean isSolution() {
         return solution;
     }
+
+    public void correction(){
+        while(!isConnexe()){
+            dominoTree.add(Graph.getRandomNeighborNode(new ArrayList<>(dominoTree)));
+        }
+    }
+
+
+
+    public boolean isConnexe(){
+        ArrayList<Node> nodes = new ArrayList<>(dominoTree);
+        ArrayList<Node> tempTree = new ArrayList<>();
+
+        tempTree.add(nodes.get(0));
+        nodes.remove(0);
+
+        for(int i=0;i<nodes.size();i++){
+            if(nodes.get(i).isNeighbor(tempTree)){
+                tempTree.add(nodes.get(i));
+                nodes.remove(i);
+                i=-1;
+            }
+        }
+
+        return nodes.isEmpty();
+    }
+
 
     public void setFitness(double fitness){
         this.fitness = fitness;

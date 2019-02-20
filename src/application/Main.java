@@ -73,10 +73,22 @@ public class Main extends Application {
 
     private static void testRead(){
         //Graph graph = new Graph("bench marks\\Range_100\\ins_050_1.txt");
-        Graph graph = new Graph("bench marks\\Range_100\\ins_200_1.txt");
-        //Solution s = new Solution();
-        //System.out.println(s);
-        methas.VNS.VNS_Algo.Exec(15,10);
+        Graph graph = new Graph("bench marks\\Range_100\\ins_500_2.txt");
+
+        double min = 10000;
+/*
+        while (true){
+            Solution s = new Solution();
+            if(min > s.fitness() )
+                min = s.fitness();
+            System.out.println(min);
+            System.out.println(s.fitness());
+            System.out.println("is Connex ? :"+s.isConnexe());
+            System.out.println("is dominate ? :"+Graph.isDomiTree(s.getDominoTree()));
+        }
+*/
+
+        methas.VNS.VNS_Algo.Exec(10,10);
     }
 
 }

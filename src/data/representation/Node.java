@@ -87,11 +87,15 @@ public class Node implements Comparable {
 
 
     // @ functions
-    public Boolean isNeighbor(Node n){
+    public boolean isNeighbor(Node n){
         return neighbors.containsKey(n);
     }
 
-
+    public boolean isNeighbor(ArrayList<Node> nodes){
+        for(Node n:nodes)
+            if(isNeighbor(n)) return true;
+        return false;
+    }
 
 
     @Override
