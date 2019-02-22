@@ -1,23 +1,22 @@
 package data.representation;
 
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Objects;
+import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Node implements Comparable {
 
 
     private String name ;
+    public  int    index;
     private HashMap<Node , Double> neighbors = new HashMap<>();
     private ArrayList<Node> neighborsNodes = new ArrayList<>();
+    private ArrayList<Arc> arcs = new ArrayList<>();
 
 
     public Node(String name) {
         this.name = name;
-        //index = Integer.valueOf(name);
+        index = Integer.valueOf(name);
     }
 
 
@@ -25,13 +24,19 @@ public class Node implements Comparable {
     public String getName() {
         return name;
     }
-    //public int getIndex() { return  index; }
+
 
     public HashMap<Node, Double> getNeighbors() {
         return neighbors;
     }
     public ArrayList<Node> getNeighborsNodes(){return neighborsNodes; }
 
+    public ArrayList<Arc> getArcs(){
+        return arcs;
+    }
+
+
+    // Random Getters
     public Node getRandomNeighbor(){
         int nbNeighbors = neighborsNodes.size();
 
@@ -45,13 +50,15 @@ public class Node implements Comparable {
 
         return null;
     }
-
-    public Node getRandomNeighbor(LinkedList<Node> exploredNodes){
+    public Node getRandomNeighbor(HashSet<Node> exploredNodes){
 
         if(exploredNodes.containsAll(neighborsNodes)) return null;
-        Node randNode = getRandomNeighbor();
-        if(randNode == null) return null;
-        if( !exploredNodes.contains(randNode)) return randNode;
+
+        for(int N=25 ; N > 0 ; N--){
+            Node randNode = getRandomNeighbor();
+            if(randNode == null) return null;
+            if( !exploredNodes.contains(randNode)) return randNode;
+        }
 
         for(Node n:neighborsNodes){
             if(!exploredNodes.contains(n))
@@ -61,12 +68,72 @@ public class Node implements Comparable {
         // return null if all neighbors are explored
         return null;
     }
+    public Arc getRandArcNeighbor(HashSet<Node> dominTree){
+        int nbArcs = arcs.size();
 
-    public Node getRandomNeighbor(ArrayList<Node> exploredNodes){
-        LinkedList<Node> linkedlist = new LinkedList<>(exploredNodes);
-        return getRandomNeighbor(linkedlist);
+        int randomIndex = 0 ;
+        if(nbArcs > 0)
+            randomIndex = ThreadLocalRandom.current()
+                    .nextInt(0, nbArcs);
+
+        if(randomIndex < nbArcs)
+            return arcs.get(randomIndex);
+
+        return null;
     }
 
+    public Arc getMinArcNeighbor(HashSet<Node> dominTree){
+        Arc minArc = null;
+        for(Arc arc:arcs){
+            if(!arc.appartien(dominTree)) continue;
+            if(minArc == null) minArc = arc;
+            if(arc.getWeight() < minArc.getWeight()){
+                minArc = arc;
+            }
+        }
+
+        return minArc;
+    }
+
+    // @ setters
+    public void addNeighbor(Node neighbor , Double weight){
+        neighborsNodes.add(neighbor);
+        neighbors.put(neighbor,weight);
+
+        arcs.add(new Arc(this,neighbor,weight));
+
+        neighbor.neighborsNodes.add(this);
+        neighbor.getNeighbors().put(this,weight);
+        neighbor.arcs.add(new Arc(neighbor,this,weight));
+    }
+
+
+    // @ functions
+    public boolean isNeighbor(Node n){
+        return neighbors.containsKey(n);
+    }
+
+    public boolean isNeighbor(HashSet<Node> nodes){
+        for(Node n:nodes)
+            if(isNeighbor(n)) return true;
+        return false;
+    }
+
+
+
+
+
+    // Fitness calculation phase
+    public double somWeight(HashSet<Node> dominateTree){
+        double som = 0;
+        if(dominateTree.size() == 0)
+            return som;
+        for(Node neighbor:neighborsNodes)
+            if(dominateTree.contains(neighbor))
+                som += weight(neighbor);
+
+        return som;
+    }
 
     public double weight(Node neighbor){
         try{
@@ -76,26 +143,7 @@ public class Node implements Comparable {
         }
     }
 
-    // @ setters
-    public void addNeighbor(Node neighbor , Double weight){
-        neighborsNodes.add(neighbor);
-        neighbors.put(neighbor,weight);
 
-        neighbor.neighborsNodes.add(this);
-        neighbor.getNeighbors().put(this,weight);
-    }
-
-
-    // @ functions
-    public boolean isNeighbor(Node n){
-        return neighbors.containsKey(n);
-    }
-
-    public boolean isNeighbor(ArrayList<Node> nodes){
-        for(Node n:nodes)
-            if(isNeighbor(n)) return true;
-        return false;
-    }
 
 
     @Override

@@ -11,6 +11,7 @@ import data.representation.Node;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ThreadLocalRandom;
 
 
 public class Main extends Application {
@@ -23,13 +24,20 @@ public class Main extends Application {
         primaryStage.show();
     }
 
-
     public static void main(String[] args) {
         //launch(args);
         //test();
         testRead();
+        //testRandom();
     }
 
+    private static void testRandom(){
+        while(true){
+            int randomIndex = ThreadLocalRandom.current()
+                    .nextInt(0, 5);
+            System.out.println(randomIndex);
+        }
+    }
 
     private static void test(){
         Node n1 = new Node("1");
@@ -72,11 +80,12 @@ public class Main extends Application {
     }
 
     private static void testRead(){
-        //Graph graph = new Graph("bench marks\\Range_100\\ins_050_1.txt");
-        Graph graph = new Graph("bench marks\\Range_100\\ins_500_2.txt");
+        //Graph graph = new Graph("bench marks\\Range_100\\ins_500_1.txt");
+        Graph graph = new Graph("bench marks\\Range_100\\ins_500_1.txt");
 
-        double min = 10000;
-/*
+        methas.VNS.VNS_Algo.Exec(10,10);
+
+        double min = 100000;
         while (true){
             Solution s = new Solution();
             if(min > s.fitness() )
@@ -84,11 +93,11 @@ public class Main extends Application {
             System.out.println(min);
             System.out.println(s.fitness());
             System.out.println("is Connex ? :"+s.isConnexe());
-            System.out.println("is dominate ? :"+Graph.isDomiTree(s.getDominoTree()));
+            System.out.println("is dominate ? :"+Graph.isDomiTree(s));
+            System.out.println(" --- "+s.size()+" ---\n");
         }
-*/
 
-        methas.VNS.VNS_Algo.Exec(10,10);
+
     }
 
 }

@@ -13,21 +13,32 @@ public class Graph {
 
     public static String[] toString;
     public static ArrayList<Node> Nodes ;
-
+    public static ArrayList<Node> DominatesNodes = new ArrayList<>();
+    public static ArrayList<Arc>  Arcs = new ArrayList<>();
 
     public Graph(String path) {
-        Nodes    = BenchToGraph.convert(path);
-        toString = BenchToGraph.StringValue;
+        Nodes        = BenchToGraph.convert(path);
+        toString     = BenchToGraph.StringValue;
 
+        int nbArcs ;
+        Node tempNode;
         // delete each Node haven't arcs
         for(int i=0;i<Nodes.size();i++){
-            if(Nodes.get(i).getNeighborsNodes().size() == 0){
-                Nodes.remove(i);
+            tempNode = Nodes.get(i);
+            Arcs.addAll(tempNode.getArcs());
+            nbArcs = tempNode.getNeighborsNodes().size();
+            if( nbArcs == 0 ){
+                System.out.println(" --- Node Non Dominate --- "+
+                tempNode);
+                Nodes.remove(tempNode);
                 i--;
+            }else if(nbArcs == 1){
+                DominatesNodes.add(
+                        tempNode.getNeighborsNodes().get(0));
             }
         }
+        System.out.println("---- Dominate Nodes Initial --- "+DominatesNodes.toString());
     }
-
 
     public static Node getRandomNode(){
         if(Nodes.size() > 0){
@@ -39,47 +50,15 @@ public class Graph {
         return null;
     }
 
-    public static Node getRandomNode(Set<Node> exploredNodes){
-        if(exploredNodes.containsAll(Nodes)) return null;
-        Node randNode = getRandomNode();
-        if(randNode == null) return null;
-        if( !exploredNodes.contains(randNode)) return randNode;
 
-        for(Node n:Nodes){
-            if(!exploredNodes.contains(n))
-                return n;
-        }
-
-        return null;
-    }
-
-
-
-    public static Node getRandomNode(ArrayList<Node> exploredNodes){
-        if(exploredNodes.containsAll(Nodes)) return null;
-        Node randNode = getRandomNode();
-        if(randNode == null) return null;
-        if( !exploredNodes.contains(randNode)) return randNode;
-
-        for(Node n:Nodes){
-            if(!exploredNodes.contains(n))
-                return n;
-        }
-        Node n = null;
-        return n;
-    }
-
-
-    public static Node getRandomNode(LinkedList<Node> exploredNodes){
-        return getRandomNode(new LinkedList<>(exploredNodes));
-    }
-
-    public static Node getRandomNeighborNode(ArrayList<Node> dominateTree){
+    public static Node getRandomNeighborNode(HashSet<Node> dominateTree){
         if(dominateTree.containsAll(Nodes)) return null;
 
         Node RandNode = null;
-        int i = 5;
-        while(RandNode != null && i != 0 ){
+
+        // N randomly time then brut check
+        int i = 25;
+        while(RandNode != null && i != 0){
             RandNode = getRandomNode();
             if(RandNode != null){
                 if(!dominateTree.contains(RandNode) &&
@@ -88,6 +67,7 @@ public class Graph {
 
                 RandNode = null;
             }
+            i--;
         }
 
         for(Node n:Nodes){
@@ -99,23 +79,42 @@ public class Graph {
         return null;
     }
 
+    public static Arc getRandomArc(HashSet<Node> domiTree){
+        ArrayList<Arc> arcs = arcsNeighbor(domiTree);
 
-    public static boolean isExplored(Set<Node> nodesExplored){
-        return nodesExplored.containsAll(Nodes);
+        if(arcs.size() == 0) {
+            System.out.println("\nNo Neighbor Arcs -- it is a solution ?\n");
+            return null;
+        }
+
+        int randomIndex = ThreadLocalRandom.current()
+                .nextInt(0, arcs.size());
+
+        return arcs.get(randomIndex);
     }
 
 
-    public static boolean isDomiTree(ArrayList<Node> nodes){
+    public static ArrayList<Arc> arcsNeighbor(HashSet<Node> dominaTreee){
+        ArrayList<Arc> arcs = new ArrayList<>();
+        for(Arc arc:Arcs){
+            if(arc.isNeighborTo(dominaTreee))
+                arcs.add(arc);
+        }
+        return arcs;
+    }
 
+
+    public static boolean isDomiTree(Solution s){
         Set<Node> exploredNodes = new HashSet<>();
-        for(Node n:nodes){
+        for(Node n:s.getDominoTree()){
             exploredNodes.addAll(n.getNeighborsNodes());
         }
         return isExplored(exploredNodes);
     }
 
-    public static boolean isDomiTree(LinkedList<Node> nodes){
-        return  isDomiTree(new ArrayList<>(nodes));
+
+    public static boolean isExplored(Set<Node> nodesExplored){
+        return nodesExplored.containsAll(Nodes);
     }
 
 }

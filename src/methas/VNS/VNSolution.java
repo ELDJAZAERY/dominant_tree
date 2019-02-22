@@ -17,120 +17,27 @@ public class VNSolution extends Solution implements Comparable ,Cloneable {
 
     public VNSolution shaking(int K) {
 
-        if(this.getDominoTree().size()<2) return this;
+        if(dominoTree.size() < 2) return this;
 
         VNSolution sol = (VNSolution) this.clone();
 
-        int randomIndex;
-        Node randNode;
+        Node oldNode , newNode;
 
         for(int i=1 ; i <= K ; i++) {
-            randomIndex = getRandomIndex(1,getDominoTree().size()-1);
-            randNode = getDominoTree().get(randomIndex-1).getRandomNeighbor(getDominoTree());
-            if(randNode != null){
-                getDominoTree().set(randomIndex,randNode);
+            oldNode = sol.getRandomNode();
+            newNode = oldNode.getRandomNeighbor(dominoTree);
+            if(newNode != null){
+                sol.dominoTree.remove(oldNode);
+                sol.dominoTree.add(newNode);
             }
         }
 
+        // Correction of solution after shaking
         sol.correction();
-        sol.MAJ_sol();
 
         return sol;
     }
 
-
-/*
-
-    public static VNSolution correction(VNSolution sol){
-
-        // already solution
-        if(Graph.isDomiTree(sol.getDominoTree()))
-            return sol;
-
-        Node current , next ;
-        LinkedList<Node> dominTree = new LinkedList<>();
-
-
-        // escape an infinity loop when pop out dominate tree
-        int faildNodesCachMemoryTimer = 0;
-        ArrayList<Node> failedNode = new ArrayList<>();
-
-
-        dominTree.add(sol.getDominoTree().get(0));
-
-        for(int i = 1 ; i < sol.cardinal()-1 ; i++) {
-            current = sol.getDominoTree().get(i-1);
-            next    = sol.getDominoTree().get(i);
-
-            if(current.isNeighbor(next)) dominTree.add(next);
-            else {
-                next = sol.getNextNode(current,failedNode);
-                while(next == null){
-                    dominTree.remove(current);
-                    if(dominTree.size() == 0) { return new VNSolution();}
-                    current = dominTree.pop();
-                    failedNode.add(current);
-                    faildNodesCachMemoryTimer++;
-                    next = sol.getNextNode(current,failedNode);
-                }
-                dominTree.add(next);
-            }
-
-
-            if(faildNodesCachMemoryTimer < 0){
-                failedNode.clear();
-            }else faildNodesCachMemoryTimer--;
-
-            // @ repeated
-            // TODO see this
-            if(Graph.isDomiTree(sol.getDominoTree()))
-                return sol;
-        }
-
-        if(Graph.isDomiTree(sol.getDominoTree()))
-            return sol;
-
-        return correctionPerAddNodes(sol);
-    }
-
-*/
-
-    public static VNSolution correctionPerAddNodes(VNSolution sol){
-        // TODO @ correction per add Nodes
-        return new VNSolution();
-    }
-
-
-/*
-    public VNSolution correction(VNSolution sol){
-        Node last , current ;
-        ArrayList<Node> tempDominTree = new ArrayList<>();
-
-
-        for(int i=1;i<sol.getDominoTree().size()-2;i++){
-            last = sol.getDominoTree().get(i-1);
-            current = sol.getDominoTree().get(i);
-
-            tempDominTree.add(last);
-
-            if(last.weight(current) == 0) {
-                current = last.getRandomNeighbor(sol.getDominoTree());
-                if(current == null)
-                    current = last.getRandomNeighbor(tempDominTree);
-                if(current == null)
-                    current = data.representation.Graph.getRandomNode(sol.getDominoTree());
-                if(current == null)
-                    current = data.representation.Graph.getRandomNode(tempDominTree);
-            }
-
-            sol.getDominoTree().set(i,current);
-        }
-
-        sol.MAJ_Fitness();
-        return sol;
-    }
-
-*/
 
     public  VNSolution LocalSearch(int K){
         VNSolution sol ;

@@ -26,7 +26,7 @@ public class VNS_Algo {
             while(k <= Kmax){
                 tempSolution = currentSolution.shaking(k);
                 tempSolution = tempSolution.LocalSearch(k);
-                if(!Graph.isDomiTree(tempSolution.getDominoTree()))
+                if(!Graph.isDomiTree(tempSolution))
                     continue;
                 if(!tempSolution.isConnexe())
                     continue;
