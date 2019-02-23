@@ -109,6 +109,7 @@ public class Node implements Comparable {
 
 
     // @ functions
+
     public boolean isNeighbor(Node n){
         return neighbors.containsKey(n);
     }

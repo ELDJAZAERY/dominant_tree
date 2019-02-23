@@ -16,6 +16,49 @@ public class Solution implements Comparable , Cloneable  {
 
 
     // @ Generate Default Random Solution
+ /*   public Solution(){
+
+        // Nodes initial
+        Node CurrentNode ;
+        Arc  CurrentArc;
+        isSolution = false;
+
+        // while we don't find solution and there is more Nodes
+        ExploredNode = new HashSet<>();
+        dominoTree   = new HashSet<>();
+        if(Graph.DominatesNodes.size() != 0){
+            dominoTree.addAll(Graph.DominatesNodes);
+        }else{
+            dominoTree.add(Graph.getRandomNode());
+        }
+
+        while(true){
+
+            CurrentNode  = Graph.getRandomNeighborNode(dominoTree);
+
+            *//* ### explore all Node without find Solution ### *//*
+            if(CurrentNode == null) {
+                System.err.println("### No Solution -- Graph Non Connexe ###");
+                System.exit(-1);
+            }
+
+            dominoTree.add(CurrentNode);
+            // TODO CurrentNode.get -- Random Arc Neighbor --
+            CurrentArc   = CurrentNode.getMinArcNeighbor(dominoTree);
+            path.add(CurrentArc);
+
+            ExploredNode.add(CurrentNode);
+            ExploredNode.addAll(CurrentNode.getNeighborsNodes());
+
+            if(Graph.isExplored(ExploredNode)){
+                MAJ_Fitness();
+                isSolution = true;
+                return;
+            }
+        }
+    }
+*/
+
     public Solution(){
 
         // Nodes initial
@@ -43,18 +86,14 @@ public class Solution implements Comparable , Cloneable  {
             }
 
             dominoTree.add(CurrentNode);
-            // TODO CurrentNode.get -- Random Arc Neighbor --
-            CurrentArc   = CurrentNode.getMinArcNeighbor(dominoTree);
-            path.add(CurrentArc);
-
             ExploredNode.add(CurrentNode);
             ExploredNode.addAll(CurrentNode.getNeighborsNodes());
 
             if(Graph.isExplored(ExploredNode)){
-                MAJ_Fitness();
-                isSolution = true;
+                MAJ_sol();
                 return;
             }
+
         }
     }
 
@@ -104,52 +143,38 @@ public class Solution implements Comparable , Cloneable  {
     // TODO NO CORRECTION YET
     public void correction(){
 
-        // already solution
-        //if(Graph.isDomiTree(this)) return;
-
         isSolution = false;
 
+        Node CurrentNode;
         HashSet<Node> tempNodes = new HashSet<>();
 
         // NO Connexe Graph
-        //tempNode.addAll(Graph.DominatesNodes);
+        //tempNodes.addAll(Graph.DominatesNodes);
 
-
-        Node CurrentNode;
         CurrentNode =  get(0);
         tempNodes.add(CurrentNode);
 
-        Arc CurrentArc;
-        this.path.clear();
-        fitness = 0;
 
         for(Node n:dominoTree){
             if(n.isNeighbor(tempNodes)){
                 tempNodes.add(n);
-                // TODO n.get -- Random Arc Neighbor --
-                CurrentArc   = n.getMinArcNeighbor(tempNodes);
-                path.add(CurrentArc);
-                fitness += CurrentArc.getWeight();
             }
-            if(Graph.isExplored(tempNodes) && isConnexe()) {
+            if(Graph.isDomiTree(tempNodes)) {
                 dominoTree = tempNodes;
-                MAJ_Fitness();
+                MAJ_sol();
                 return;
             }
         }
 
         dominoTree.clear();
 
-        while(!Graph.isExplored(tempNodes)){
+        while(!Graph.isDomiTree(tempNodes)){
             CurrentNode = Graph.getRandomNeighborNode(tempNodes);
             tempNodes.add(CurrentNode);
-            // TODO n.get -- Random Arc Neighbor --
-            CurrentArc   = CurrentNode.getMinArcNeighbor(tempNodes);
-            path.add(CurrentArc);
-            fitness += CurrentArc.getWeight();
         }
 
         dominoTree = tempNodes;
+        MAJ_sol();
     }
 
 
@@ -166,6 +191,28 @@ public class Solution implements Comparable , Cloneable  {
 
 
     public void MAJ_Arcs(){
+
+        Arc CurrentArc;
+        this.path.clear();
+
+        ArrayList<Node> nodes  = new ArrayList<>(dominoTree);
+        HashSet<Node> tempTree = new HashSet<>();
+
+        tempTree.add(nodes.get(0));
+        nodes.remove(0);
+
+        while(!nodes.isEmpty()){
+            for(int i=0;i<nodes.size();i++){
+                if(nodes.get(i).isNeighbor(tempTree)){
+                    CurrentArc = nodes.get(i).getRandArcNeighbor(tempTree);
+                    if(CurrentArc == null) continue;
+                    path.add(CurrentArc);
+                    tempTree.add(nodes.get(i));
+                    nodes.remove(i);
+                    i--;
+                }
+            }
+        }
 
     }
 

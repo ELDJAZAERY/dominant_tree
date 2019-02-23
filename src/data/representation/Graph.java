@@ -105,8 +105,12 @@ public class Graph {
 
 
     public static boolean isDomiTree(Solution s){
+        return isDomiTree(s.dominoTree);
+    }
+
+    public static boolean isDomiTree(HashSet<Node> domiNodes){
         Set<Node> exploredNodes = new HashSet<>();
-        for(Node n:s.getDominoTree()){
+        for(Node n:domiNodes){
             exploredNodes.addAll(n.getNeighborsNodes());
         }
         return isExplored(exploredNodes);

@@ -87,6 +87,6 @@ public class Arc implements Comparable , Cloneable {
 
     @Override
     public String toString() {
-        return super.toString();
+        return "" + debut.getName() + " ---- "+weight+" ---- " + fin.getName();
     }
 }

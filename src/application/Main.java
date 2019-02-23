@@ -83,7 +83,7 @@ public class Main extends Application {
         //Graph graph = new Graph("bench marks\\Range_100\\ins_500_1.txt");
         Graph graph = new Graph("bench marks\\Range_100\\ins_500_1.txt");
 
-        methas.VNS.VNS_Algo.Exec(10,10);
+        methas.VNS.VNS_Algo.Exec(50,10);
 
         double min = 100000;
         while (true){
