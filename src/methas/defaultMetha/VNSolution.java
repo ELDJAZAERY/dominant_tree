@@ -1,14 +1,7 @@
-package methas.VNS;
+package methas.defaultMetha;
 
-import data.representation.Graph;
 import data.representation.Node;
 import data.representation.Solution;
-
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class VNSolution extends Solution implements Comparable ,Cloneable {
 
@@ -19,25 +12,24 @@ public class VNSolution extends Solution implements Comparable ,Cloneable {
 
         if(dominoTree.size() < 2) return this;
 
-        VNSolution sol = (VNSolution) this.clone();
+        VNSolution clone = (VNSolution) this.clone();
 
         Node oldNode , newNode;
 
-        for(int i=1 ; i <= K ; i++) {
-            oldNode = sol.getRandomNode();
-            newNode = oldNode.getRandomNeighbor(dominoTree);
+        for(int i=0 ; i <= K ; i++) {
+            oldNode = clone.getRandomNode();
+            newNode = oldNode.getRandomNeighbor(clone.dominoTree);
             if(newNode != null){
-                sol.dominoTree.remove(oldNode);
-                sol.dominoTree.add(newNode);
+                clone.dominoTree.remove(oldNode);
+                clone.dominoTree.add(newNode);
             }
         }
 
         // Correction of solution after shaking
-        sol.correction();
+        clone.correction();
 
-        return sol;
+        return clone;
     }
-
 
     public  VNSolution LocalSearch(int K){
         VNSolution sol ;
@@ -46,15 +38,6 @@ public class VNSolution extends Solution implements Comparable ,Cloneable {
             if(compareTo(sol)>0) return sol;
         }
         return this;
-    }
-
-    public VNSolution DeepLocalSearch(int K){
-        VNSolution sol , BestSol = this;
-        for(int i = 2 ; i <= K ; i++){
-            sol = shaking(i);
-            if(BestSol.compareTo(sol)>0) BestSol = sol;
-        }
-        return BestSol;
     }
 
 

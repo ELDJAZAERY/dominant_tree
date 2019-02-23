@@ -40,13 +40,6 @@ public class Arc implements Comparable , Cloneable {
     }
 
     // getters
-    public Node getDebut() {
-        return debut;
-    }
-
-    public Node getFin() {
-        return fin;
-    }
 
     public double getWeight() {
         return weight;
@@ -87,6 +80,6 @@ public class Arc implements Comparable , Cloneable {
 
     @Override
     public String toString() {
-        return "" + debut.getName() + " ---- "+weight+" ---- " + fin.getName();
+        return "\n" + debut.getName() + " ---- "+weight+" ---- " + fin.getName()+"";
     }
 }

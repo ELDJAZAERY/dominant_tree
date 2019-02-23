@@ -16,6 +16,9 @@ public class Graph {
     public static ArrayList<Node> DominatesNodes = new ArrayList<>();
     public static ArrayList<Arc>  Arcs = new ArrayList<>();
 
+
+
+    // Initialisation
     public Graph(String path) {
         Nodes        = BenchToGraph.convert(path);
         toString     = BenchToGraph.StringValue;
@@ -40,6 +43,11 @@ public class Graph {
         System.out.println("---- Dominate Nodes Initial --- "+DominatesNodes.toString());
     }
 
+
+
+    // Getters
+
+    // @ Random Getters
     public static Node getRandomNode(){
         if(Nodes.size() > 0){
             int randomIndex = ThreadLocalRandom.current()
@@ -79,30 +87,18 @@ public class Graph {
         return null;
     }
 
-    public static Arc getRandomArc(HashSet<Node> domiTree){
-        ArrayList<Arc> arcs = arcsNeighbor(domiTree);
 
-        if(arcs.size() == 0) {
-            System.out.println("\nNo Neighbor Arcs -- it is a solution ?\n");
-            return null;
-        }
+    // @ Specific getters
+    public Node getMaxNode(){
+        return null;
+    }
 
-        int randomIndex = ThreadLocalRandom.current()
-                .nextInt(0, arcs.size());
-
-        return arcs.get(randomIndex);
+    public Node getMaxNode(HashSet<Node> dominTree){
+        return null;
     }
 
 
-    public static ArrayList<Arc> arcsNeighbor(HashSet<Node> dominaTreee){
-        ArrayList<Arc> arcs = new ArrayList<>();
-        for(Arc arc:Arcs){
-            if(arc.isNeighborTo(dominaTreee))
-                arcs.add(arc);
-        }
-        return arcs;
-    }
-
+    // Verification phase
 
     public static boolean isDomiTree(Solution s){
         return isDomiTree(s.dominoTree);
@@ -115,7 +111,6 @@ public class Graph {
         }
         return isExplored(exploredNodes);
     }
-
 
     public static boolean isExplored(Set<Node> nodesExplored){
         return nodesExplored.containsAll(Nodes);

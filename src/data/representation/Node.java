@@ -68,20 +68,6 @@ public class Node implements Comparable {
         // return null if all neighbors are explored
         return null;
     }
-    public Arc getRandArcNeighbor(HashSet<Node> dominTree){
-        int nbArcs = arcs.size();
-
-        int randomIndex = 0 ;
-        if(nbArcs > 0)
-            randomIndex = ThreadLocalRandom.current()
-                    .nextInt(0, nbArcs);
-
-        if(randomIndex < nbArcs)
-            return arcs.get(randomIndex);
-
-        return null;
-    }
-
     public Arc getMinArcNeighbor(HashSet<Node> dominTree){
         Arc minArc = null;
         for(Arc arc:arcs){
@@ -94,6 +80,7 @@ public class Node implements Comparable {
 
         return minArc;
     }
+
 
     // @ setters
     public void addNeighbor(Node neighbor , Double weight){

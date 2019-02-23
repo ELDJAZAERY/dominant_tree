@@ -1,12 +1,15 @@
 package data.representation;
 
-import methas.VNS.VNSolution;
+import application.Main;
 
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 
 
 public class Solution implements Comparable , Cloneable  {
+
+
+    public static int nbEvaluations = 0;
 
     protected HashSet<Node> dominoTree ;
     private HashSet<Arc> path = new HashSet<>();
@@ -16,54 +19,11 @@ public class Solution implements Comparable , Cloneable  {
 
 
     // @ Generate Default Random Solution
- /*   public Solution(){
-
-        // Nodes initial
-        Node CurrentNode ;
-        Arc  CurrentArc;
-        isSolution = false;
-
-        // while we don't find solution and there is more Nodes
-        ExploredNode = new HashSet<>();
-        dominoTree   = new HashSet<>();
-        if(Graph.DominatesNodes.size() != 0){
-            dominoTree.addAll(Graph.DominatesNodes);
-        }else{
-            dominoTree.add(Graph.getRandomNode());
-        }
-
-        while(true){
-
-            CurrentNode  = Graph.getRandomNeighborNode(dominoTree);
-
-            *//* ### explore all Node without find Solution ### *//*
-            if(CurrentNode == null) {
-                System.err.println("### No Solution -- Graph Non Connexe ###");
-                System.exit(-1);
-            }
-
-            dominoTree.add(CurrentNode);
-            // TODO CurrentNode.get -- Random Arc Neighbor --
-            CurrentArc   = CurrentNode.getMinArcNeighbor(dominoTree);
-            path.add(CurrentArc);
-
-            ExploredNode.add(CurrentNode);
-            ExploredNode.addAll(CurrentNode.getNeighborsNodes());
-
-            if(Graph.isExplored(ExploredNode)){
-                MAJ_Fitness();
-                isSolution = true;
-                return;
-            }
-        }
-    }
-*/
 
     public Solution(){
 
         // Nodes initial
         Node CurrentNode ;
-        Arc  CurrentArc;
         isSolution = false;
 
         // while we don't find solution and there is more Nodes
@@ -125,6 +85,10 @@ public class Solution implements Comparable , Cloneable  {
         return null;
     }
 
+    public HashSet<Arc> getPath() {
+        return path;
+    }
+
 
 
     // Random Getters
@@ -149,7 +113,7 @@ public class Solution implements Comparable , Cloneable  {
         HashSet<Node> tempNodes = new HashSet<>();
 
         // NO Connexe Graph
-        //tempNodes.addAll(Graph.DominatesNodes);
+        tempNodes.addAll(Graph.DominatesNodes);
 
         CurrentNode =  get(0);
         tempNodes.add(CurrentNode);
@@ -198,19 +162,17 @@ public class Solution implements Comparable , Cloneable  {
         ArrayList<Node> nodes  = new ArrayList<>(dominoTree);
         HashSet<Node> tempTree = new HashSet<>();
 
-        tempTree.add(nodes.get(0));
+        Node CurrentNode = nodes.get(0);
         nodes.remove(0);
+        tempTree.add(CurrentNode);
 
         while(!nodes.isEmpty()){
-            for(int i=0;i<nodes.size();i++){
-                if(nodes.get(i).isNeighbor(tempTree)){
-                    tempTree.add(nodes.get(i));
-                    CurrentArc = nodes.get(i).getRandArcNeighbor(tempTree);
-                    if(CurrentArc == null) continue;
-                    path.add(CurrentArc);
-                    nodes.remove(i);
-                    i--;
-                }
+            for(int i = 0 ; i<nodes.size();i++){
+                CurrentNode = nodes.get(i);
+                nodes.remove(i);
+                tempTree.add(CurrentNode);
+                CurrentArc = CurrentNode.getMinArcNeighbor(tempTree);
+                if(CurrentArc != null) path.add(CurrentArc);
             }
         }
 
@@ -222,6 +184,7 @@ public class Solution implements Comparable , Cloneable  {
         for(Arc arc:path){
             fitness += arc.getWeight();
         }
+        nbEvaluations++;
     }
 
     public void Connect(){
@@ -282,6 +245,24 @@ public class Solution implements Comparable , Cloneable  {
 
         return out;
     }
+
+
+    public void printPerformance() {
+
+        double now = System.currentTimeMillis() / 1000;
+
+
+        String out = "\n";
+        out += "Solution { \n " ;
+        out += "\tfitness     : " + fitness   + " ,\n";
+        out += "\tTime        : " + (now - Main.startTime) + " Sec ,\n";
+        out += "\tCardinality : " + dominoTree.size() + " ,\n";
+        out += "\tEvaluations : " + nbEvaluations + " times,\n";
+        out += "}\n";
+        
+        System.out.println(out);
+    }
+
 
 
     @Override

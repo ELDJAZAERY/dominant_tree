@@ -5,6 +5,8 @@ import data.representation.*;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 
 
@@ -49,7 +51,9 @@ public class BenchToGraph {
 
             n1 = tempNodes.get(Integer.valueOf(row[0]));
             n2 = tempNodes.get(Integer.valueOf(row[1]));
+
             weight = Double.valueOf(row[2]);
+            weight = new Double(weight).intValue();
 
             n1.addNeighbor(n2,weight);
         }
