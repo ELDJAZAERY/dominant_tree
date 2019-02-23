@@ -1,4 +1,4 @@
-package methas.defaultMetha;
+package methas.VNS;
 
 public class VNS_Algo {
 
@@ -6,15 +6,15 @@ public class VNS_Algo {
     public static void Exec(int Kmax , int MaxIter){
         int iter = 0 , k = 2;
 
-        VNSolution  currentSolution ,BestSolution , tempSolution  ;
+        VNSolution currentSolution ,BestSolution , tempSolution  ;
 
         BestSolution = new VNSolution();
 
 
         while (iter < MaxIter){
 
-            //System.out.println("---- New Solution ---");
-            // Solution initial
+            //System.out.println("---- New dSolution ---");
+            // dSolution initial
              currentSolution = new VNSolution();
             // fussionner current with bestSol
 
@@ -31,9 +31,10 @@ public class VNS_Algo {
                 }
                 k++;
             }
+            iter++;
         }
 
-        iter++;
+
         System.out.println(" ----- defaultMetha FIN -----");
     }
 

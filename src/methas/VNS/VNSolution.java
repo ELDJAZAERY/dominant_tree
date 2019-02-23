@@ -1,4 +1,4 @@
-package methas.defaultMetha;
+package methas.VNS;
 
 import data.representation.Node;
 import data.representation.Solution;
@@ -31,13 +31,13 @@ public class VNSolution extends Solution implements Comparable ,Cloneable {
         return clone;
     }
 
-    public  VNSolution LocalSearch(int K){
-        VNSolution sol ;
+    public VNSolution LocalSearch(int K){
+        VNSolution sol = new VNSolution();
         for(int i = 2 ; i <= K ; i++){
             sol = shaking(i);
             if(compareTo(sol)>0) return sol;
         }
-        return this;
+        return sol;
     }
 
 

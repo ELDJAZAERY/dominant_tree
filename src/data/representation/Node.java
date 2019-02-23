@@ -68,7 +68,7 @@ public class Node implements Comparable {
         // return null if all neighbors are explored
         return null;
     }
-    public Arc getMinArcNeighbor(HashSet<Node> dominTree){
+    public Arc  getMinArcNeighbor(HashSet<Node> dominTree){
         Arc minArc = null;
         for(Arc arc:arcs){
             if(!arc.appartien(dominTree)) continue;

@@ -18,7 +18,7 @@ public class Solution implements Comparable , Cloneable  {
     private Set<Node> ExploredNode ;
 
 
-    // @ Generate Default Random Solution
+    // @ Generate Default Random dSolution
 
     public Solution(){
 
@@ -39,9 +39,9 @@ public class Solution implements Comparable , Cloneable  {
 
             CurrentNode  = Graph.getRandomNeighborNode(dominoTree);
 
-            /* ### explore all Node without find Solution ### */
+            /* ### explore all Node without find dSolution ### */
             if(CurrentNode == null) {
-                System.err.println("### No Solution -- Graph Non Connexe ###");
+                System.err.println("### No dSolution -- Graph Non Connexe ###");
                 System.exit(-1);
             }
 
@@ -234,7 +234,7 @@ public class Solution implements Comparable , Cloneable  {
     @Override
     public String toString() {
         String out = "";
-        out += "\n\nSolution { \n " ;
+        out += "\n\ndSolution { \n " ;
         out += "fitness = " + fitness + " ,\n";
         out += "Cardinality = " + dominoTree.size() + " ,\n";
         out += "Nodes = [\n";
@@ -274,7 +274,7 @@ public class Solution implements Comparable , Cloneable  {
             clone.fitness = fitness;
             return clone;
         }catch (Exception e){
-            System.err.println("\n\nSolution can't be cloned : CloneNotSupportedException Exception");
+            System.err.println("\n\ndSolution can't be cloned : CloneNotSupportedException Exception");
             return this;
         }
     }

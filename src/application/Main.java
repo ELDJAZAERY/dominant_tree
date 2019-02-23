@@ -7,6 +7,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import methas.VNS.VNS_Algo;
+import methas.defaultMetha.dAlgo;
 
 
 public class Main extends Application {
@@ -31,13 +33,15 @@ public class Main extends Application {
 
     private static void testRead(){
         //Graph graph = new Graph("bench marks\\Range_100\\ins_500_1.txt");
-        Graph graph = new Graph("bench marks\\Range_100\\ins_500_3.txt");
+        Graph graph = new Graph("bench marks\\Range_100\\ins_500_2.txt");
 
         startTime = System.currentTimeMillis() / 1000;
 
 
-        methas.defaultMetha.VNS_Algo.Exec(30,10);
+        dAlgo.Exec(5,1000);
+        //VNS_Algo.Exec(30,1000);
 
+/*
         double min = 100000;
         int i = 0;
         Solution Best = new Solution();
@@ -52,6 +56,7 @@ public class Main extends Application {
         Best.printPerformance();
         System.out.println("is Connex ? :"+Best.isConnexe());
         System.out.println("is dominate ? :"+Graph.isDomiTree(Best));
+*/
 
     }
 
