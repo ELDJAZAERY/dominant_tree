@@ -81,9 +81,9 @@ public class Main extends Application {
 
     private static void testRead(){
         //Graph graph = new Graph("bench marks\\Range_100\\ins_500_1.txt");
-        Graph graph = new Graph("bench marks\\Range_100\\ins_500_1.txt");
+        Graph graph = new Graph("bench marks\\Range_100\\ins_050_2.txt");
 
-        methas.VNS.VNS_Algo.Exec(50,10);
+        methas.VNS.VNS_Algo.Exec(30,10);
 
         double min = 100000;
         while (true){

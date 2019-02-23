@@ -204,10 +204,10 @@ public class Solution implements Comparable , Cloneable  {
         while(!nodes.isEmpty()){
             for(int i=0;i<nodes.size();i++){
                 if(nodes.get(i).isNeighbor(tempTree)){
+                    tempTree.add(nodes.get(i));
                     CurrentArc = nodes.get(i).getRandArcNeighbor(tempTree);
                     if(CurrentArc == null) continue;
                     path.add(CurrentArc);
-                    tempTree.add(nodes.get(i));
                     nodes.remove(i);
                     i--;
                 }
