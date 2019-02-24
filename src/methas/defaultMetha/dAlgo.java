@@ -1,5 +1,10 @@
 package methas.defaultMetha;
 
+import data.representation.Node;
+
+import java.util.ArrayList;
+import java.util.concurrent.ThreadLocalRandom;
+
 public class dAlgo {
 
 
@@ -10,22 +15,30 @@ public class dAlgo {
 
         BestSolution = currentSolution = new dSolution();
 
+        ArrayList<dSolution> LastBest = new ArrayList<>();
+
+        LastBest.add(BestSolution);
+
         int init = 1000;
         while(--init != 0) {
             currentSolution = new dSolution();
             if(BestSolution.compareTo(currentSolution)>0){
+                LastBest.add(BestSolution);
                 BestSolution = currentSolution;
                 BestSolution.printPerformance();
+                System.out.println(" --- INITIAL SOLUTIONS ----");
             }
         }
 
 
-        int JUMPING = 50;
+        int JUMPING = 200;
         while (++iter <= MaxIter) {
             if(--JUMPING == 0) {
-                currentSolution = new dSolution();
-                JUMPING = 50;
-                System.out.println(" -- JUMPING --");
+                //currentSolution = new dSolution();
+                int randIndex = ThreadLocalRandom.current().nextInt(0,LastBest.size());
+                currentSolution = LastBest.get(randIndex);
+                JUMPING = 200;
+                //System.out.println(" -- JUMPING --");
             }
 
             for(int k =1; k<Kmax ; k++){
@@ -55,5 +68,7 @@ public class dAlgo {
 
         System.out.println(" ----- defaultMetha FIN -----");
     }
+
+
 
 }

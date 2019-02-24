@@ -1,5 +1,7 @@
 package methas.VNS;
 
+import methas.defaultMetha.dSolution;
+
 public class VNS_Algo {
 
 
@@ -8,14 +10,22 @@ public class VNS_Algo {
 
         VNSolution currentSolution ,BestSolution , tempSolution  ;
 
-        BestSolution = new VNSolution();
+        BestSolution = currentSolution = new VNSolution();
 
+        int init = 500;
+        while(--init != 0) {
+            currentSolution = new VNSolution();
+            if(BestSolution.compareTo(currentSolution)>0){
+                BestSolution = currentSolution;
+                BestSolution.printPerformance();
+            }
+        }
 
         while (iter < MaxIter){
 
             //System.out.println("---- New dSolution ---");
             // dSolution initial
-             currentSolution = new VNSolution();
+             //currentSolution = new VNSolution();
             // fussionner current with bestSol
 
             k = 2;

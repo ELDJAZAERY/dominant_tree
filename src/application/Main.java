@@ -33,12 +33,12 @@ public class Main extends Application {
 
     private static void testRead(){
         //Graph graph = new Graph("bench marks\\Range_100\\ins_500_1.txt");
-        Graph graph = new Graph("bench marks\\Range_100\\ins_500_2.txt");
+        Graph graph = new Graph("bench marks\\Range_100\\ins_050_3.txt");
 
         startTime = System.currentTimeMillis() / 1000;
 
 
-        dAlgo.Exec(5,1000);
+        dAlgo.Exec(10,100000);
         //VNS_Algo.Exec(30,1000);
 
 /*
