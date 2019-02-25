@@ -33,12 +33,13 @@ public class dAlgo {
 
         int JUMPING = 200;
         while (++iter <= MaxIter) {
-            if(--JUMPING == 0) {
+            if(--JUMPING == 0 && !LastBest.isEmpty()) {
                 //currentSolution = new dSolution();
                 int randIndex = ThreadLocalRandom.current().nextInt(0,LastBest.size());
                 currentSolution = LastBest.get(randIndex);
+                LastBest.remove(randIndex);
                 JUMPING = 200;
-                //System.out.println(" -- JUMPING --");
+                System.out.println(" --- JUMPING ---");
             }
 
             for(int k =1; k<Kmax ; k++){
@@ -61,7 +62,6 @@ public class dAlgo {
                     k=1;
                 }
 
-                currentSolution = BestSolution;
             }
 
         }

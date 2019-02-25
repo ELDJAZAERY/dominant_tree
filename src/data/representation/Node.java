@@ -68,6 +68,7 @@ public class Node implements Comparable {
         // return null if all neighbors are explored
         return null;
     }
+
     public Arc  getMinArcNeighbor(HashSet<Node> dominTree){
         Arc minArc = null;
         for(Arc arc:arcs){
@@ -108,8 +109,22 @@ public class Node implements Comparable {
     }
 
 
+    public boolean isPurninable(HashSet<Node> nodes){
+        for(Node neighbor : neighborsNodes){
+            if(!neighbor.haveAnotherDominNode(this,nodes))
+                return false;
+        }
+        return true;
+    }
 
-
+    public boolean haveAnotherDominNode(Node dominNode , HashSet<Node> nodes){
+        for(Node neighbor : neighborsNodes){
+            if(nodes.contains(neighbor) &&
+                    !neighbor.equals(dominNode))
+                return true;
+        }
+        return false;
+    }
 
     // Fitness calculation phase
     public double somWeight(HashSet<Node> dominateTree){

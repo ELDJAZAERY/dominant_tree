@@ -1,6 +1,7 @@
 package application;
 
 import data.representation.Graph;
+import data.representation.Node;
 import data.representation.Solution;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -9,6 +10,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import methas.VNS.VNS_Algo;
 import methas.defaultMetha.dAlgo;
+
+import java.util.HashSet;
 
 
 public class Main extends Application {
@@ -33,12 +36,12 @@ public class Main extends Application {
 
     private static void testRead(){
         //Graph graph = new Graph("bench marks\\Range_100\\ins_500_1.txt");
-        Graph graph = new Graph("bench marks\\Range_100\\ins_050_3.txt");
+        Graph graph = new Graph("bench marks\\Range_100\\ins_500_1.txt");
 
         startTime = System.currentTimeMillis() / 1000;
 
 
-        dAlgo.Exec(10,100000);
+        dAlgo.Exec(30,100000);
         //VNS_Algo.Exec(30,1000);
 
 /*

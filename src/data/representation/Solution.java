@@ -1,6 +1,7 @@
 package data.representation;
 
 import application.Main;
+import com.sun.xml.internal.bind.v2.TODO;
 
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
@@ -29,11 +30,13 @@ public class Solution implements Comparable , Cloneable  {
         // while we don't find solution and there is more Nodes
         ExploredNode = new HashSet<>();
         dominoTree   = new HashSet<>();
+
         if(Graph.DominatesNodes.size() != 0){
             dominoTree.addAll(Graph.DominatesNodes);
         }else{
             dominoTree.add(Graph.getRandomNode());
         }
+
 
         while(true){
 
@@ -50,7 +53,7 @@ public class Solution implements Comparable , Cloneable  {
             ExploredNode.addAll(CurrentNode.getNeighborsNodes());
 
             if(Graph.isExplored(ExploredNode)){
-                MAJ_sol();
+                correction();
                 return;
             }
 
@@ -101,6 +104,16 @@ public class Solution implements Comparable , Cloneable  {
     }
 
 
+    public void pruning(){
+        HashSet<Node> afterPruning = new HashSet<>(dominoTree);
+        for(Node node : dominoTree){
+            if(node.isPurninable(afterPruning))
+                afterPruning.remove(node);
+            //System.out.println(node.isPurninable(afterPruning));
+        }
+        dominoTree = afterPruning;
+    }
+
 
     // Correction Phase
 
@@ -108,12 +121,11 @@ public class Solution implements Comparable , Cloneable  {
     public void correction(){
 
         isSolution = false;
+        if(!Graph.DominatesNodes.isEmpty())
+            dominoTree.addAll(Graph.DominatesNodes);
 
         Node CurrentNode;
         HashSet<Node> tempNodes = new HashSet<>();
-
-        // NO Connexe Graph
-        tempNodes.addAll(Graph.DominatesNodes);
 
         CurrentNode =  get(0);
         tempNodes.add(CurrentNode);
@@ -124,18 +136,16 @@ public class Solution implements Comparable , Cloneable  {
                 tempNodes.add(n);
             }
             if(Graph.isDomiTree(tempNodes)) {
-                dominoTree = tempNodes;
-                MAJ_sol();
-                return;
+                break;
             }
         }
 
-        dominoTree.clear();
 
         while(!Graph.isDomiTree(tempNodes)){
             CurrentNode = Graph.getRandomNeighborNode(tempNodes);
             tempNodes.add(CurrentNode);
         }
+
 
         dominoTree = tempNodes;
         MAJ_sol();
@@ -143,7 +153,12 @@ public class Solution implements Comparable , Cloneable  {
 
 
     public void MAJ_sol(){
+
         // connect dominate Node
+        Connect();
+
+        pruning();
+
         Connect();
 
         // TODO MAJ ARCs
@@ -155,6 +170,8 @@ public class Solution implements Comparable , Cloneable  {
 
 
     public void MAJ_Arcs(){
+
+        // TODO (MST) giv a Minimal set of edge
 
         Arc CurrentArc;
         this.path.clear();
@@ -251,13 +268,17 @@ public class Solution implements Comparable , Cloneable  {
 
         double now = System.currentTimeMillis() / 1000;
 
-
+        MAJ_Fitness();
         String out = "\n";
         out += "Solution { \n " ;
         out += "\tfitness     : " + fitness   + " ,\n";
         out += "\tTime        : " + (now - Main.startTime) + " Sec ,\n";
         out += "\tCardinality : " + dominoTree.size() + " ,\n";
-        out += "\tEvaluations : " + nbEvaluations + " times,\n";
+        out += "\tEvaluations : " + nbEvaluations + " times ,\n";
+        out += "\tIsDominate  : " + Graph.isDomiTree(dominoTree) + " , \n";
+        out += "\tIsConnexe   : " + isConnexe() + "  ,\n";
+        out += "\tNb Arcs     : " + path.size() + "  ,\n";
+
         out += "}\n";
         
         System.out.println(out);
