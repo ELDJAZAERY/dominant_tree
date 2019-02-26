@@ -7,8 +7,8 @@ import java.util.Objects;
 
 public class Arc implements Comparable , Cloneable {
 
-    private Node debut;
-    private Node fin;
+    public Node debut;
+    public Node fin;
     private double weight;
 
 
@@ -67,8 +67,8 @@ public class Arc implements Comparable , Cloneable {
         if( o == null  || !(o instanceof Arc) ) return false;
         Arc arc = ((Arc) o);
 
-        if((arc.debut.equals(debut) || arc.debut.equals(fin)) &&
-                (arc.fin.equals(debut) || arc.fin.equals(fin)))
+        if((arc.debut.equals(debut) && arc.fin.equals(fin)) ||
+                (arc.fin.equals(debut) && arc.debut.equals(fin)))
             return true;
         return false;
     }

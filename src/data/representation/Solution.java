@@ -53,7 +53,7 @@ public class Solution implements Comparable , Cloneable  {
             ExploredNode.addAll(CurrentNode.getNeighborsNodes());
 
             if(Graph.isExplored(ExploredNode)){
-                correction();
+                MAJ_sol();
                 return;
             }
 
@@ -162,14 +162,16 @@ public class Solution implements Comparable , Cloneable  {
         Connect();
 
         // TODO MAJ ARCs
-        MAJ_Arcs();
+        MST();
+        //MAJ_Arcs();
+
 
         // MAJ Fitness
         MAJ_Fitness();
     }
 
 
-    public void MAJ_Arcs(){
+    private void MAJ_Arcs(){
 
         // TODO (MST) giv a Minimal set of edge
 
@@ -194,6 +196,40 @@ public class Solution implements Comparable , Cloneable  {
         }
 
     }
+
+    public void MST(){
+
+        path.clear();
+
+        Node nextNode;
+        ArrayList<Node> nodes = new ArrayList<>();
+        ArrayList<Arc>  ququeArcs = new ArrayList<>();
+
+        nextNode = get(0);
+        nodes.add(nextNode);
+        ququeArcs.addAll(nextNode.getArcs());
+
+        while(!nodes.containsAll(dominoTree)){
+            //System.out.println("\n\n ### BEFOR ### \n"+ququeArcs.toString()+" \n\n");
+            Collections.sort(ququeArcs);
+            //System.out.println("\n\n ### AFTER ### \n"+ququeArcs.toString()+" \n\n");
+            for(Arc arc:ququeArcs) {
+                if(!arc.appartien(dominoTree)) continue;
+                if (!nodes.contains(arc.fin)){
+                    path.add(arc);
+                    nodes.add(arc.fin);
+                    ququeArcs.addAll(arc.fin.getArcs());
+                    break;
+                }else if(!nodes.contains(arc.debut)){
+                    path.add(arc);
+                    nodes.add(arc.debut);
+                    ququeArcs.addAll(arc.debut.getArcs());
+                    break;
+                }
+            }
+        }
+    }
+
 
     public void MAJ_Fitness(){
         fitness = 0;
@@ -268,7 +304,6 @@ public class Solution implements Comparable , Cloneable  {
 
         double now = System.currentTimeMillis() / 1000;
 
-        MAJ_Fitness();
         String out = "\n";
         out += "Solution { \n " ;
         out += "\tfitness     : " + fitness   + " ,\n";
