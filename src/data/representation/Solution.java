@@ -154,15 +154,21 @@ public class Solution implements Comparable , Cloneable  {
 
     public void MAJ_sol(){
 
+        pruning();
         // connect dominate Node
+//        System.out.println("MAJ Solution");
+//        System.out.println("befor connect"+dominoTree.size());
         Connect();
+//        System.out.println("after connect befor pruning"+dominoTree.size());
 
         pruning();
+//        System.out.println("after pruning"+dominoTree.size());
 
         Connect();
+//        System.out.println("after connect"+dominoTree.size());
 
-        // TODO MAJ ARCs
         MST();
+//        System.out.println("MAJ Solution\n\n\n");
         //MAJ_Arcs();
 
 
@@ -170,32 +176,6 @@ public class Solution implements Comparable , Cloneable  {
         MAJ_Fitness();
     }
 
-
-    private void MAJ_Arcs(){
-
-        // TODO (MST) giv a Minimal set of edge
-
-        Arc CurrentArc;
-        this.path.clear();
-
-        ArrayList<Node> nodes  = new ArrayList<>(dominoTree);
-        HashSet<Node> tempTree = new HashSet<>();
-
-        Node CurrentNode = nodes.get(0);
-        nodes.remove(0);
-        tempTree.add(CurrentNode);
-
-        while(!nodes.isEmpty()){
-            for(int i = 0 ; i<nodes.size();i++){
-                CurrentNode = nodes.get(i);
-                nodes.remove(i);
-                tempTree.add(CurrentNode);
-                CurrentArc = CurrentNode.getMinArcNeighbor(tempTree);
-                if(CurrentArc != null) path.add(CurrentArc);
-            }
-        }
-
-    }
 
     public void MST(){
 
@@ -240,10 +220,177 @@ public class Solution implements Comparable , Cloneable  {
         nbEvaluations++;
     }
 
+
     public void Connect(){
-        while(!isConnexe()){
-            dominoTree.add(Graph.getRandomNeighborNode(dominoTree));
+
+        ArrayList<Node> DominateSet = new ArrayList<>(dominoTree);
+        HashSet<Node> newDominateSet = new HashSet<>();
+
+        HashSet<Node> path0 , path1 , path2 ;
+
+
+        Node maxNode = getHaveMaxDominNeighbr(DominateSet);
+        path0 = maxNode.getDominNeighbors(DominateSet);
+
+        newDominateSet.add(maxNode);
+        newDominateSet.addAll(path0);
+
+        DominateSet.remove(maxNode);
+        DominateSet.removeAll(path0);
+
+
+        while(!DominateSet.isEmpty()){
+
+            maxNode = getHaveMaxDominNeighbr(DominateSet);
+
+            path0 = getPath0(newDominateSet,DominateSet,maxNode,false);
+
+            if(!path0.isEmpty()){
+                newDominateSet.addAll(path0);
+                DominateSet.removeAll(path0);
+                continue;
+            }
+
+
+            path1 = getPath1(newDominateSet,DominateSet,maxNode,false);
+
+            if(!path1.isEmpty()){
+                newDominateSet.addAll(path1);
+                DominateSet.removeAll(path1);
+                continue;
+            }
+
+
+
+            path2 = getPath2(newDominateSet,DominateSet,maxNode,false);
+
+            if(!path2.isEmpty()){
+                newDominateSet.addAll(path2);
+                DominateSet.removeAll(path2);
+                continue;
+            }else{
+                System.out.println("Connect infini boucle "+DominateSet.toString());
+            }
+
         }
+
+        dominoTree = newDominateSet;
+    }
+
+
+    public HashSet<Node> getPath0(HashSet<Node> newDominateSet , ArrayList<Node> DominateSet , Node MaxNode , boolean onlyForMAxNode){
+
+        HashSet<Node> path0 = new HashSet<>();
+
+        HashSet<Node>  MaxNodeDN  , tempNodeDN ;
+
+        if(MaxNode != null && MaxNode.isNeighbor(newDominateSet)){
+            MaxNodeDN = MaxNode.getDominNeighbors(DominateSet);
+
+            path0.add(MaxNode);
+            path0.addAll(MaxNodeDN);
+
+            return path0;
+        }
+
+        if(onlyForMAxNode) return path0;
+
+        for(Node node:DominateSet){
+            if(node.isNeighbor(newDominateSet)){
+                tempNodeDN = node.getDominNeighbors(DominateSet);
+
+                path0.add(node);
+                path0.addAll(tempNodeDN);
+
+                return path0;
+            }
+        }
+
+        return path0;
+    }
+
+
+    public HashSet<Node> getPath1(HashSet<Node> newDominateSet , ArrayList<Node> DominateSet , Node MaxNode ,boolean onlyForMAxNode){
+
+        HashSet<Node> path1 = new HashSet<>();
+
+        if(MaxNode != null){
+            for(Node node :MaxNode.getNeighborsNodes()){
+                path1 = getPath0(newDominateSet,DominateSet,node,true);
+                if(!path1.isEmpty()) {
+                    path1.add(MaxNode);
+                    path1.addAll(MaxNode.getDominNeighbors(DominateSet));
+                    return path1;
+                }
+            }
+        }
+
+        if(onlyForMAxNode) return path1;
+
+
+        for(Node node:DominateSet){
+            for(Node node2 : node.getNeighborsNodes()){
+                path1 = getPath0(newDominateSet,DominateSet,node2,true);
+                if(!path1.isEmpty()) {
+                    path1.add(node);
+                    path1.addAll(node.getDominNeighbors(DominateSet));
+                    return path1;
+                }
+            }
+        }
+
+        return path1;
+    }
+
+
+    public HashSet<Node> getPath2(HashSet<Node> newDominateSet , ArrayList<Node> DominateSet ,Node MaxNode,boolean onlyForMAxNode){
+
+        HashSet<Node> path2 = new HashSet<>();
+
+        if(MaxNode != null){
+            for(Node node :MaxNode.getNeighborsNodes()){
+                path2 = getPath0(newDominateSet,DominateSet,node,true);
+                if(!path2.isEmpty()) {
+                    path2.add(MaxNode);
+                    path2.addAll(MaxNode.getDominNeighbors(DominateSet));
+                    return path2;
+                }
+            }
+        }
+
+        if(onlyForMAxNode) return path2;
+
+
+        for(Node node:DominateSet){
+            for(Node node2 : node.getNeighborsNodes()){
+                path2 = getPath1(newDominateSet,DominateSet,node2,true);
+                if(!path2.isEmpty()) {
+                    path2.add(node);
+                    path2.addAll(node.getDominNeighbors(DominateSet));
+                    return path2;
+                }
+            }
+        }
+
+        return path2;
+    }
+
+
+    // TODO
+    public Node getHaveMaxDominNeighbr(ArrayList<Node> dominSet){
+
+        int max = 0;
+        Node maxNode = dominSet.get(0);
+
+        for(Node node:dominSet){
+            int nbDN = node.getDominNeighbors(dominSet).size();
+            if( nbDN > max){
+                maxNode = node;
+                max = nbDN;
+            }
+        }
+
+        return maxNode;
     }
 
 
@@ -313,6 +460,7 @@ public class Solution implements Comparable , Cloneable  {
         out += "\tIsDominate  : " + Graph.isDomiTree(dominoTree) + " , \n";
         out += "\tIsConnexe   : " + isConnexe() + "  ,\n";
         out += "\tNb Arcs     : " + path.size() + "  ,\n";
+        //out += "\tArcs        : " + path.toString() + "  ,\n";
 
         out += "}\n";
         

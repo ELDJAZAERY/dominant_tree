@@ -19,18 +19,20 @@ public class dAlgo {
 
         LastBest.add(BestSolution);
 
-        int init = 1000;
-        while(--init != 0) {
-            currentSolution = new dSolution();
-            if(BestSolution.compareTo(currentSolution)>0){
-                LastBest.add(BestSolution);
-                BestSolution = currentSolution;
-                BestSolution.printPerformance();
-                System.out.println(" --- INITIAL SOLUTIONS ----");
-            }
-        }
+//
+//        int init = 1000;
+//        while(--init != 0) {
+//            currentSolution = new dSolution();
+//            if(BestSolution.compareTo(currentSolution)>0){
+//                LastBest.add(BestSolution);
+//                BestSolution = currentSolution;
+//                BestSolution.printPerformance();
+//                System.out.println(" --- INITIAL SOLUTIONS ----");
+//            }
+//        }
+//
 
-
+        BestSolution.printPerformance();
         int JUMPING = 200;
         while (++iter <= MaxIter) {
             if(--JUMPING == 0 && !LastBest.isEmpty()) {

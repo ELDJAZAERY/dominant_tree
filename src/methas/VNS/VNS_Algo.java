@@ -23,10 +23,10 @@ public class VNS_Algo {
 
         while (iter < MaxIter){
 
-            //System.out.println("---- New dSolution ---");
-            // dSolution initial
-             //currentSolution = new VNSolution();
-            // fussionner current with bestSol
+            System.out.println("---- New dSolution ---");
+             //dSolution initial
+             currentSolution = new VNSolution();
+             //fussionner current with bestSol
 
             k = 2;
             while(k <= Kmax){

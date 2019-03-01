@@ -111,13 +111,13 @@ public class Node implements Comparable {
 
     public boolean isPurninable(HashSet<Node> nodes){
         for(Node neighbor : neighborsNodes){
-            if(!neighbor.haveAnotherDominNode(this,nodes))
+            if(!neighbor.haveAnotherDominNeighbor(this,nodes))
                 return false;
         }
         return true;
     }
 
-    public boolean haveAnotherDominNode(Node dominNode , HashSet<Node> nodes){
+    public boolean haveAnotherDominNeighbor(Node dominNode , HashSet<Node> nodes){
         for(Node neighbor : neighborsNodes){
             if(nodes.contains(neighbor) &&
                     !neighbor.equals(dominNode))
@@ -126,26 +126,18 @@ public class Node implements Comparable {
         return false;
     }
 
-    // Fitness calculation phase
-    public double somWeight(HashSet<Node> dominateTree){
-        double som = 0;
-        if(dominateTree.size() == 0)
-            return som;
-        for(Node neighbor:neighborsNodes)
-            if(dominateTree.contains(neighbor))
-                som += weight(neighbor);
 
-        return som;
-    }
-
-    public double weight(Node neighbor){
-        try{
-            return neighbors.get(neighbor);
-        }catch (Exception e) {
-            return 0;
+    public HashSet<Node> getDominNeighbors(ArrayList<Node> dominSet){
+        HashSet<Node> dn = new HashSet<>();
+        for(Node neighbor:neighborsNodes){
+            if(dominSet.contains(neighbor))
+                dn.add(neighbor);
         }
+        return dn;
     }
 
+
+    // Fitness calculation phase
 
 
 
