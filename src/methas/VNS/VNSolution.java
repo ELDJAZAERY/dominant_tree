@@ -1,5 +1,6 @@
 package methas.VNS;
 
+import data.representation.Graph;
 import data.representation.Node;
 import data.representation.Solution;
 
@@ -18,7 +19,7 @@ public class VNSolution extends Solution implements Comparable ,Cloneable {
 
         for(int i=0 ; i <= K ; i++) {
             oldNode = clone.getRandomNode();
-            newNode = oldNode.getRandomNeighbor(clone.dominoTree);
+            newNode = Graph.getRandomNode();
             if(newNode != null){
                 clone.dominoTree.remove(oldNode);
                 clone.dominoTree.add(newNode);

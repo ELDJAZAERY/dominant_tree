@@ -39,7 +39,7 @@ public class dSolution extends Solution implements Comparable ,Cloneable {
 
         for(int i=1 ; i <= K ; i++) {
             oldNode = cloneSolution.getRandomNode();
-            newNode = oldNode.getRandomNeighbor(cloneSolution.dominoTree);
+            newNode = Graph.getRandomNode();
             if(newNode != null){
                 cloneSolution.dominoTree.remove(oldNode);
                 cloneSolution.dominoTree.add(newNode);

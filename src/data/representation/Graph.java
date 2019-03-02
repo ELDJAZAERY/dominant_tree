@@ -112,6 +112,15 @@ public class Graph {
         return isExplored(exploredNodes);
     }
 
+    public static boolean isDomiTree(ArrayList<Node> domiNodes){
+        Set<Node> exploredNodes = new HashSet<>();
+        for(Node n:domiNodes){
+            exploredNodes.addAll(n.getNeighborsNodes());
+        }
+        return isExplored(exploredNodes);
+    }
+
+
     public static boolean isExplored(Set<Node> nodesExplored){
         return nodesExplored.containsAll(Nodes);
     }

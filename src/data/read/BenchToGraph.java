@@ -53,7 +53,7 @@ public class BenchToGraph {
             n2 = tempNodes.get(Integer.valueOf(row[1]));
 
             weight = Double.valueOf(row[2]);
-            weight = new Double(weight).intValue();
+            //weight = new Double(weight).intValue();
 
             n1.addNeighbor(n2,weight);
         }

@@ -1,50 +1,64 @@
 package data.representation;
 
 import application.Main;
-import com.sun.xml.internal.bind.v2.TODO;
 
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 
 
-public class Solution implements Comparable , Cloneable  {
+public class Solution2 implements Comparable , Cloneable  {
 
 
     public static int nbEvaluations = 0;
 
     protected HashSet<Node> dominoTree ;
-    private HashSet<Arc> path ;
+    private HashSet<Arc> path = new HashSet<>();
     private double fitness;
+    public boolean isSolution;
+    private Set<Node> ExploredNode ;
 
 
     // @ Generate Default Random dSolution
 
-    public Solution(){
+    public Solution2(){
+
+        // Nodes initial
+        Node CurrentNode ;
+        isSolution = false;
 
         // while we don't find solution and there is more Nodes
+        ExploredNode = new HashSet<>();
         dominoTree   = new HashSet<>();
 
-        ArrayList<Node> graph = new ArrayList<>(Graph.Nodes);
-        Collections.shuffle(graph);
+        if(Graph.DominatesNodes.size() != 0){
+            dominoTree.addAll(Graph.DominatesNodes);
+        }else{
+            dominoTree.add(Graph.getRandomNode());
+        }
 
-        HashSet<Node> NodesExplored = new HashSet<>();
 
-        if(Graph.DominatesNodes.size() != 0) {
-            for(Node node:Graph.DominatesNodes){
-                dominoTree.add(node);
+        while(true){
 
-                NodesExplored.add(node);
-                NodesExplored.addAll(node.getNeighborsNodes());
+            CurrentNode  = Graph.getRandomNeighborNode(dominoTree);
+
+            /* ### explore all Node without find dSolution ### */
+            if(CurrentNode == null) {
+                System.err.println("### No dSolution -- Graph Non Connexe ###");
+                System.exit(-1);
             }
-        }
 
-        for(int i = 0 ; i < graph.size() ; i++){
-            if(Graph.isDomiTree(this)) break;
-            dominoTree.add(graph.get(i));
-        }
+            dominoTree.add(CurrentNode);
+            ExploredNode.add(CurrentNode);
+            ExploredNode.addAll(CurrentNode.getNeighborsNodes());
 
-        MAJ_sol();
+            if(Graph.isExplored(ExploredNode)){
+                MAJ_sol();
+                return;
+            }
+
+        }
     }
+
 
 
     // @ getters
@@ -94,59 +108,77 @@ public class Solution implements Comparable , Cloneable  {
         for(Node node : dominoTree){
             if(node.isPurninable(afterPruning))
                 afterPruning.remove(node);
+            //System.out.println(node.isPurninable(afterPruning));
         }
         dominoTree = afterPruning;
     }
 
 
-
-    // #Correction_Phase
+    // Correction Phase
 
     // TODO NO CORRECTION YET
     public void correction(){
 
-        ArrayList<Node> graph = new ArrayList<>(Graph.Nodes);
-        Collections.shuffle(graph);
+        isSolution = false;
+        if(!Graph.DominatesNodes.isEmpty())
+            dominoTree.addAll(Graph.DominatesNodes);
 
-        ArrayList<Node> dominoTree = new ArrayList<>(this.dominoTree);
+        Node CurrentNode;
+        HashSet<Node> tempNodes = new HashSet<>();
 
-        // HashSet no duplicated Node
-        this.dominoTree.clear();
+        CurrentNode =  get(0);
+        tempNodes.add(CurrentNode);
 
-        for(int i = 0 ; i < dominoTree.size() ; i++){
-            if(Graph.isDomiTree(this)) {
-                MAJ_sol();
-                return;
+
+        for(Node n:dominoTree){
+            if(n.isNeighbor(tempNodes)){
+                tempNodes.add(n);
             }
-
-            this.dominoTree.add(dominoTree.get(i));
+            if(Graph.isDomiTree(tempNodes)) {
+                break;
+            }
         }
 
-        for(int i = 0 ; i < graph.size() ; i++){
-            if(Graph.isDomiTree(this)) {
-                MAJ_sol();
-                return;
-            }
 
-            this.dominoTree.add(graph.get(i));
+        while(!Graph.isDomiTree(tempNodes)){
+            CurrentNode = Graph.getRandomNeighborNode(tempNodes);
+            tempNodes.add(CurrentNode);
         }
+
+
+        dominoTree = tempNodes;
+        MAJ_sol();
     }
 
 
     public void MAJ_sol(){
+
+        //pruning();
+        // connect dominate Node
+//        System.out.println("MAJ Solution");
+//        System.out.println("befor connect"+dominoTree.size());
+        //Connect();
+//        System.out.println("after connect befor pruning"+dominoTree.size());
+
         pruning();
+//        System.out.println("after pruning"+dominoTree.size());
 
         Connect();
+//        System.out.println("after connect"+dominoTree.size());
 
         MST();
+//        System.out.println("MAJ Solution\n\n\n");
+        //MAJ_Arcs();
 
+
+        // MAJ Fitness
         MAJ_Fitness();
     }
 
 
     public void MST(){
 
-        path = new HashSet<>();
+        path.clear();
 
         Node nextNode;
         ArrayList<Node> nodes = new ArrayList<>();
@@ -235,6 +267,8 @@ public class Solution implements Comparable , Cloneable  {
                 newDominateSet.addAll(path2);
                 DominateSet.removeAll(path2);
                 continue;
+            }else{
+                System.out.println("Connect infini boucle "+DominateSet.toString());
             }
 
         }
@@ -380,14 +414,14 @@ public class Solution implements Comparable , Cloneable  {
 
     @Override
     public int compareTo(Object o) {
-        return (int)(fitness - ((Solution) o).fitness);
+        return (int)(fitness - ((Solution2) o).fitness);
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Solution)) return false;
-        return dominoTree.equals(((Solution) o).dominoTree);
+        if (!(o instanceof Solution2)) return false;
+        return dominoTree.equals(((Solution2) o).dominoTree);
     }
 
     @Override
@@ -436,9 +470,9 @@ public class Solution implements Comparable , Cloneable  {
 
     @Override
     protected Object clone() {
-        Solution clone = null;
+        Solution2 clone = null;
         try{
-            clone = (Solution) super.clone();
+            clone = (Solution2) super.clone();
             clone.dominoTree = new HashSet<>(dominoTree);
             clone.fitness = fitness;
             return clone;
