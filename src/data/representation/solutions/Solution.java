@@ -1,7 +1,9 @@
-package data.representation;
+package data.representation.solutions;
 
 import application.Main;
-import com.sun.xml.internal.bind.v2.TODO;
+import data.representation.Arc;
+import data.representation.Graph;
+import data.representation.Node;
 
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
@@ -12,7 +14,7 @@ public class Solution implements Comparable , Cloneable  {
 
     public static int nbEvaluations = 0;
 
-    protected HashSet<Node> dominoTree ;
+    public HashSet<Node> dominoTree ;
     private HashSet<Arc> path ;
     private double fitness;
 
@@ -39,7 +41,7 @@ public class Solution implements Comparable , Cloneable  {
         }
 
         for(int i = 0 ; i < graph.size() ; i++){
-            if(Graph.isDomiTree(this)) break;
+            if(isSolution()) break;
             dominoTree.add(graph.get(i));
         }
 
@@ -89,20 +91,9 @@ public class Solution implements Comparable , Cloneable  {
     }
 
 
-    public void pruning(){
-        HashSet<Node> afterPruning = new HashSet<>(dominoTree);
-        for(Node node : dominoTree){
-            if(node.isPurninable(afterPruning))
-                afterPruning.remove(node);
-        }
-        dominoTree = afterPruning;
-    }
+    // TODO #Correction_Phase
 
 
-
-    // #Correction_Phase
-
-    // TODO NO CORRECTION YET
     public void correction(){
 
         ArrayList<Node> graph = new ArrayList<>(Graph.Nodes);
@@ -114,7 +105,7 @@ public class Solution implements Comparable , Cloneable  {
         this.dominoTree.clear();
 
         for(int i = 0 ; i < dominoTree.size() ; i++){
-            if(Graph.isDomiTree(this)) {
+            if(isSolution()) {
                 MAJ_sol();
                 return;
             }
@@ -123,13 +114,32 @@ public class Solution implements Comparable , Cloneable  {
         }
 
         for(int i = 0 ; i < graph.size() ; i++){
-            if(Graph.isDomiTree(this)) {
+            if(isSolution()) {
                 MAJ_sol();
                 return;
             }
 
             this.dominoTree.add(graph.get(i));
         }
+    }
+
+
+    public boolean isSolution(){
+        Set<Node> exploredNodes = new HashSet<>();
+        for(Node n:dominoTree){
+            exploredNodes.addAll(n.getNeighborsNodes());
+        }
+        return exploredNodes.containsAll(Graph.Nodes);
+    }
+
+
+    public void pruning(){
+        HashSet<Node> afterPruning = new HashSet<>(dominoTree);
+        for(Node node : dominoTree){
+            if(node.isPurninable(afterPruning))
+                afterPruning.remove(node);
+        }
+        dominoTree = afterPruning;
     }
 
 
@@ -341,7 +351,7 @@ public class Solution implements Comparable , Cloneable  {
     }
 
 
-    // TODO
+
     public Node getHaveMaxDominNeighbr(ArrayList<Node> dominSet){
 
         int max = 0;
@@ -395,7 +405,6 @@ public class Solution implements Comparable , Cloneable  {
         return Objects.hash(dominoTree);
     }
 
-
     @Override
     public String toString() {
         String out = "";
@@ -411,7 +420,6 @@ public class Solution implements Comparable , Cloneable  {
         return out;
     }
 
-
     public void printPerformance() {
 
         double now = System.currentTimeMillis() / 1000;
@@ -422,7 +430,7 @@ public class Solution implements Comparable , Cloneable  {
         out += "\tTime        : " + (now - Main.startTime) + " Sec ,\n";
         out += "\tCardinality : " + dominoTree.size() + " ,\n";
         out += "\tEvaluations : " + nbEvaluations + " times ,\n";
-        out += "\tIsDominate  : " + Graph.isDomiTree(dominoTree) + " , \n";
+        out += "\tIsDominate  : " + isSolution() + " , \n";
         out += "\tIsConnexe   : " + isConnexe() + "  ,\n";
         out += "\tNb Arcs     : " + path.size() + "  ,\n";
         //out += "\tArcs        : " + path.toString() + "  ,\n";
@@ -431,8 +439,6 @@ public class Solution implements Comparable , Cloneable  {
         
         System.out.println(out);
     }
-
-
 
     @Override
     protected Object clone() {

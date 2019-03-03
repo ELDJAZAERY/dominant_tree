@@ -117,6 +117,15 @@ public class Node implements Comparable {
         return true;
     }
 
+    public boolean isPurninable(ArrayList<Node> nodes){
+        for(Node neighbor : neighborsNodes){
+            if(!neighbor.haveAnotherDominNeighbor(this,nodes))
+                return false;
+        }
+        return true;
+    }
+
+
     public boolean haveAnotherDominNeighbor(Node dominNode , HashSet<Node> nodes){
         for(Node neighbor : neighborsNodes){
             if(nodes.contains(neighbor) &&
@@ -126,6 +135,14 @@ public class Node implements Comparable {
         return false;
     }
 
+    public boolean haveAnotherDominNeighbor(Node dominNode , ArrayList<Node> nodes){
+        for(Node neighbor : neighborsNodes){
+            if(nodes.contains(neighbor) &&
+                    !neighbor.equals(dominNode))
+                return true;
+        }
+        return false;
+    }
 
     public HashSet<Node> getDominNeighbors(ArrayList<Node> dominSet){
         HashSet<Node> dn = new HashSet<>();

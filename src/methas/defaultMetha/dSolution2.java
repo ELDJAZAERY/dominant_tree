@@ -1,19 +1,20 @@
 package methas.defaultMetha;
 
-import data.representation.*;
+import data.representation.Graph;
+import data.representation.Node;
 import data.representation.solutions.Binary_Solution;
-import data.representation.solutions.Solution;
-
-public class dSolution extends Solution implements Comparable ,Cloneable {
 
 
-    public dSolution(){}
+public class dSolution2 extends Binary_Solution implements Comparable ,Cloneable {
 
-    public dSolution shaking(int K) {
+
+    public dSolution2(){}
+
+    public dSolution2 shaking(int K) {
 
         if(dominoTree.size() < 2) return this;
 
-        dSolution clone = (dSolution) this.clone();
+        dSolution2 clone = (dSolution2) this.clone();
 
         Node oldNode ;
 
@@ -30,16 +31,16 @@ public class dSolution extends Solution implements Comparable ,Cloneable {
         return clone;
     }
 
-    public dSolution LocalSearch(int K){
+    public dSolution2 LocalSearch(int K){
         if(dominoTree.size() < 2) return this;
 
-        dSolution cloneSolution = (dSolution) this.clone();
+        dSolution2 cloneSolution = (dSolution2) this.clone();
 
         Node oldNode , newNode;
 
         for(int i=1 ; i <= K ; i++) {
             oldNode = cloneSolution.getRandomNode();
-            newNode = oldNode.getRandomNeighbor(cloneSolution.dominoTree);
+            newNode = Graph.getRandomNode();
             if(newNode != null){
                 cloneSolution.dominoTree.remove(oldNode);
                 cloneSolution.dominoTree.add(newNode);

@@ -1,68 +1,71 @@
-package data.representation;
+package data.representation.solutions;
 
 import application.Main;
+import data.representation.Arc;
+import data.representation.Graph;
+import data.representation.Node;
+import sun.management.snmp.jvminstr.JvmThreadInstanceEntryImpl;
 
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 
 
-public class Solution2 implements Comparable , Cloneable  {
+public class Binary_Solution implements Comparable , Cloneable  {
 
 
     public static int nbEvaluations = 0;
 
-    protected HashSet<Node> dominoTree ;
-    private HashSet<Arc> path = new HashSet<>();
+    protected ArrayList<Node> dominoTree ;
+    protected Byte[] binary ;
+
+    private HashSet<Arc> path ;
     private double fitness;
-    public boolean isSolution;
-    private Set<Node> ExploredNode ;
 
 
     // @ Generate Default Random dSolution
 
-    public Solution2(){
-
-        // Nodes initial
-        Node CurrentNode ;
-        isSolution = false;
+    public Binary_Solution(){
 
         // while we don't find solution and there is more Nodes
-        ExploredNode = new HashSet<>();
-        dominoTree   = new HashSet<>();
+        dominoTree   = new ArrayList<>();
+        binary = new Byte[Graph.Nodes.size()];
 
-        if(Graph.DominatesNodes.size() != 0){
-            dominoTree.addAll(Graph.DominatesNodes);
-        }else{
-            dominoTree.add(Graph.getRandomNode());
+        ArrayList<Node> graph = new ArrayList<>(Graph.Nodes);
+        Collections.shuffle(graph);
+
+        HashSet<Node> NodesExplored = new HashSet<>();
+
+        if(Graph.DominatesNodes.size() != 0) {
+            for(Node node:Graph.DominatesNodes){
+                dominoTree.add(node);
+
+                NodesExplored.add(node);
+                NodesExplored.addAll(node.getNeighborsNodes());
+            }
         }
 
+        for(int i = 0 ; i < graph.size() ; i++){
+            if(isSolution()) break;
+            dominoTree.add(graph.get(i));
+        }
 
-        while(true){
+        MAJ_sol();
+        MAJ_binary();
+    }
 
-            CurrentNode  = Graph.getRandomNeighborNode(dominoTree);
 
-            /* ### explore all Node without find dSolution ### */
-            if(CurrentNode == null) {
-                System.err.println("### No dSolution -- Graph Non Connexe ###");
-                System.exit(-1);
-            }
-
-            dominoTree.add(CurrentNode);
-            ExploredNode.add(CurrentNode);
-            ExploredNode.addAll(CurrentNode.getNeighborsNodes());
-
-            if(Graph.isExplored(ExploredNode)){
-                MAJ_sol();
-                return;
-            }
-
+    public void MAJ_binary(){
+        int i = 0;
+        for(Node node:Graph.Nodes){
+                binary[i] = (byte) 1;
+                binary[i] = dominoTree.contains(node) ? (byte) 1 : (byte) 0;
+                i++;
         }
     }
 
 
-
     // @ getters
-    public HashSet<Node> getDominoTree(){
+    public ArrayList<Node> getDominoTree(){
         return dominoTree;
     }
 
@@ -104,81 +107,85 @@ public class Solution2 implements Comparable , Cloneable  {
 
 
     public void pruning(){
-        HashSet<Node> afterPruning = new HashSet<>(dominoTree);
+        ArrayList<Node> afterPruning = new ArrayList<>(dominoTree);
         for(Node node : dominoTree){
             if(node.isPurninable(afterPruning))
                 afterPruning.remove(node);
-            //System.out.println(node.isPurninable(afterPruning));
         }
         dominoTree = afterPruning;
     }
 
 
-    // Correction Phase
+    // TODO #Correction_Phase
 
-    // TODO NO CORRECTION YET
+    public boolean isSolution(){
+        Set<Node> exploredNodes = new HashSet<>();
+        for(Node n:dominoTree){
+            exploredNodes.addAll(n.getNeighborsNodes());
+        }
+        return exploredNodes.containsAll(Graph.Nodes);
+    }
+
+    public void correctionBinary(){
+        dominoTree.clear();
+
+        int i = 0;
+        for(Node node:Graph.Nodes){
+            if(binary[i] == 1)
+                dominoTree.add(node);
+            i++;
+        }
+
+        correction();
+    }
+
     public void correction(){
 
-        isSolution = false;
-        if(!Graph.DominatesNodes.isEmpty())
-            dominoTree.addAll(Graph.DominatesNodes);
+        ArrayList<Node> graph = new ArrayList<>(Graph.Nodes);
+        Collections.shuffle(graph);
 
-        Node CurrentNode;
-        HashSet<Node> tempNodes = new HashSet<>();
+        ArrayList<Node> dominoTree = new ArrayList<>(this.dominoTree);
 
-        CurrentNode =  get(0);
-        tempNodes.add(CurrentNode);
+        // HashSet no duplicated Node
+        this.dominoTree.clear();
 
-
-        for(Node n:dominoTree){
-            if(n.isNeighbor(tempNodes)){
-                tempNodes.add(n);
+        for(int i = 0 ; i < dominoTree.size() ; i++){
+            if(isSolution()) {
+                MAJ_sol();
+                return;
             }
-            if(Graph.isDomiTree(tempNodes)) {
-                break;
-            }
+
+            this.dominoTree.add(dominoTree.get(i));
         }
 
+        for(int i = 0 ; i < graph.size() ; i++){
+            if(isSolution()) {
+                MAJ_sol();
+                return;
+            }
 
-        while(!Graph.isDomiTree(tempNodes)){
-            CurrentNode = Graph.getRandomNeighborNode(tempNodes);
-            tempNodes.add(CurrentNode);
+            this.dominoTree.add(graph.get(i));
         }
-
-
-        dominoTree = tempNodes;
-        MAJ_sol();
     }
 
 
     public void MAJ_sol(){
 
-        //pruning();
-        // connect dominate Node
-//        System.out.println("MAJ Solution");
-//        System.out.println("befor connect"+dominoTree.size());
-        //Connect();
-//        System.out.println("after connect befor pruning"+dominoTree.size());
+        Connect();
 
         pruning();
-//        System.out.println("after pruning"+dominoTree.size());
 
         Connect();
-//        System.out.println("after connect"+dominoTree.size());
 
         MST();
-//        System.out.println("MAJ Solution\n\n\n");
-        //MAJ_Arcs();
 
-
-        // MAJ Fitness
         MAJ_Fitness();
     }
 
 
     public void MST(){
 
-        path.clear();
+        path = new HashSet<>();
 
         Node nextNode;
         ArrayList<Node> nodes = new ArrayList<>();
@@ -267,13 +274,11 @@ public class Solution2 implements Comparable , Cloneable  {
                 newDominateSet.addAll(path2);
                 DominateSet.removeAll(path2);
                 continue;
-            }else{
-                System.out.println("Connect infini boucle "+DominateSet.toString());
             }
 
         }
 
-        dominoTree = newDominateSet;
+        dominoTree = new ArrayList<>(newDominateSet);
     }
 
 
@@ -414,14 +419,14 @@ public class Solution2 implements Comparable , Cloneable  {
 
     @Override
     public int compareTo(Object o) {
-        return (int)(fitness - ((Solution2) o).fitness);
+        return (int)(fitness - ((Binary_Solution) o).fitness);
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Solution2)) return false;
-        return dominoTree.equals(((Solution2) o).dominoTree);
+        if (!(o instanceof Binary_Solution)) return false;
+        return dominoTree.equals(((Binary_Solution) o).dominoTree);
     }
 
     @Override
@@ -456,9 +461,10 @@ public class Solution2 implements Comparable , Cloneable  {
         out += "\tTime        : " + (now - Main.startTime) + " Sec ,\n";
         out += "\tCardinality : " + dominoTree.size() + " ,\n";
         out += "\tEvaluations : " + nbEvaluations + " times ,\n";
-        out += "\tIsDominate  : " + Graph.isDomiTree(dominoTree) + " , \n";
+        out += "\tIsDominate  : " + isSolution() + " , \n";
         out += "\tIsConnexe   : " + isConnexe() + "  ,\n";
         out += "\tNb Arcs     : " + path.size() + "  ,\n";
+        //out += "\tBinary      : " + binarytoString() + "  ,\n";
         //out += "\tArcs        : " + path.toString() + "  ,\n";
 
         out += "}\n";
@@ -466,14 +472,21 @@ public class Solution2 implements Comparable , Cloneable  {
         System.out.println(out);
     }
 
+    public String binarytoString(){
+        String out = " ";
+        for(Byte bin:binary){
+            out += bin + ",";
+        }
+        return out;
+    }
 
 
     @Override
     protected Object clone() {
-        Solution2 clone = null;
+        Binary_Solution clone = null;
         try{
-            clone = (Solution2) super.clone();
-            clone.dominoTree = new HashSet<>(dominoTree);
+            clone = (Binary_Solution) super.clone();
+            clone.dominoTree = new ArrayList<>(dominoTree);
             clone.fitness = fitness;
             return clone;
         }catch (Exception e){

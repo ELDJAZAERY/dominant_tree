@@ -1,0 +1,108 @@
+Solution {
+ 	fitness     : 1597.4 ,
+	Time        : 0.0 Sec ,
+	Cardinality : 24 ,
+	Evaluations : 4 times ,
+	IsDominate  : true ,
+	IsConnexe   : true  ,
+	Nb Arcs     : 23  ,
+}
+
+
+Solution {
+ 	fitness     : 1560.0699999999997 ,
+	Time        : 0.0 Sec ,
+	Cardinality : 23 ,
+	Evaluations : 7 times ,
+	IsDominate  : true ,
+	IsConnexe   : true  ,
+	Nb Arcs     : 22  ,
+}
+
+
+Solution {
+ 	fitness     : 1533.7099999999998 ,
+	Time        : 0.0 Sec ,
+	Cardinality : 22 ,
+	Evaluations : 24 times ,
+	IsDominate  : true ,
+	IsConnexe   : true  ,
+	Nb Arcs     : 21  ,
+}
+
+
+Solution {
+ 	fitness     : 1507.13 ,
+	Time        : 0.0 Sec ,
+	Cardinality : 22 ,
+	Evaluations : 35 times ,
+	IsDominate  : true ,
+	IsConnexe   : true  ,
+	Nb Arcs     : 21  ,
+}
+
+
+Solution {
+ 	fitness     : 1432.1699999999996 ,
+	Time        : 0.0 Sec ,
+	Cardinality : 22 ,
+	Evaluations : 38 times ,
+	IsDominate  : true ,
+	IsConnexe   : true  ,
+	Nb Arcs     : 21  ,
+}
+
+
+Solution {
+ 	fitness     : 1420.5 ,
+	Time        : 1.0 Sec ,
+	Cardinality : 22 ,
+	Evaluations : 165 times ,
+	IsDominate  : true ,
+	IsConnexe   : true  ,
+	Nb Arcs     : 21  ,
+}
+
+
+Solution {
+ 	fitness     : 1408.81 ,
+	Time        : 1.0 Sec ,
+	Cardinality : 21 ,
+	Evaluations : 168 times ,
+	IsDominate  : true ,
+	IsConnexe   : true  ,
+	Nb Arcs     : 20  ,
+}
+
+
+Solution {
+ 	fitness     : 1369.58 ,
+	Time        : 1.0 Sec ,
+	Cardinality : 22 ,
+	Evaluations : 180 times ,
+	IsDominate  : true ,
+	IsConnexe   : true  ,
+	Nb Arcs     : 21  ,
+}
+
+
+Solution {
+ 	fitness     : 1353.25 ,
+	Time        : 1.0 Sec ,
+	Cardinality : 20 ,
+	Evaluations : 566 times ,
+	IsDominate  : true ,
+	IsConnexe   : true  ,
+	Nb Arcs     : 19  ,
+}
+
+
+Solution {
+ 	fitness     : 1343.29 ,
+	Time        : 3.0 Sec ,
+	Cardinality : 21 ,
+	Evaluations : 3404 times ,
+	IsDominate  : true ,
+	IsConnexe   : true  ,
+	Nb Arcs     : 20  ,
+}

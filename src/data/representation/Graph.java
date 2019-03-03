@@ -1,11 +1,10 @@
 package data.representation;
 
 import data.read.BenchToGraph;
-import org.jetbrains.annotations.Nullable;
+import data.representation.solutions.Solution;
 
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.LinkedList;
 import java.util.Set;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -97,32 +96,5 @@ public class Graph {
         return null;
     }
 
-
-    // Verification phase
-
-    public static boolean isDomiTree(Solution s){
-        return isDomiTree(s.dominoTree);
-    }
-
-    public static boolean isDomiTree(HashSet<Node> domiNodes){
-        Set<Node> exploredNodes = new HashSet<>();
-        for(Node n:domiNodes){
-            exploredNodes.addAll(n.getNeighborsNodes());
-        }
-        return isExplored(exploredNodes);
-    }
-
-    public static boolean isDomiTree(ArrayList<Node> domiNodes){
-        Set<Node> exploredNodes = new HashSet<>();
-        for(Node n:domiNodes){
-            exploredNodes.addAll(n.getNeighborsNodes());
-        }
-        return isExplored(exploredNodes);
-    }
-
-
-    public static boolean isExplored(Set<Node> nodesExplored){
-        return nodesExplored.containsAll(Nodes);
-    }
 
 }

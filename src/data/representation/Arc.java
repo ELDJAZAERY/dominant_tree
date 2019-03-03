@@ -2,6 +2,7 @@ package data.representation;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Objects;
 
@@ -32,6 +33,13 @@ public class Arc implements Comparable , Cloneable {
         return false;
     }
 
+    public boolean appartien(ArrayList<Node> dominoTree){
+        if(dominoTree.contains(debut) &&
+                dominoTree.contains(fin))
+            return true;
+        return false;
+    }
+
     public boolean isNeighborTo(HashSet<Node> dominTree){
         if(appartien(dominTree)) return false;
         if(dominTree.contains(debut) ||
@@ -47,7 +55,7 @@ public class Arc implements Comparable , Cloneable {
 
     @Override
     public int compareTo(@NotNull Object o) {
-        return (int)(weight - ((Arc) o).weight);
+        return (int)weight - (int)((Arc) o).weight;
     }
 
     @Override

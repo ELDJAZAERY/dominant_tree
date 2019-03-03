@@ -24,10 +24,9 @@ public class dAlgo {
         while(--init != 0) {
             currentSolution = new dSolution();
             if(BestSolution.compareTo(currentSolution)>0){
-                LastBest.add(BestSolution);
                 BestSolution = currentSolution;
                 BestSolution.printPerformance();
-                System.out.println(" --- INITIAL SOLUTIONS ----");
+                //System.out.println(" --- INITIAL SOLUTIONS ----");
             }
         }
 
@@ -51,6 +50,7 @@ public class dAlgo {
 
                 if(BestSolution.compareTo(currentSolution)>0){
                     BestSolution = currentSolution;
+                    LastBest.add(BestSolution);
                     BestSolution.printPerformance();
                     k=1;
                 }
@@ -60,6 +60,7 @@ public class dAlgo {
 
                 if(BestSolution.compareTo(currentSolution)>0){
                     BestSolution = currentSolution;
+                    LastBest.add(BestSolution);
                     BestSolution.printPerformance();
                     k=1;
                 }
