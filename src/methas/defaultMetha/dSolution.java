@@ -43,6 +43,8 @@ public class dSolution extends Solution implements Comparable ,Cloneable {
             if(newNode != null){
                 cloneSolution.dominoTree.remove(oldNode);
                 cloneSolution.dominoTree.add(newNode);
+            }else{
+                cloneSolution.dominoTree.remove(oldNode);
             }
         }
 

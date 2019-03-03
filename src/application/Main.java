@@ -1,6 +1,7 @@
 package application;
 
 import data.representation.Graph;
+import data.representation.solutions.Binary_Solution;
 import data.representation.solutions.Solution;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -42,16 +43,15 @@ public class Main extends Application {
         startTime = System.currentTimeMillis() / 1000;
 
 
-        //dAlgo.Exec(10,10000);
+        //dAlgo.Exec(20,10000);
         //VNS_Algo.Exec(5,100000);
-        G_Algo.Exec(25,1000);
+        G_Algo.Exec(15,1000);
         //BSO_Algo.Exec(5,2,1000);
 
-//
 //        double min = 100000;
 //        int i = 0;
 //        Solution Best = new Solution();
-//        while (++i<500){
+//        while (++i<5000){
 //            Solution s = new Solution();
 //            if(min > s.fitness() ){
 //                min = s.fitness();
@@ -60,6 +60,22 @@ public class Main extends Application {
 //        }
 //
 //        Best.printPerformance();
+//
+//
+//        int i2 = 0;
+//        Binary_Solution Best2 = new Binary_Solution();
+//        while (++i2<5000){
+//            Binary_Solution s = new Binary_Solution();
+//            if(min > s.fitness() ){
+//                min = s.fitness();
+//                Best2 = s;
+//            }
+//        }
+//
+//        Best2.printPerformance();
+
+
+
 
     }
 

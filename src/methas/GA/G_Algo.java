@@ -30,18 +30,23 @@ public class G_Algo {
             newPopulation = new ArrayList<>();
 
 
-            for(int i = 0 ; i < K-1 ; i++){
+            for(int i = 0 ; i < K ; i++){
 
                 // get Have Max fitness
                 n = population.get(i);
 
-                n1 = population.get(i+1);
+                // i % K
+                n1 = (i==K-1) ? new GA_Solution() : population.get(i+1);
 
-                nstar = GA_Solution.crossOver(n,n1);
+
+                /** #CrossOver **/
+                //nstar = GA_Solution.crossOver(n,n1);
+                nstar = new GA_Solution(n,n1);
+
 
                 // proba of 5% to do Mutation
                 int proba = ThreadLocalRandom.current().nextInt(0,100);
-                if(proba <= 5)
+                if(proba <= 75)
                     nstar.mutation();
 
                 nstar = nstar.LocalSearch();
@@ -53,7 +58,6 @@ public class G_Algo {
                 newPopulation.add(nstar);
             }
 
-            newPopulation.add(new GA_Solution());
             population = newPopulation;
         }
 
