@@ -44,9 +44,9 @@ public class Main extends Application {
 
 
         //dAlgo.Exec(20,10000);
-        //VNS_Algo.Exec(5,100000);
-        G_Algo.Exec(15,1000);
-        //BSO_Algo.Exec(5,2,1000);
+        VNS_Algo.Exec(5,100000);
+        //G_Algo.Exec(15,1000);
+        //BSO_Algo.Exec(10,2,1000);
 
 //        double min = 100000;
 //        int i = 0;
@@ -60,6 +60,7 @@ public class Main extends Application {
 //        }
 //
 //        Best.printPerformance();
+
 //
 //
 //        int i2 = 0;

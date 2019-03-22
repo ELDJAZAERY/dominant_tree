@@ -30,13 +30,13 @@ public class G_Algo {
             newPopulation = new ArrayList<>();
 
 
-            for(int i = 0 ; i < K ; i++){
+            for(int i = 0 ; i < K-3 ; i++){
 
                 // get Have Max fitness
                 n = population.get(i);
 
                 // i % K
-                n1 = (i==K-1) ? new GA_Solution() : population.get(i+1);
+                n1 = population.get(i+1);
 
 
                 /** #CrossOver **/
@@ -57,6 +57,10 @@ public class G_Algo {
 
                 newPopulation.add(nstar);
             }
+
+            newPopulation.add(population.get(0));
+            newPopulation.add(population.get(1));
+            newPopulation.add(population.get(2));
 
             population = newPopulation;
         }

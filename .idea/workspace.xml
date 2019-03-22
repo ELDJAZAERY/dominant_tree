@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/methas/GA/GA_Solution2.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/out/production/dominate_tree/application/Main.class" afterPath="$PROJECT_DIR$/out/production/dominate_tree/application/Main.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/dominate_tree/methas/GA/GA_Solution.class" afterPath="$PROJECT_DIR$/out/production/dominate_tree/methas/GA/GA_Solution.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/dominate_tree/data/representation/Graph.class" afterPath="$PROJECT_DIR$/out/production/dominate_tree/data/representation/Graph.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/dominate_tree/data/representation/Node.class" afterPath="$PROJECT_DIR$/out/production/dominate_tree/data/representation/Node.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/dominate_tree/data/representation/solutions/Solution.class" afterPath="$PROJECT_DIR$/out/production/dominate_tree/data/representation/solutions/Solution.class" />
       <change beforePath="$PROJECT_DIR$/out/production/dominate_tree/methas/GA/G_Algo.class" afterPath="$PROJECT_DIR$/out/production/dominate_tree/methas/GA/G_Algo.class" />
       <change beforePath="$PROJECT_DIR$/src/application/Main.java" afterPath="$PROJECT_DIR$/src/application/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/methas/GA/GA_Solution.java" afterPath="$PROJECT_DIR$/src/methas/GA/GA_Solution.java" />
+      <change beforePath="$PROJECT_DIR$/src/data/representation/Graph.java" afterPath="$PROJECT_DIR$/src/data/representation/Graph.java" />
+      <change beforePath="$PROJECT_DIR$/src/data/representation/Node.java" afterPath="$PROJECT_DIR$/src/data/representation/Node.java" />
+      <change beforePath="$PROJECT_DIR$/src/data/representation/solutions/Solution.java" afterPath="$PROJECT_DIR$/src/data/representation/solutions/Solution.java" />
       <change beforePath="$PROJECT_DIR$/src/methas/GA/G_Algo.java" afterPath="$PROJECT_DIR$/src/methas/GA/G_Algo.java" />
-      <change beforePath="$PROJECT_DIR$/src/methas/defaultMetha/dSolution.java" afterPath="$PROJECT_DIR$/src/methas/defaultMetha/dSolution.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,7 +25,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/dominate_tree$Main.coverage" NAME="Main Coverage Results" MODIFIED="1551130744095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/dominate_tree$Main.coverage" NAME="Main Coverage Results" MODIFIED="1551823208061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>application.*</FILTER>
     </SUITE>
   </component>
@@ -87,10 +89,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/application/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
+            <state relative-caret-position="237">
               <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding>
                 <element signature="method#start#0;class#Main#0" expanded="false" />
@@ -99,21 +101,103 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GA_Solution.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/methas/GA/GA_Solution.java">
+      <file leaf-file-name="dAlgo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/methas/defaultMetha/dAlgo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-566">
-              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="-77">
+              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="G_Algo.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dSolution.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/methas/defaultMetha/dSolution.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="464">
+              <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Node.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/data/representation/Node.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1452">
+              <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+              <folding>
+                <element signature="e#1763#1764#0" expanded="true" />
+                <element signature="e#1790#1791#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Graph.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/data/representation/Graph.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+              <folding>
+                <element signature="method#getRandomNode#0;class#Graph#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/data/representation/solutions/Solution.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4158">
+              <caret line="211" column="0" lean-forward="false" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
+              <folding>
+                <element signature="e#2554#2555#0" expanded="true" />
+                <element signature="e#2587#2588#0" expanded="true" />
+                <element signature="e#2617#2618#0" expanded="true" />
+                <element signature="e#2647#2648#0" expanded="true" />
+                <element signature="e#2671#2672#0" expanded="true" />
+                <element signature="e#2711#2712#0" expanded="true" />
+                <element signature="method#get#0;class#Solution#0" expanded="false" />
+                <element signature="e#3017#3018#0" expanded="true" />
+                <element signature="e#3044#3045#0" expanded="true" />
+                <element signature="method#getRandomNode#0;class#Solution#0" expanded="false" />
+                <element signature="method#isSolution#0;class#Solution#0" expanded="false" />
+                <element signature="method#pruning#0;class#Solution#0" expanded="false" />
+                <element signature="method#MST#0;class#Solution#0" expanded="false" />
+                <element signature="method#MAJ_Fitness#0;class#Solution#0" expanded="false" />
+                <element signature="method#getPath0#0;class#Solution#0" expanded="false" />
+                <element signature="method#getPath1#0;class#Solution#0" expanded="false" />
+                <element signature="method#getHaveMaxDominNeighbr#0;class#Solution#0" expanded="false" />
+                <element signature="method#isConnexe#0;class#Solution#0" expanded="false" />
+                <element signature="e#11780#11781#0" expanded="true" />
+                <element signature="e#11842#11843#0" expanded="true" />
+                <element signature="method#equals#0;class#Solution#0" expanded="false" />
+                <element signature="e#12093#12094#0" expanded="true" />
+                <element signature="e#12140#12141#0" expanded="true" />
+                <element signature="method#toString#0;class#Solution#0" expanded="false" />
+                <element signature="method#printPerformance#0;class#Solution#0" expanded="false" />
+                <element signature="method#clone#0;class#Solution#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GA_Solution.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/methas/GA/GA_Solution.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="G_Algo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/methas/GA/G_Algo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="1276">
+              <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -143,6 +227,7 @@
       <find>getDominNeighbors</find>
       <find>getRandomNode</find>
       <find>path</find>
+      <find>remove</find>
     </findStrings>
     <dirStrings>
       <dir>E:\USTHB\Master SII\2eme années\PFE\work station\dominate_tree\src\methas\defaultMetha</dir>
@@ -192,14 +277,11 @@
         <option value="$PROJECT_DIR$/Logs/Logs_100/logs 50 2" />
         <option value="$PROJECT_DIR$/Logs/Logs_100/logs 50 1" />
         <option value="$PROJECT_DIR$/Logs/Logs_100/logs 500 1" />
-        <option value="$PROJECT_DIR$/src/data/representation/Node.java" />
         <option value="$PROJECT_DIR$/src/data/representation/Arc.java" />
         <option value="$PROJECT_DIR$/src/data/representation/Binary_Solution.java" />
         <option value="$PROJECT_DIR$/src/data/representation/solutions/Solution2.java" />
         <option value="$PROJECT_DIR$/src/data/representation/solutions/Solution_Abst.java" />
         <option value="$PROJECT_DIR$/src/data/representation/solutions/Solutoin_Interface.java" />
-        <option value="$PROJECT_DIR$/src/data/representation/Graph.java" />
-        <option value="$PROJECT_DIR$/src/data/representation/solutions/Solution.java" />
         <option value="$PROJECT_DIR$/Logs/Logs_100/100_1" />
         <option value="$PROJECT_DIR$/src/data/representation/solutions/Binary_Solution.java" />
         <option value="$PROJECT_DIR$/src/methas/BSO/BSO_Solution.java" />
@@ -213,8 +295,11 @@
         <option value="$PROJECT_DIR$/src/methas/GA/GA_Solution2.java" />
         <option value="$PROJECT_DIR$/src/methas/defaultMetha/dSolution.java" />
         <option value="$PROJECT_DIR$/src/methas/GA/GA_Solution.java" />
-        <option value="$PROJECT_DIR$/src/application/Main.java" />
         <option value="$PROJECT_DIR$/src/methas/GA/G_Algo.java" />
+        <option value="$PROJECT_DIR$/src/data/representation/Node.java" />
+        <option value="$PROJECT_DIR$/src/data/representation/Graph.java" />
+        <option value="$PROJECT_DIR$/src/data/representation/solutions/Solution.java" />
+        <option value="$PROJECT_DIR$/src/application/Main.java" />
       </list>
     </option>
   </component>
@@ -256,6 +341,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -273,27 +362,10 @@
               <item name="dominate_tree" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="dominate_tree" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dominate_tree" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="methas" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dominate_tree" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dominate_tree" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="methas" type="462c0819:PsiDirectoryNode" />
-              <item name="defaultMetha" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -497,11 +569,13 @@
       <workItem from="1551515821531" duration="31456000" />
       <workItem from="1551559169508" duration="11714000" />
       <workItem from="1551636420970" duration="6025000" />
+      <workItem from="1551817121892" duration="6718000" />
+      <workItem from="1553295278961" duration="616000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="275573000" />
+    <option name="totallyTimeSpent" value="282907000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1040" height="744" extended-state="6" />
@@ -514,8 +588,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959184" sideWeight="0.4878788" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47126436" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51724136" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -525,8 +599,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.42727274" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39901477" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -589,7 +663,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="14" />
+      <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -679,10 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2266">
           <caret line="138" column="34" lean-forward="false" selection-start-line="138" selection-start-column="34" selection-end-line="138" selection-end-column="34" />
-          <folding>
-            <element signature="e#5644#5645#0" expanded="false" />
-            <element signature="e#5675#5676#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -698,7 +768,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-11093">
           <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -772,32 +841,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/representation/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="127" column="0" lean-forward="true" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/data/representation/solutions/Solution_Abst.java" />
     <entry file="file://$PROJECT_DIR$/src/data/representation/solutions/Solutoin_Interface.java" />
     <entry file="file://$PROJECT_DIR$/src/data/representation/solutions/Solution2.java" />
-    <entry file="file://$PROJECT_DIR$/src/data/representation/Graph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="method#Graph#0;class#Graph#0" expanded="false" />
-            <element signature="method#getRandomNode#0;class#Graph#0" expanded="false" />
-            <element signature="method#getRandomNeighborNode#0;class#Graph#0" expanded="false" />
-            <element signature="e#2436#2437#0" expanded="false" />
-            <element signature="e#2463#2464#0" expanded="false" />
-            <element signature="e#2517#2518#0" expanded="false" />
-            <element signature="e#2544#2545#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Logs/Logs_100/100_1">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
@@ -809,7 +855,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
           <caret line="175" column="0" lean-forward="false" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -831,9 +876,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
           <caret line="22" column="2" lean-forward="false" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -859,34 +901,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/representation/solutions/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1606">
-          <caret line="369" column="0" lean-forward="true" selection-start-line="369" selection-start-column="0" selection-end-line="369" selection-end-column="0" />
-          <folding>
-            <element signature="method#Solution#0;class#Solution#0" expanded="false" />
-            <element signature="method#get#0;class#Solution#0" expanded="false" />
-            <element signature="method#getRandomNode#0;class#Solution#0" expanded="false" />
-            <element signature="method#correction#0;class#Solution#0" expanded="false" />
-            <element signature="method#isSolution#0;class#Solution#0" expanded="false" />
-            <element signature="method#pruning#0;class#Solution#0" expanded="false" />
-            <element signature="method#MAJ_sol#0;class#Solution#0" expanded="false" />
-            <element signature="method#MST#0;class#Solution#0" expanded="false" />
-            <element signature="method#MAJ_Fitness#0;class#Solution#0" expanded="false" />
-            <element signature="method#Connect#0;class#Solution#0" expanded="false" />
-            <element signature="method#getPath0#0;class#Solution#0" expanded="false" />
-            <element signature="method#getPath1#0;class#Solution#0" expanded="false" />
-            <element signature="method#getPath2#0;class#Solution#0" expanded="false" />
-            <element signature="method#getHaveMaxDominNeighbr#0;class#Solution#0" expanded="false" />
-            <element signature="method#isConnexe#0;class#Solution#0" expanded="false" />
-            <element signature="method#equals#0;class#Solution#0" expanded="false" />
-            <element signature="method#toString#0;class#Solution#0" expanded="false" />
-            <element signature="method#printPerformance#0;class#Solution#0" expanded="false" />
-            <element signature="method#clone#0;class#Solution#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/methas/defaultMetha/dSolution2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -906,9 +920,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-100">
           <caret line="13" column="41" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -916,7 +927,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -924,21 +934,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="21" column="66" lean-forward="false" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1108#1109#0" expanded="true" />
-            <element signature="e#1144#1145#0" expanded="true" />
-            <element signature="e#1196#1197#0" expanded="true" />
-            <element signature="e#1237#1238#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/methas/defaultMetha/dAlgo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -946,15 +941,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
           <caret line="173" column="1" lean-forward="false" selection-start-line="173" selection-start-column="1" selection-end-line="173" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/methas/defaultMetha/dSolution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -962,33 +948,104 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="89">
           <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding>
-            <element signature="method#start#0;class#Main#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/methas/GA/GA_Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-566">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="440">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/methas/GA/G_Algo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="1276">
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/representation/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1452">
+          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding>
+            <element signature="e#1763#1764#0" expanded="true" />
+            <element signature="e#1790#1791#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/representation/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding>
+            <element signature="method#getRandomNode#0;class#Graph#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/representation/solutions/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4158">
+          <caret line="211" column="0" lean-forward="false" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
+          <folding>
+            <element signature="e#2554#2555#0" expanded="true" />
+            <element signature="e#2587#2588#0" expanded="true" />
+            <element signature="e#2617#2618#0" expanded="true" />
+            <element signature="e#2647#2648#0" expanded="true" />
+            <element signature="e#2671#2672#0" expanded="true" />
+            <element signature="e#2711#2712#0" expanded="true" />
+            <element signature="method#get#0;class#Solution#0" expanded="false" />
+            <element signature="e#3017#3018#0" expanded="true" />
+            <element signature="e#3044#3045#0" expanded="true" />
+            <element signature="method#getRandomNode#0;class#Solution#0" expanded="false" />
+            <element signature="method#isSolution#0;class#Solution#0" expanded="false" />
+            <element signature="method#pruning#0;class#Solution#0" expanded="false" />
+            <element signature="method#MST#0;class#Solution#0" expanded="false" />
+            <element signature="method#MAJ_Fitness#0;class#Solution#0" expanded="false" />
+            <element signature="method#getPath0#0;class#Solution#0" expanded="false" />
+            <element signature="method#getPath1#0;class#Solution#0" expanded="false" />
+            <element signature="method#getHaveMaxDominNeighbr#0;class#Solution#0" expanded="false" />
+            <element signature="method#isConnexe#0;class#Solution#0" expanded="false" />
+            <element signature="e#11780#11781#0" expanded="true" />
+            <element signature="e#11842#11843#0" expanded="true" />
+            <element signature="method#equals#0;class#Solution#0" expanded="false" />
+            <element signature="e#12093#12094#0" expanded="true" />
+            <element signature="e#12140#12141#0" expanded="true" />
+            <element signature="method#toString#0;class#Solution#0" expanded="false" />
+            <element signature="method#printPerformance#0;class#Solution#0" expanded="false" />
+            <element signature="method#clone#0;class#Solution#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/methas/defaultMetha/dAlgo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-77">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/methas/defaultMetha/dSolution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <element signature="method#start#0;class#Main#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -27,7 +27,7 @@ public class Solution implements Comparable , Cloneable  {
         dominoTree   = new HashSet<>();
 
         ArrayList<Node> graph = new ArrayList<>(Graph.Nodes);
-        Collections.shuffle(graph);
+        //Collections.shuffle(graph);
 
         HashSet<Node> NodesExplored = new HashSet<>();
 
@@ -40,13 +40,72 @@ public class Solution implements Comparable , Cloneable  {
             }
         }
 
-        for(int i = 0 ; i < graph.size() ; i++){
-            if(isSolution()) break;
-            dominoTree.add(graph.get(i));
+        Node tempNode;
+        while(!isSolution()){
+
+            for(Node node:graph){
+                node.rate(NodesExplored);
+            }
+
+            Collections.sort(graph);
+
+            tempNode = graph.get(0);
+            graph.remove(tempNode);
+            dominoTree.add(tempNode);
+            NodesExplored.add(tempNode);
+            NodesExplored.addAll(tempNode.getNeighborsNodes());
         }
 
         MAJ_sol();
     }
+
+/*
+
+
+        if(Graph.DominatesNodes.size() != 0) {
+            for(Node node:Graph.DominatesNodes){
+                dominoTree.add(node);
+
+                NodesExplored.add(node);
+                NodesExplored.addAll(node.getNeighborsNodes());
+            }
+        }
+
+        Node tempNode;
+        while(!NodesExplored.containsAll(graph)){
+
+            for(Node node:graph){
+                node.rate(NodesExplored);
+            }
+
+            Collections.sort(graph);
+
+            tempNode = graph.get(0);
+            dominoTree.add(tempNode);
+            NodesExplored.add(tempNode);
+            NodesExplored.addAll(tempNode.getNeighborsNodes());
+        }
+
+
+
+
+
+        if(Graph.DominatesNodes.size() != 0) {
+            for(Node node:Graph.DominatesNodes){
+                dominoTree.add(node);
+            }
+        }
+
+        Node tempNode;
+        for(int i = 0 ; i < graph.size() ; i++){
+            if(isSolution()) break;
+            tempNode = graph.get(i);
+            dominoTree.add(tempNode);
+        }
+
+
+
+ */
 
 
     // @ getters
@@ -104,23 +163,50 @@ public class Solution implements Comparable , Cloneable  {
         // HashSet no duplicated Node
         this.dominoTree.clear();
 
+        HashSet<Node> NodesExplored = new HashSet<>();
+
+        if(Graph.DominatesNodes.size() != 0) {
+            for(Node node:Graph.DominatesNodes){
+                this.dominoTree.add(node);
+
+                NodesExplored.add(node);
+                NodesExplored.addAll(node.getNeighborsNodes());
+            }
+        }
+
+        Node tempNode;
+
         for(int i = 0 ; i < dominoTree.size() ; i++){
             if(isSolution()) {
                 MAJ_sol();
                 return;
             }
 
-            this.dominoTree.add(dominoTree.get(i));
+            tempNode = dominoTree.get(i);
+            this.dominoTree.add(tempNode);
+            NodesExplored.add(tempNode);
+            NodesExplored.addAll(tempNode.getNeighborsNodes());
         }
 
-        for(int i = 0 ; i < graph.size() ; i++){
-            if(isSolution()) {
-                MAJ_sol();
-                return;
+
+        while(!isSolution()){
+
+            for(Node node:graph){
+                node.rate(NodesExplored);
             }
 
-            this.dominoTree.add(graph.get(i));
+            Collections.sort(graph);
+
+            tempNode = graph.get(0);
+            graph.remove(tempNode);
+            this.dominoTree.add(tempNode);
+            NodesExplored.add(tempNode);
+            NodesExplored.addAll(tempNode.getNeighborsNodes());
+
         }
+
+        MAJ_sol();
+
     }
 
 
@@ -144,7 +230,10 @@ public class Solution implements Comparable , Cloneable  {
 
 
     public void MAJ_sol(){
+
+
         pruning();
+
 
         Connect();
 

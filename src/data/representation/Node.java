@@ -13,6 +13,7 @@ public class Node implements Comparable {
     private ArrayList<Node> neighborsNodes = new ArrayList<>();
     private ArrayList<Arc> arcs = new ArrayList<>();
 
+    private int rate;
 
     public Node(String name) {
         this.name = name;
@@ -67,6 +68,10 @@ public class Node implements Comparable {
 
         // return null if all neighbors are explored
         return null;
+    }
+
+    public int getRate() {
+        return rate;
     }
 
     public Arc  getMinArcNeighbor(HashSet<Node> dominTree){
@@ -154,14 +159,23 @@ public class Node implements Comparable {
     }
 
 
-    // Fitness calculation phase
+    public void rate(HashSet<Node> dominNodes){
 
+        if(dominNodes.contains(this)) rate = -1;
 
+        int score = neighborsNodes.size();
+
+        for(Node neighbor:neighborsNodes){
+            if(dominNodes.contains(neighbor)) score--;
+        }
+
+        this.rate = score;
+    }
 
     @Override
     public int compareTo(Object o) {
         if( o == null  || !(o instanceof Node) ) return -1;
-        return ((Node) o) .name == name ? 0 : -1;
+        return ((Node) o) .rate - rate;
     }
 
     @Override

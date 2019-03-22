@@ -32,7 +32,7 @@ public class Graph {
             if( nbArcs == 0 ){
                 System.out.println(" --- Node Non Dominate --- "+
                 tempNode);
-                Nodes.remove(tempNode);
+                //Nodes.remove(tempNode);
                 i--;
             }else if(nbArcs == 1){
                 DominatesNodes.add(
