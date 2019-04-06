@@ -1,0 +1,25 @@
+#### 1 ####
+Best {
+	 Fitness : 1217.4698
+	 Nodes   : 19
+	 Iters   : 2
+	 Secs    : 11.0
+}
+
+
+#### 2 #####
+Best {
+	 Fitness : 1128.4
+	 Nodes   : 18
+	 Iters   : 3
+	 Secs    : 12.0
+}
+
+
+##### 3 #####
+Best {
+	 Fitness : 1253.4899
+	 Nodes   : 19
+	 Iters   : 7
+	 Secs    : 27.0
+}

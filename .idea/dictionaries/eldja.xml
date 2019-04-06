@@ -1,8 +1,13 @@
 <component name="ProjectDictionaryState">
   <dictionary name="eldja">
     <words>
-      <w>connexe</w>
-      <w>domin</w>
+      <w>evals</w>
+      <w>iter</w>
+      <w>kmax</w>
+      <w>newgraph</w>
+      <w>numberofvertices</w>
+      <w>popsize</w>
+      <w>purninable</w>
     </words>
   </dictionary>
 </component>

@@ -1,0 +1,6 @@
+Best {
+	 Fitness : 1198.27
+	 Nodes   : 24
+	 Iters   : 30
+	 Secs    : 1460.0
+}

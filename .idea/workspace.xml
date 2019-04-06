@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/metas/ACO/ACO_Algo.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/metas/ACO/ACO_Solution.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/dominate_tree/application/Main.class" afterPath="$PROJECT_DIR$/out/production/dominate_tree/application/Main.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/dominate_tree/data/representation/Graph.class" afterPath="$PROJECT_DIR$/out/production/dominate_tree/data/representation/Graph.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/dominate_tree/data/representation/Node.class" afterPath="$PROJECT_DIR$/out/production/dominate_tree/data/representation/Node.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/dominate_tree/data/representation/solutions/Solution.class" afterPath="$PROJECT_DIR$/out/production/dominate_tree/data/representation/solutions/Solution.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/dominate_tree/methas/GA/G_Algo.class" afterPath="$PROJECT_DIR$/out/production/dominate_tree/methas/GA/G_Algo.class" />
-      <change beforePath="$PROJECT_DIR$/src/application/Main.java" afterPath="$PROJECT_DIR$/src/application/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/data/representation/Graph.java" afterPath="$PROJECT_DIR$/src/data/representation/Graph.java" />
-      <change beforePath="$PROJECT_DIR$/src/data/representation/Node.java" afterPath="$PROJECT_DIR$/src/data/representation/Node.java" />
-      <change beforePath="$PROJECT_DIR$/src/data/representation/solutions/Solution.java" afterPath="$PROJECT_DIR$/src/data/representation/solutions/Solution.java" />
-      <change beforePath="$PROJECT_DIR$/src/methas/GA/G_Algo.java" afterPath="$PROJECT_DIR$/src/methas/GA/G_Algo.java" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/metas/BBO/BBO.class" afterPath="$PROJECT_DIR$/out/production/promo - version/metas/BBO/BBO.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/metas/BSO/BSO_Algo.class" afterPath="$PROJECT_DIR$/out/production/promo - version/metas/BSO/BSO_Algo.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/metas/Demo.class" afterPath="$PROJECT_DIR$/out/production/promo - version/metas/Demo.class" />
+      <change beforePath="$PROJECT_DIR$/src/metas/BBO/BBO.java" afterPath="$PROJECT_DIR$/src/metas/BBO/BBO.java" />
+      <change beforePath="$PROJECT_DIR$/src/metas/BSO/BSO_Algo.java" afterPath="$PROJECT_DIR$/src/metas/BSO/BSO_Algo.java" />
+      <change beforePath="$PROJECT_DIR$/src/metas/Demo.java" afterPath="$PROJECT_DIR$/src/metas/Demo.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,8 +23,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/dominate_tree$Main.coverage" NAME="Main Coverage Results" MODIFIED="1551823208061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>application.*</FILTER>
+    <SUITE FILE_PATH="coverage/promo___version$Demo__1_.coverage" NAME="Demo (1) Coverage Results" MODIFIED="1554154230304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>metas.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/promo___version$Main_test__1_.coverage" NAME="Main_test (1) Coverage Results" MODIFIED="1553353999182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>metas.*</FILTER>
     </SUITE>
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -89,115 +90,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/application/Main.java">
+      <file leaf-file-name="Demo.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/metas/Demo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-              <folding>
-                <element signature="method#start#0;class#Main#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dAlgo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/methas/defaultMetha/dAlgo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-77">
-              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dSolution.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/methas/defaultMetha/dSolution.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Node.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/data/representation/Node.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1452">
-              <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-              <folding>
-                <element signature="e#1763#1764#0" expanded="true" />
-                <element signature="e#1790#1791#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Graph.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/data/representation/Graph.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-              <folding>
-                <element signature="method#getRandomNode#0;class#Graph#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/data/representation/solutions/Solution.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4158">
-              <caret line="211" column="0" lean-forward="false" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
-              <folding>
-                <element signature="e#2554#2555#0" expanded="true" />
-                <element signature="e#2587#2588#0" expanded="true" />
-                <element signature="e#2617#2618#0" expanded="true" />
-                <element signature="e#2647#2648#0" expanded="true" />
-                <element signature="e#2671#2672#0" expanded="true" />
-                <element signature="e#2711#2712#0" expanded="true" />
-                <element signature="method#get#0;class#Solution#0" expanded="false" />
-                <element signature="e#3017#3018#0" expanded="true" />
-                <element signature="e#3044#3045#0" expanded="true" />
-                <element signature="method#getRandomNode#0;class#Solution#0" expanded="false" />
-                <element signature="method#isSolution#0;class#Solution#0" expanded="false" />
-                <element signature="method#pruning#0;class#Solution#0" expanded="false" />
-                <element signature="method#MST#0;class#Solution#0" expanded="false" />
-                <element signature="method#MAJ_Fitness#0;class#Solution#0" expanded="false" />
-                <element signature="method#getPath0#0;class#Solution#0" expanded="false" />
-                <element signature="method#getPath1#0;class#Solution#0" expanded="false" />
-                <element signature="method#getHaveMaxDominNeighbr#0;class#Solution#0" expanded="false" />
-                <element signature="method#isConnexe#0;class#Solution#0" expanded="false" />
-                <element signature="e#11780#11781#0" expanded="true" />
-                <element signature="e#11842#11843#0" expanded="true" />
-                <element signature="method#equals#0;class#Solution#0" expanded="false" />
-                <element signature="e#12093#12094#0" expanded="true" />
-                <element signature="e#12140#12141#0" expanded="true" />
-                <element signature="method#toString#0;class#Solution#0" expanded="false" />
-                <element signature="method#printPerformance#0;class#Solution#0" expanded="false" />
-                <element signature="method#clone#0;class#Solution#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GA_Solution.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/methas/GA/GA_Solution.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="G_Algo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/methas/GA/G_Algo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1276">
-              <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+            <state relative-caret-position="363">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -214,24 +111,46 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getRandomNeighbor</find>
-      <find>getMinNeighbor</find>
-      <find>HashSetNoeds</find>
-      <find>Nodes</find>
-      <find>dominoTree</find>
-      <find>MAJ_sol</find>
-      <find>ThreadLocalRandom</find>
-      <find>MAJ_Fitness</find>
-      <find>path.add</find>
-      <find>MAJ_Arcs</find>
-      <find>getDominNeighbors</find>
-      <find>getRandomNode</find>
-      <find>path</find>
+      <find>PMutate</find>
+      <find>nbEvals</find>
+      <find>L</find>
+      <find>B2</find>
+      <find>G2</find>
+      <find>Individual</find>
+      <find>|</find>
+      <find>permutation</find>
+      <find>div</find>
+      <find>verticesDT</find>
+      <find>Arc</find>
+      <find>neighbors</find>
+      <find>neighborhood</find>
+      <find>Node</find>
+      <find>getDominNeighborsv</find>
+      <find>vertices</find>
+      <find>node</find>
+      <find>nbEvaluations</find>
+      <find>false</find>
+      <find>methas.GA.GA_Solution</find>
       <find>remove</find>
+      <find>dSolution</find>
+      <find>methas.BSO</find>
+      <find>methas.BSO.</find>
+      <find>permutationInitial.get</find>
+      <find>stop</find>
+      <find>find</find>
+      <find>SpeciesCount</find>
+      <find>.SpeciesCount</find>
+      <find>prob</find>
     </findStrings>
-    <dirStrings>
-      <dir>E:\USTHB\Master SII\2eme années\PFE\work station\dominate_tree\src\methas\defaultMetha</dir>
-    </dirStrings>
+    <replaceStrings>
+      <replace />
+      <replace>Vertex</replace>
+      <replace>vertex</replace>
+      <replace>getDominNeighborsEdges</replace>
+      <replace>getDominNeighbors</replace>
+      <replace>Individual</replace>
+      <replace>BSO</replace>
+    </replaceStrings>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -249,57 +168,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/bench marks/Range_150/ins_50_1.txt" />
-        <option value="$PROJECT_DIR$/bench marks/Range_150/ins_50_2.txt" />
-        <option value="$PROJECT_DIR$/bench marks/Range_150/ins_50_3.txt" />
-        <option value="$PROJECT_DIR$/bench marks/Range_150/ins_500_1.txt" />
-        <option value="$PROJECT_DIR$/src/metha/VNS/VNS_Algo.java" />
-        <option value="$PROJECT_DIR$/src/metha/VNS_Algo.java" />
-        <option value="$PROJECT_DIR$/src/metha/VNS/VNSolution.java" />
-        <option value="$PROJECT_DIR$/bench marks/Range_150/ins_500_2.txt" />
-        <option value="$PROJECT_DIR$/bench marks/Range_125/ins_500_3.txt" />
-        <option value="$PROJECT_DIR$/bench marks/Range_125/ins_50_1.txt" />
-        <option value="$PROJECT_DIR$/bench marks/Range_150/ins_100_3.txt" />
-        <option value="$PROJECT_DIR$/bench marks/Range_150/ins_200_3.txt" />
-        <option value="$PROJECT_DIR$/bench marks/Range_125/ins_200_3.txt" />
-        <option value="$PROJECT_DIR$/bench marks/Range_125/ins_300_2.txt" />
-        <option value="$PROJECT_DIR$/bench marks/Range_150/ins_500_3.txt" />
-        <option value="$PROJECT_DIR$/bench marks/Range_125/ins_500_1.txt" />
-        <option value="$PROJECT_DIR$/src/methas/defaultMetha/VNS_Algo.java" />
-        <option value="$PROJECT_DIR$/src/methas/defaultMetha/VNSolution.java" />
-        <option value="$PROJECT_DIR$/src/methas/defaultMetha/Solution.java" />
-        <option value="$PROJECT_DIR$/bench marks/Range_125/ins_50_3.txt" />
-        <option value="$PROJECT_DIR$/bench marks/Range_125/ins_50_2.txt" />
-        <option value="$PROJECT_DIR$/src/data/representation/KruskalMST.java" />
-        <option value="$PROJECT_DIR$/src/data/representation/Solution2.java" />
-        <option value="$PROJECT_DIR$/src/data/representation/Solution.java" />
-        <option value="$PROJECT_DIR$/src/data/read/BenchToGraph.java" />
-        <option value="$PROJECT_DIR$/Logs/Logs_100/logs 50 2" />
-        <option value="$PROJECT_DIR$/Logs/Logs_100/logs 50 1" />
-        <option value="$PROJECT_DIR$/Logs/Logs_100/logs 500 1" />
-        <option value="$PROJECT_DIR$/src/data/representation/Arc.java" />
-        <option value="$PROJECT_DIR$/src/data/representation/Binary_Solution.java" />
-        <option value="$PROJECT_DIR$/src/data/representation/solutions/Solution2.java" />
-        <option value="$PROJECT_DIR$/src/data/representation/solutions/Solution_Abst.java" />
-        <option value="$PROJECT_DIR$/src/data/representation/solutions/Solutoin_Interface.java" />
-        <option value="$PROJECT_DIR$/Logs/Logs_100/100_1" />
-        <option value="$PROJECT_DIR$/src/data/representation/solutions/Binary_Solution.java" />
-        <option value="$PROJECT_DIR$/src/methas/BSO/BSO_Solution.java" />
-        <option value="$PROJECT_DIR$/src/methas/BSO/Bee.java" />
-        <option value="$PROJECT_DIR$/src/methas/VNS/VNSolution2.java" />
-        <option value="$PROJECT_DIR$/src/methas/VNS/VNS_Algo.java" />
-        <option value="$PROJECT_DIR$/src/methas/VNS/VNSolution.java" />
-        <option value="$PROJECT_DIR$/src/methas/defaultMetha/dSolution2.java" />
-        <option value="$PROJECT_DIR$/src/methas/defaultMetha/dAlgo.java" />
-        <option value="$PROJECT_DIR$/src/methas/BSO/BSO_Algo.java" />
-        <option value="$PROJECT_DIR$/src/methas/GA/GA_Solution2.java" />
-        <option value="$PROJECT_DIR$/src/methas/defaultMetha/dSolution.java" />
-        <option value="$PROJECT_DIR$/src/methas/GA/GA_Solution.java" />
-        <option value="$PROJECT_DIR$/src/methas/GA/G_Algo.java" />
-        <option value="$PROJECT_DIR$/src/data/representation/Node.java" />
-        <option value="$PROJECT_DIR$/src/data/representation/Graph.java" />
-        <option value="$PROJECT_DIR$/src/data/representation/solutions/Solution.java" />
-        <option value="$PROJECT_DIR$/src/application/Main.java" />
+        <option value="$PROJECT_DIR$/src/dtp_2/EBBO_LS_DTP.java" />
+        <option value="$PROJECT_DIR$/src/dtp_2/Solution.java" />
+        <option value="$PROJECT_DIR$/src/metas/BBO/Main_test.java" />
+        <option value="$PROJECT_DIR$/src/data/GraphProblems.java" />
+        <option value="$PROJECT_DIR$/src/data/reader/GraphProblems.java" />
+        <option value="$PROJECT_DIR$/src/metas/BBO_clone/Bestc.java" />
+        <option value="$PROJECT_DIR$/src/metas/BBO_clone/Individualc.java" />
+        <option value="$PROJECT_DIR$/src/metas/BBO_clone/Solutionc.java" />
+        <option value="$PROJECT_DIR$/src/metas/BBO_clone/EBBO_DTP_clone.java" />
+        <option value="$PROJECT_DIR$/src/metas/BBO2/Prims_MST.java" />
+        <option value="$PROJECT_DIR$/src/metas/BBO2/Individual.java" />
+        <option value="$PROJECT_DIR$/src/metas/BBO2/Best.java" />
+        <option value="$PROJECT_DIR$/src/metas/BBO2/EBBO_DTP_2.java" />
+        <option value="$PROJECT_DIR$/src/metas/BBO2/Solution.java" />
+        <option value="$PROJECT_DIR$/src/data/representations/Instances.java" />
+        <option value="$PROJECT_DIR$/src/metas/BBO/EBBO_DTP.java" />
+        <option value="$PROJECT_DIR$/src/metas/Main_test.java" />
+        <option value="$PROJECT_DIR$/src/metas/BBO/Demo.java" />
+        <option value="$PROJECT_DIR$/src/metas/Genetic.java" />
+        <option value="$PROJECT_DIR$/bench_marks/100/50_1.txt" />
+        <option value="$PROJECT_DIR$/src/data/representations/GraphProblems.java" />
+        <option value="$PROJECT_DIR$/src/metas/BBO/Solution.java" />
+        <option value="$PROJECT_DIR$/src/data/representations/Prims_MST.java" />
+        <option value="$PROJECT_DIR$/src/data/representations/MST.java" />
+        <option value="$PROJECT_DIR$/src/metas/BBO/Prims_MST.java" />
+        <option value="$PROJECT_DIR$/Logs/100/100.1.txt" />
+        <option value="$PROJECT_DIR$/Logs/100/100.txt" />
+        <option value="$PROJECT_DIR$/src/data/representations/Graph.java" />
+        <option value="$PROJECT_DIR$/Logs/100/50.txt" />
+        <option value="$PROJECT_DIR$/src/data/representations/Vertex.java" />
+        <option value="$PROJECT_DIR$/src/data/representations/Edge.java" />
+        <option value="$PROJECT_DIR$/src/data/reader/Instances.java" />
+        <option value="$PROJECT_DIR$/src/metas/GA/GA.java" />
+        <option value="$PROJECT_DIR$/src/metas/defaultMetha/dAlgo.java" />
+        <option value="$PROJECT_DIR$/src/metas/defaultMetha/dSolution.java" />
+        <option value="$PROJECT_DIR$/src/metas/GA/Individual.java" />
+        <option value="$PROJECT_DIR$/src/metas/defaultMetha/Individual.java" />
+        <option value="$PROJECT_DIR$/src/metas/BSO/Solution.java" />
+        <option value="$PROJECT_DIR$/src/data/representations/Solution.java" />
+        <option value="$PROJECT_DIR$/src/metas/BSO/Bee.java" />
+        <option value="$PROJECT_DIR$/src/data/representations/Solutions/Binary_Solution.java" />
+        <option value="$PROJECT_DIR$/src/metas/BSO/BSO_Solution.java" />
+        <option value="$PROJECT_DIR$/src/metas/BBO/Individual.java" />
+        <option value="$PROJECT_DIR$/src/metas/BBO/Best.java" />
+        <option value="F:/ums/unms root/unms-electron/src/components/utilComponent.js" />
+        <option value="$PROJECT_DIR$/src/metas/BBO/BBO.java" />
+        <option value="$PROJECT_DIR$/src/data/representations/Solutions/Solution.java" />
+        <option value="$PROJECT_DIR$/src/metas/BSO/BSO_Algo.java" />
+        <option value="$PROJECT_DIR$/src/metas/ACO/ACO_Algo.java" />
+        <option value="$PROJECT_DIR$/src/metas/ACO/ACO_Solution.java" />
+        <option value="$PROJECT_DIR$/src/metas/Demo.java" />
       </list>
     </option>
   </component>
@@ -317,8 +236,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-385" />
-    <option name="y" value="-14" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1044" />
     <option name="height" value="788" />
   </component>
@@ -341,36 +260,43 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="dominate_tree" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dominate_tree" type="462c0819:PsiDirectoryNode" />
+              <item name="stable Version" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stable Version" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dominate_tree" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dominate_tree" type="462c0819:PsiDirectoryNode" />
-              <item name="Logs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dominate_tree" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dominate_tree" type="462c0819:PsiDirectoryNode" />
+              <item name="stable Version" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stable Version" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="stable Version" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stable Version" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="metas" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="stable Version" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stable Version" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="metas" type="462c0819:PsiDirectoryNode" />
+              <item name="BSO" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="OverrideImplement.combined" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
@@ -380,18 +306,14 @@
     <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../last version/dominant_tree/dominate_tree.iml" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="methas.GA" />
-      <recent name="methas.defaultMetha" />
-      <recent name="methas.VNS" />
-      <recent name="data.representation" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\USTHB\Master SII\2eme années\PFE\work station\dominate_tree\src\methas\VNS" />
-      <recent name="E:\USTHB\Master SII\2eme années\PFE\work station\dominate_tree\src\methas" />
+      <recent name="metas.defaultMetha" />
+      <recent name="data.representations" />
+      <recent name="metas.BBO2" />
+      <recent name="metas.BBO_clone" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -406,7 +328,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Demo (1)">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module />
       <option name="HTML_USED" value="false" />
@@ -415,14 +337,14 @@
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application">
+    <configuration name="Demo (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="application.*" />
+          <option name="PATTERN" value="metas.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="application.Main" />
+      <option name="MAIN_CLASS_NAME" value="metas.Demo" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -431,10 +353,67 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="dominate_tree" />
+      <module name="promo - version" />
+      <envs />
+    </configuration>
+    <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="metas.BBO.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="metas.BBO.Demo" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="promo - version" />
+      <envs />
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="sample.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="sample.Main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="promo - version" />
       <envs />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
+    </configuration>
+    <configuration name="Main_test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="data.representations.Solutions.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="metas.BBO.Main_test" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="promo - version" />
+      <envs />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -522,6 +501,19 @@
       <Host>localhost</Host>
       <Port>5050</Port>
     </configuration>
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Main_test" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Demo" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Demo (1)" />
+    </list>
+    <recent_temporary>
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Application.Demo (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Demo" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Main_test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -537,96 +529,76 @@
       <option name="presentableId" value="Default" />
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
-      <workItem from="1550230112259" duration="127000" />
-      <workItem from="1550239199981" duration="16524000" />
-      <workItem from="1550269254489" duration="4437000" />
-      <workItem from="1550275193963" duration="2713000" />
-      <workItem from="1550308174319" duration="30551000" />
-      <workItem from="1550342975799" duration="3606000" />
-      <workItem from="1550351134648" duration="7683000" />
-      <workItem from="1550428493081" duration="16566000" />
-      <workItem from="1550686952067" duration="3839000" />
-      <workItem from="1550697984556" duration="8051000" />
-      <workItem from="1550821142175" duration="10986000" />
-      <workItem from="1550833254272" duration="1206000" />
-      <workItem from="1550846141333" duration="15023000" />
-      <workItem from="1550869157513" duration="9933000" />
-      <workItem from="1550881802923" duration="5405000" />
-      <workItem from="1550912330539" duration="21064000" />
-      <workItem from="1550941152133" duration="7338000" />
-      <workItem from="1551041812986" duration="7302000" />
-      <workItem from="1551119844253" duration="1405000" />
-      <workItem from="1551128057064" duration="7085000" />
-      <workItem from="1551206520272" duration="2607000" />
-      <workItem from="1551217924690" duration="5545000" />
-      <workItem from="1551296016529" duration="5481000" />
-      <workItem from="1551379390673" duration="745000" />
-      <workItem from="1551391515992" duration="5548000" />
-      <workItem from="1551447652750" duration="3355000" />
-      <workItem from="1551452166457" duration="6266000" />
-      <workItem from="1551460515443" duration="5167000" />
-      <workItem from="1551476270719" duration="9518000" />
-      <workItem from="1551515821531" duration="31456000" />
-      <workItem from="1551559169508" duration="11714000" />
-      <workItem from="1551636420970" duration="6025000" />
-      <workItem from="1551817121892" duration="6718000" />
-      <workItem from="1553295278961" duration="616000" />
+      <workItem from="1552152633601" duration="794000" />
+      <workItem from="1552250087056" duration="1713000" />
+      <workItem from="1552771789904" duration="3258000" />
+      <workItem from="1552849660611" duration="5503000" />
+      <workItem from="1552932724649" duration="11809000" />
+      <workItem from="1553023318716" duration="9630000" />
+      <workItem from="1553110224108" duration="9854000" />
+      <workItem from="1553293090927" duration="2094000" />
+      <workItem from="1553348112149" duration="11749000" />
+      <workItem from="1553361324657" duration="1006000" />
+      <workItem from="1553365261445" duration="3540000" />
+      <workItem from="1553455794812" duration="8790000" />
+      <workItem from="1553539304157" duration="989000" />
+      <workItem from="1553548128463" duration="6539000" />
+      <workItem from="1553554823877" duration="354000" />
+      <workItem from="1553711557735" duration="15441000" />
+      <workItem from="1553868958394" duration="2289000" />
+      <workItem from="1553899112875" duration="7973000" />
+      <workItem from="1553937075883" duration="27255000" />
+      <workItem from="1553978436292" duration="6784000" />
+      <workItem from="1554147946409" duration="10452000" />
+      <workItem from="1554233416704" duration="3068000" />
+      <workItem from="1554237370714" duration="3480000" />
+      <workItem from="1554585503847" duration="5969000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="282907000" />
+    <option name="totallyTimeSpent" value="161635000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1040" height="744" extended-state="6" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959184" sideWeight="0.4878788" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47126436" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5581633" sideWeight="0.49131513" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4909688" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.61247945" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26530612" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959184" sideWeight="0.47575757" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28163266" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.4846154" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.42727274" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.4549356" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39901477" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959184" sideWeight="0.5242424" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5450644" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294964" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="Vcs.Log.History.Properties">
-    <option name="COLUMN_ORDER">
-      <list>
-        <option value="0" />
-        <option value="2" />
-        <option value="3" />
-        <option value="1" />
-      </list>
-    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -663,7 +635,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="16" />
+      <option name="time" value="15" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -672,380 +644,256 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bench marks/Range_150/ins_50_1.txt">
+    <entry file="file://$PROJECT_DIR$/src/metas/BBO/Solution.java" />
+    <entry file="file://$PROJECT_DIR$/src/metas/BBO_clone/Bestc.java" />
+    <entry file="file://$PROJECT_DIR$/src/metas/BBO_clone/Individualc.java" />
+    <entry file="file://$PROJECT_DIR$/src/metas/BBO_clone/Solutionc.java" />
+    <entry file="file://$PROJECT_DIR$/src/metas/BBO/Best.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6072">
-          <caret line="276" column="11" lean-forward="true" selection-start-line="276" selection-start-column="0" selection-end-line="276" selection-end-column="11" />
+        <state relative-caret-position="154">
+          <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bench marks/Range_100/ins_050_1.txt">
+    <entry file="file://$PROJECT_DIR$/src/metas/BBO_clone/EBBO_DTP_clone.java" />
+    <entry file="file://$PROJECT_DIR$/src/metas/BBO/BBO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1015">
-          <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+        <state relative-caret-position="-17">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../last version/dominant_tree/dominate_tree.iml">
+    <entry file="file://$PROJECT_DIR$/out/production/promo - version/metas/BBO/EBBO_DTP.class" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/LinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="554" column="0" lean-forward="false" selection-start-line="554" selection-start-column="0" selection-end-line="554" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/metas/Genetic.java" />
+    <entry file="file://$PROJECT_DIR$/Instances/ins.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-120">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Instances/100/PP/ins_050_3.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bench marks/Range_100/ins_500_1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51164">
-          <caret line="17" column="11" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bench marks/Range_125/ins_500_1.txt">
+    <entry file="file://$PROJECT_DIR$/Instances/100/PP/ins_050_2.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bench_marks/100/ins_050_1.txt" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/Integer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="579" column="0" lean-forward="false" selection-start-line="579" selection-start-column="0" selection-end-line="579" selection-end-column="0" />
+        <state relative-caret-position="107">
+          <caret line="765" column="0" lean-forward="false" selection-start-line="765" selection-start-column="0" selection-end-line="765" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bench marks/Range_150/ins_50_3.txt">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/NumberFormatException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="3" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        <state relative-caret-position="148">
+          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/System.java">
+    <entry file="file://$PROJECT_DIR$/Instances/100/50_1.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6732">
-          <caret line="348" column="56" lean-forward="false" selection-start-line="348" selection-start-column="44" selection-end-line="348" selection-end-column="56" />
+        <state relative-caret-position="88">
+          <caret line="4" column="10" lean-forward="true" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bench marks/Range_125/ins_50_3.txt">
+    <entry file="file://$PROJECT_DIR$/bench_marks/100/50_1.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="154">
+          <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bench marks/Range_125/ins_50_2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bench marks/Range_125/ins_50_1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="6" lean-forward="true" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/representations/GraphProblems.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/Collections.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2266">
-          <caret line="138" column="34" lean-forward="false" selection-start-line="138" selection-start-column="34" selection-end-line="138" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/representation/KruskalMST.java" />
-    <entry file="file://$PROJECT_DIR$/dominate_tree.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11093">
-          <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/com/sun/javafx/application/LauncherImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
-          <caret line="327" column="0" lean-forward="false" selection-start-line="327" selection-start-column="0" selection-end-line="327" selection-end-column="0" />
+          <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+          <folding>
+            <element signature="e#5675#5676#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/representations/Prims_MST.java" />
+    <entry file="file://$PROJECT_DIR$/src/data/representations/MST.java" />
+    <entry file="file://$PROJECT_DIR$/src/metas/BBO/Solution.java" />
+    <entry file="file://$PROJECT_DIR$/src/metas/BBO/Prims_MST.java" />
+    <entry file="file://$PROJECT_DIR$/Logs/100/500.txt" />
+    <entry file="file://$PROJECT_DIR$/src/data/representations/Vertex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1153">
+          <caret line="103" column="0" lean-forward="true" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/metas/GA/GA_Solution.java" />
+    <entry file="file://$PROJECT_DIR$/src/data/reader/Instances.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="14" column="45" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="45" />
+          <folding>
+            <element signature="method#readFile#0;class#Instances#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/representations/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/representations/Edge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/ComparableTimSort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
+        <state relative-caret-position="78">
           <caret line="865" column="0" lean-forward="false" selection-start-line="865" selection-start-column="0" selection-end-line="865" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/jre/lib/rt.jar!/sun/reflect/DelegatingMethodAccessorImpl.class">
+    <entry file="file://$PROJECT_DIR$/src/metas/GA/GA.java" />
+    <entry file="file://$PROJECT_DIR$/src/metas/defaultMetha/Heuristic.java" />
+    <entry file="file://$PROJECT_DIR$/src/metas/defaultMetha/dSolution.java" />
+    <entry file="file://$PROJECT_DIR$/src/metas/defaultMetha/Individual.java" />
+    <entry file="file://$PROJECT_DIR$/Logs/100/50.txt" />
+    <entry file="file://$PROJECT_DIR$/src/metas/BSO/Solution.java" />
+    <entry file="file://$PROJECT_DIR$/src/metas/BSO/Bee.java" />
+    <entry file="file://$PROJECT_DIR$/Logs/100/100.txt" />
+    <entry file="file://$PROJECT_DIR$/src/metas/BBO/Best.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/reflect/Method.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="497" column="0" lean-forward="false" selection-start-line="497" selection-start-column="0" selection-end-line="497" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/Arrays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1311" column="0" lean-forward="false" selection-start-line="1311" selection-start-column="0" selection-end-line="1311" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Logs/Logs_100/logs 50 3">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Logs/Logs_100/logs 50 2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="108" column="0" lean-forward="true" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Logs/Logs_100/logs 500 1">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="120" column="0" lean-forward="true" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/representation/Arc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="40" column="5" lean-forward="false" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/representation/solutions/Solution_Abst.java" />
-    <entry file="file://$PROJECT_DIR$/src/data/representation/solutions/Solutoin_Interface.java" />
-    <entry file="file://$PROJECT_DIR$/src/data/representation/solutions/Solution2.java" />
-    <entry file="file://$PROJECT_DIR$/Logs/Logs_100/100_1">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/representation/solutions/Binary_Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="175" column="0" lean-forward="false" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/Comparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="149" column="8" lean-forward="false" selection-start-line="149" selection-start-column="8" selection-end-line="149" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/jre/lib/rt.jar!/sun/launcher/LauncherHelper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="576" column="0" lean-forward="false" selection-start-line="576" selection-start-column="0" selection-end-line="576" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/methas/BSO/BSO_Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="22" column="2" lean-forward="false" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/methas/BSO/Bee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="492" column="0" lean-forward="true" selection-start-line="492" selection-start-column="0" selection-end-line="492" selection-end-column="0" />
+        <state relative-caret-position="704">
+          <caret line="34" column="16" lean-forward="false" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/methas/VNS/VNSolution2.java">
+    <entry file="file://F:/ums/unms root/unms-electron/src/components/utilComponent.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/methas/defaultMetha/dSolution2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/methas/VNS/VNS_Algo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/methas/BSO/BSO_Algo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-100">
-          <caret line="13" column="41" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/methas/GA/GA_Solution2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/methas/VNS/VNSolution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="21" column="66" lean-forward="false" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Logs/Logs_100/logs 50 1">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="173" column="1" lean-forward="false" selection-start-line="173" selection-start-column="1" selection-end-line="173" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/read/BenchToGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/methas/GA/GA_Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/methas/GA/G_Algo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1276">
-          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/representation/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1452">
-          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+        <state relative-caret-position="297">
+          <caret line="158" column="0" lean-forward="true" selection-start-line="157" selection-start-column="11" selection-end-line="158" selection-end-column="0" />
           <folding>
-            <element signature="e#1763#1764#0" expanded="true" />
-            <element signature="e#1790#1791#0" expanded="true" />
+            <element signature="e#0#198#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/representation/Graph.java">
+    <entry file="file://$PROJECT_DIR$/src/metas/BBO/BBO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="262" column="0" lean-forward="true" selection-start-line="262" selection-start-column="0" selection-end-line="262" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/metas/BSO/BSO_Algo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/representations/Solutions/Binary_Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/metas/BBO/Individual.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="e#922#923#0" expanded="true" />
+            <element signature="e#965#966#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/metas/ACO/ACO_Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#912#913#0" expanded="true" />
+            <element signature="e#984#985#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/metas/GA/Individual.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="23" column="55" lean-forward="true" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/representations/Solutions/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="13" column="41" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/metas/ACO/ACO_Algo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/metas/BSO/BSO_Solution.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
-          <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-          <folding>
-            <element signature="method#getRandomNode#0;class#Graph#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/representation/solutions/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4158">
-          <caret line="211" column="0" lean-forward="false" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
-          <folding>
-            <element signature="e#2554#2555#0" expanded="true" />
-            <element signature="e#2587#2588#0" expanded="true" />
-            <element signature="e#2617#2618#0" expanded="true" />
-            <element signature="e#2647#2648#0" expanded="true" />
-            <element signature="e#2671#2672#0" expanded="true" />
-            <element signature="e#2711#2712#0" expanded="true" />
-            <element signature="method#get#0;class#Solution#0" expanded="false" />
-            <element signature="e#3017#3018#0" expanded="true" />
-            <element signature="e#3044#3045#0" expanded="true" />
-            <element signature="method#getRandomNode#0;class#Solution#0" expanded="false" />
-            <element signature="method#isSolution#0;class#Solution#0" expanded="false" />
-            <element signature="method#pruning#0;class#Solution#0" expanded="false" />
-            <element signature="method#MST#0;class#Solution#0" expanded="false" />
-            <element signature="method#MAJ_Fitness#0;class#Solution#0" expanded="false" />
-            <element signature="method#getPath0#0;class#Solution#0" expanded="false" />
-            <element signature="method#getPath1#0;class#Solution#0" expanded="false" />
-            <element signature="method#getHaveMaxDominNeighbr#0;class#Solution#0" expanded="false" />
-            <element signature="method#isConnexe#0;class#Solution#0" expanded="false" />
-            <element signature="e#11780#11781#0" expanded="true" />
-            <element signature="e#11842#11843#0" expanded="true" />
-            <element signature="method#equals#0;class#Solution#0" expanded="false" />
-            <element signature="e#12093#12094#0" expanded="true" />
-            <element signature="e#12140#12141#0" expanded="true" />
-            <element signature="method#toString#0;class#Solution#0" expanded="false" />
-            <element signature="method#printPerformance#0;class#Solution#0" expanded="false" />
-            <element signature="method#clone#0;class#Solution#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/methas/defaultMetha/dAlgo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-77">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/methas/defaultMetha/dSolution.java">
+    <entry file="file://$PROJECT_DIR$/src/metas/Demo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+        <state relative-caret-position="363">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding>
-            <element signature="method#start#0;class#Main#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
