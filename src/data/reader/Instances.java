@@ -12,7 +12,8 @@ public class Instances {
     public static int NbEdges;
 
     public static Graph graph;
-    public static LinkedList<Vertex> vertices;
+
+    private LinkedList<Vertex> vertices;
 
     public Instances(String path)  {
 

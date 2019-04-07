@@ -18,13 +18,11 @@ public class Demo {
         GA ga = new GA(50,10000);
         Heuristic heuristic = new Heuristic(15,1000);
 
-
         //ga.Exec();
 		//bbo.BBO_Exec();
-        BSO_Algo.Exec(10,5,1000);
+        //BSO_Algo.Exec(10,5,1000);
 
         //heuristic.Exec();
 	}
 
-}	
-	
+}

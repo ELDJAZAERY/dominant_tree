@@ -32,7 +32,7 @@ public class Binary_Solution extends Solution implements Cloneable {
     public void Set_To_Binary(){
         int i = 0;
         binary = new Byte[Instances.NbVertices];
-        for(Vertex vertices: Instances.vertices){
+        for(Vertex vertices: Instances.graph.vertices){
                 binary[i] = (byte) 1;
                 binary[i] = verticesDT.contains(vertices) ? (byte) 1 : (byte) 0;
                 i++;

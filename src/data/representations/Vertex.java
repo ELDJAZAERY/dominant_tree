@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.List;
 
 
-public class Vertex {
+public class Vertex implements Cloneable {
 
     public  int index ;
     private String label;
@@ -20,7 +20,17 @@ public class Vertex {
 		neighbors = new HashSet<>();
 	}
 
-	public void addNeighbor(Edge edge){
+	private Vertex(Vertex clone){
+	    label = clone.label;
+	    neighbors = new HashSet<>();
+	    neighborsEdges = new ArrayList<>();
+    }
+
+    public ArrayList<Edge> getNeighborsEdges() {
+        return neighborsEdges;
+    }
+
+    public void addNeighbor(Edge edge){
 		if(!neighborsEdges.contains(edge))
 		    neighborsEdges.add(edge);
 	}
@@ -102,7 +112,6 @@ public class Vertex {
     }
 
 
-
     @Override
     public String toString() {
         return " " + label;
@@ -120,6 +129,11 @@ public class Vertex {
         }
         Vertex v = (Vertex) other;
         return this.label.equals(v.label);
+    }
+
+    @Override
+    protected Object clone() {
+        return new Vertex(this);
     }
 
 }

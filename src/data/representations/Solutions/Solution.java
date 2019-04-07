@@ -2,6 +2,7 @@ package data.representations.Solutions;
 
 import data.reader.Instances;
 import data.representations.Edge;
+import data.representations.Graph;
 import data.representations.Vertex;
 
 import java.util.*;
@@ -61,7 +62,7 @@ public class Solution implements Cloneable {
         ArrayList<Vertex> dominating_set = new ArrayList<>();
 
         /** Correction phase **/
-        if(permutation.size() < Instances.vertices.size()){
+        if(permutation.size() < Instances.graph.vertices.size()){
             Collections.shuffle(permutationInitial);
             for(Integer vertex:permutationInitial)
                 if(!permutation.contains(vertex))
@@ -77,8 +78,8 @@ public class Solution implements Cloneable {
                 computer++;
             }
 
-            dominating_set.add(Instances.vertices.get(permutation.get(j)));
-            Vertex V = Instances.vertices.get(permutation.get(j));
+            dominating_set.add(Instances.graph.vertices.get(permutation.get(j)));
+            Vertex V = Instances.graph.vertices.get(permutation.get(j));
             for (int k = 0; k < V.getNeighborCount(); k++) {
                 int v = Integer.parseInt(V.getNeighbor(k).getTheOtherOne(V).getLabel());
                 if(temp[v] == 0){
@@ -91,6 +92,13 @@ public class Solution implements Cloneable {
 
         return dominating_set;
     }
+
+/*
+    public void MST(){
+        path = Graph.MST(verticesDT);
+        MAJ_Fitness();
+    }
+*/
 
 
     public void MST(){
@@ -106,9 +114,10 @@ public class Solution implements Cloneable {
         ququeArcs.addAll(nextVertex.getDominNeighborsEdges(verticesDT));
 
         while(!vertices.containsAll(verticesDT)){
+            ququeArcs.removeAll(path);
             Collections.sort(ququeArcs);
             for(Edge arc:ququeArcs) {
-                if(!arc.contains_vertex(verticesDT)) continue;
+                //if(!arc.contains_vertex(verticesDT)) continue;
                 if (!vertices.contains(arc.getTwo())){
                     path.add(arc);
                     vertices.add(arc.getTwo());
@@ -160,7 +169,7 @@ public class Solution implements Cloneable {
 
     private void connect(){
         while(!isConnected()){
-            verticesDT.add(Instances.vertices.get(permutation.get(verticesDT.size())));
+            verticesDT.add(Instances.graph.vertices.get(permutation.get(verticesDT.size())));
         }
     }
 
@@ -209,7 +218,7 @@ public class Solution implements Cloneable {
 
         while(!DominateSet.isEmpty()){
 
-            maxVertex = getHaveMaxDominNeighbor(DominateSet);
+            maxVertex = DominateSet.get(0);
 
             path0 = getPath0(newDominateSet,DominateSet,maxVertex,false);
 

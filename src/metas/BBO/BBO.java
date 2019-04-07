@@ -1,9 +1,6 @@
 package metas.BBO;
 
-
 import data.reader.Instances;
-import data.representations.Graph;
-import data.representations.Vertex;
 
 import java.util.*;
 import java.util.concurrent.Callable;
@@ -14,7 +11,6 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class BBO {
 
-    private int NbNodes;
     private int MaxNbGenerations; // max number of generation
 
     private int populationSize; // max species count, for each island
@@ -28,12 +24,7 @@ public class BBO {
     private float PMutate; // initial mutation probability
     private LinkedList<Float> prob; // the species count probability of each habitat
 
-
-    private Graph graph;
-    private LinkedList<Vertex> vertices;
-
     private Best best;
-    private float diff;
 
     private int random(int range){
         range = (range == 0) ? 1 : range;
@@ -42,9 +33,6 @@ public class BBO {
 
     int nbIteration ;
 	public BBO(int MaxNbGenerations , int populationSize , float PMutate){
-	    graph = Instances.graph;
-        vertices = Instances.vertices;
-        NbNodes = Instances.NbVertices;
 
         population = new LinkedList<>();
 
@@ -110,11 +98,9 @@ public class BBO {
             /** evaluate Population **/
 			Collections.sort(population);
 
-			if ( (diff = (best.cost - population.get(0).cost)) > 0) {
+			if ( best.cost - population.get(0).cost > 0) {
                 best.update(population.get(0),i,startTime);
                 best.display();
-                if(diff < 2)
-                    best.div ++;
 			} else {
 				best.div++;
 			}
@@ -213,12 +199,12 @@ public class BBO {
 
         float mi;
         mi = PMutate * ( (1 - (prob.get(j))) / Collections.max(prob));
-        for (int i = 0; i < NbNodes; i++) {
+        for (int i = 0; i < Instances.NbVertices ; i++) {
 
             if (random(100) < mi) {
 
                 int rand;
-                while((rand = random(NbNodes - 1)) ==
+                while((rand = random(Instances.NbVertices - 1)) ==
                         currentSolutions.get(currentSolutions.get(i)));
 
                 int temp = currentSolutions.get(i);
@@ -266,9 +252,9 @@ public class BBO {
     private void _MultiThLocalSearch(){
 
         ArrayList<Callable<Void>> taskList = new ArrayList<>();
-        for (int j = 0; j < Math.min(populationSize,nbIteration) ; j++) {
+        //for (int j = 0; j < Math.min(populationSize,nbIteration) ; j++) {
         //for (int j = 0; j < 5 ; j++) {
-        //for (int j = 0; j < populationSize; j++) {
+        for (int j = 0; j < populationSize; j++) {
             final int th = j;
             Callable<Void> callable = () -> {
                 _Individual_Search(th);
@@ -295,7 +281,7 @@ public class BBO {
         Individual LocalBest = individual;
 
         for (int t = 0; t < individual.sol.verticesDT.size(); t++) {
-                for (int v = 0; v < NbNodes ; v++) {
+                for (int v = 0; v < Instances.NbVertices ; v++) {
                     permutation = new LinkedList<>(individual.sol.permutation);
                     temp = permutation.get(t);
                     permutation.set(t, permutation.get(v));

@@ -1,13 +1,12 @@
 package data.representations;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
-public class Edge implements Comparable<Edge> {
+public class Edge implements Comparable<Edge> , Cloneable {
 
 	private Vertex one, two;
 	private float weight;
-
 
 	public Edge(Vertex one, Vertex two, float weight) {
 		this.one = (one.getLabel().compareTo(two.getLabel()) <= 0) ? one : two;
@@ -15,6 +14,11 @@ public class Edge implements Comparable<Edge> {
 		this.weight = weight;
 	}
 
+    private Edge(Edge clone) {
+	    one = new Vertex(clone.getOne().getLabel());
+        two = new Vertex(clone.getTwo().getLabel());
+        weight = clone.weight;
+	}
 
 	/** Getters **/
 
@@ -71,4 +75,9 @@ public class Edge implements Comparable<Edge> {
         return (one+ "," + two).hashCode();
     }
 
+
+    @Override
+    protected Object clone() {
+        return new Edge(this);
+    }
 }
