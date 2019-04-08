@@ -40,7 +40,7 @@ public class Solution implements Cloneable {
         DT();
     }
 
-    public Solution(Solution clone) {
+    protected Solution(Solution clone) {
         permutation = clone.permutation;
         verticesDT = clone.verticesDT;
         path = clone.path;
@@ -117,7 +117,7 @@ public class Solution implements Cloneable {
             ququeArcs.removeAll(path);
             Collections.sort(ququeArcs);
             for(Edge arc:ququeArcs) {
-                //if(!arc.contains_vertex(verticesDT)) continue;
+                if(!arc.contains_vertex(verticesDT)) continue;
                 if (!vertices.contains(arc.getTwo())){
                     path.add(arc);
                     vertices.add(arc.getTwo());
@@ -173,6 +173,7 @@ public class Solution implements Cloneable {
         }
     }
 
+    // TODO Optimization of this method
     private boolean isConnected(){
 
         if(verticesDT.isEmpty()) return false;

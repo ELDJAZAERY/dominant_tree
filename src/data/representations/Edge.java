@@ -3,7 +3,7 @@ package data.representations;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Edge implements Comparable<Edge> , Cloneable {
+public class Edge implements Comparable<Edge>  {
 
 	private Vertex one, two;
 	private float weight;
@@ -14,11 +14,6 @@ public class Edge implements Comparable<Edge> , Cloneable {
 		this.weight = weight;
 	}
 
-    private Edge(Edge clone) {
-	    one = new Vertex(clone.getOne().getLabel());
-        two = new Vertex(clone.getTwo().getLabel());
-        weight = clone.weight;
-	}
 
 	/** Getters **/
 
@@ -62,7 +57,11 @@ public class Edge implements Comparable<Edge> , Cloneable {
 
     @Override
     public boolean equals(Object other) {
-        return hashCode() == other.hashCode();
+        if (!(other instanceof Edge)) {
+            return false;
+        }
+        Edge e = (Edge) other;
+        return e.one.equals(this.one) && e.two.equals(this.two);
     }
 
 	@Override
@@ -72,12 +71,8 @@ public class Edge implements Comparable<Edge> , Cloneable {
 
     @Override
     public int hashCode() {
-        return (one+ "," + two).hashCode();
+        return (one.getLabel() + "," + two.getLabel()).hashCode();
     }
 
 
-    @Override
-    protected Object clone() {
-        return new Edge(this);
-    }
 }

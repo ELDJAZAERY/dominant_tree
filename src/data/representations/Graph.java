@@ -8,12 +8,15 @@ import java.util.*;
 public class Graph {
     
     public ArrayList<Vertex> vertices;
+    public HashMap<String, Vertex> verticesMap;
+
     public ArrayList<Edge> edges;
     
     
     public Graph() {
-        this.vertices = new ArrayList<>();
-        this.edges = new ArrayList<>();
+        vertices = new ArrayList<>();
+        verticesMap = new HashMap<>();
+        edges = new ArrayList<>();
     }
 
     private Graph(Graph clone , ArrayList<Vertex> verticesDT){
@@ -61,7 +64,12 @@ public class Graph {
     }
 
     public void addVertex(Vertex vertex) {
+        verticesMap.put(vertex.getLabel(), vertex);
         vertices.add(vertex);
+    }
+
+    public Vertex getVertex(String label) {
+        return verticesMap.get(label);
     }
 
     public void CloneZone(ArrayList<Vertex> verticesDT) {

@@ -3,11 +3,10 @@ package metas.BBO;
 
 import data.representations.Solutions.Solution;
 
-import java.util.Collections;
 import java.util.LinkedList;
 
 
-public class Individual implements Comparable , Cloneable {
+public class Individual implements Comparable {
 
 	static int nbEval = 0 ;
 
@@ -33,18 +32,9 @@ public class Individual implements Comparable , Cloneable {
         this.eval = ++nbEval;
     }
 
-    private Individual(Individual clone){
-	    this.sol = (Solution) clone.sol.clone();
-        this.cost = sol.fitness;
-    }
-
     @Override
     public int compareTo(Object other) {
         return ((int)sol.fitness - (int)((Individual) other).sol.fitness);
     }
 
-    @Override
-    protected Object clone(){
-        return new Individual(this);
-    }
 }

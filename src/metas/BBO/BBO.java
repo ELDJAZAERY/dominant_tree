@@ -45,11 +45,10 @@ public class BBO {
 		this.PMutate = PMutate;
     }
 
+    long startTime = System.currentTimeMillis();
 
 	public void BBO_Exec() {
 
-	    // Start Time
-        long startTime = System.currentTimeMillis();
 
 	    // initialize the population
 		InitializePopulation();
@@ -59,6 +58,7 @@ public class BBO {
         best.display();
 
         nbIteration = 0;
+
         /**\// ## Updating Population Loop ## \//**/
 		for (int i = 0; i < MaxNbGenerations; i++) {
             nbIteration++;
@@ -86,7 +86,9 @@ public class BBO {
 
 			/** Local Search Multi Thread **/
             //_MonoThLocalSearch();
-            _MultiThLocalSearch();
+            //_MultiThLocalSearch();
+            _LocalSearch();
+
 
 
             /** Elitism with the worst **/
@@ -301,7 +303,64 @@ public class BBO {
         }
     }
 
-
     /** </Local Search> **/
+
+
+    /** Local Search Multi Thread **/
+    private void _LocalSearch(){
+        /** <Local Search> **/
+        ArrayList<Callable<Void>> taskList = new ArrayList<>();
+        for (int j = 0; j < populationSize; j++) {
+            final int th = j;
+            Callable<Void> callable = () -> {
+                _VNS_Function_I(th);
+                return null;
+            };
+            taskList.add(callable);
+        }
+
+        ExecutorService executor = Executors.newFixedThreadPool(populationSize);
+        try {
+            executor.invokeAll(taskList);
+        } catch (InterruptedException ie) {
+        }
+        /** </Local Search> **/
+
+    }
+
+    /**  Local search individual **/
+    private void _VNS_Function_I(int i) {
+
+        Individual I_p = population.get(i);
+        boolean stop = false;
+
+        while (!stop) {
+            stop = true;
+            for (int t = 0; t < I_p.sol.verticesDT.size(); t++) {
+                boolean find = false;
+                Individual I_pc = I_p;
+                for (int v = I_p.sol.verticesDT.size(); v < Instances.NbVertices && !find; v++) {
+                    LinkedList<Integer> permutation_pp = new LinkedList<>(I_p.sol.permutation);
+                    int temp = permutation_pp.get(t);
+                    permutation_pp.set(t, permutation_pp.get(v));
+                    permutation_pp.set(v, temp);
+
+                    Individual I_pp = new Individual(permutation_pp);
+
+                    if (I_pp.cost < I_pc.cost) {
+                        I_pc = I_pp;
+                    }
+                }
+                I_p = I_pc;
+            }
+            // End of Local Search
+            if (population.get(i).cost > I_p.cost) {
+                population.set(i, I_p);
+            }
+        }
+    }
+
+
+
 
 }
