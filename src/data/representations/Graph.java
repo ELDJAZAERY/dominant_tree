@@ -127,7 +127,7 @@ public class Graph {
             ququeArcs.removeAll(pathDT);
             Collections.sort(ququeArcs);
             for(Edge arc:ququeArcs) {
-                if(!arc.contains_vertex(graphDT.vertices)) continue;
+                //if(!arc.contains_vertex(graphDT.vertices)) continue;
                 if (!vertices.contains(arc.getTwo())){
                     pathDT.add(arc);
                     vertices.add(arc.getTwo());

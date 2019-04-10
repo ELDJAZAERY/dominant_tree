@@ -4,17 +4,18 @@ package metas.BBO;
 import data.representations.Solutions.Solution;
 
 import java.util.LinkedList;
+import java.util.List;
 
 
-public class Individual implements Comparable {
+public class Individual implements Comparable<Individual> {
 
 	static int nbEval = 0 ;
 
-	Solution sol;
+	public  Solution sol;
 	float cost;
 	int eval;
 
-	public Individual(LinkedList<Integer> CurrentSol){
+	public Individual(List<Integer> CurrentSol){
         Solution sol = new Solution(CurrentSol);
 
         this.sol = sol;
@@ -33,8 +34,8 @@ public class Individual implements Comparable {
     }
 
     @Override
-    public int compareTo(Object other) {
-        return ((int)sol.fitness - (int)((Individual) other).sol.fitness);
+    public int compareTo(Individual other) {
+        return (int)sol.fitness - (int)other.sol.fitness;
     }
 
 }

@@ -51,7 +51,7 @@ public class Binary_Solution extends Solution implements Cloneable {
     }
 
     @Override
-    public Object clone(){
+    public Binary_Solution clone(){
         return new Binary_Solution(this);
     }
 

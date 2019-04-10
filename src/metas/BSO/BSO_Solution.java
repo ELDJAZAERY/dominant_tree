@@ -125,7 +125,7 @@ public class BSO_Solution extends Binary_Solution implements Comparable , Clonea
     }
 
     @Override
-    public Object clone() {
+    public BSO_Solution clone() {
         return new BSO_Solution(this);
     }
 

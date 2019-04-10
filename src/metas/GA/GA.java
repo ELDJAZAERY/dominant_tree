@@ -1,5 +1,7 @@
 package metas.GA;
 
+import data.representations.Solutions.Solution;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.concurrent.ThreadLocalRandom;
@@ -8,16 +10,17 @@ import java.util.concurrent.ThreadLocalRandom;
 public class GA {
 
     private int populationSize , nbIteration;
+    private ArrayList<Individual> population ;
 
     public GA(int populationSize , int nbIteration){
         this.populationSize = populationSize;
         this.nbIteration = nbIteration;
+        population = new ArrayList<>();
     }
 
 
     public void Exec(){
 
-        ArrayList<Individual> population = new ArrayList<>();
         Individual n , n1 , nstar , BestSol = new Individual();
         int nbIter = nbIteration;
 
@@ -72,9 +75,15 @@ public class GA {
             population = newPopulation;
         }
 
-        System.out.println(this.nbIteration);
+        System.out.println("----- GA END ----"+this.nbIteration);
     }
 
-
+    public ArrayList<Solution> getPopulation(){
+        ArrayList<Solution> popSolutions = new ArrayList<>();
+        for(Individual ind:this.population){
+            popSolutions.add(ind.sol);
+        }
+        return popSolutions;
+    }
 
 }

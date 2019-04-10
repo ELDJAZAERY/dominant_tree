@@ -10,7 +10,7 @@ public class Individual implements Comparable {
     static int nbEval = 0 ;
 
     private int eval;
-    private Solution sol;
+    protected Solution sol;
 
 
     public Individual(){

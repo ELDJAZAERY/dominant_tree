@@ -36,6 +36,12 @@ public class Solution implements Cloneable {
 
 
     public Solution(List<Integer> CurrentSol) {
+        if(permutationInitial.size() != Instances.NbVertices){
+            permutationInitial.clear();
+            for (int j = 0; j < Instances.NbVertices; j++) {
+                permutationInitial.add(j);
+            }
+        }
         permutation = new ArrayList<>(CurrentSol);
         DT();
     }
@@ -55,25 +61,27 @@ public class Solution implements Cloneable {
         Connect();
         pruning();
         MST();
+        //MSTGraph();
     }
 
-
-    private ArrayList<Vertex> DominatingSet(){
-        ArrayList<Vertex> dominating_set = new ArrayList<>();
-
+    public ArrayList<Vertex> DominatingSet() {
         /** Correction phase **/
         if(permutation.size() < Instances.graph.vertices.size()){
+            //System.out.println(" --- #Correction phase ---");
             Collections.shuffle(permutationInitial);
             for(Integer vertex:permutationInitial)
-                if(!permutation.contains(vertex))
+                if(!permutation.contains(vertex)){
                     permutation.add(vertex);
+                }
         }
+
+        ArrayList<Vertex> dominating_set = new ArrayList<>();
 
         int[] temp = new int[permutation.size()];
         int computer = 0, j = 0;
 
-        while(j < permutation.size() && computer != permutation.size()){
-            if(temp[permutation.get(j)] == 0){
+        while (j < permutation.size() && computer != permutation.size()) {
+            if (temp[permutation.get(j)] == 0) {
                 temp[permutation.get(j)] = 1;
                 computer++;
             }
@@ -82,23 +90,24 @@ public class Solution implements Cloneable {
             Vertex V = Instances.graph.vertices.get(permutation.get(j));
             for (int k = 0; k < V.getNeighborCount(); k++) {
                 int v = Integer.parseInt(V.getNeighbor(k).getTheOtherOne(V).getLabel());
-                if(temp[v] == 0){
+
+                if (temp[v] == 0) {
                     temp[v] = 1;
                     computer++;
                 }
             }
             j++;
+
         }
 
         return dominating_set;
     }
 
-/*
-    public void MST(){
+
+    public void MSTGraph(){
         path = Graph.MST(verticesDT);
         MAJ_Fitness();
     }
-*/
 
 
     public void MST(){
@@ -117,7 +126,7 @@ public class Solution implements Cloneable {
             ququeArcs.removeAll(path);
             Collections.sort(ququeArcs);
             for(Edge arc:ququeArcs) {
-                if(!arc.contains_vertex(verticesDT)) continue;
+                //if(!arc.contains_vertex(verticesDT)) continue;
                 if (!vertices.contains(arc.getTwo())){
                     path.add(arc);
                     vertices.add(arc.getTwo());

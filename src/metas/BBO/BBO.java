@@ -1,6 +1,8 @@
 package metas.BBO;
 
+import data.Logger;
 import data.reader.Instances;
+import data.representations.Solutions.Solution;
 
 import java.util.*;
 import java.util.concurrent.Callable;
@@ -47,11 +49,10 @@ public class BBO {
 
     long startTime = System.currentTimeMillis();
 
-	public void BBO_Exec() {
 
+	public void BBO_Exec(ArrayList<Solution> populationInitial) {
 
-	    // initialize the population
-		InitializePopulation();
+        InitializePopulation(populationInitial);
 
         best = new Best();
         best.update(population.get(0),0,0);
@@ -86,9 +87,8 @@ public class BBO {
 
 			/** Local Search Multi Thread **/
             //_MonoThLocalSearch();
-            //_MultiThLocalSearch();
-            _LocalSearch();
-
+            _MultiThLocalSearch();
+            //_LocalSearch();
 
 
             /** Elitism with the worst **/
@@ -103,11 +103,12 @@ public class BBO {
 			if ( best.cost - population.get(0).cost > 0) {
                 best.update(population.get(0),i,startTime);
                 best.display();
+                Logger.PersistanceLog("500-1",best.toString());
 			} else {
 				best.div++;
 			}
 
-			if (best.div >= 10) {
+			if (best.div >= 50) {
 			    /** Diversification **/
 			    _Diversity(elitism);
 			}
@@ -120,27 +121,38 @@ public class BBO {
 	}
 
 
-	public void InitializePopulation() {
-		for (int i = 0; i < populationSize; i++) {
-			Individual ind = new Individual();
-			population.add(ind);
-
-			// lambda(i) is the immigration rate for habitat i
-			lambda.add( (float) (1. - ( (populationSize - i) / populationSize )));
-			// mu(i) is the emigration rate for habitat i
-			mu.add( (float) ((populationSize - i) / populationSize));
-		}
-        updateProb();
+	public void InitializePopulation(ArrayList<Solution> populationInitial) {
+	    if(populationInitial == null){
+            for (int i = 0; i < populationSize; i++) {
+                Individual In = new Individual();
+                population.add(In);
+                // lambda(i) is the immigration rate for habitat i
+                lambda.add(1 - (((float)(populationSize - i)) / populationSize));
+                // mu(i) is the emigration rate for habitat i
+                mu.add( ((float)(populationSize - i)) / populationSize);
+            }
+            updateProb();
+        }else{
+            for (int i = 0; i < populationSize; i++) {
+                Individual In = new Individual(populationInitial.get(i).permutation);
+                population.add(In);
+                // lambda(i) is the immigration rate for habitat i
+                lambda.add(1 - (((float)(populationSize - i)) / populationSize));
+                // mu(i) is the emigration rate for habitat i
+                mu.add( ((float)(populationSize - i)) / populationSize);
+            }
+            updateProb();
+        }
 	}
 
 
 	public void UpdatePopulations() {
-		for (int i = 0; i < population.size(); i++) {
-			// lambda(i) is the immigration rate for habitat i
-            lambda.set( i, (float) (1. - ( (populationSize - i) / populationSize ) ));
-			// mu(i) is the emigration rate for habitat i
-            mu.set(i, (float) ((populationSize - i) / populationSize));
-		}
+        for (int i = 0; i < population.size(); i++) {
+            // lambda(i) is the immigration rate for habitat i
+            lambda.set(i, 1 - (((float)(populationSize - i)) / populationSize));
+            // mu(i) is the emigration rate for habitat i
+            mu.set(i, ((float)(populationSize - i)) / populationSize);
+        }
         updateProb();
 	}
 

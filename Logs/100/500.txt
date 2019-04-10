@@ -6,6 +6,103 @@ Best {
 }
 
 
+
+[ 369,  230,  446,  466,  218,  390,  103,  461,  204,  263,  373,  310,  48,  360,  182,  213,  20,  72,  40,  149]
+1207.2098 ?
+
+
+[ 426,  205,  483,  48,  73,  19,  213,  103,  466,  267,  436,  446,  303,  138,  373,  379,  142,  461,  344,  496,  273,  368]
+1209.4501 ?
+
+--------------------
+##### NEW CODE #####
+--------------------
+
+
+Best {
+	 Fitness    : 2538.76
+	 Nodes      : 59
+	 Iters      : 1
+	 nb Sols    : 51750980
+	 Secs       : 1.55491264E9
+}
+Best {
+	 Fitness    : 1288.9199
+	 Nodes      : 21
+	 Iters      : 1
+	 nb Sols    : 51846347
+	 Secs       : 70.0
+}
+Best {
+	 Fitness    : 1245.7999
+	 Nodes      : 20
+	 Iters      : 2
+	 nb Sols    : 51945598
+	 Secs       : 137.0
+}
+Best {
+	 Fitness    : 1240.9198
+	 Nodes      : 20
+	 Iters      : 3
+	 nb Sols    : 52014911
+	 Secs       : 211.0
+}
+Best {
+	 Fitness    : 1232.2799
+	 Nodes      : 21
+	 Iters      : 5
+	 nb Sols    : 52253612
+	 Secs       : 349.0
+}
+Best {
+	 Fitness    : 1225.52
+	 Nodes      : 22
+	 Iters      : 8
+	 nb Sols    : 52592225
+	 Secs       : 542.0
+}
+Best {
+	 Fitness    : 1202.0
+	 Nodes      : 21
+	 Iters      : 9
+	 nb Sols    : 52689758
+	 Secs       : 612.0
+}
+Best {
+	 Fitness    : 1201.9501
+	 Nodes      : 21
+	 Iters      : 12
+	 nb Sols    : 53005326
+	 Secs       : 836.0
+}
+Best {
+	 Fitness    : 1201.0302
+	 Nodes      : 21
+	 Iters      : 13
+	 nb Sols    : 53081495
+	 Secs       : 909.0
+}
+Best {
+	 Fitness    : 1200.1401
+	 Nodes      : 21
+	 Iters      : 15
+	 nb Sols    : 53259998
+	 Secs       : 1072.0
+}
+Best {
+	 Fitness    : 1200.06
+	 Nodes      : 22
+	 Iters      : 16
+	 nb Sols    : 53365706
+	 Secs       : 1153.0
+}
+
+
+
+------------------------------------------------------------
+### OLD CODE ###
+
+
 Best {
 	 Fitness    : 1300.56
 	 Nodes      : 23
