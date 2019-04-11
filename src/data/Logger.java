@@ -4,10 +4,9 @@ import java.io.PrintWriter;
 
 public class Logger {
 
-    private static String Logs;
+    private static String Logs = "";
 
     public static void Log(String fileName , String log){
-
         try {
             PrintWriter writer = new PrintWriter(fileName, "UTF-8");
             writer.println(log);

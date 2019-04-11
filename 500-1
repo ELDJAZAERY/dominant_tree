@@ -1,57 +1,22 @@
-nullBest {
-	 Fitness    : 1269.95
-	 Nodes      : 20
+Best {
+	 Fitness    : 1336.72
+	 Nodes      : 22
 	 Iters      : 1
-	 nb Sols    : 65250
-	 Secs       : 235.0
+	 nb Sols    : 79813
+	 Secs       : 116.0
 }
 Best {
-	 Fitness    : 1259.98
-	 Nodes      : 20
+	 Fitness    : 1283.8601
+	 Nodes      : 21
 	 Iters      : 2
-	 nb Sols    : 199335
-	 Secs       : 306.0
+	 nb Sols    : 189525
+	 Secs       : 211.0
 }
 Best {
-	 Fitness    : 1243.13
-	 Nodes      : 19
+	 Fitness    : 1267.7299
+	 Nodes      : 20
 	 Iters      : 3
-	 nb Sols    : 264105
-	 Secs       : 377.0
-}
-Best {
-	 Fitness    : 1242.58
-	 Nodes      : 19
-	 Iters      : 5
-	 nb Sols    : 399925
-	 Secs       : 515.0
-}
-Best {
-	 Fitness    : 1236.32
-	 Nodes      : 19
-	 Iters      : 21
-	 nb Sols    : 2048986
-	 Secs       : 1410.0
-}
-Best {
-	 Fitness    : 1235.0
-	 Nodes      : 19
-	 Iters      : 22
-	 nb Sols    : 2127653
-	 Secs       : 1468.0
-}
-Best {
-	 Fitness    : 1231.21
-	 Nodes      : 20
-	 Iters      : 23
-	 nb Sols    : 2242245
-	 Secs       : 1527.0
-}
-Best {
-	 Fitness    : 1229.0599
-	 Nodes      : 20
-	 Iters      : 24
-	 nb Sols    : 2342936
-	 Secs       : 1576.0
+	 nb Sols    : 328723
+	 Secs       : 277.0
 }
 

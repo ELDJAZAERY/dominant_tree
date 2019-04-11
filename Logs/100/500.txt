@@ -17,6 +17,91 @@ Best {
 --------------------
 ##### NEW CODE #####
 --------------------
+Best {
+	 Fitness    : 2243.6
+	 Nodes      : 39
+	 Iters      : 1
+	 nb Sols    : 8762348
+	 Secs       : 1.55496768E9
+}
+Best {
+	 Fitness    : 1316.88
+	 Nodes      : 23
+	 Iters      : 1
+	 nb Sols    : 8872261
+	 Secs       : 84.0
+}
+Best {
+	 Fitness    : 1270.56
+	 Nodes      : 20
+	 Iters      : 2
+	 nb Sols    : 8974500
+	 Secs       : 150.0
+}
+Best {
+	 Fitness    : 1259.51
+	 Nodes      : 21
+	 Iters      : 3
+	 nb Sols    : 9056993
+	 Secs       : 220.0
+}
+Best {
+	 Fitness    : 1244.54
+	 Nodes      : 22
+	 Iters      : 4
+	 nb Sols    : 9185381
+	 Secs       : 296.0
+}
+Best {
+	 Fitness    : 1244.4501
+	 Nodes      : 22
+	 Iters      : 5
+	 nb Sols    : 9220731
+	 Secs       : 366.0
+}
+Best {
+	 Fitness    : 1241.31
+	 Nodes      : 21
+	 Iters      : 9
+	 nb Sols    : 9700502
+	 Secs       : 676.0
+}
+Best {
+	 Fitness    : 1223.0
+	 Nodes      : 22
+	 Iters      : 10
+	 nb Sols    : 9812000
+	 Secs       : 771.0
+}
+Best {
+	 Fitness    : 1211.26
+	 Nodes      : 22
+	 Iters      : 12
+	 nb Sols    : 9982108
+	 Secs       : 929.0
+}
+Best {
+	 Fitness    : 1210.0
+	 Nodes      : 22
+	 Iters      : 13
+	 nb Sols    : 10041953
+	 Secs       : 1013.0
+}
+Best {
+	 Fitness    : 1205.95
+	 Nodes      : 22
+	 Iters      : 15
+	 nb Sols    : 10343173
+	 Secs       : 1203.0
+}
+Best {
+	 Fitness    : 1198.2699
+	 Nodes      : 24
+	 Iters      : 17
+	 nb Sols    : 10577391
+	 Secs       : 1408.0
+}
+ --------- BBO FIN ----------
 
 
 Best {

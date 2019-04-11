@@ -25,15 +25,15 @@ public class Demo {
 		BBO bbo = new BBO(300,10,(float) 0.005);
         GA ga = new GA(50,500);
 
-        ga.Exec();
-        bbo.BBO_Exec(ga.getPopulation());
+        //ga.Exec();
+        //bbo.BBO_Exec(ga.getPopulation());
 
 		//bbo.BBO_Exec();
         //BSO_Algo.Exec(10,5,1000);
 
         //heuristic.Exec();
 
-        //BBODemo();
+        BBODemo();
         //BBOTime();
         //randomTest();
 

@@ -86,9 +86,8 @@ public class BBO {
 			}
 
 			/** Local Search Multi Thread **/
-            //_MonoThLocalSearch();
             _MultiThLocalSearch();
-            //_LocalSearch();
+
 
 
             /** Elitism with the worst **/
@@ -126,9 +125,7 @@ public class BBO {
             for (int i = 0; i < populationSize; i++) {
                 Individual In = new Individual();
                 population.add(In);
-                // lambda(i) is the immigration rate for habitat i
                 lambda.add(1 - (((float)(populationSize - i)) / populationSize));
-                // mu(i) is the emigration rate for habitat i
                 mu.add( ((float)(populationSize - i)) / populationSize);
             }
             updateProb();
@@ -136,9 +133,9 @@ public class BBO {
             for (int i = 0; i < populationSize; i++) {
                 Individual In = new Individual(populationInitial.get(i).permutation);
                 population.add(In);
-                // lambda(i) is the immigration rate for habitat i
+
                 lambda.add(1 - (((float)(populationSize - i)) / populationSize));
-                // mu(i) is the emigration rate for habitat i
+
                 mu.add( ((float)(populationSize - i)) / populationSize);
             }
             updateProb();
@@ -148,9 +145,7 @@ public class BBO {
 
 	public void UpdatePopulations() {
         for (int i = 0; i < population.size(); i++) {
-            // lambda(i) is the immigration rate for habitat i
             lambda.set(i, 1 - (((float)(populationSize - i)) / populationSize));
-            // mu(i) is the emigration rate for habitat i
             mu.set(i, ((float)(populationSize - i)) / populationSize);
         }
         updateProb();
@@ -211,8 +206,7 @@ public class BBO {
             permutations.put(currentSolutions.get(n), String.valueOf(n));
         }
 
-        float mi;
-        mi = PMutate * ( (1 - (prob.get(j))) / Collections.max(prob));
+        float mi = PMutate * ( (1 - (prob.get(j))) / Collections.max(prob));
         for (int i = 0; i < Instances.NbVertices ; i++) {
 
             if (random(100) < mi) {
@@ -284,6 +278,7 @@ public class BBO {
         }
     }
 
+
     /**  Local search individual **/
     private void _Individual_Search(int i) {
 
@@ -316,63 +311,5 @@ public class BBO {
     }
 
     /** </Local Search> **/
-
-
-    /** Local Search Multi Thread **/
-    private void _LocalSearch(){
-        /** <Local Search> **/
-        ArrayList<Callable<Void>> taskList = new ArrayList<>();
-        for (int j = 0; j < populationSize; j++) {
-            final int th = j;
-            Callable<Void> callable = () -> {
-                _VNS_Function_I(th);
-                return null;
-            };
-            taskList.add(callable);
-        }
-
-        ExecutorService executor = Executors.newFixedThreadPool(populationSize);
-        try {
-            executor.invokeAll(taskList);
-        } catch (InterruptedException ie) {
-        }
-        /** </Local Search> **/
-
-    }
-
-    /**  Local search individual **/
-    private void _VNS_Function_I(int i) {
-
-        Individual I_p = population.get(i);
-        boolean stop = false;
-
-        while (!stop) {
-            stop = true;
-            for (int t = 0; t < I_p.sol.verticesDT.size(); t++) {
-                boolean find = false;
-                Individual I_pc = I_p;
-                for (int v = I_p.sol.verticesDT.size(); v < Instances.NbVertices && !find; v++) {
-                    LinkedList<Integer> permutation_pp = new LinkedList<>(I_p.sol.permutation);
-                    int temp = permutation_pp.get(t);
-                    permutation_pp.set(t, permutation_pp.get(v));
-                    permutation_pp.set(v, temp);
-
-                    Individual I_pp = new Individual(permutation_pp);
-
-                    if (I_pp.cost < I_pc.cost) {
-                        I_pc = I_pp;
-                    }
-                }
-                I_p = I_pc;
-            }
-            // End of Local Search
-            if (population.get(i).cost > I_p.cost) {
-                population.set(i, I_p);
-            }
-        }
-    }
-
-
-
 
 }
