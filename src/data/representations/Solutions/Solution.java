@@ -1,5 +1,6 @@
 package data.representations.Solutions;
 
+import data.Logger;
 import data.reader.Instances;
 import data.representations.Edge;
 import data.representations.Graph;
@@ -8,20 +9,34 @@ import data.representations.Vertex;
 import java.util.*;
 
 
-public class Solution implements Cloneable {
+public class Solution implements Cloneable , Comparable<Solution> {
 
-    private static ArrayList<Integer> permutationInitial = new ArrayList<>();
 
+    /** Solution props **/
     public ArrayList<Integer> permutation;
     public ArrayList<Vertex> verticesDT;
     public HashSet<Edge> path;
     public float fitness;
 
 
-    public int nbEvaluations;
+    /** #Static Permutation initial of the instance actual **/
+    private static ArrayList<Integer> permutationInitial = new ArrayList<>();
+
+
+    /** #Static #Nb Total of solutions **/
+    public static int NbEvalsTotal = 0;
+    private int nbEvaluations ;
+
+
+    /** #Static Timer **/
+    public static long StartTime = System.currentTimeMillis();
+    protected float sec = 0;
+    protected int   nbIteration = 0;
+
 
 
     public Solution() {
+        nbEvaluations = NbEvalsTotal++;
         if(permutationInitial.size() != Instances.NbVertices){
             permutationInitial.clear();
             for (int j = 0; j < Instances.NbVertices; j++) {
@@ -36,6 +51,7 @@ public class Solution implements Cloneable {
 
 
     public Solution(List<Integer> CurrentSol) {
+        nbEvaluations = NbEvalsTotal++;
         if(permutationInitial.size() != Instances.NbVertices){
             permutationInitial.clear();
             for (int j = 0; j < Instances.NbVertices; j++) {
@@ -51,6 +67,8 @@ public class Solution implements Cloneable {
         verticesDT = clone.verticesDT;
         path = clone.path;
         fitness = clone.fitness;
+
+        nbEvaluations = NbEvalsTotal;
     }
 
 
@@ -391,10 +409,47 @@ public class Solution implements Cloneable {
         return maxVertex;
     }
 
+    
+    public void display(int nbIteration){
+        this.nbIteration = nbIteration;
+        display();
+    }
+
+    public void display(){
+        if(sec == 0 ) {
+            long endTime_best = System.currentTimeMillis();
+            sec = (endTime_best - StartTime);
+            sec = (float) (sec / 1000.1);
+        }
+        System.out.println(toString());
+
+        /** Logs file **/
+        Logger.PersistanceLog("Logs.txt",toString());
+    }
+
+
+    @Override
+    public String toString() {
+        String out = "";
+        out += "Best {";
+        out += "\n\t Fitness    : " + fitness;
+        out += "\n\t Vertices   : " + verticesDT.size();
+        out += "\n\t Iteration  : " + nbIteration;
+        out += "\n\t nb Sols    : " + nbEvaluations;
+        out += "\n\t Secs       : " + sec;
+        out += "\n}";
+        return out;
+    }
 
     @Override
     public Object clone(){
         return new Solution(this);
+    }
+
+
+    @Override
+    public int compareTo(Solution other) {
+        return (int)fitness - (int)other.fitness;
     }
 
 }

@@ -13,10 +13,11 @@ import static java.util.stream.Collectors.toMap;
 public class Ant {
 
     private static HashMap<Integer,Double> pheromone_table;
-    private ArrayList<Integer> permutation ;
+    private ArrayList<Integer> permutation = new ArrayList<>();
 
     private Solution solLocal;
     private int index ;
+
 
     Ant(int i){
         index = i % Instances.NbVertices;
@@ -34,19 +35,16 @@ public class Ant {
     }
 
     public void build_Solution() {
-        build_par_Intensification();
-/*
-        if (Random() < ACO_Algo.q0 ) {
+        if (Random() > ACO.q0 ) {
             build_par_Intensification();
         } else {
-            select_par_diversification();
+            build_par_diversification();
         }
-*/
 
         LocalSearch();
-        if(solLocal.fitness < ACO_Algo.BestSol.fitness){
-            ACO_Algo.BestSol = solLocal;
-            System.out.println(solLocal.fitness);
+        if(solLocal.fitness < ACO.BestSol.fitness){
+            ACO.BestSol = solLocal;
+            solLocal.display();
         }
     }
 
@@ -72,7 +70,12 @@ public class Ant {
 
 
     private void build_par_diversification(){
+        if(permutation.isEmpty())
+            build_par_Intensification();
 
+        Collections.shuffle(permutation);
+        permute();
+        solLocal = new Solution(permutation);
     }
 
     private void LocalSearch(){
@@ -105,7 +108,7 @@ public class Ant {
         double alpha ;
         for (Integer v : pheromone_table.keySet()) {
             alpha = solLocal.verticesDT.contains(new Vertex(""+v)) ? 0.05 : 0;
-            pheromone_table.put(v, (ACO_Algo.raux * pheromone_table.get(v) + alpha));
+            pheromone_table.put(v, (ACO.raux * pheromone_table.get(v) + alpha));
         }
     }
 
@@ -113,7 +116,7 @@ public class Ant {
         double alpha ;
         for (Integer v : pheromone_table.keySet()) {
             alpha = best.verticesDT.contains(v) ? 0.05 : 0;
-            pheromone_table.put(v, (ACO_Algo.raux * pheromone_table.get(v) + alpha));
+            pheromone_table.put(v, (ACO.raux * pheromone_table.get(v) + alpha));
         }
     }
 
@@ -125,6 +128,7 @@ public class Ant {
         permutation.set(0,temp);
         permutation.set(index,temp1);
     }
+
 
 }
 

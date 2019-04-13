@@ -3,14 +3,15 @@ package metas.BSO;
 
 import data.reader.Instances;
 import data.representations.Solutions.Binary_Solution;
+import data.representations.Solutions.Solution;
+
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.concurrent.ThreadLocalRandom;
 
 
-public class BSO_Solution extends Binary_Solution implements Comparable , Cloneable {
+public class BSO_Solution extends Binary_Solution implements Cloneable {
 
-    public static int flip = 5;
 
     public static int nbLocalSearch = 10;
 
@@ -19,10 +20,10 @@ public class BSO_Solution extends Binary_Solution implements Comparable , Clonea
 
         int i = 1;
         do{
-            int flipper = ( (flip * i )% Instances.NbVertices-1) ;
+            int flipper = ( (BSO.flip * i )% Instances.NbVertices-1) ;
             binary[flipper] = (byte) ( (binary[flipper] + 1) % 2) ;
             i++;
-        }while (flip * i  < Instances.NbVertices );
+        }while (BSO.flip * i  < Instances.NbVertices );
 
         Binary_TO_Set();
     }
@@ -30,24 +31,25 @@ public class BSO_Solution extends Binary_Solution implements Comparable , Clonea
     public BSO_Solution(BSO_Solution sol , int numBee){
         super();
 
-        BSO_Solution newSol = (BSO_Solution) sol.clone();
+        BSO_Solution newSol = sol.clone();
         Byte[] binary = newSol.binary;
 
         int i = 1;
         do{
-            int fliper = ( (flip * i + numBee)% Instances.NbVertices - 1 ) ;
-            binary[fliper] = (byte) ( (binary[fliper] + 1) % 2) ;
+            int flipper = ( (BSO.flip * i + numBee)% Instances.NbVertices - 1 ) ;
+            binary[flipper] = (byte) ( (binary[flipper] + 1) % 2) ;
             i++;
-        }while (flip * i + numBee < Instances.NbVertices );
+        }while (BSO.flip * i + numBee < Instances.NbVertices );
 
 
         this.binary = binary;
         Binary_TO_Set();
     }
 
-    public BSO_Solution(BSO_Solution clone){
+    public BSO_Solution(Solution clone){
         super(clone);
     }
+
 
     public int distance(BSO_Solution sol){
         int dist = 0;
@@ -61,7 +63,7 @@ public class BSO_Solution extends Binary_Solution implements Comparable , Clonea
     public int distance(){
         int dist = 0;
         for(int i = 0 ; i < binary.length ; i++ ) {
-            if(binary[i].equals(BSO_Algo.CurrentSol.binary[i]))
+            if(binary[i].equals(BSO.CurrentSol.binary[i]))
                 dist++;
         }
         return dist;
@@ -76,23 +78,23 @@ public class BSO_Solution extends Binary_Solution implements Comparable , Clonea
         if(!Bee.Dances.isEmpty())
             return Bee.Dances.get(Bee.Dances.size()-1);
 
-        return BSO_Algo.CurrentSol;
+        return BSO.CurrentSol;
     }
 
 
 //    public BSO_Solution diversity(){
 //        BSO_Solution tempSol ;
 //
-//        Collections.sort(BSO_Algo.tabu,
+//        Collections.sort(BSO.tabu,
 //                Comparator.comparingInt(BSO_Solution::distance));
 //
-//        if(!BSO_Algo.tabu.isEmpty()){
-//            tempSol = BSO_Algo.tabu.get(BSO_Algo.tabu.size()-1);
-//            BSO_Algo.tabu.remove(tempSol);
+//        if(!BSO.tabu.isEmpty()){
+//            tempSol = BSO.tabu.get(BSO.tabu.size()-1);
+//            BSO.tabu.remove(tempSol);
 //            return tempSol;
 //        }
 //
-//        return BSO_Algo.CurrentSol;
+//        return BSO.CurrentSol;
 //    }
 
 
@@ -115,14 +117,6 @@ public class BSO_Solution extends Binary_Solution implements Comparable , Clonea
         }
     }
 
-    public void printPerformance(){
-        System.out.println(fitness);
-    }
-
-    @Override
-    public int compareTo(Object other) {
-        return ((int)fitness - (int)((BSO_Solution) other).fitness);
-    }
 
     @Override
     public BSO_Solution clone() {

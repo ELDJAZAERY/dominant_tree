@@ -1,40 +1,75 @@
 package metas.BSO;
 
+import data.representations.Solutions.Solution;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class BSO_Algo {
+public class BSO {
 
-    public static int maxChances = 30;
-    public static int chance = 10;
-    public static int nbBees = 5 ;
+    protected static int nbIteration = 300;
+    protected static int nbBees = 5 ;
+    protected static int flip = 5;
 
-    public static BSO_Solution CurrentSol = new BSO_Solution()
+    /** Diversification params **/
+    private static int maxChances = 30;
+    private static int chance = 10;
+
+
+    protected static ArrayList<Bee> Bees = new ArrayList<>();
+    protected static ArrayList<BSO_Solution> tabu = new ArrayList<>();
+
+    protected static BSO_Solution CurrentSol = new BSO_Solution()
             ,BestSol = new BSO_Solution();
 
-    static ArrayList<Bee> Bees = new ArrayList<>();
 
-    public static ArrayList<BSO_Solution> tabu = new ArrayList<>();
+    private static void setParams(int nbIterations , int nbBee , int flip ){
+        BSO.nbBees = nbBee;
+        BSO.flip = flip;
+    }
+
+    public static Solution getBest(){
+        return BestSol;
+    }
+
+    public static void Exec(){
+        setParams(300, 5, 5);
+        BSO_Exec();
+    }
+
+    public static void Exec(Solution solutionInitial){
+        CurrentSol = new BSO_Solution(solutionInitial);
+        BestSol = CurrentSol;
+        setParams(300, 5, 5);
+        BSO_Exec();
+    }
+
+    public static void Exec(int nbIterations , int nbBee , int flip) {
+        setParams(nbIterations, nbBee, flip);
+        BSO_Exec();
+    }
+
+    public static void Exec(int nbIterations , int nbBee , int flip , Solution solInitial ){
+        CurrentSol = new BSO_Solution(solInitial);
+        BestSol = CurrentSol;
+        setParams(nbIterations,nbBee,flip);
+        BSO_Exec();
+    }
 
 
-    public static void Exec(int nbBee , int flip , int nbIterations){
 
-        nbBees = nbBee;
+    public static void BSO_Exec(){
 
-        BSO_Solution.flip = flip;
+        initBee(nbBees);
+        int iterations = 0;
 
-        initBee(nbBee);
-
-        while (--nbIterations >= 0){
+        while (--iterations < nbIteration){
             selectZone();
-
             lanceBees();
-            //System.out.println(" --- Iteration N --- " + nbIterations);
         }
 
         System.out.print(" --- BSO Terminated --- ");
-
-        BestSol.printPerformance();
+        BestSol.display();
     }
 
 
@@ -67,7 +102,7 @@ public class BSO_Algo {
             tabu.add(CurrentSol);
 
             /*** deploy Current Best Sol Performance */
-            BestSol.printPerformance();
+            BestSol.display();
 
             Bee.Dances.clear();
             return;
@@ -97,9 +132,10 @@ public class BSO_Algo {
         for(int i = 0 ; i< nbBee ; i++){
             Bee bee = new Bee();
             bee.search();
-            Bees.add(bee);
+            BSO.Bees.add(bee);
         }
     }
+
 
     private static void lanceBees(){
 

@@ -9,27 +9,66 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class GA {
 
-    private int populationSize , nbIteration;
-    private ArrayList<Individual> population ;
+    private static int populationSize , nbIteration;
+    private static ArrayList<Individual> population ;
 
-    public GA(int populationSize , int nbIteration){
-        this.populationSize = populationSize;
-        this.nbIteration = nbIteration;
+
+    public static void Exec(int nbIteration , int populationSize){
+        GA.populationSize = populationSize;
+        GA.nbIteration = nbIteration;
         population = new ArrayList<>();
+        initialzePopulation(null);
+        GA_Exec();
+    }
+
+    public static void Exec(){
+        GA.nbIteration = 500;
+        GA.populationSize = 50;
+        population = new ArrayList<>();
+        initialzePopulation(null);
+        GA_Exec();
+    }
+
+    public static void Exec(ArrayList<Solution> populationInitial){
+        GA.nbIteration = 500;
+        GA.populationSize = 50;
+        population = new ArrayList<>();
+        initialzePopulation(populationInitial);
+        GA_Exec();
     }
 
 
-    public void Exec(){
+    private static void initialzePopulation(ArrayList<Solution> populationInitial){
+        int init = populationSize ;
 
-        Individual n , n1 , nstar , BestSol = new Individual();
-        int nbIter = nbIteration;
-
-        // init population initial
-        int init = populationSize + 1;
-        while(--init != 0) {
-            population.add(new Individual());
+        if(populationInitial == null ){
+            while(--init != 0) {
+                population.add(new Individual());
+            }
+        }else{
+            for(Solution sol:populationInitial){
+                init--;
+                population.add(new Individual(sol));
+            }
+            while(--init != 0) {
+                population.add(new Individual());
+            }
         }
+    }
 
+    public ArrayList<Solution> getPopulation(){
+        ArrayList<Solution> popSolutions = new ArrayList<>();
+        for(Individual ind:this.population){
+            popSolutions.add(ind.solLocal);
+        }
+        return popSolutions;
+    }
+
+
+    public static void GA_Exec(){
+
+        Individual n , n1 , nstar , BestSol = Collections.max(population);
+        int nbIter = nbIteration;
 
         ArrayList<Individual> newPopulation ;
 
@@ -62,7 +101,7 @@ public class GA {
                 nstar.LocalSearch();
                 if(BestSol.compareTo(nstar) > 0 ){
                     BestSol = nstar;
-                    BestSol.printPerformance();
+                    BestSol.display();
                 }
 
                 newPopulation.add(nstar);
@@ -75,15 +114,8 @@ public class GA {
             population = newPopulation;
         }
 
-        System.out.println("----- GA END ----"+this.nbIteration);
+        System.out.println("----- GA END ----"+nbIteration);
     }
 
-    public ArrayList<Solution> getPopulation(){
-        ArrayList<Solution> popSolutions = new ArrayList<>();
-        for(Individual ind:this.population){
-            popSolutions.add(ind.solLocal);
-        }
-        return popSolutions;
-    }
 
 }

@@ -7,18 +7,18 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Individual implements Comparable {
 
-    static int nbEval = 0 ;
 
-    private int eval;
     protected Solution solLocal;
 
 
     public Individual(){
         Solution sol = new Solution();
         this.solLocal = sol;
-        eval = ++nbEval;
     }
 
+    public Individual(Solution sol) {
+        solLocal = (Solution) sol.clone();
+    }
 
     private Individual(Solution s1 , Solution s2){
         ArrayList<Integer> crossed = new ArrayList<>();
@@ -77,24 +77,8 @@ public class Individual implements Comparable {
         }
     }
 
-
-    public void printPerformance(){
-        System.out.println(toString());
-    }
-
-    @Override
-    public String toString() {
-        String out = "";
-        out += "Best {";
-        out += "\n\t Fitness    : " + solLocal.fitness;
-        out += "\n\t nbVertices : " + solLocal.verticesDT.size();
-        out += "\n\t nbPath     : " + solLocal.path.size();
-
-        /*        out += "\n\t Nodes   : " + NbN;
-        out += "\n\t Iters   : " + NbIt;
-        out += "\n\t Secs    : " + t;*/
-        out += "\n}";
-        return out;
+    public void display(){
+        solLocal.display();
     }
 
     @Override

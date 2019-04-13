@@ -24,7 +24,7 @@ public class Binary_Solution extends Solution implements Cloneable {
         Set_To_Binary();
     }
 
-    public Binary_Solution(Binary_Solution clone) {
+    public Binary_Solution(Solution clone) {
         super(clone);
         Set_To_Binary();
     }

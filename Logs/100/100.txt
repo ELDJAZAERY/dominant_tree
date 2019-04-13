@@ -18,8 +18,10 @@ Best {
 
 ##### 3 #####
 Best {
-	 Fitness : 1253.4899
-	 Nodes   : 19
-	 Iters   : 7
-	 Secs    : 27.0
+	 Fitness    : 1252.99
+	 Vertices   : 20
+	 Iteration  : 3
+	 nb Sols    : 38523
+	 Secs       : 8.290171
 }
+
