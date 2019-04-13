@@ -1,0 +1,227 @@
+######## GLOBAL BEST ######
+
+Best {
+	 Fitness    : 1236.81
+	 Nodes      : 19
+	 Iters      : 39
+	 nb Sols    : 3905239
+	 Secs       : 2193.7346
+}
+
+###########################
+
+
+
+######## GLOBAL Moyenne ######
+
+
+
+###############################
+
+
+
+Best {
+	 Fitness    : 2821.3494
+	 Nodes      : 64
+	 Iters      : 1
+	 nb Sols    : 1
+	 Secs       : 1.55491264E9
+}
+Best {
+	 Fitness    : 1355.46
+	 Nodes      : 23
+	 Iters      : 1
+	 nb Sols    : 88470
+	 Secs       : 74.87451
+}
+Best {
+	 Fitness    : 1295.1099
+	 Nodes      : 24
+	 Iters      : 2
+	 nb Sols    : 211503
+	 Secs       : 140.86792
+}
+Best {
+	 Fitness    : 1283.2399
+	 Nodes      : 21
+	 Iters      : 3
+	 nb Sols    : 315893
+	 Secs       : 203.77962
+}
+Best {
+	 Fitness    : 1281.35
+	 Nodes      : 21
+	 Iters      : 7
+	 nb Sols    : 768790
+	 Secs       : 430.7249
+}
+Best {
+	 Fitness    : 1268.14
+	 Nodes      : 21
+	 Iters      : 10
+	 nb Sols    : 1087227
+	 Secs       : 576.2134
+}
+Best {
+	 Fitness    : 1253.9099
+	 Nodes      : 21
+	 Iters      : 11
+	 nb Sols    : 1189122
+	 Secs       : 628.3202
+}
+Best {
+	 Fitness    : 1243.49
+	 Nodes      : 20
+	 Iters      : 12
+	 nb Sols    : 1241576
+	 Secs       : 682.7847
+}
+Best {
+	 Fitness    : 1236.81
+	 Nodes      : 19
+	 Iters      : 39
+	 nb Sols    : 3905239
+	 Secs       : 2193.7346
+}
+Best {
+	 Fitness    : 1236.81
+	 Nodes      : 19
+	 Iters      : 39
+	 nb Sols    : 3905239
+	 Secs       : 2193.7346
+}
+ --------- BBO FIN ----------
+Best {
+	 Fitness    : 3804.52
+	 Nodes      : 122
+	 Iters      : 1
+	 nb Sols    : 4074903
+	 Secs       : 1.55491482E9
+}
+Best {
+	 Fitness    : 1366.37
+	 Nodes      : 22
+	 Iters      : 1
+	 nb Sols    : 4178664
+	 Secs       : 82.07779
+}
+Best {
+	 Fitness    : 1293.5498
+	 Nodes      : 22
+	 Iters      : 2
+	 nb Sols    : 4294452
+	 Secs       : 157.51225
+}
+Best {
+	 Fitness    : 1283.9497
+	 Nodes      : 23
+	 Iters      : 3
+	 nb Sols    : 4366612
+	 Secs       : 224.21358
+}
+Best {
+	 Fitness    : 1278.4299
+	 Nodes      : 24
+	 Iters      : 5
+	 nb Sols    : 4607289
+	 Secs       : 367.65924
+}
+Best {
+	 Fitness    : 1278.0399
+	 Nodes      : 23
+	 Iters      : 6
+	 nb Sols    : 4665743
+	 Secs       : 447.42926
+}
+Best {
+	 Fitness    : 1277.2198
+	 Nodes      : 23
+	 Iters      : 17
+	 nb Sols    : 5952600
+	 Secs       : 1352.0198
+}
+Best {
+	 Fitness    : 1274.9998
+	 Nodes      : 23
+	 Iters      : 25
+	 nb Sols    : 6872959
+	 Secs       : 2061.15
+}
+Best {
+	 Fitness    : 1271.7299
+	 Nodes      : 23
+	 Iters      : 29
+	 nb Sols    : 7369123
+	 Secs       : 2409.0662
+}
+Best {
+	 Fitness    : 1270.48
+	 Nodes      : 22
+	 Iters      : 32
+	 nb Sols    : 7676216
+	 Secs       : 2643.5017
+}
+Best {
+	 Fitness    : 1270.48
+	 Nodes      : 22
+	 Iters      : 32
+	 nb Sols    : 7676216
+	 Secs       : 2643.5017
+}
+ --------- BBO FIN ----------
+Best {
+	 Fitness    : 2291.4397
+	 Nodes      : 44
+	 Iters      : 1
+	 nb Sols    : 8600149
+	 Secs       : 1.55491814E9
+}
+Best {
+	 Fitness    : 1354.2701
+	 Nodes      : 24
+	 Iters      : 1
+	 nb Sols    : 8695838
+	 Secs       : 74.68853
+}
+Best {
+	 Fitness    : 1310.5698
+	 Nodes      : 18
+	 Iters      : 2
+	 nb Sols    : 8828712
+	 Secs       : 145.87141
+}
+Best {
+	 Fitness    : 1303.32
+	 Nodes      : 18
+	 Iters      : 3
+	 nb Sols    : 8844082
+	 Secs       : 220.57994
+}
+Best {
+	 Fitness    : 1289.98
+	 Nodes      : 22
+	 Iters      : 4
+	 nb Sols    : 9038995
+	 Secs       : 289.29208
+}
+Best {
+	 Fitness    : 1277.97
+	 Nodes      : 21
+	 Iters      : 5
+	 nb Sols    : 9157481
+	 Secs       : 347.0163
+}
+Best {
+	 Fitness    : 1277.01
+	 Nodes      : 20
+	 Iters      : 6
+	 nb Sols    : 9246859
+	 Secs       : 405.78342
+}
+Best {
+	 Fitness    : 1269.4601
+	 Nodes      : 20
+	 Iters      : 7
+	 nb Sols    : 9297920
+	 Secs       : 467.50626
+}

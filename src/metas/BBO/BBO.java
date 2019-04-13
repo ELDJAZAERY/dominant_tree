@@ -4,7 +4,10 @@ import data.Logger;
 import data.reader.Instances;
 import data.representations.Solutions.Solution;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -13,55 +16,78 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class BBO {
 
-    private int MaxNbGenerations; // max number of generation
+    private int MaxIterations;
 
-    private int populationSize; // max species count, for each island
-    private LinkedList<Individual> population; // the species count probability of each
+    private int populationSize;
+    private ArrayList<Individual> population;
 
-    private LinkedList<Float> mu; // emigration rate
+    // Emigration rate (Crossing)
+    private ArrayList<Float> EmigrationsPbs;
 
-    private LinkedList<Float> lambda; // immigration rate
+    // Immigration Rate
+    private ArrayList<Float> ImmigrationsPbs;
+
+    // mutation Probabilities
+    private float PMutate = (float) 0.005;
+    private ArrayList<Float> IndividualPMutate;
 
 
-    private float PMutate; // initial mutation probability
-    private LinkedList<Float> prob; // the species count probability of each habitat
+    // Diversification
+    private int diversificationRate = 30;
+    private int diversification = 0 ;
 
-    private Best best;
+    private Individual Best;
+
+
+    /** Static */
+    public static long startTime   = System.currentTimeMillis();
+    public static int  nbIteration = 0;
+
 
     private int random(int range){
         range = (range == 0) ? 1 : range;
         return ThreadLocalRandom.current().nextInt(0,range);
     }
 
-    int nbIteration ;
-	public BBO(int MaxNbGenerations , int populationSize , float PMutate){
+	public BBO(int MaxIterations , int populationSize , float PMutate ){
 
-        population = new LinkedList<>();
+        population = new ArrayList<>();
 
-        prob = new LinkedList<>();
-        lambda = new LinkedList<>();
-        mu = new LinkedList<>();
+        IndividualPMutate = new ArrayList<>();
+        ImmigrationsPbs = new ArrayList<>();
+        EmigrationsPbs = new ArrayList<>();
 
-        this.MaxNbGenerations = MaxNbGenerations;
+        this.MaxIterations = MaxIterations;
         this.populationSize = populationSize;
 		this.PMutate = PMutate;
     }
 
-    long startTime = System.currentTimeMillis();
+    public BBO(int MaxIterations , int populationSize){
+
+        population = new ArrayList<>();
+
+        IndividualPMutate = new ArrayList<>();
+        ImmigrationsPbs = new ArrayList<>();
+        EmigrationsPbs = new ArrayList<>();
+
+        this.MaxIterations = MaxIterations;
+        this.populationSize = populationSize;
+    }
 
 
 	public void BBO_Exec(ArrayList<Solution> populationInitial) {
 
+	    startTime = System.currentTimeMillis();
+
         InitializePopulation(populationInitial);
 
-        best = new Best();
-        best.update(population.get(0),0,0);
-        best.display();
+        Best = Collections.max(population);
+        Best.display();
 
         nbIteration = 0;
 
         /**\// ## Updating Population Loop ## \//**/
-		for (int i = 0; i < MaxNbGenerations; i++) {
+		for (int i = 0; i < MaxIterations; i++) {
             nbIteration++;
 
 			LinkedList<Individual> elitism = new LinkedList<>();
@@ -73,7 +99,7 @@ public class BBO {
 				LinkedList<Integer> currentSolutions = new LinkedList<>(population.get(j).sol.permutation);
 
 				// Random 0% --> 100%
-				if (random(100) < lambda.get(j)) {
+				if(random(100) < ImmigrationsPbs.get(j)) {
 				    /** Permutations **/
 				    _Crossing(currentSolutions,j);
 				}else{
@@ -99,23 +125,24 @@ public class BBO {
             /** evaluate Population **/
 			Collections.sort(population);
 
-			if ( best.cost - population.get(0).cost > 0) {
-                best.update(population.get(0),i,startTime);
-                best.display();
-                Logger.PersistanceLog("500-1",best.toString());
+			if ( Best.sol.fitness - population.get(0).fitness > 0) {
+			    Best = population.get(0);
+			    Best.display();
+                Logger.PersistanceLog("500-1",Best.toString());
 			} else {
-				best.div++;
+				diversification++;
 			}
 
-			if (best.div >= 50) {
+			if (diversification > diversificationRate) {
 			    /** Diversification **/
 			    _Diversity(elitism);
+			    diversification = 0;
 			}
 
 			UpdatePopulations();
 		}
 
-        best.display();
+        Best.display();
         System.out.println(" --------- BBO FIN ----------");
 	}
 
@@ -125,8 +152,8 @@ public class BBO {
             for (int i = 0; i < populationSize; i++) {
                 Individual In = new Individual();
                 population.add(In);
-                lambda.add(1 - (((float)(populationSize - i)) / populationSize));
-                mu.add( ((float)(populationSize - i)) / populationSize);
+                ImmigrationsPbs.add(1 - (((float)(populationSize - i)) / populationSize));
+                EmigrationsPbs.add( ((float)(populationSize - i)) / populationSize);
             }
             updateProb();
         }else{
@@ -134,9 +161,9 @@ public class BBO {
                 Individual In = new Individual(populationInitial.get(i).permutation);
                 population.add(In);
 
-                lambda.add(1 - (((float)(populationSize - i)) / populationSize));
+                ImmigrationsPbs.add(1 - (((float)(populationSize - i)) / populationSize));
 
-                mu.add( ((float)(populationSize - i)) / populationSize);
+                EmigrationsPbs.add( ((float)(populationSize - i)) / populationSize);
             }
             updateProb();
         }
@@ -145,8 +172,8 @@ public class BBO {
 
 	public void UpdatePopulations() {
         for (int i = 0; i < population.size(); i++) {
-            lambda.set(i, 1 - (((float)(populationSize - i)) / populationSize));
-            mu.set(i, ((float)(populationSize - i)) / populationSize);
+            ImmigrationsPbs.set(i, 1 - (((float)(populationSize - i)) / populationSize));
+            EmigrationsPbs.set(i, ((float)(populationSize - i)) / populationSize);
         }
         updateProb();
 	}
@@ -154,45 +181,45 @@ public class BBO {
 
     public void updateProb() {
 
-	    prob.clear();
+	    IndividualPMutate.clear();
 
         float sommeLambdaTotal = 0;
         float sommeMuTotal = 0;
         float somme ;
 
         for (int k = 0; k < populationSize; k++) {
-            sommeLambdaTotal = sommeLambdaTotal + lambda.get(k);
-            sommeMuTotal = sommeMuTotal + mu.get(k);
+            sommeLambdaTotal = sommeLambdaTotal + ImmigrationsPbs.get(k);
+            sommeMuTotal = sommeMuTotal + EmigrationsPbs.get(k);
         }
         somme = sommeLambdaTotal / sommeMuTotal;
 
         for (int k = 0; k < populationSize; k++) {
-            prob.add((1 / (1 + somme)));
+            IndividualPMutate.add((1 / (1 + somme)));
         }
     }
 
 
-    HashMap<Integer, String> permutations;
+    private HashMap<Integer, Integer> permutations;
     private void _Crossing(LinkedList<Integer> currentSolutions , int j){
 
         permutations = new HashMap<>();
         for (int n = 0; n < currentSolutions.size(); n++) {
-            permutations.put(currentSolutions.get(n), String.valueOf(n));
+            permutations.put(currentSolutions.get(n), n);
         }
 
         for (int l = 0; l < populationSize && l != j; l++) {
 
-            if (random(100) < mu.get(l)) {
+            if (random(100) < EmigrationsPbs.get(l)) {
 
                 int rand = random(population.get(l).sol.verticesDT.size() - 1 );
 
                 int temp = currentSolutions.get(rand);
                 int newVertex = population.get(l).sol.permutation.get(rand);
-                String pos = permutations.get(newVertex);
+                int pos = permutations.get(newVertex);
 
                 currentSolutions.set(rand, newVertex);
-                currentSolutions.set(Integer.parseInt(pos), temp);
-                permutations.put(newVertex, String.valueOf(rand));
+                currentSolutions.set(pos, temp);
+                permutations.put(newVertex, rand);
                 permutations.put(temp, pos);
             }
         }
@@ -203,10 +230,10 @@ public class BBO {
 
         permutations = new HashMap<>();
         for (int n = 0; n < currentSolutions.size(); n++) {
-            permutations.put(currentSolutions.get(n), String.valueOf(n));
+            permutations.put(currentSolutions.get(n), n);
         }
 
-        float mi = PMutate * ( (1 - (prob.get(j))) / Collections.max(prob));
+        float mi = PMutate * ( (1 - (IndividualPMutate.get(j))) / Collections.max(IndividualPMutate));
         for (int i = 0; i < Instances.NbVertices ; i++) {
 
             if (random(100) < mi) {
@@ -216,10 +243,11 @@ public class BBO {
                         currentSolutions.get(currentSolutions.get(i)));
 
                 int temp = currentSolutions.get(i);
-                String pos   = permutations.get(rand);
+                int pos   = permutations.get(rand);
+
                 currentSolutions.set(i, rand);
-                currentSolutions.set(Integer.parseInt(pos), temp);
-                permutations.put(rand, String.valueOf(i));
+                currentSolutions.set(pos, temp);
+                permutations.put(rand, i);
                 permutations.put(temp, pos);
             }
         }
@@ -229,25 +257,25 @@ public class BBO {
 
     private void _Diversity(LinkedList<Individual> elitism){
         System.out.println(" ---- @Diversification ----");
+        diversification = 0;
 
         // Generate new Population
         for (int k = 0; k < populationSize; k++) {
             Individual I = new Individual();
             population.set(k, I);
         }
-        best.div = 0;
 
         // Elitism
         population.set(populationSize - 1, elitism.get(0));
         population.set(populationSize - 2, elitism.get(1));
-        population.set(populationSize - 3, best.individual);
+        population.set(populationSize - 3, Best);
 
         Collections.sort(population);
     }
 
 
-    /** <Local Search> **/
 
+    /** <Local Search> **/
 
     private void _MonoThLocalSearch(){
         for (int I = 0; I < populationSize; I++) {
@@ -260,8 +288,6 @@ public class BBO {
     private void _MultiThLocalSearch(){
 
         ArrayList<Callable<Void>> taskList = new ArrayList<>();
-        //for (int j = 0; j < Math.min(populationSize,nbIteration) ; j++) {
-        //for (int j = 0; j < 5 ; j++) {
         for (int j = 0; j < populationSize; j++) {
             final int th = j;
             Callable<Void> callable = () -> {
@@ -283,29 +309,30 @@ public class BBO {
     private void _Individual_Search(int i) {
 
         Individual individual = population.get(i);
-        LinkedList<Integer> permutation;
+        ArrayList<Integer> permutation;
         Individual current ;
         int temp;
 
         Individual LocalBest = individual;
 
-        for (int t = 0; t < individual.sol.verticesDT.size(); t++) {
-                for (int v = 0; v < Instances.NbVertices ; v++) {
-                    permutation = new LinkedList<>(individual.sol.permutation);
-                    temp = permutation.get(t);
-                    permutation.set(t, permutation.get(v));
-                    permutation.set(v, temp);
+        for (int d = 0; d < individual.sol.verticesDT.size(); d++) {
+            //for (int v = 0; v < Instances.NbVertices ; v++) {
+            for (int v = individual.sol.verticesDT.size(); v < Instances.NbVertices ; v++) {
+                permutation = new ArrayList<>(individual.sol.permutation);
+                temp = permutation.get(d);
+                permutation.set(d, permutation.get(v));
+                permutation.set(v, temp);
 
-                    current = new Individual(permutation);
+                current = new Individual(permutation);
 
-                    if (current.cost < LocalBest.cost) {
-                        LocalBest = current;
-                    }
+                if (current.fitness < LocalBest.fitness) {
+                    LocalBest = current;
                 }
-                individual = LocalBest;
+            }
+            individual = LocalBest;
         }
 
-        if (population.get(i).cost > individual.cost) {
+        if (population.get(i).fitness > individual.fitness) {
             population.set(i, individual);
         }
     }

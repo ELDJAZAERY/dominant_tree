@@ -10,12 +10,12 @@ public class Individual implements Comparable {
     static int nbEval = 0 ;
 
     private int eval;
-    protected Solution sol;
+    protected Solution solLocal;
 
 
     public Individual(){
         Solution sol = new Solution();
-        this.sol = sol;
+        this.solLocal = sol;
         eval = ++nbEval;
     }
 
@@ -35,27 +35,46 @@ public class Individual implements Comparable {
             }
         }
 
-        this.sol = new Solution(new ArrayList<>(crossed));
+        this.solLocal = new Solution(new ArrayList<>(crossed));
     }
 
     public static Individual crossOver(Individual one,Individual otherOne){
-        return new Individual(one.sol,otherOne.sol);
+        return new Individual(one.solLocal,otherOne.solLocal);
     }
 
     public void mutation(){
         int randIndex = ThreadLocalRandom.current()
-                .nextInt(0,sol.permutation.size());
+                .nextInt(0, solLocal.permutation.size());
 
-        int mutated = sol.permutation.remove(randIndex);
-        sol.permutation.add(mutated);
+        int mutated = solLocal.permutation.remove(randIndex);
+        solLocal.permutation.add(mutated);
 
         // Correction phase
-        sol.Correction();
+        solLocal.Correction();
     }
 
 
-    public Individual LocalSearch(){
-        return this;
+    public void LocalSearch(){
+        int temp;
+        Solution current ;
+        Solution LocalBest = solLocal;
+        ArrayList<Integer> permutationTemp;
+
+        for (int d = 0; d < solLocal.verticesDT.size(); d++) {
+            for (int v = solLocal.verticesDT.size(); v < Instances.NbVertices ; v++) {
+                permutationTemp = new ArrayList<>(solLocal.permutation);
+                temp = permutationTemp.get(d);
+                permutationTemp.set(d, permutationTemp.get(v));
+                permutationTemp.set(v, temp);
+
+                current = new Solution(permutationTemp);
+
+                if (current.fitness < solLocal.fitness) {
+                    LocalBest = current;
+                }
+            }
+            solLocal = LocalBest;
+        }
     }
 
 
@@ -67,8 +86,11 @@ public class Individual implements Comparable {
     public String toString() {
         String out = "";
         out += "Best {";
-        out += "\n\t Fitness : " + sol.fitness;
-/*        out += "\n\t Nodes   : " + NbN;
+        out += "\n\t Fitness    : " + solLocal.fitness;
+        out += "\n\t nbVertices : " + solLocal.verticesDT.size();
+        out += "\n\t nbPath     : " + solLocal.path.size();
+
+        /*        out += "\n\t Nodes   : " + NbN;
         out += "\n\t Iters   : " + NbIt;
         out += "\n\t Secs    : " + t;*/
         out += "\n}";
@@ -77,7 +99,7 @@ public class Individual implements Comparable {
 
     @Override
     public int compareTo(Object other) {
-        return ((int)sol.fitness - (int)((Individual) other).sol.fitness);
+        return ((int) solLocal.fitness - (int)((Individual) other).solLocal.fitness);
     }
 
 }

@@ -1,22 +1,8 @@
 Best {
-	 Fitness    : 1336.72
-	 Nodes      : 22
-	 Iters      : 1
-	 nb Sols    : 79813
-	 Secs       : 116.0
-}
-Best {
-	 Fitness    : 1283.8601
-	 Nodes      : 21
-	 Iters      : 2
-	 nb Sols    : 189525
-	 Secs       : 211.0
-}
-Best {
-	 Fitness    : 1267.7299
-	 Nodes      : 20
-	 Iters      : 3
-	 nb Sols    : 328723
-	 Secs       : 277.0
+	 Fitness    : 1204.9
+	 Vertices   : 19
+	 Iteration  : 1
+	 nb Sols    : 4648
+	 Secs       : 1.1628838
 }
 

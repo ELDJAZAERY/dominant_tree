@@ -53,6 +53,19 @@ public class Solution implements Cloneable {
         fitness = clone.fitness;
     }
 
+
+    /** Getters **/
+    public ArrayList<Integer> getPermutation() {
+        return permutation;
+    }
+
+    public ArrayList<Vertex> getVerticesDT() {
+        return verticesDT;
+    }
+
+
+
+
     public void Correction(){
         DT();
     }
@@ -63,6 +76,7 @@ public class Solution implements Cloneable {
         MST();
         //MSTGraph();
     }
+
 
     public ArrayList<Vertex> DominatingSet() {
         /** Correction phase **/

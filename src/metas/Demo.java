@@ -10,35 +10,52 @@ import java.util.ArrayList;
 
 public class Demo {
 
-
-	// TODO Check Local Search BBO
 	// TODO connect and isCennected Function optimisation
-	// TODO Re-Do BBO as beginng
-
 
 	public static void main(String[] args) {
 
-        String path = "bench_marks\\100\\500_1.txt";
+        String path = "bench_marks\\100\\50_1.txt";
 
         new Instances(path);
 
 		BBO bbo = new BBO(300,10,(float) 0.005);
         GA ga = new GA(50,500);
 
-        //ga.Exec();
-        //bbo.BBO_Exec(ga.getPopulation());
 
-		//bbo.BBO_Exec();
+        /** ACO TEST **/
+        ACO_Algo.ACO_Exec();
+
+
+        /** BBO TEST **/
+        //bbo.BBO_Exec(null);
+
+
+        /**  BSO TEST **/
         //BSO_Algo.Exec(10,5,1000);
 
+
+        /** Genetic TEST  **/
+        //ga.Exec();
+
+
+        /** VNS heuristic **/
         //heuristic.Exec();
 
-        BBODemo();
+
+        /** Initialization population by GA and optimization by BBO **/
+        /*
+        ga.Exec();
+        bbo.BBO_Exec(ga.getPopulation());
+        */
+
+
+
+        /**  TEST FOR LOGS  **/
+        //BBODemo();
         //BBOTime();
         //randomTest();
 
-        //ACO_Algo.ACO_Exec();
-	}
+    }
 
 
 	private static void BBODemo(){

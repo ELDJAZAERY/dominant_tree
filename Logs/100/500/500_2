@@ -1,0 +1,462 @@
+
+##### GLOBAL BEST ######
+
+Best {
+	 Fitness    : 1223.05
+	 Nodes      : 23
+	 Iters      : 27
+	 nb Sols    : 7247470
+	 Secs       : 2137.0
+}
+
+#########################
+
+ Best {
+ 	 Fitness    : 1385.8201
+ 	 Nodes      : 22
+ 	 Iters      : 1
+ 	 nb Sols    : 89654
+ 	 Secs       : 92.0
+ }
+ Best {
+ 	 Fitness    : 1293.24
+ 	 Nodes      : 22
+ 	 Iters      : 2
+ 	 nb Sols    : 227678
+ 	 Secs       : 178.0
+ }
+ Best {
+ 	 Fitness    : 1280.0999
+ 	 Nodes      : 22
+ 	 Iters      : 3
+ 	 nb Sols    : 343911
+ 	 Secs       : 257.0
+ }
+ Best {
+ 	 Fitness    : 1279.7599
+ 	 Nodes      : 21
+ 	 Iters      : 4
+ 	 nb Sols    : 408245
+ 	 Secs       : 328.0
+ }
+ Best {
+ 	 Fitness    : 1274.32
+ 	 Nodes      : 21
+ 	 Iters      : 6
+ 	 nb Sols    : 675450
+ 	 Secs       : 466.0
+ }
+ Best {
+ 	 Fitness    : 1272.89
+ 	 Nodes      : 20
+ 	 Iters      : 7
+ 	 nb Sols    : 750315
+ 	 Secs       : 524.0
+ }
+ Best {
+ 	 Fitness    : 1272.1699
+ 	 Nodes      : 20
+ 	 Iters      : 8
+ 	 nb Sols    : 780595
+ 	 Secs       : 582.0
+ }
+ Best {
+ 	 Fitness    : 1263.56
+ 	 Nodes      : 20
+ 	 Iters      : 9
+ 	 nb Sols    : 955063
+ 	 Secs       : 639.0
+ }
+ Best {
+ 	 Fitness    : 1251.5701
+ 	 Nodes      : 21
+ 	 Iters      : 19
+ 	 nb Sols    : 1951705
+ 	 Secs       : 1206.0
+ }
+ Best {
+ 	 Fitness    : 1247.6799
+ 	 Nodes      : 21
+ 	 Iters      : 20
+ 	 nb Sols    : 2051516
+ 	 Secs       : 1271.0
+ }
+ Best {
+ 	 Fitness    : 1246.33
+ 	 Nodes      : 21
+ 	 Iters      : 39
+ 	 nb Sols    : 4074434
+ 	 Secs       : 2353.0
+ }
+ Best {
+ 	 Fitness    : 1355.14
+ 	 Nodes      : 23
+ 	 Iters      : 1
+ 	 nb Sols    : 4339333
+ 	 Secs       : 102.0
+ }
+ Best {
+ 	 Fitness    : 1310.1799
+ 	 Nodes      : 24
+ 	 Iters      : 2
+ 	 nb Sols    : 4386707
+ 	 Secs       : 183.0
+ }
+ Best {
+ 	 Fitness    : 1289.9498
+ 	 Nodes      : 24
+ 	 Iters      : 3
+ 	 nb Sols    : 4564537
+ 	 Secs       : 265.0
+ }
+ Best {
+ 	 Fitness    : 1283.6898
+ 	 Nodes      : 23
+ 	 Iters      : 4
+ 	 nb Sols    : 4658590
+ 	 Secs       : 340.0
+ }
+ Best {
+ 	 Fitness    : 1279.1399
+ 	 Nodes      : 25
+ 	 Iters      : 6
+ 	 nb Sols    : 4913594
+ 	 Secs       : 483.0
+ }
+ Best {
+ 	 Fitness    : 1272.3899
+ 	 Nodes      : 23
+ 	 Iters      : 7
+ 	 nb Sols    : 5023965
+ 	 Secs       : 562.0
+ }
+ Best {
+ 	 Fitness    : 1267.9899
+ 	 Nodes      : 22
+ 	 Iters      : 8
+ 	 nb Sols    : 5062649
+ 	 Secs       : 642.0
+ }
+ Best {
+ 	 Fitness    : 1267.9897
+ 	 Nodes      : 22
+ 	 Iters      : 9
+ 	 nb Sols    : 5157986
+ 	 Secs       : 720.0
+ }
+ Best {
+ 	 Fitness    : 1265.3201
+ 	 Nodes      : 25
+ 	 Iters      : 18
+ 	 nb Sols    : 6252274
+ 	 Secs       : 1440.0
+ }
+ Best {
+ 	 Fitness    : 1250.98
+ 	 Nodes      : 22
+ 	 Iters      : 19
+ 	 nb Sols    : 6354402
+ 	 Secs       : 1519.0
+ }
+ Best {
+ 	 Fitness    : 1247.48
+ 	 Nodes      : 23
+ 	 Iters      : 20
+ 	 nb Sols    : 6460397
+ 	 Secs       : 1589.0
+ }
+ Best {
+ 	 Fitness    : 1224.7001
+ 	 Nodes      : 23
+ 	 Iters      : 21
+ 	 nb Sols    : 6510824
+ 	 Secs       : 1657.0
+ }
+ Best {
+ 	 Fitness    : 1223.05
+ 	 Nodes      : 23
+ 	 Iters      : 27
+ 	 nb Sols    : 7247470
+ 	 Secs       : 2137.0
+ }
+ Best {
+ 	 Fitness    : 1340.53
+ 	 Nodes      : 22
+ 	 Iters      : 1
+ 	 nb Sols    : 8884222
+ 	 Secs       : 99.0
+ }
+ Best {
+ 	 Fitness    : 1285.7699
+ 	 Nodes      : 22
+ 	 Iters      : 2
+ 	 nb Sols    : 9001920
+ 	 Secs       : 187.0
+ }
+ Best {
+ 	 Fitness    : 1285.4099
+ 	 Nodes      : 22
+ 	 Iters      : 3
+ 	 nb Sols    : 9086049
+ 	 Secs       : 261.0
+ }
+ Best {
+ 	 Fitness    : 1273.85
+ 	 Nodes      : 22
+ 	 Iters      : 4
+ 	 nb Sols    : 9223576
+ 	 Secs       : 341.0
+ }
+ Best {
+ 	 Fitness    : 1269.09
+ 	 Nodes      : 21
+ 	 Iters      : 6
+ 	 nb Sols    : 9424455
+ 	 Secs       : 518.0
+ }
+ Best {
+ 	 Fitness    : 1266.24
+ 	 Nodes      : 21
+ 	 Iters      : 7
+ 	 nb Sols    : 9473502
+ 	 Secs       : 600.0
+ }
+ Best {
+ 	 Fitness    : 1256.1
+ 	 Nodes      : 21
+ 	 Iters      : 9
+ 	 nb Sols    : 9734590
+ 	 Secs       : 772.0
+ }
+ Best {
+ 	 Fitness    : 1255.4701
+ 	 Nodes      : 22
+ 	 Iters      : 13
+ 	 nb Sols    : 10142353
+ 	 Secs       : 1103.0
+ }
+ Best {
+ 	 Fitness    : 1253.6599
+ 	 Nodes      : 22
+ 	 Iters      : 14
+ 	 nb Sols    : 10261824
+ 	 Secs       : 1181.0
+ }
+ Best {
+ 	 Fitness    : 1251.0
+ 	 Nodes      : 22
+ 	 Iters      : 15
+ 	 nb Sols    : 10313023
+ 	 Secs       : 1263.0
+ }
+ Best {
+ 	 Fitness    : 1245.5499
+ 	 Nodes      : 20
+ 	 Iters      : 20
+ 	 nb Sols    : 10945735
+ 	 Secs       : 1663.0
+ }
+ Best {
+ 	 Fitness    : 1245.36
+ 	 Nodes      : 20
+ 	 Iters      : 21
+ 	 nb Sols    : 11026404
+ 	 Secs       : 1748.0
+ }
+ Best {
+ 	 Fitness    : 1244.3201
+ 	 Nodes      : 21
+ 	 Iters      : 26
+ 	 nb Sols    : 11585995
+ 	 Secs       : 2157.0
+ }
+ Best {
+ 	 Fitness    : 1239.3699
+ 	 Nodes      : 22
+ 	 Iters      : 27
+ 	 nb Sols    : 11643254
+ 	 Secs       : 2231.0
+ }
+ Best {
+ 	 Fitness    : 1238.1699
+ 	 Nodes      : 21
+ 	 Iters      : 33
+ 	 nb Sols    : 12296100
+ 	 Secs       : 2811.0
+ }
+ Best {
+ 	 Fitness    : 1342.24
+ 	 Nodes      : 25
+ 	 Iters      : 1
+ 	 nb Sols    : 13200608
+ 	 Secs       : 80.0
+ }
+ Best {
+ 	 Fitness    : 1281.7501
+ 	 Nodes      : 23
+ 	 Iters      : 2
+ 	 nb Sols    : 13311756
+ 	 Secs       : 155.0
+ }
+ Best {
+ 	 Fitness    : 1254.6901
+ 	 Nodes      : 22
+ 	 Iters      : 3
+ 	 nb Sols    : 13397106
+ 	 Secs       : 228.0
+ }
+ Best {
+ 	 Fitness    : 1249.8
+ 	 Nodes      : 21
+ 	 Iters      : 4
+ 	 nb Sols    : 13466072
+ 	 Secs       : 301.0
+ }
+ Best {
+ 	 Fitness    : 1247.6
+ 	 Nodes      : 20
+ 	 Iters      : 5
+ 	 nb Sols    : 13587873
+ 	 Secs       : 374.0
+ }
+ Best {
+ 	 Fitness    : 1383.19
+ 	 Nodes      : 24
+ 	 Iters      : 1
+ 	 nb Sols    : 17188841
+ 	 Secs       : 94.0
+ }
+ Best {
+ 	 Fitness    : 1284.06
+ 	 Nodes      : 22
+ 	 Iters      : 2
+ 	 nb Sols    : 17329995
+ 	 Secs       : 174.0
+ }
+ Best {
+ 	 Fitness    : 1260.6699
+ 	 Nodes      : 22
+ 	 Iters      : 3
+ 	 nb Sols    : 17444470
+ 	 Secs       : 241.0
+ }
+ Best {
+ 	 Fitness    : 1260.5499
+ 	 Nodes      : 22
+ 	 Iters      : 5
+ 	 nb Sols    : 17642419
+ 	 Secs       : 393.0
+ }
+ Best {
+ 	 Fitness    : 1260.4299
+ 	 Nodes      : 22
+ 	 Iters      : 6
+ 	 nb Sols    : 17691928
+ 	 Secs       : 477.0
+ }
+ Best {
+ 	 Fitness    : 1258.1399
+ 	 Nodes      : 21
+ 	 Iters      : 9
+ 	 nb Sols    : 18094622
+ 	 Secs       : 716.0
+ }
+ Best {
+ 	 Fitness    : 1241.9099
+ 	 Nodes      : 21
+ 	 Iters      : 10
+ 	 nb Sols    : 18148373
+ 	 Secs       : 795.0
+ }
+ Best {
+ 	 Fitness    : 1240.2899
+ 	 Nodes      : 22
+ 	 Iters      : 34
+ 	 nb Sols    : 20656626
+ 	 Secs       : 2532.0
+ }
+ Best {
+ 	 Fitness    : 1389.7499
+ 	 Nodes      : 21
+ 	 Iters      : 1
+ 	 nb Sols    : 21410717
+ 	 Secs       : 83.0
+ }
+ Best {
+ 	 Fitness    : 1322.97
+ 	 Nodes      : 23
+ 	 Iters      : 2
+ 	 nb Sols    : 21573931
+ 	 Secs       : 156.0
+ }
+ Best {
+ 	 Fitness    : 1303.2701
+ 	 Nodes      : 22
+ 	 Iters      : 3
+ 	 nb Sols    : 21680584
+ 	 Secs       : 224.0
+ }
+ Best {
+ 	 Fitness    : 1267.58
+ 	 Nodes      : 22
+ 	 Iters      : 4
+ 	 nb Sols    : 21775216
+ 	 Secs       : 292.0
+ }
+ Best {
+ 	 Fitness    : 1259.6101
+ 	 Nodes      : 21
+ 	 Iters      : 6
+ 	 nb Sols    : 21939481
+ 	 Secs       : 427.0
+ }
+ Best {
+ 	 Fitness    : 1254.2101
+ 	 Nodes      : 21
+ 	 Iters      : 9
+ 	 nb Sols    : 22242976
+ 	 Secs       : 634.0
+ }
+ Best {
+ 	 Fitness    : 1238.96
+ 	 Nodes      : 19
+ 	 Iters      : 24
+ 	 nb Sols    : 23845126
+ 	 Secs       : 1640.0
+ }
+ Best {
+ 	 Fitness    : 1236.17
+ 	 Nodes      : 22
+ 	 Iters      : 36
+ 	 nb Sols    : 25096988
+ 	 Secs       : 2376.0
+ }
+ Best {
+ 	 Fitness    : 1339.26
+ 	 Nodes      : 23
+ 	 Iters      : 1
+ 	 nb Sols    : 25614475
+ 	 Secs       : 93.0
+ }
+ Best {
+ 	 Fitness    : 1313.5099
+ 	 Nodes      : 21
+ 	 Iters      : 2
+ 	 nb Sols    : 25739965
+ 	 Secs       : 161.0
+ }
+ Best {
+ 	 Fitness    : 1260.9099
+ 	 Nodes      : 20
+ 	 Iters      : 3
+ 	 nb Sols    : 25833553
+ 	 Secs       : 222.0
+ }
+ Best {
+ 	 Fitness    : 1251.5399
+ 	 Nodes      : 19
+ 	 Iters      : 4
+ 	 nb Sols    : 25934816
+ 	 Secs       : 280.0
+ }
+

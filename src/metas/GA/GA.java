@@ -56,10 +56,10 @@ public class GA {
 
                 // proba of 5% to do Mutation
                 int proba = ThreadLocalRandom.current().nextInt(0,100);
-                if(proba <= 75)
+                if(proba <= 5)
                     nstar.mutation();
 
-                nstar = nstar.LocalSearch();
+                nstar.LocalSearch();
                 if(BestSol.compareTo(nstar) > 0 ){
                     BestSol = nstar;
                     BestSol.printPerformance();
@@ -81,7 +81,7 @@ public class GA {
     public ArrayList<Solution> getPopulation(){
         ArrayList<Solution> popSolutions = new ArrayList<>();
         for(Individual ind:this.population){
-            popSolutions.add(ind.sol);
+            popSolutions.add(ind.solLocal);
         }
         return popSolutions;
     }
