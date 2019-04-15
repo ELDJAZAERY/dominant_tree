@@ -1,4 +1,4 @@
-package metas.ACO;
+package metas.hebride.ACO_BBO;
 
 import data.representations.Solutions.Solution;
 
@@ -35,23 +35,6 @@ public class ACO {
         return BestSol;
     }
 
-    public static Solution ACO_As_LocalSearch(Solution solInitial){
-        System.out.println(" ----------- !!!!!!!!!!! ");
-        setParams(10,10,0.05,0.05);
-        BestSol = (Solution) solInitial.clone();
-        init_Ants();
-        Ant.Initials_Pheromones();
-        for(int iteration = 0; iteration < nbIter; iteration++) {
-            for (Ant ant : Ants) {
-                System.out.println(" iteration 1 ACO ");
-                ant.build_Solution();
-                ant.MAJ_OnLine();
-            }
-            maj_global();
-        }
-
-        return (Solution) BestSol.clone();
-    }
 
     public static void ACO_Exec( int nbIteration , int nbAnts , double raux , double q0){
         setParams(nbIteration,nbAnts,raux,q0);
@@ -59,7 +42,7 @@ public class ACO {
     }
 
     public static void ACO_Exec(){
-        setParams();
+        setParams(500,5,0.05,0.05);
         Exec();
     }
 

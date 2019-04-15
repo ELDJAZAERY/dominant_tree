@@ -1,7 +1,8 @@
-package metas.BBO;
+package metas.hebride.BBO_ACO;
 
 import data.reader.Instances;
 import data.representations.Solutions.Solution;
+import metas.ACO.ACO;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -92,7 +93,7 @@ public class BBO {
         Exec();
     }
 
-    public static void BBO_Exec(int MaxIterations , int populationSize , double PMutate , ArrayList<data.representations.Solutions.Solution> population){
+    public static void BBO_Exec(int MaxIterations , int populationSize , double PMutate , ArrayList<Solution> population){
         setParams(MaxIterations,populationSize,(float)PMutate);
         InitializePopulation(population);
         Exec();
@@ -103,14 +104,6 @@ public class BBO {
         setParams(50,10,(float)0.05);
         InitializePopulation(population);
         Exec();
-    }
-
-    public static Solution BBO_As_LocalSearch(Solution solInitial){
-        setParams(1,10,(float)0.05);
-        InitializePopulation(null);
-        population.set(populationSize-1,solInitial);
-        Exec();
-        return (Solution) Collections.max(getPopulation()).clone();
     }
 
     public static ArrayList<Solution> getPopulation() {
@@ -127,6 +120,8 @@ public class BBO {
         /**\// ## Updating Population Loop ## \//**/
 		for (int i = 0; i < MaxIterations; i++) {
             nbIteration++;
+
+            System.out.println(" --- Iteration 1 ---");
 
 			ArrayList<Solution> elitism = new ArrayList<>();
 			elitism.add(population.get(0));
@@ -151,8 +146,8 @@ public class BBO {
 			}
 
 			/** Local Search Multi Thread **/
-            _MultiThLocalSearch();
-
+            //_MultiThLocalSearch();
+            _MonoThLocalSearch();
 
 
             /** Elitism with the worst **/
@@ -185,7 +180,7 @@ public class BBO {
 	}
 
 
-    private static void InitializePopulation(ArrayList<data.representations.Solutions.Solution> populationInitial) {
+    private static void InitializePopulation(ArrayList<Solution> populationInitial) {
 	    if(populationInitial == null){
             for (int i = 0; i < populationSize; i++) {
                 Solution In = new Solution();
@@ -348,33 +343,10 @@ public class BBO {
     private static void _Individual_Search(int i) {
 
         Solution individual = population.get(i);
-        ArrayList<Integer> permutation;
-        Solution current ;
-        int temp;
 
-        Solution LocalBest = individual;
+        individual = ACO.ACO_As_LocalSearch(individual);
 
-        for (int d = 0; d < individual.verticesDT.size(); d++) {
-            //for (int v = 0; v < Instances.NbVertices ; v++) {
-            for (int v = individual.verticesDT.size(); v < Instances.NbVertices ; v++) {
-                permutation = new ArrayList<>(individual.permutation);
-                temp = permutation.get(d);
-                permutation.set(d, permutation.get(v));
-                permutation.set(v, temp);
-
-                current = new Solution(permutation);
-
-                if (current.fitness < LocalBest.fitness) {
-                    LocalBest = current;
-                    LocalBest.display();
-                }
-            }
-            individual = LocalBest;
-        }
-
-        if (population.get(i).fitness > individual.fitness) {
-            population.set(i, individual);
-        }
+        population.set(i, individual);
     }
 
     /** </Local Search> **/

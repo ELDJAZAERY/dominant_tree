@@ -1,4 +1,4 @@
-package metas.BBO;
+package metas.hebride.ACO_BBO;
 
 import data.reader.Instances;
 import data.representations.Solutions.Solution;
@@ -92,7 +92,7 @@ public class BBO {
         Exec();
     }
 
-    public static void BBO_Exec(int MaxIterations , int populationSize , double PMutate , ArrayList<data.representations.Solutions.Solution> population){
+    public static void BBO_Exec(int MaxIterations , int populationSize , double PMutate , ArrayList<Solution> population){
         setParams(MaxIterations,populationSize,(float)PMutate);
         InitializePopulation(population);
         Exec();
@@ -120,7 +120,6 @@ public class BBO {
     private static void Exec() {
 
         Best = Collections.max(population);
-        Best.display();
 
         nbIteration = 0;
 
@@ -166,7 +165,6 @@ public class BBO {
 
 			if ( Best.fitness - population.get(0).fitness > 0) {
 			    Best = population.get(0);
-			    Best.display(nbIteration);
 			} else {
 				diversification++;
 			}
@@ -180,12 +178,10 @@ public class BBO {
 			UpdatePopulations();
 		}
 
-        Best.display();
-        System.out.println(" --------- BBO FIN ----------");
 	}
 
 
-    private static void InitializePopulation(ArrayList<data.representations.Solutions.Solution> populationInitial) {
+    private static void InitializePopulation(ArrayList<Solution> populationInitial) {
 	    if(populationInitial == null){
             for (int i = 0; i < populationSize; i++) {
                 Solution In = new Solution();
@@ -366,7 +362,6 @@ public class BBO {
 
                 if (current.fitness < LocalBest.fitness) {
                     LocalBest = current;
-                    LocalBest.display();
                 }
             }
             individual = LocalBest;

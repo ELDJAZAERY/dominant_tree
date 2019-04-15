@@ -449,7 +449,8 @@ public class Solution implements Cloneable , Comparable<Solution> {
 
     @Override
     public int compareTo(Solution other) {
-        return (int)fitness - (int)other.fitness;
+        float diff = this.fitness - other.fitness;
+        return diff < 0 ? -1 : diff > 0 ? 1 : 0;
     }
 
 }
