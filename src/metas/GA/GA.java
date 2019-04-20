@@ -56,12 +56,17 @@ public class GA {
         }
     }
 
-    public ArrayList<Solution> getPopulation(){
+    public static ArrayList<Solution> getPopulation(){
         ArrayList<Solution> popSolutions = new ArrayList<>();
-        for(Individual ind:this.population){
+        for(Individual ind:population){
             popSolutions.add(ind.solLocal);
         }
         return popSolutions;
+    }
+
+    public static  ArrayList<Solution> GA_ForInitializatoinPopulation(int PopulationSize){
+        Exec(3,PopulationSize);
+        return getPopulation();
     }
 
 
@@ -98,7 +103,7 @@ public class GA {
                 if(proba <= 5)
                     nstar.mutation();
 
-                nstar.LocalSearch();
+                //nstar.LocalSearch();
                 if(BestSol.compareTo(nstar) > 0 ){
                     BestSol = nstar;
                     BestSol.display();
@@ -114,7 +119,7 @@ public class GA {
             population = newPopulation;
         }
 
-        System.out.println("----- GA END ----"+nbIteration);
+        System.out.println(" ---- GA END ---- "+nbIteration + " Iterations ");
     }
 
 

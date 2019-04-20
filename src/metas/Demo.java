@@ -1,5 +1,6 @@
  package metas;
 
+import data.Logger;
 import data.reader.Instances;
 import data.representations.Solutions.Solution;
 import metas.ACO.ACO;
@@ -7,7 +8,6 @@ import metas.BBO.BBO;
 import metas.BSO.BSO;
 import metas.GA.GA;
 
-import java.util.Collection;
 import java.util.Collections;
 
 
@@ -17,10 +17,10 @@ import java.util.Collections;
 
 	public static void main(String[] args) {
 
-        String path = "bench_marks\\100\\500_1.txt";
+        String path = "bench_marks\\100\\50_1.txt";
         new Instances(path);
 
-        cooperation();
+        //cooperation();
         //MetasDemo(MetasEnum.BBO.name());
         //MetasDemo(MetasEnum.ACO.name());
         //MetasDemo(MetasEnum.BSO.name());
@@ -34,8 +34,14 @@ import java.util.Collections;
         */
 
         /**  TEST FOR LOGS  **/
-        //BBODemo();
+        BBODemo();
         //BBOTime();
+
+
+
+        /** Cooperation Demo **/
+        //Coopertaion.Cooperate();
+
     }
 
 
@@ -43,11 +49,11 @@ import java.util.Collections;
         switch (meta){
             case "ACO" :
                 /** ACO TEST **/
-                metas.hebride.ACO_BBO.ACO.ACO_Exec();
+                ACO.ACO_Exec();
                 break;
             case "BBO" :
                 /** BBO TEST **/
-                metas.hebride.BBO_ACO.BBO.BBO_Exec();
+                BBO.BBO_Exec();
                 break;
             case "BSO" :
                 /**  BSO TEST **/
@@ -69,11 +75,23 @@ import java.util.Collections;
     }
 
 	private static void BBODemo(){
-        BBO bbo;
-        for(int i=0;i<20;i++) {
-            BBO.BBO_Exec(40,10,0.0005);
-            Solution.NbEvalsTotal = 0;
+
+        for(int vertices = 100 ; vertices <= 500 ; vertices += 100){
+            for(int id = 1 ; id <= 3 ; id++){
+
+                String path = "bench_marks\\100\\"+vertices+"_"+id+".txt";
+                new Instances(path);
+
+                Logger.LoggerFileName = "Logs/BBO100/"+vertices+"_"+id+".txt";
+
+                for(int i=0;i<20;i++) {
+                    BBO.BBO_Exec(40,10,0.005);
+                    Solution.NbEvalsTotal = 0;
+                    Solution.StartTime = System.currentTimeMillis();
+                }
+            }
         }
+
     }
 
     private static void BBOTime(){

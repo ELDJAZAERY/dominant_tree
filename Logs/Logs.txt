@@ -1,0 +1,15 @@
+Best {
+	 Fitness    : 1230.7499
+	 Vertices   : 18
+	 Iteration  : 0
+	 nb Sols    : 396
+	 Secs       : 0.6829317
+}
+Best {
+	 Fitness    : 1204.41
+	 Vertices   : 19
+	 Iteration  : 0
+	 nb Sols    : 1008
+	 Secs       : 0.8909109
+}
+

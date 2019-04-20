@@ -2,6 +2,7 @@ package metas.BBO;
 
 import data.reader.Instances;
 import data.representations.Solutions.Solution;
+import metas.ACO.Ant;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -31,53 +32,13 @@ public class BBO {
 
 
     // Diversification
-    private static int diversificationRate = 15;
+    private static int diversificationRate = 5;
     private static int diversification ;
 
     private static Solution Best;
 
 
     public static int  nbIteration = 0;
-
-    /** Timer Comperation  **/
-    public static void BBOTime(){
-        long startTime = System.currentTimeMillis();
-
-        Solution best = new Solution(), current;
-        for(int i = 0 ; i< 100 ; i++){
-            current = new Solution();
-            System.out.println(current.fitness);
-            current = new Solution(current.permutation);
-            System.out.println(current.fitness);
-            if(current.compareTo(best)<0){
-                best = current;
-            }
-        }
-
-        System.out.println(best.fitness);
-        long endTime_best = System.currentTimeMillis();
-        long t = (endTime_best - startTime) / 1000;
-        System.out.println(t);
-    }
-
-
-    private static int random(int range){
-        range = (range == 0) ? 1 : range;
-        return ThreadLocalRandom.current().nextInt(0,range);
-    }
-
-
-    private static void setParams(int MaxIterations , int populationSize , float PMutate ){
-        population = new ArrayList<>();
-
-        IndividualPMutate = new ArrayList<>();
-        ImmigrationsPbs = new ArrayList<>();
-        EmigrationsPbs = new ArrayList<>();
-
-        BBO.MaxIterations = MaxIterations;
-        BBO.populationSize = populationSize;
-        BBO.PMutate = PMutate;
-    }
 
 
     public static void BBO_Exec(){
@@ -86,36 +47,6 @@ public class BBO {
         Exec();
     }
 
-    public static void BBO_Exec(int MaxIterations , int populationSize , double PMutate ){
-        setParams(MaxIterations,populationSize,(float)PMutate);
-        InitializePopulation(null);
-        Exec();
-    }
-
-    public static void BBO_Exec(int MaxIterations , int populationSize , double PMutate , ArrayList<data.representations.Solutions.Solution> population){
-        setParams(MaxIterations,populationSize,(float)PMutate);
-        InitializePopulation(population);
-        Exec();
-    }
-
-
-    public static void BBO_Exec(ArrayList<Solution> population){
-        setParams(50,10,(float)0.05);
-        InitializePopulation(population);
-        Exec();
-    }
-
-    public static Solution BBO_As_LocalSearch(Solution solInitial){
-        setParams(1,10,(float)0.05);
-        InitializePopulation(null);
-        population.set(populationSize-1,solInitial);
-        Exec();
-        return (Solution) Collections.max(getPopulation()).clone();
-    }
-
-    public static ArrayList<Solution> getPopulation() {
-        return population;
-    }
 
     private static void Exec() {
 
@@ -195,6 +126,11 @@ public class BBO {
             }
             updateProb();
         }else{
+	        if(!population.isEmpty() &&
+                    population.size() == populationSize &&
+                    population.get(0).permutation.size() == Instances.NbVertices)
+	            return;
+
             for (int i = 0; i < populationSize; i++) {
                 Solution In = new Solution(populationInitial.get(i).permutation);
                 population.add(In);
@@ -366,7 +302,6 @@ public class BBO {
 
                 if (current.fitness < LocalBest.fitness) {
                     LocalBest = current;
-                    LocalBest.display();
                 }
             }
             individual = LocalBest;
@@ -378,5 +313,184 @@ public class BBO {
     }
 
     /** </Local Search> **/
+
+
+
+
+    /** Cooperation Helpers **/
+
+
+
+    /** Timer Comperation  **/
+    public static void BBOTime(){
+        long startTime = System.currentTimeMillis();
+
+        Solution best = new Solution(), current;
+        for(int i = 0 ; i< 100 ; i++){
+            current = new Solution();
+            System.out.println(current.fitness);
+            current = new Solution(current.permutation);
+            System.out.println(current.fitness);
+            if(current.compareTo(best)<0){
+                best = current;
+            }
+        }
+
+        System.out.println(best.fitness);
+        long endTime_best = System.currentTimeMillis();
+        long t = (endTime_best - startTime) / 1000;
+        System.out.println(t);
+    }
+
+
+    private static int random(int range){
+        range = (range == 0) ? 1 : range;
+        return ThreadLocalRandom.current().nextInt(0,range);
+    }
+
+
+    private static void setParams(int MaxIterations , int populationSize , float PMutate ){
+        population = new ArrayList<>();
+
+        IndividualPMutate = new ArrayList<>();
+        ImmigrationsPbs = new ArrayList<>();
+        EmigrationsPbs = new ArrayList<>();
+
+        BBO.MaxIterations = MaxIterations;
+        BBO.populationSize = populationSize;
+        BBO.PMutate = PMutate;
+    }
+
+
+    public static void BBO_Exec(int MaxIterations , int populationSize , double PMutate ){
+        setParams(MaxIterations,populationSize,(float)PMutate);
+        InitializePopulation(null);
+        Exec();
+    }
+
+    public static void BBO_Exec(int MaxIterations , int populationSize , double PMutate , ArrayList<data.representations.Solutions.Solution> population){
+        setParams(MaxIterations,populationSize,(float)PMutate);
+        InitializePopulation(population);
+        Exec();
+    }
+
+
+    public static void BBO_Exec(ArrayList<Solution> population){
+        setParams(50,10,(float)0.05);
+        InitializePopulation(population);
+        Exec();
+    }
+
+    public static Solution BBO_As_LocalSearch(Solution solInitial){
+        setParams(1,10,(float)0.05);
+        InitializePopulation(null);
+        population.set(populationSize-1,solInitial);
+        Exec();
+        return (Solution) Collections.max(getPopulation()).clone();
+    }
+
+
+    public static Solution CooperationExec(Solution solInitial) {
+
+        setParams(1,10,(float)0.05);
+        InitializePopulation(null);
+
+        Best = (Solution) solInitial.clone();
+        population.set(populationSize-1,Best);
+
+        return CooperationBBO();
+    }
+
+
+    public static Solution CooperationExec(ArrayList<Solution> populations) {
+
+        setParams(1,10,(float)0.05);
+        InitializePopulation(populations);
+
+        Best = Collections.max(population);
+
+        return CooperationBBO();
+    }
+
+
+    public static Solution CooperationFinalExec() {
+
+        setParams(30,10,(float)0.05);
+        InitializePopulation(null);
+
+        Best = Collections.max(population);
+
+        return CooperationBBO();
+    }
+
+
+    public static Solution CooperationBBO() {
+        nbIteration = 0;
+
+        /**\// ## Updating Population Loop ## \//**/
+        for (int i = 0; i < MaxIterations; i++) {
+            nbIteration++;
+
+            ArrayList<Solution> elitism = new ArrayList<>();
+            elitism.add(population.get(0));
+            elitism.add(population.get(1));
+            elitism.add(population.get(2));
+
+
+            for (int j = 0; j < populationSize; j++) {
+                ArrayList<Integer> currentSolutions = new ArrayList<>(population.get(j).permutation);
+
+                // Random 0% --> 100%
+                if(random(100) < ImmigrationsPbs.get(j)) {
+                    /** Permutations **/
+                    _Crossing(currentSolutions,j);
+                }else{
+                    /** Mutations **/
+                    _Mutation(currentSolutions,j);
+                }
+
+                Solution I = new Solution(currentSolutions);
+                population.set(j, I);
+            }
+
+            /** Local Search Multi Thread **/
+            _MultiThLocalSearch();
+
+
+
+            /** Elitism with the worst **/
+            Collections.sort(population);
+            population.set(populationSize - 1, elitism.get(0));
+            population.set(populationSize - 2, elitism.get(1));
+
+
+            /** evaluate Population **/
+            Collections.sort(population);
+
+            if ( Best.fitness - population.get(0).fitness > 0) {
+                Best = population.get(0);
+                Best.display(nbIteration);
+            } else {
+                diversification++;
+            }
+
+            if (diversification > diversificationRate) {
+                /** Diversification **/
+                _Diversity(elitism);
+                diversification = 0;
+            }
+
+            UpdatePopulations();
+        }
+
+        return Best;
+    }
+
+
+    public static ArrayList<Solution> getPopulation() {
+        return population;
+    }
+
+
 
 }

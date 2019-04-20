@@ -3,6 +3,8 @@ package metas.ACO;
 import data.representations.Solutions.Solution;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 
 public class ACO {
@@ -35,15 +37,17 @@ public class ACO {
         return BestSol;
     }
 
-    public static Solution ACO_As_LocalSearch(Solution solInitial){
-        System.out.println(" ----------- !!!!!!!!!!! ");
-        setParams(10,10,0.05,0.05);
+    public static Solution ACO_As_LocalSearch(Solution solInitial) {
+
         BestSol = (Solution) solInitial.clone();
+
+        setParams(10,10,0.05,0.05);
+
         init_Ants();
         Ant.Initials_Pheromones();
+
         for(int iteration = 0; iteration < nbIter; iteration++) {
             for (Ant ant : Ants) {
-                System.out.println(" iteration 1 ACO ");
                 ant.build_Solution();
                 ant.MAJ_OnLine();
             }
@@ -62,6 +66,64 @@ public class ACO {
         setParams();
         Exec();
     }
+
+
+    public static Solution CooperationExec(Solution solInitial) {
+
+        BestSol = (Solution) solInitial.clone();
+
+        setParams(1,10,0.05,0.05);
+
+        init_Ants();
+
+        for(int iteration = 0; iteration < nbIter; iteration++) {
+            for (Ant ant : Ants) {
+                ant.build_Solution();
+                ant.MAJ_OnLine();
+            }
+            maj_global();
+        }
+
+        return (Solution) BestSol.clone();
+    }
+
+
+    public static Solution CooperationExec(ArrayList<Solution> populations) {
+
+        BestSol = (Solution) Collections.max(populations).clone();
+
+        for(Solution s:populations){
+            Ant.MAJ_OffLine(s);
+        }
+
+        setParams(1,10,0.05,0.05);
+
+        init_Ants();
+
+        for(int iteration = 0; iteration < nbIter; iteration++) {
+            for (Ant ant : Ants) {
+                ant.build_Solution();
+                ant.MAJ_OnLine();
+            }
+            maj_global();
+        }
+
+        return (Solution) BestSol.clone();
+    }
+
+    public static Solution CooperationFinalExec() {
+
+        for(int iteration = 0; iteration < nbIter; iteration++) {
+            for (Ant ant : Ants) {
+                ant.build_Solution();
+                ant.MAJ_OnLine();
+            }
+            maj_global();
+        }
+
+        return (Solution) BestSol.clone();
+    }
+
 
     private static void Exec(){
 

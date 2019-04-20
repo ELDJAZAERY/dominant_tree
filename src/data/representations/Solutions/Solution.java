@@ -424,7 +424,7 @@ public class Solution implements Cloneable , Comparable<Solution> {
         System.out.println(toString());
 
         /** Logs file **/
-        Logger.PersistanceLog("Logs.txt",toString());
+        Logger.PersistanceLog(toString());
     }
 
 

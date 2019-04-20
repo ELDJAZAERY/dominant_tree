@@ -13,6 +13,10 @@ import static java.util.stream.Collectors.toMap;
 public class Ant {
 
     private static HashMap<Integer,Double> pheromone_table;
+    static {
+        Initials_Pheromones();
+    }
+
     private ArrayList<Integer> permutation = new ArrayList<>();
 
     private Solution solLocal;
@@ -57,7 +61,7 @@ public class Ant {
                 .stream()
                 .sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))
                 .collect(
-                        toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e2,
+                        toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1 - e2,
                                 LinkedHashMap::new));
 
         for (Integer v:sorted.keySet()){
