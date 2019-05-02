@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="704.0" prefWidth="1330.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <LineChart fx:id="chart" axisSortingPolicy="NONE" createSymbols="false" layoutX="380.0" layoutY="128.0" prefHeight="556.0" prefWidth="942.0">
+            <xAxis>
+                <NumberAxis prefHeight="54.0" prefWidth="871.0" side="BOTTOM" style="-fx-tick-label-fill: #FFF;" tickLabelRotation="-18.4">
+               <tickLabelFont>
+                  <Font name="Berlin Sans FB Demi Bold" size="16.0" />
+               </tickLabelFont></NumberAxis>
+            </xAxis>
+            <yAxis>
+                <!-- <CategoryAxis  label="taux de satisfiabilité %" side="BOTTOM />  -->
+                <NumberAxis side="LEFT" style="-fx-tick-label-fill: #FFF; -fx-label-fill: #FFF;" tickLabelRotation="-20.6">
+               <tickLabelFont>
+                  <Font name="Berlin Sans FB Demi Bold" size="16.0" />
+               </tickLabelFont></NumberAxis>
+            </yAxis>
+        </LineChart>
+        <Separator layoutX="336.0" layoutY="95.0" orientation="VERTICAL" prefHeight="583.0" prefWidth="35.0" />
+        <TextArea fx:id="instanceContiant" editable="false" layoutX="14.0" layoutY="94.0" prefHeight="583.0" prefWidth="321.0" />
+        <ChoiceBox id="choiceBox" fx:id="instanceChoice" cache="true" cacheHint="QUALITY" layoutX="237.0" layoutY="28.0" prefWidth="150.0">
+            <effect>
+                <Bloom threshold="1.0" />
+            </effect>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </ChoiceBox>
+        <Label layoutX="37.0" layoutY="25.0" styleClass="main-text" text="Choisisez un fichier">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5428571428571428" cycleMethod="REFLECT" radius="0.5">
+               <stops>
+                  <Stop color="#7b8619" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill></Label>
+        <Separator layoutX="14.0" layoutY="75.0" prefHeight="4.0" prefWidth="1296.0" />
+        <ChoiceBox fx:id="metasChoice" layoutX="716.0" layoutY="28.0" prefWidth="150.0">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </ChoiceBox>
+        <Button layoutX="908.0" layoutY="21.0" mnemonicParsing="false" onAction="#solve" text="Résudre " />
+      <Label layoutX="478.0" layoutY="25.0" style="-fx-rotate: 0;" styleClass="main-text" text="Méthode de Recherche">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5428571428571428" cycleMethod="REFLECT" radius="0.5">
+               <stops>
+                  <Stop color="#7b8619" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="798.0" layoutY="94.0" styleClass="main-text" text="Line Chart">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5428571428571428" cycleMethod="REFLECT" radius="0.5">
+               <stops>
+                  <Stop color="#7b8619" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="345.0" layoutY="371.0" prefHeight="31.0" prefWidth="70.0" style="-fx-rotate: -90;" styleClass="main-text" text="Fitness" textFill="#eaf287" />
+      <Label layoutX="731.0" layoutY="653.0" prefHeight="31.0" prefWidth="121.0" style="-fx-rotate: 0;" styleClass="main-text" text="Temp / sec" textFill="#eaf287" />
+    </children>
+</AnchorPane>

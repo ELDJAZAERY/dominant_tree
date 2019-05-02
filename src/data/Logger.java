@@ -4,7 +4,7 @@ import java.io.PrintWriter;
 
 public class Logger {
 
-    private static String Logs = "";
+    public static String Logs = "";
 
     public static String id = "1";
     public static String Range = "100";

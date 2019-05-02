@@ -1,0 +1,1709 @@
+Best {
+	 Fitness    : 3302.2007
+	 Vertices   : 96
+	 Iteration  : 0
+	 nb Sols    : 1
+	 Secs       : 0.2969703
+}
+Best {
+	 Fitness    : 1363.64
+	 Vertices   : 25
+	 Iteration  : 1
+	 nb Sols    : 80244
+	 Secs       : 53.48965
+}
+Best {
+	 Fitness    : 1296.9001
+	 Vertices   : 22
+	 Iteration  : 2
+	 nb Sols    : 142791
+	 Secs       : 103.93761
+}
+Best {
+	 Fitness    : 1289.16
+	 Vertices   : 19
+	 Iteration  : 3
+	 nb Sols    : 223153
+	 Secs       : 146.38437
+}
+Best {
+	 Fitness    : 1278.1799
+	 Vertices   : 20
+	 Iteration  : 5
+	 nb Sols    : 383040
+	 Secs       : 235.43846
+}
+Best {
+	 Fitness    : 1276.3501
+	 Vertices   : 20
+	 Iteration  : 7
+	 nb Sols    : 535711
+	 Secs       : 320.14697
+}
+Best {
+	 Fitness    : 1275.84
+	 Vertices   : 21
+	 Iteration  : 18
+	 nb Sols    : 1402517
+	 Secs       : 802.7857
+}
+Best {
+	 Fitness    : 1273.41
+	 Vertices   : 19
+	 Iteration  : 22
+	 nb Sols    : 1718893
+	 Secs       : 991.6348
+}
+Best {
+	 Fitness    : 1272.9099
+	 Vertices   : 19
+	 Iteration  : 23
+	 nb Sols    : 1753693
+	 Secs       : 1037.1813
+}
+Best {
+	 Fitness    : 1269.89
+	 Vertices   : 19
+	 Iteration  : 38
+	 nb Sols    : 2944864
+	 Secs       : 1782.4907
+}
+Best {
+	 Fitness    : 1268.6
+	 Vertices   : 19
+	 Iteration  : 39
+	 nb Sols    : 2969226
+	 Secs       : 1824.6495
+}
+
+
+ ------- Best --------> 
+
+Best {
+	 Fitness    : 1268.6
+	 Vertices   : 19
+	 Iteration  : 39
+	 nb Sols    : 2969226
+	 Secs       : 1824.6495
+}
+ ------- Fin -------- Ieration N 
+
+0
+Best {
+	 Fitness    : 3386.6396
+	 Vertices   : 95
+	 Iteration  : 0
+	 nb Sols    : 4
+	 Secs       : 0.0669933
+}
+Best {
+	 Fitness    : 1358.22
+	 Vertices   : 24
+	 Iteration  : 1
+	 nb Sols    : 39600
+	 Secs       : 111.52685
+}
+Best {
+	 Fitness    : 1304.39
+	 Vertices   : 20
+	 Iteration  : 2
+	 nb Sols    : 144512
+	 Secs       : 162.19478
+}
+Best {
+	 Fitness    : 1300.95
+	 Vertices   : 22
+	 Iteration  : 3
+	 nb Sols    : 244428
+	 Secs       : 213.44666
+}
+Best {
+	 Fitness    : 1295.01
+	 Vertices   : 22
+	 Iteration  : 4
+	 nb Sols    : 324834
+	 Secs       : 263.9166
+}
+Best {
+	 Fitness    : 1282.6398
+	 Vertices   : 22
+	 Iteration  : 7
+	 nb Sols    : 574343
+	 Secs       : 420.9889
+}
+Best {
+	 Fitness    : 1278.9401
+	 Vertices   : 22
+	 Iteration  : 8
+	 nb Sols    : 650020
+	 Secs       : 477.36627
+}
+Best {
+	 Fitness    : 1276.1799
+	 Vertices   : 22
+	 Iteration  : 9
+	 nb Sols    : 735151
+	 Secs       : 533.1097
+}
+Best {
+	 Fitness    : 1274.1299
+	 Vertices   : 20
+	 Iteration  : 13
+	 nb Sols    : 1054811
+	 Secs       : 756.0504
+}
+Best {
+	 Fitness    : 1266.1699
+	 Vertices   : 20
+	 Iteration  : 14
+	 nb Sols    : 1151912
+	 Secs       : 811.8918
+}
+Best {
+	 Fitness    : 1265.0398
+	 Vertices   : 21
+	 Iteration  : 18
+	 nb Sols    : 1465387
+	 Secs       : 1040.8389
+}
+Best {
+	 Fitness    : 1264.0999
+	 Vertices   : 21
+	 Iteration  : 25
+	 nb Sols    : 2031164
+	 Secs       : 1417.6033
+}
+Best {
+	 Fitness    : 1258.8098
+	 Vertices   : 20
+	 Iteration  : 26
+	 nb Sols    : 2106785
+	 Secs       : 1477.6582
+}
+Best {
+	 Fitness    : 1249.82
+	 Vertices   : 21
+	 Iteration  : 35
+	 nb Sols    : 2828501
+	 Secs       : 1933.3567
+}
+Best {
+	 Fitness    : 1249.6
+	 Vertices   : 20
+	 Iteration  : 36
+	 nb Sols    : 2880204
+	 Secs       : 1980.413
+}
+
+
+ ------- Best --------> 
+
+Best {
+	 Fitness    : 1249.6
+	 Vertices   : 20
+	 Iteration  : 36
+	 nb Sols    : 2880204
+	 Secs       : 1980.413
+}
+ ------- Fin -------- Ieration N 
+
+1
+Best {
+	 Fitness    : 2634.38
+	 Vertices   : 60
+	 Iteration  : 0
+	 nb Sols    : 3
+	 Secs       : 0.0419958
+}
+Best {
+	 Fitness    : 1370.9202
+	 Vertices   : 21
+	 Iteration  : 1
+	 nb Sols    : 41346
+	 Secs       : 76.27338
+}
+Best {
+	 Fitness    : 1312.69
+	 Vertices   : 21
+	 Iteration  : 2
+	 nb Sols    : 162554
+	 Secs       : 130.52895
+}
+Best {
+	 Fitness    : 1280.8098
+	 Vertices   : 20
+	 Iteration  : 3
+	 nb Sols    : 220710
+	 Secs       : 205.71342
+}
+Best {
+	 Fitness    : 1279.1299
+	 Vertices   : 20
+	 Iteration  : 8
+	 nb Sols    : 638299
+	 Secs       : 458.60214
+}
+Best {
+	 Fitness    : 1277.7599
+	 Vertices   : 20
+	 Iteration  : 9
+	 nb Sols    : 701392
+	 Secs       : 502.80573
+}
+Best {
+	 Fitness    : 1277.0599
+	 Vertices   : 20
+	 Iteration  : 10
+	 nb Sols    : 761728
+	 Secs       : 548.5601
+}
+Best {
+	 Fitness    : 1276.9598
+	 Vertices   : 20
+	 Iteration  : 12
+	 nb Sols    : 932548
+	 Secs       : 643.79364
+}
+Best {
+	 Fitness    : 1273.4799
+	 Vertices   : 21
+	 Iteration  : 20
+	 nb Sols    : 1529557
+	 Secs       : 1057.6412
+}
+
+
+ ------- Best --------> 
+
+Best {
+	 Fitness    : 1273.4799
+	 Vertices   : 21
+	 Iteration  : 20
+	 nb Sols    : 1529557
+	 Secs       : 1057.6412
+}
+ ------- Fin -------- Ieration N 
+
+2
+Best {
+	 Fitness    : 3005.0498
+	 Vertices   : 77
+	 Iteration  : 0
+	 nb Sols    : 2
+	 Secs       : 0.0549945
+}
+Best {
+	 Fitness    : 1348.3999
+	 Vertices   : 23
+	 Iteration  : 1
+	 nb Sols    : 69271
+	 Secs       : 56.569344
+}
+Best {
+	 Fitness    : 1307.2101
+	 Vertices   : 22
+	 Iteration  : 2
+	 nb Sols    : 150237
+	 Secs       : 104.64253
+}
+Best {
+	 Fitness    : 1281.8701
+	 Vertices   : 20
+	 Iteration  : 3
+	 nb Sols    : 199598
+	 Secs       : 159.81502
+}
+Best {
+	 Fitness    : 1276.38
+	 Vertices   : 21
+	 Iteration  : 4
+	 nb Sols    : 286474
+	 Secs       : 212.39076
+}
+Best {
+	 Fitness    : 1273.44
+	 Vertices   : 21
+	 Iteration  : 6
+	 nb Sols    : 476693
+	 Secs       : 306.37436
+}
+Best {
+	 Fitness    : 1262.9799
+	 Vertices   : 21
+	 Iteration  : 7
+	 nb Sols    : 508451
+	 Secs       : 353.9356
+}
+Best {
+	 Fitness    : 1262.48
+	 Vertices   : 21
+	 Iteration  : 32
+	 nb Sols    : 2550579
+	 Secs       : 1576.5474
+}
+Best {
+	 Fitness    : 1260.86
+	 Vertices   : 20
+	 Iteration  : 33
+	 nb Sols    : 2558697
+	 Secs       : 1623.8766
+}
+
+
+ ------- Best --------> 
+
+Best {
+	 Fitness    : 1260.86
+	 Vertices   : 20
+	 Iteration  : 33
+	 nb Sols    : 2558697
+	 Secs       : 1623.8766
+}
+ ------- Fin -------- Ieration N 
+
+3
+Best {
+	 Fitness    : 2610.36
+	 Vertices   : 55
+	 Iteration  : 0
+	 nb Sols    : 6
+	 Secs       : 0.0169983
+}
+Best {
+	 Fitness    : 1377.98
+	 Vertices   : 21
+	 Iteration  : 1
+	 nb Sols    : 65258
+	 Secs       : 78.78912
+}
+Best {
+	 Fitness    : 1287.83
+	 Vertices   : 21
+	 Iteration  : 2
+	 nb Sols    : 155644
+	 Secs       : 124.69753
+}
+Best {
+	 Fitness    : 1283.1599
+	 Vertices   : 22
+	 Iteration  : 3
+	 nb Sols    : 243126
+	 Secs       : 168.9821
+}
+Best {
+	 Fitness    : 1282.7397
+	 Vertices   : 21
+	 Iteration  : 4
+	 nb Sols    : 315539
+	 Secs       : 210.64694
+}
+Best {
+	 Fitness    : 1282.6198
+	 Vertices   : 22
+	 Iteration  : 15
+	 nb Sols    : 1139216
+	 Secs       : 666.0564
+}
+Best {
+	 Fitness    : 1275.64
+	 Vertices   : 22
+	 Iteration  : 34
+	 nb Sols    : 2768504
+	 Secs       : 1423.3397
+}
+Best {
+	 Fitness    : 1270.05
+	 Vertices   : 23
+	 Iteration  : 39
+	 nb Sols    : 3201172
+	 Secs       : 1624.0776
+}
+Best {
+	 Fitness    : 1269.25
+	 Vertices   : 23
+	 Iteration  : 40
+	 nb Sols    : 3271059
+	 Secs       : 1660.579
+}
+
+
+ ------- Best --------> 
+
+Best {
+	 Fitness    : 1269.25
+	 Vertices   : 23
+	 Iteration  : 40
+	 nb Sols    : 3271059
+	 Secs       : 1660.579
+}
+ ------- Fin -------- Ieration N 
+
+4
+Best {
+	 Fitness    : 3034.5503
+	 Vertices   : 79
+	 Iteration  : 0
+	 nb Sols    : 7
+	 Secs       : 0.059994
+}
+Best {
+	 Fitness    : 1336.53
+	 Vertices   : 19
+	 Iteration  : 1
+	 nb Sols    : 41731
+	 Secs       : 50.668934
+}
+Best {
+	 Fitness    : 1315.6799
+	 Vertices   : 19
+	 Iteration  : 2
+	 nb Sols    : 138802
+	 Secs       : 97.77822
+}
+Best {
+	 Fitness    : 1298.63
+	 Vertices   : 22
+	 Iteration  : 3
+	 nb Sols    : 250054
+	 Secs       : 137.35426
+}
+Best {
+	 Fitness    : 1284.2902
+	 Vertices   : 22
+	 Iteration  : 4
+	 nb Sols    : 324673
+	 Secs       : 178.24318
+}
+Best {
+	 Fitness    : 1281.04
+	 Vertices   : 21
+	 Iteration  : 5
+	 nb Sols    : 349434
+	 Secs       : 229.15509
+}
+Best {
+	 Fitness    : 1279.4501
+	 Vertices   : 21
+	 Iteration  : 9
+	 nb Sols    : 722145
+	 Secs       : 418.13217
+}
+Best {
+	 Fitness    : 1279.0399
+	 Vertices   : 21
+	 Iteration  : 13
+	 nb Sols    : 1049274
+	 Secs       : 620.7959
+}
+Best {
+	 Fitness    : 1269.21
+	 Vertices   : 21
+	 Iteration  : 14
+	 nb Sols    : 1114415
+	 Secs       : 673.7746
+}
+Best {
+	 Fitness    : 1265.5898
+	 Vertices   : 21
+	 Iteration  : 15
+	 nb Sols    : 1194048
+	 Secs       : 747.0433
+}
+
+
+ ------- Best --------> 
+
+Best {
+	 Fitness    : 1265.5898
+	 Vertices   : 21
+	 Iteration  : 15
+	 nb Sols    : 1194048
+	 Secs       : 747.0433
+}
+ ------- Fin -------- Ieration N 
+
+5
+Best {
+	 Fitness    : 3381.8203
+	 Vertices   : 95
+	 Iteration  : 0
+	 nb Sols    : 9
+	 Secs       : 0.2519748
+}
+Best {
+	 Fitness    : 1386.6401
+	 Vertices   : 22
+	 Iteration  : 1
+	 nb Sols    : 64633
+	 Secs       : 63.349667
+}
+Best {
+	 Fitness    : 1298.83
+	 Vertices   : 21
+	 Iteration  : 2
+	 nb Sols    : 150213
+	 Secs       : 108.21318
+}
+Best {
+	 Fitness    : 1277.3099
+	 Vertices   : 21
+	 Iteration  : 3
+	 nb Sols    : 229518
+	 Secs       : 156.62134
+}
+Best {
+	 Fitness    : 1268.8699
+	 Vertices   : 22
+	 Iteration  : 6
+	 nb Sols    : 476504
+	 Secs       : 316.0034
+}
+Best {
+	 Fitness    : 1256.8099
+	 Vertices   : 21
+	 Iteration  : 7
+	 nb Sols    : 551617
+	 Secs       : 369.1331
+}
+Best {
+	 Fitness    : 1254.96
+	 Vertices   : 23
+	 Iteration  : 23
+	 nb Sols    : 1807766
+	 Secs       : 1121.8458
+}
+Best {
+	 Fitness    : 1253.57
+	 Vertices   : 22
+	 Iteration  : 36
+	 nb Sols    : 2991394
+	 Secs       : 1708.5712
+}
+Best {
+	 Fitness    : 1253.0701
+	 Vertices   : 23
+	 Iteration  : 37
+	 nb Sols    : 3058823
+	 Secs       : 1749.972
+}
+
+
+ ------- Best --------> 
+
+Best {
+	 Fitness    : 1253.0701
+	 Vertices   : 23
+	 Iteration  : 37
+	 nb Sols    : 3058823
+	 Secs       : 1749.972
+}
+ ------- Fin -------- Ieration N 
+
+6
+Best {
+	 Fitness    : 2807.779
+	 Vertices   : 69
+	 Iteration  : 0
+	 nb Sols    : 9
+	 Secs       : 0.0229977
+}
+Best {
+	 Fitness    : 1342.11
+	 Vertices   : 20
+	 Iteration  : 1
+	 nb Sols    : 67737
+	 Secs       : 51.717827
+}
+Best {
+	 Fitness    : 1278.8003
+	 Vertices   : 22
+	 Iteration  : 2
+	 nb Sols    : 151883
+	 Secs       : 97.38226
+}
+Best {
+	 Fitness    : 1269.6301
+	 Vertices   : 21
+	 Iteration  : 4
+	 nb Sols    : 300144
+	 Secs       : 198.27518
+}
+Best {
+	 Fitness    : 1269.63
+	 Vertices   : 22
+	 Iteration  : 5
+	 nb Sols    : 346580
+	 Secs       : 267.37427
+}
+Best {
+	 Fitness    : 1268.39
+	 Vertices   : 20
+	 Iteration  : 7
+	 nb Sols    : 572238
+	 Secs       : 356.73633
+}
+Best {
+	 Fitness    : 1262.4701
+	 Vertices   : 20
+	 Iteration  : 14
+	 nb Sols    : 1122419
+	 Secs       : 669.5231
+}
+Best {
+	 Fitness    : 1262.47
+	 Vertices   : 20
+	 Iteration  : 25
+	 nb Sols    : 1975890
+	 Secs       : 1197.0983
+}
+Best {
+	 Fitness    : 1261.3301
+	 Vertices   : 22
+	 Iteration  : 36
+	 nb Sols    : 2882474
+	 Secs       : 1921.5359
+}
+
+
+ ------- Best --------> 
+
+Best {
+	 Fitness    : 1261.3301
+	 Vertices   : 22
+	 Iteration  : 36
+	 nb Sols    : 2882474
+	 Secs       : 1921.5359
+}
+ ------- Fin -------- Ieration N 
+
+7
+Best {
+	 Fitness    : 3802.099
+	 Vertices   : 131
+	 Iteration  : 0
+	 nb Sols    : 8
+	 Secs       : 0.0559944
+}
+Best {
+	 Fitness    : 1365.4698
+	 Vertices   : 23
+	 Iteration  : 1
+	 nb Sols    : 86159
+	 Secs       : 58.774124
+}
+Best {
+	 Fitness    : 1319.84
+	 Vertices   : 23
+	 Iteration  : 2
+	 nb Sols    : 161688
+	 Secs       : 116.25337
+}
+Best {
+	 Fitness    : 1304.13
+	 Vertices   : 22
+	 Iteration  : 3
+	 nb Sols    : 250213
+	 Secs       : 174.9745
+}
+Best {
+	 Fitness    : 1292.9799
+	 Vertices   : 22
+	 Iteration  : 4
+	 nb Sols    : 328758
+	 Secs       : 236.0654
+}
+Best {
+	 Fitness    : 1292.02
+	 Vertices   : 22
+	 Iteration  : 5
+	 nb Sols    : 374021
+	 Secs       : 297.9352
+}
+Best {
+	 Fitness    : 1269.8201
+	 Vertices   : 21
+	 Iteration  : 14
+	 nb Sols    : 1106905
+	 Secs       : 977.39526
+}
+Best {
+	 Fitness    : 1266.8501
+	 Vertices   : 21
+	 Iteration  : 15
+	 nb Sols    : 1144820
+	 Secs       : 1072.7858
+}
+Best {
+	 Fitness    : 1265.2299
+	 Vertices   : 21
+	 Iteration  : 24
+	 nb Sols    : 1918846
+	 Secs       : 1617.4093
+}
+
+
+ ------- Best --------> 
+
+Best {
+	 Fitness    : 1265.2299
+	 Vertices   : 21
+	 Iteration  : 24
+	 nb Sols    : 1918846
+	 Secs       : 1617.4093
+}
+ ------- Fin -------- Ieration N 
+
+8
+Best {
+	 Fitness    : 3227.3599
+	 Vertices   : 84
+	 Iteration  : 0
+	 nb Sols    : 5
+	 Secs       : 0.0279972
+}
+Best {
+	 Fitness    : 1373.39
+	 Vertices   : 23
+	 Iteration  : 1
+	 nb Sols    : 62206
+	 Secs       : 72.78172
+}
+Best {
+	 Fitness    : 1332.58
+	 Vertices   : 22
+	 Iteration  : 2
+	 nb Sols    : 153443
+	 Secs       : 126.480354
+}
+Best {
+	 Fitness    : 1316.1699
+	 Vertices   : 21
+	 Iteration  : 3
+	 nb Sols    : 232554
+	 Secs       : 175.20648
+}
+Best {
+	 Fitness    : 1315.4199
+	 Vertices   : 21
+	 Iteration  : 4
+	 nb Sols    : 296030
+	 Secs       : 224.58054
+}
+Best {
+	 Fitness    : 1312.57
+	 Vertices   : 21
+	 Iteration  : 5
+	 nb Sols    : 405481
+	 Secs       : 274.51355
+}
+Best {
+	 Fitness    : 1306.1001
+	 Vertices   : 20
+	 Iteration  : 6
+	 nb Sols    : 449328
+	 Secs       : 324.74652
+}
+Best {
+	 Fitness    : 1278.97
+	 Vertices   : 19
+	 Iteration  : 7
+	 nb Sols    : 560975
+	 Secs       : 378.53214
+}
+Best {
+	 Fitness    : 1277.4099
+	 Vertices   : 19
+	 Iteration  : 8
+	 nb Sols    : 576931
+	 Secs       : 436.0564
+}
+Best {
+	 Fitness    : 1272.4598
+	 Vertices   : 20
+	 Iteration  : 14
+	 nb Sols    : 1105428
+	 Secs       : 778.8191
+}
+Best {
+	 Fitness    : 1271.1099
+	 Vertices   : 20
+	 Iteration  : 15
+	 nb Sols    : 1151906
+	 Secs       : 838.0902
+}
+Best {
+	 Fitness    : 1268.5801
+	 Vertices   : 21
+	 Iteration  : 25
+	 nb Sols    : 1930964
+	 Secs       : 1393.1267
+}
+Best {
+	 Fitness    : 1265.5898
+	 Vertices   : 21
+	 Iteration  : 30
+	 nb Sols    : 2338768
+	 Secs       : 1705.4385
+}
+
+
+ ------- Best --------> 
+
+Best {
+	 Fitness    : 1265.5898
+	 Vertices   : 21
+	 Iteration  : 30
+	 nb Sols    : 2338768
+	 Secs       : 1705.4385
+}
+ ------- Fin -------- Ieration N 
+
+9
+Best {
+	 Fitness    : 3144.2998
+	 Vertices   : 75
+	 Iteration  : 0
+	 nb Sols    : 6
+	 Secs       : 0.0729927
+}
+Best {
+	 Fitness    : 1428.93
+	 Vertices   : 26
+	 Iteration  : 1
+	 nb Sols    : 88513
+	 Secs       : 52.662735
+}
+Best {
+	 Fitness    : 1289.91
+	 Vertices   : 23
+	 Iteration  : 2
+	 nb Sols    : 166775
+	 Secs       : 108.76512
+}
+Best {
+	 Fitness    : 1279.5302
+	 Vertices   : 21
+	 Iteration  : 3
+	 nb Sols    : 251394
+	 Secs       : 157.13829
+}
+Best {
+	 Fitness    : 1276.83
+	 Vertices   : 20
+	 Iteration  : 5
+	 nb Sols    : 384805
+	 Secs       : 258.57816
+}
+Best {
+	 Fitness    : 1274.04
+	 Vertices   : 21
+	 Iteration  : 8
+	 nb Sols    : 652911
+	 Secs       : 454.9985
+}
+Best {
+	 Fitness    : 1262.7
+	 Vertices   : 19
+	 Iteration  : 10
+	 nb Sols    : 788389
+	 Secs       : 551.66284
+}
+Best {
+	 Fitness    : 1262.47
+	 Vertices   : 19
+	 Iteration  : 11
+	 nb Sols    : 834900
+	 Secs       : 603.1127
+}
+Best {
+	 Fitness    : 1262.32
+	 Vertices   : 20
+	 Iteration  : 22
+	 nb Sols    : 1661321
+	 Secs       : 1117.8552
+}
+
+
+ ------- Best --------> 
+
+Best {
+	 Fitness    : 1262.32
+	 Vertices   : 20
+	 Iteration  : 22
+	 nb Sols    : 1661321
+	 Secs       : 1117.8552
+}
+ ------- Fin -------- Ieration N 
+
+10
+Best {
+	 Fitness    : 3021.9297
+	 Vertices   : 87
+	 Iteration  : 0
+	 nb Sols    : 8
+	 Secs       : 0.0659934
+}
+Best {
+	 Fitness    : 1373.37
+	 Vertices   : 20
+	 Iteration  : 1
+	 nb Sols    : 56131
+	 Secs       : 53.71663
+}
+Best {
+	 Fitness    : 1309.2399
+	 Vertices   : 21
+	 Iteration  : 2
+	 nb Sols    : 161578
+	 Secs       : 100.442955
+}
+Best {
+	 Fitness    : 1297.4299
+	 Vertices   : 21
+	 Iteration  : 3
+	 nb Sols    : 205030
+	 Secs       : 151.83781
+}
+Best {
+	 Fitness    : 1295.05
+	 Vertices   : 20
+	 Iteration  : 4
+	 nb Sols    : 296013
+	 Secs       : 195.54344
+}
+Best {
+	 Fitness    : 1294.32
+	 Vertices   : 20
+	 Iteration  : 5
+	 nb Sols    : 382300
+	 Secs       : 239.89801
+}
+Best {
+	 Fitness    : 1294.24
+	 Vertices   : 19
+	 Iteration  : 7
+	 nb Sols    : 487460
+	 Secs       : 325.44547
+}
+Best {
+	 Fitness    : 1292.5199
+	 Vertices   : 21
+	 Iteration  : 8
+	 nb Sols    : 614404
+	 Secs       : 370.34897
+}
+Best {
+	 Fitness    : 1289.7799
+	 Vertices   : 21
+	 Iteration  : 9
+	 nb Sols    : 676698
+	 Secs       : 419.52905
+}
+Best {
+	 Fitness    : 1282.08
+	 Vertices   : 20
+	 Iteration  : 10
+	 nb Sols    : 784609
+	 Secs       : 466.71933
+}
+Best {
+	 Fitness    : 1280.23
+	 Vertices   : 20
+	 Iteration  : 11
+	 nb Sols    : 863730
+	 Secs       : 516.6453
+}
+Best {
+	 Fitness    : 1277.19
+	 Vertices   : 20
+	 Iteration  : 12
+	 nb Sols    : 909831
+	 Secs       : 571.7808
+}
+Best {
+	 Fitness    : 1274.32
+	 Vertices   : 21
+	 Iteration  : 40
+	 nb Sols    : 3103230
+	 Secs       : 2036.1404
+}
+
+
+ ------- Best --------> 
+
+Best {
+	 Fitness    : 1274.32
+	 Vertices   : 21
+	 Iteration  : 40
+	 nb Sols    : 3103230
+	 Secs       : 2036.1404
+}
+ ------- Fin -------- Ieration N 
+
+11
+Best {
+	 Fitness    : 3864.8804
+	 Vertices   : 129
+	 Iteration  : 0
+	 nb Sols    : 7
+	 Secs       : 0.0429957
+}
+Best {
+	 Fitness    : 1395.99
+	 Vertices   : 25
+	 Iteration  : 1
+	 nb Sols    : 83763
+	 Secs       : 77.40126
+}
+Best {
+	 Fitness    : 1337.5099
+	 Vertices   : 23
+	 Iteration  : 2
+	 nb Sols    : 164511
+	 Secs       : 129.32907
+}
+Best {
+	 Fitness    : 1305.5099
+	 Vertices   : 23
+	 Iteration  : 3
+	 nb Sols    : 206880
+	 Secs       : 179.949
+}
+Best {
+	 Fitness    : 1289.17
+	 Vertices   : 22
+	 Iteration  : 4
+	 nb Sols    : 326803
+	 Secs       : 225.00749
+}
+Best {
+	 Fitness    : 1288.28
+	 Vertices   : 22
+	 Iteration  : 5
+	 nb Sols    : 339887
+	 Secs       : 270.27298
+}
+Best {
+	 Fitness    : 1288.13
+	 Vertices   : 23
+	 Iteration  : 13
+	 nb Sols    : 1033940
+	 Secs       : 673.35065
+}
+Best {
+	 Fitness    : 1284.14
+	 Vertices   : 22
+	 Iteration  : 19
+	 nb Sols    : 1590105
+	 Secs       : 962.3898
+}
+Best {
+	 Fitness    : 1283.24
+	 Vertices   : 22
+	 Iteration  : 20
+	 nb Sols    : 1672955
+	 Secs       : 1009.67206
+}
+
+
+ ------- Best --------> 
+
+Best {
+	 Fitness    : 1283.24
+	 Vertices   : 22
+	 Iteration  : 20
+	 nb Sols    : 1672955
+	 Secs       : 1009.67206
+}
+ ------- Fin -------- Ieration N 
+
+12
+Best {
+	 Fitness    : 3484.681
+	 Vertices   : 113
+	 Iteration  : 0
+	 nb Sols    : 4
+	 Secs       : 0.0949905
+}
+Best {
+	 Fitness    : 1355.01
+	 Vertices   : 18
+	 Iteration  : 1
+	 nb Sols    : 37193
+	 Secs       : 52.0198
+}
+Best {
+	 Fitness    : 1329.2701
+	 Vertices   : 17
+	 Iteration  : 2
+	 nb Sols    : 134407
+	 Secs       : 112.77472
+}
+Best {
+	 Fitness    : 1323.71
+	 Vertices   : 18
+	 Iteration  : 4
+	 nb Sols    : 264133
+	 Secs       : 214.07458
+}
+Best {
+	 Fitness    : 1320.01
+	 Vertices   : 20
+	 Iteration  : 5
+	 nb Sols    : 322252
+	 Secs       : 262.33676
+}
+Best {
+	 Fitness    : 1294.5598
+	 Vertices   : 21
+	 Iteration  : 6
+	 nb Sols    : 453870
+	 Secs       : 315.32346
+}
+Best {
+	 Fitness    : 1291.19
+	 Vertices   : 21
+	 Iteration  : 8
+	 nb Sols    : 597512
+	 Secs       : 427.9812
+}
+Best {
+	 Fitness    : 1281.72
+	 Vertices   : 22
+	 Iteration  : 11
+	 nb Sols    : 809630
+	 Secs       : 626.9303
+}
+Best {
+	 Fitness    : 1277.26
+	 Vertices   : 22
+	 Iteration  : 12
+	 nb Sols    : 877872
+	 Secs       : 708.0202
+}
+Best {
+	 Fitness    : 1276.9601
+	 Vertices   : 22
+	 Iteration  : 14
+	 nb Sols    : 1043279
+	 Secs       : 909.19006
+}
+Best {
+	 Fitness    : 1273.37
+	 Vertices   : 22
+	 Iteration  : 15
+	 nb Sols    : 1088284
+	 Secs       : 1008.21716
+}
+Best {
+	 Fitness    : 1272.4401
+	 Vertices   : 22
+	 Iteration  : 19
+	 nb Sols    : 1424094
+	 Secs       : 1407.4883
+}
+Best {
+	 Fitness    : 1271.6201
+	 Vertices   : 21
+	 Iteration  : 20
+	 nb Sols    : 1557691
+	 Secs       : 1507.2142
+}
+Best {
+	 Fitness    : 1269.3099
+	 Vertices   : 22
+	 Iteration  : 21
+	 nb Sols    : 1589624
+	 Secs       : 1594.1606
+}
+Best {
+	 Fitness    : 1269.13
+	 Vertices   : 20
+	 Iteration  : 22
+	 nb Sols    : 1719590
+	 Secs       : 1677.9392
+}
+
+
+ ------- Best --------> 
+
+Best {
+	 Fitness    : 1269.13
+	 Vertices   : 20
+	 Iteration  : 22
+	 nb Sols    : 1719590
+	 Secs       : 1677.9392
+}
+ ------- Fin -------- Ieration N 
+
+13
+Best {
+	 Fitness    : 2912.6697
+	 Vertices   : 70
+	 Iteration  : 0
+	 nb Sols    : 10
+	 Secs       : 0.149985
+}
+Best {
+	 Fitness    : 1396.7899
+	 Vertices   : 21
+	 Iteration  : 1
+	 nb Sols    : 79506
+	 Secs       : 52.944706
+}
+Best {
+	 Fitness    : 1319.09
+	 Vertices   : 21
+	 Iteration  : 2
+	 nb Sols    : 161529
+	 Secs       : 105.67543
+}
+Best {
+	 Fitness    : 1285.29
+	 Vertices   : 20
+	 Iteration  : 3
+	 nb Sols    : 222953
+	 Secs       : 158.81712
+}
+Best {
+	 Fitness    : 1281.15
+	 Vertices   : 20
+	 Iteration  : 5
+	 nb Sols    : 380167
+	 Secs       : 270.14697
+}
+Best {
+	 Fitness    : 1272.5599
+	 Vertices   : 21
+	 Iteration  : 6
+	 nb Sols    : 458542
+	 Secs       : 319.709
+}
+Best {
+	 Fitness    : 1264.7399
+	 Vertices   : 21
+	 Iteration  : 7
+	 nb Sols    : 545760
+	 Secs       : 361.57883
+}
+Best {
+	 Fitness    : 1264.21
+	 Vertices   : 21
+	 Iteration  : 22
+	 nb Sols    : 1761447
+	 Secs       : 1023.33264
+}
+
+
+ ------- Best --------> 
+
+Best {
+	 Fitness    : 1264.21
+	 Vertices   : 21
+	 Iteration  : 22
+	 nb Sols    : 1761447
+	 Secs       : 1023.33264
+}
+ ------- Fin -------- Ieration N 
+
+14
+Best {
+	 Fitness    : 4360.2705
+	 Vertices   : 169
+	 Iteration  : 0
+	 nb Sols    : 2
+	 Secs       : 0.0779922
+}
+Best {
+	 Fitness    : 1375.1198
+	 Vertices   : 24
+	 Iteration  : 1
+	 nb Sols    : 75721
+	 Secs       : 86.09739
+}
+Best {
+	 Fitness    : 1331.3501
+	 Vertices   : 20
+	 Iteration  : 2
+	 nb Sols    : 141568
+	 Secs       : 148.10619
+}
+Best {
+	 Fitness    : 1323.1998
+	 Vertices   : 21
+	 Iteration  : 3
+	 nb Sols    : 227737
+	 Secs       : 214.78552
+}
+Best {
+	 Fitness    : 1305.1001
+	 Vertices   : 21
+	 Iteration  : 4
+	 nb Sols    : 329475
+	 Secs       : 279.64603
+}
+Best {
+	 Fitness    : 1278.97
+	 Vertices   : 22
+	 Iteration  : 5
+	 nb Sols    : 406430
+	 Secs       : 340.32596
+}
+Best {
+	 Fitness    : 1273.92
+	 Vertices   : 22
+	 Iteration  : 6
+	 nb Sols    : 483064
+	 Secs       : 408.29718
+}
+Best {
+	 Fitness    : 1269.21
+	 Vertices   : 22
+	 Iteration  : 7
+	 nb Sols    : 531855
+	 Secs       : 483.2097
+}
+Best {
+	 Fitness    : 1267.67
+	 Vertices   : 23
+	 Iteration  : 21
+	 nb Sols    : 1700080
+	 Secs       : 1550.9989
+}
+Best {
+	 Fitness    : 1266.52
+	 Vertices   : 22
+	 Iteration  : 22
+	 nb Sols    : 1760179
+	 Secs       : 1634.7775
+}
+
+
+ ------- Best --------> 
+
+Best {
+	 Fitness    : 1266.52
+	 Vertices   : 22
+	 Iteration  : 22
+	 nb Sols    : 1760179
+	 Secs       : 1634.7775
+}
+ ------- Fin -------- Ieration N 
+
+15
+Best {
+	 Fitness    : 3414.6895
+	 Vertices   : 107
+	 Iteration  : 0
+	 nb Sols    : 7
+	 Secs       : 0.0559944
+}
+Best {
+	 Fitness    : 1364.23
+	 Vertices   : 22
+	 Iteration  : 1
+	 nb Sols    : 52701
+	 Secs       : 52.327766
+}
+Best {
+	 Fitness    : 1302.4102
+	 Vertices   : 22
+	 Iteration  : 2
+	 nb Sols    : 159864
+	 Secs       : 99.51705
+}
+Best {
+	 Fitness    : 1288.9099
+	 Vertices   : 22
+	 Iteration  : 3
+	 nb Sols    : 211702
+	 Secs       : 143.50365
+}
+Best {
+	 Fitness    : 1282.9702
+	 Vertices   : 22
+	 Iteration  : 4
+	 nb Sols    : 320289
+	 Secs       : 182.71272
+}
+Best {
+	 Fitness    : 1281.7401
+	 Vertices   : 21
+	 Iteration  : 5
+	 nb Sols    : 362142
+	 Secs       : 222.29977
+}
+Best {
+	 Fitness    : 1279.7301
+	 Vertices   : 22
+	 Iteration  : 8
+	 nb Sols    : 625917
+	 Secs       : 351.72882
+}
+Best {
+	 Fitness    : 1279.4302
+	 Vertices   : 22
+	 Iteration  : 9
+	 nb Sols    : 644586
+	 Secs       : 394.48557
+}
+Best {
+	 Fitness    : 1267.8099
+	 Vertices   : 20
+	 Iteration  : 14
+	 nb Sols    : 1120643
+	 Secs       : 641.1999
+}
+Best {
+	 Fitness    : 1260.47
+	 Vertices   : 19
+	 Iteration  : 21
+	 nb Sols    : 1661133
+	 Secs       : 943.5886
+}
+Best {
+	 Fitness    : 1259.0299
+	 Vertices   : 20
+	 Iteration  : 26
+	 nb Sols    : 2071834
+	 Secs       : 1160.788
+}
+
+
+ ------- Best --------> 
+
+Best {
+	 Fitness    : 1259.0299
+	 Vertices   : 20
+	 Iteration  : 26
+	 nb Sols    : 2071834
+	 Secs       : 1160.788
+}
+ ------- Fin -------- Ieration N 
+
+16
+Best {
+	 Fitness    : 2879.6
+	 Vertices   : 72
+	 Iteration  : 0
+	 nb Sols    : 9
+	 Secs       : 0.0559944
+}
+Best {
+	 Fitness    : 1389.99
+	 Vertices   : 21
+	 Iteration  : 1
+	 nb Sols    : 48778
+	 Secs       : 58.620136
+}
+Best {
+	 Fitness    : 1309.0299
+	 Vertices   : 22
+	 Iteration  : 2
+	 nb Sols    : 169293
+	 Secs       : 105.13649
+}
+Best {
+	 Fitness    : 1299.38
+	 Vertices   : 21
+	 Iteration  : 3
+	 nb Sols    : 242465
+	 Secs       : 153.65964
+}
+Best {
+	 Fitness    : 1283.4198
+	 Vertices   : 21
+	 Iteration  : 4
+	 nb Sols    : 326238
+	 Secs       : 198.56615
+}
+Best {
+	 Fitness    : 1280.44
+	 Vertices   : 21
+	 Iteration  : 5
+	 nb Sols    : 404491
+	 Secs       : 241.83981
+}
+Best {
+	 Fitness    : 1279.1802
+	 Vertices   : 21
+	 Iteration  : 8
+	 nb Sols    : 662744
+	 Secs       : 389.85202
+}
+Best {
+	 Fitness    : 1277.03
+	 Vertices   : 21
+	 Iteration  : 9
+	 nb Sols    : 701208
+	 Secs       : 437.51724
+}
+Best {
+	 Fitness    : 1277.02
+	 Vertices   : 20
+	 Iteration  : 10
+	 nb Sols    : 761735
+	 Secs       : 484.56055
+}
+Best {
+	 Fitness    : 1261.72
+	 Vertices   : 20
+	 Iteration  : 14
+	 nb Sols    : 1105870
+	 Secs       : 677.31226
+}
+
+
+ ------- Best --------> 
+
+Best {
+	 Fitness    : 1261.72
+	 Vertices   : 20
+	 Iteration  : 14
+	 nb Sols    : 1105870
+	 Secs       : 677.31226
+}
+ ------- Fin -------- Ieration N 
+
+17
+Best {
+	 Fitness    : 2962.5
+	 Vertices   : 81
+	 Iteration  : 0
+	 nb Sols    : 5
+	 Secs       : 0.0379962
+}
+Best {
+	 Fitness    : 1367.9501
+	 Vertices   : 20
+	 Iteration  : 1
+	 nb Sols    : 62222
+	 Secs       : 79.66403
+}
+Best {
+	 Fitness    : 1329.4602
+	 Vertices   : 22
+	 Iteration  : 2
+	 nb Sols    : 163665
+	 Secs       : 135.62344
+}
+Best {
+	 Fitness    : 1276.3801
+	 Vertices   : 20
+	 Iteration  : 3
+	 nb Sols    : 218540
+	 Secs       : 193.34267
+}
+Best {
+	 Fitness    : 1266.7799
+	 Vertices   : 20
+	 Iteration  : 4
+	 nb Sols    : 265200
+	 Secs       : 244.90051
+}
+Best {
+	 Fitness    : 1266.3499
+	 Vertices   : 20
+	 Iteration  : 5
+	 nb Sols    : 331144
+	 Secs       : 293.57364
+}
+Best {
+	 Fitness    : 1263.97
+	 Vertices   : 20
+	 Iteration  : 16
+	 nb Sols    : 1204271
+	 Secs       : 713.32166
+}
+Best {
+	 Fitness    : 1262.45
+	 Vertices   : 20
+	 Iteration  : 26
+	 nb Sols    : 1963408
+	 Secs       : 1121.3038
+}
+Best {
+	 Fitness    : 1257.3901
+	 Vertices   : 20
+	 Iteration  : 36
+	 nb Sols    : 2793893
+	 Secs       : 1674.7006
+}
+
+
+ ------- Best --------> 
+
+Best {
+	 Fitness    : 1257.3901
+	 Vertices   : 20
+	 Iteration  : 36
+	 nb Sols    : 2793893
+	 Secs       : 1674.7006
+}
+ ------- Fin -------- Ieration N 
+
+18
+Best {
+	 Fitness    : 3187.7097
+	 Vertices   : 86
+	 Iteration  : 0
+	 nb Sols    : 6
+	 Secs       : 0.0689931
+}
+Best {
+	 Fitness    : 1356.7101
+	 Vertices   : 22
+	 Iteration  : 1
+	 nb Sols    : 79664
+	 Secs       : 68.43016
+}
+Best {
+	 Fitness    : 1320.4401
+	 Vertices   : 22
+	 Iteration  : 2
+	 nb Sols    : 168077
+	 Secs       : 124.433556
+}
+Best {
+	 Fitness    : 1318.2101
+	 Vertices   : 22
+	 Iteration  : 3
+	 nb Sols    : 213612
+	 Secs       : 174.70253
+}
+Best {
+	 Fitness    : 1288.27
+	 Vertices   : 20
+	 Iteration  : 4
+	 nb Sols    : 300164
+	 Secs       : 226.19038
+}
+Best {
+	 Fitness    : 1285.6901
+	 Vertices   : 20
+	 Iteration  : 5
+	 nb Sols    : 383240
+	 Secs       : 278.59714
+}
+Best {
+	 Fitness    : 1285.1299
+	 Vertices   : 20
+	 Iteration  : 8
+	 nb Sols    : 618798
+	 Secs       : 437.40027
+}
+
+
+ ------- Best --------> 
+
+Best {
+	 Fitness    : 1285.1299
+	 Vertices   : 20
+	 Iteration  : 8
+	 nb Sols    : 618798
+	 Secs       : 437.40027
+}
+ ------- Fin -------- Ieration N 
+
+19
+

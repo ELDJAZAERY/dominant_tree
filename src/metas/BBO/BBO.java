@@ -1,8 +1,10 @@
 package metas.BBO;
 
+import data.Logger;
 import data.reader.Instances;
 import data.representations.Solutions.Solution;
 import metas.ACO.Ant;
+import metas.Controller;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -51,6 +53,7 @@ public class BBO {
     private static void Exec() {
 
         Best = Collections.max(population);
+        Controller.majFitness(Best.fitness);
         Best.display();
 
         nbIteration = 0;
@@ -97,6 +100,7 @@ public class BBO {
 
 			if ( Best.fitness - population.get(0).fitness > 0) {
 			    Best = population.get(0);
+                Controller.majFitness(Best.fitness);
 			    Best.display(nbIteration);
 			} else {
 				diversification++;
@@ -111,6 +115,8 @@ public class BBO {
 			UpdatePopulations();
 		}
 
+
+        Logger.PersistanceLog("\n\n ------- Best --------> \n");
         Best.display();
         System.out.println(" --------- BBO FIN ----------");
 	}
@@ -396,6 +402,7 @@ public class BBO {
         InitializePopulation(null);
 
         Best = (Solution) solInitial.clone();
+        Controller.majFitness(Best.fitness);
         population.set(populationSize-1,Best);
 
         return CooperationBBO();
@@ -408,6 +415,7 @@ public class BBO {
         InitializePopulation(populations);
 
         Best = Collections.max(population);
+        Controller.majFitness(Best.fitness);
 
         return CooperationBBO();
     }
@@ -419,6 +427,7 @@ public class BBO {
         InitializePopulation(null);
 
         Best = Collections.max(population);
+        Controller.majFitness(Best.fitness);
 
         return CooperationBBO();
     }
@@ -469,6 +478,7 @@ public class BBO {
 
             if ( Best.fitness - population.get(0).fitness > 0) {
                 Best = population.get(0);
+                Controller.majFitness(Best.fitness);
                 Best.display(nbIteration);
             } else {
                 diversification++;

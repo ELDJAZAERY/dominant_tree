@@ -11,13 +11,13 @@ import metas.GA.GA;
 import java.util.Collections;
 
 
- public class Demo {
+public class Demo {
 
 	// TODO connect and isConnected Function optimisation
 
 	public static void main(String[] args) {
 
-        String path = "bench_marks\\100\\50_1.txt";
+        String path = "bench_marks\\100\\300_3.txt";
         new Instances(path);
 
         //cooperation();
@@ -76,23 +76,41 @@ import java.util.Collections;
 
 	private static void BBODemo(){
 
-        for(int vertices = 100 ; vertices <= 500 ; vertices += 100){
-            for(int id = 1 ; id <= 3 ; id++){
+        for(int vertices = 500 ; vertices <= 500 ; vertices += 100){
+            for(int id = 2 ; id <= 3 ; id++){
 
                 String path = "bench_marks\\100\\"+vertices+"_"+id+".txt";
                 new Instances(path);
 
-                Logger.LoggerFileName = "Logs/BBO100/"+vertices+"_"+id+".txt";
+                Logger.LoggerFileName = "Logs/ACO100/"+vertices+"_"+id+".txt";
 
                 for(int i=0;i<20;i++) {
-                    BBO.BBO_Exec(40,10,0.005);
+                    ACO.ACO_Exec();
                     Solution.NbEvalsTotal = 0;
                     Solution.StartTime = System.currentTimeMillis();
+                    Logger.PersistanceLog(" ------- Fin -------- Ieration N \n\n" + i);
+                    System.out.println(" ------- Fin -------- Ieration N " + i);
                 }
             }
         }
 
     }
+
+    private static void BBODemo(int nbVertices , int id){
+
+        String path = "bench_marks\\100\\"+nbVertices+"_"+id+".txt";
+        new Instances(path);
+
+        Logger.LoggerFileName = "Logs/BBO100/"+nbVertices+"_"+id+".txt";
+
+        for(int i=0;i<20;i++) {
+            BBO.BBO_Exec(40,10,0.005);
+            Solution.NbEvalsTotal = 0;
+            Solution.StartTime = System.currentTimeMillis();
+        }
+
+    }
+
 
     private static void BBOTime(){
 	    BBO.BBOTime();

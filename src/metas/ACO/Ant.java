@@ -3,6 +3,7 @@ package metas.ACO;
 import data.reader.Instances;
 import data.representations.Solutions.Solution;
 import data.representations.Vertex;
+import metas.Controller;
 
 
 import java.util.*;
@@ -13,10 +14,6 @@ import static java.util.stream.Collectors.toMap;
 public class Ant {
 
     private static HashMap<Integer,Double> pheromone_table;
-    static {
-        Initials_Pheromones();
-    }
-
     private ArrayList<Integer> permutation = new ArrayList<>();
 
     private Solution solLocal;
@@ -34,20 +31,29 @@ public class Ant {
         }
     }
 
+
     private float Random(){
         return ThreadLocalRandom.current().nextFloat();
     }
 
+
+    //1(intens tourn ) 2(intens diver)3(diver tourn)
     public void build_Solution() {
         if (Random() > ACO.q0 ) {
-            build_par_Intensification();
+            //  build_par_Intensification();
+            //  build_par_diversification();
+            builde_by_tournoi();
+            // builde_by_ellitism();
+
         } else {
             build_par_diversification();
+            //      builde_by_ellitism();
+            //    builde_by_tournoi();
         }
-
         LocalSearch();
         if(solLocal.fitness < ACO.BestSol.fitness){
             ACO.BestSol = solLocal;
+            Controller.majFitness(solLocal.fitness);
             solLocal.display();
         }
     }
@@ -61,7 +67,7 @@ public class Ant {
                 .stream()
                 .sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))
                 .collect(
-                        toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1 - e2,
+                        toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e2,
                                 LinkedHashMap::new));
 
         for (Integer v:sorted.keySet()){
@@ -133,6 +139,88 @@ public class Ant {
         permutation.set(index,temp1);
     }
 
+    public void builde_by_ellitism(){
+        permutation = new ArrayList<>();
+
+        HashMap<Integer,Double> sorted = pheromone_table
+                .entrySet()
+                .stream()
+                .sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))
+                .collect(
+                        toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e2,
+                                LinkedHashMap::new));
+        int i=0;
+        for(Integer v:sorted.keySet()){
+            if(i<5){
+                i++;
+                permutation.add(v);
+            }else break;
+        }
+        //mapShuffle
+        List keys=new ArrayList(pheromone_table.keySet());
+        Collections.shuffle(keys);
+        for(Object o:keys){
+            if(!permutation.contains(o)){
+                permutation.add((Integer)o);
+            }
+        }
+        solLocal = new Solution(permutation);
+
+    }
+
+    public void builde_by_tournoi(){
+        permutation = new ArrayList<>();
+        Random rand=new Random();
+        int i = rand.nextInt(50);
+        int j = rand.nextInt(50);
+        List keys=new ArrayList(pheromone_table.keySet());
+        Integer v1=(Integer)keys.get(i);
+        Integer v2=(Integer)keys.get(j);
+        if(pheromone_table.get(v1)>pheromone_table.get(v2)){
+            permutation.add(v1);
+        }else permutation.add(v2);
+        HashMap<Integer,Double> sorted = pheromone_table
+                .entrySet()
+                .stream()
+                .sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))
+                .collect(
+                        toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e2,
+                                LinkedHashMap::new));
+        for(Integer o :sorted.keySet()){
+            if(!permutation.contains(o)){
+                permutation.add(o);
+            }
+        }
+
+        solLocal = new Solution(permutation);
+    }
+
+    public void builde_by_tournoishuff(){
+        permutation = new ArrayList<>();
+        Random rand=new Random();
+        int i = rand.nextInt(50);
+        int j = rand.nextInt(50);
+        List keys = new ArrayList(pheromone_table.keySet());
+        Integer v1=(Integer)keys.get(i);
+        Integer v2=(Integer)keys.get(j);
+        if(pheromone_table.get(v1)>pheromone_table.get(v2)){
+            permutation.add(v1);
+        }else permutation.add(v2);
+        HashMap<Integer,Double> sorted = pheromone_table
+                .entrySet()
+                .stream()
+                .sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))
+                .collect(
+                        toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e2,
+                                LinkedHashMap::new));
+        for(Integer o :pheromone_table.keySet()){
+            if(!permutation.contains(o)){
+                permutation.add(o);
+            }
+        }
+
+        solLocal = new Solution(permutation);
+    }
 
 }
 

@@ -1,5 +1,6 @@
 package data.reader;
 
+import data.Logger;
 import data.representations.Graph;
 import data.representations.Vertex;
 
@@ -8,6 +9,7 @@ import java.util.LinkedList;
 
 public class Instances {
 
+    public static String instanceString = "";
     public static int NbVertices;
     public static int NbEdges;
 
@@ -40,6 +42,9 @@ public class Instances {
                     Float.parseFloat(row[2].trim())
             );
         }
+
+
+        Logger.Logs = "";
     }
 
     private void initVertices(){
@@ -51,6 +56,7 @@ public class Instances {
 
 
     private static String[] readFile(String path) {
+        instanceString = "";
         String content = null;
         File file = new File(path); // For example, foo.txt
         FileReader reader = null;
@@ -68,6 +74,7 @@ public class Instances {
             }
         }
 
+        instanceString = content;
         return content.split("\n");
     }
 

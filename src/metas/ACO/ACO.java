@@ -1,10 +1,15 @@
 package metas.ACO;
 
+import data.Logger;
 import data.representations.Solutions.Solution;
+import metas.Controller;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 
 public class ACO {
@@ -20,8 +25,8 @@ public class ACO {
 
 
     private static void setParams(){
-        ACO.nbIter = 1500;
-        ACO.nbAnts = 100;
+        ACO.nbIter = 10;
+        ACO.nbAnts = 10;
         ACO.raux = (float) 0.05;
         ACO.q0 = (float) 0.05;
     }
@@ -40,6 +45,8 @@ public class ACO {
     public static Solution ACO_As_LocalSearch(Solution solInitial) {
 
         BestSol = (Solution) solInitial.clone();
+        Controller.majFitness(BestSol.fitness);
+
 
         setParams(10,10,0.05,0.05);
 
@@ -47,10 +54,7 @@ public class ACO {
         Ant.Initials_Pheromones();
 
         for(int iteration = 0; iteration < nbIter; iteration++) {
-            for (Ant ant : Ants) {
-                ant.build_Solution();
-                ant.MAJ_OnLine();
-            }
+            MultiThreadAnts();
             maj_global();
         }
 
@@ -71,6 +75,8 @@ public class ACO {
     public static Solution CooperationExec(Solution solInitial) {
 
         BestSol = (Solution) solInitial.clone();
+        Controller.majFitness(BestSol.fitness);
+
 
         setParams(1,10,0.05,0.05);
 
@@ -91,6 +97,7 @@ public class ACO {
     public static Solution CooperationExec(ArrayList<Solution> populations) {
 
         BestSol = (Solution) Collections.max(populations).clone();
+        Controller.majFitness(BestSol.fitness);
 
         for(Solution s:populations){
             Ant.MAJ_OffLine(s);
@@ -128,6 +135,8 @@ public class ACO {
     private static void Exec(){
 
         BestSol = new Solution();
+        Controller.majFitness(BestSol.fitness);
+
 
         init_Ants();
         Ant.Initials_Pheromones();
@@ -138,8 +147,39 @@ public class ACO {
                 ant.MAJ_OnLine();
             }
             maj_global();
+            System.out.println(" Iteration N -- > " + iteration);
         }
 
+
+        long endTime_best = System.currentTimeMillis();
+        float sec = (endTime_best - Solution.StartTime);
+        sec = (float) (sec / 1000.1);
+
+        System.out.println(" ----- ACO end in ---> " + sec);
+
+        Logger.PersistanceLog(" ----------- END  ------------- \n\n\n");
+        Logger.PersistanceLog(BestSol.toString());
+        Logger.PersistanceLog(" ----------- END  ------------- \n\n\n");
+    }
+
+    private static void MultiThreadAnts(){
+        ArrayList<Callable<Void>> taskList = new ArrayList<>();
+        for (int a = 0; a < Ants.size() ; a++) {
+            final int ant = a;
+            Callable<Void> callable = () -> {
+                Ants.get(ant).build_Solution();
+                //Ants.get(ant).MAJ_OnLine();
+                return null;
+            };
+            taskList.add(callable);
+        }
+
+        ExecutorService executor = Executors.newFixedThreadPool(Ants.size());
+        try {
+            executor.invokeAll(taskList);
+        } catch (InterruptedException ie) {
+
+        }
     }
 
 
