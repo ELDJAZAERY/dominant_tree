@@ -16,7 +16,7 @@
 
 <AnchorPane prefHeight="704.0" prefWidth="1330.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <children>
-        <LineChart fx:id="chart" axisSortingPolicy="NONE" createSymbols="false" layoutX="380.0" layoutY="128.0" prefHeight="556.0" prefWidth="942.0">
+        <LineChart fx:id="chart" axisSortingPolicy="NONE" createSymbols="false" layoutX="380.0" layoutY="128.0" prefHeight="556.0" prefWidth="641.0">
             <xAxis>
                 <NumberAxis prefHeight="54.0" prefWidth="871.0" side="BOTTOM" style="-fx-tick-label-fill: #FFF;" tickLabelRotation="-18.4">
                <tickLabelFont>

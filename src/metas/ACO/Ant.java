@@ -13,7 +13,7 @@ import static java.util.stream.Collectors.toMap;
 
 public class Ant {
 
-    private static HashMap<Integer,Double> pheromone_table;
+    protected static HashMap<Integer,Double> pheromone_table;
     private ArrayList<Integer> permutation = new ArrayList<>();
 
     private Solution solLocal;
@@ -53,8 +53,7 @@ public class Ant {
         LocalSearch();
         if(solLocal.fitness < ACO.BestSol.fitness){
             ACO.BestSol = solLocal;
-            Controller.majFitness(solLocal.fitness);
-            solLocal.display();
+            Controller.majFitness(solLocal);
         }
     }
 

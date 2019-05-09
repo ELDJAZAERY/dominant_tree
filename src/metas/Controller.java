@@ -1,5 +1,6 @@
 package metas;
 
+import data.representations.Solutions.Solution;
 import metas.ACO.ACO;
 import metas.BBO.BBO;
 import metas.BSO.BSO;
@@ -36,8 +37,11 @@ public class Controller {
         CurrentTimeEnSecs = 0;
     }
 
-    public static void majFitness(float fitness){
-        if(fitness < CurrentFitness || CurrentFitness == 0) CurrentFitness = fitness;
+    public static void majFitness(Solution sol){
+        if(sol.fitness < CurrentFitness || CurrentFitness == 0){
+            sol.display();
+            CurrentFitness = sol.fitness;
+        }
     }
 
     public static int getCurrentTimeEnSecs(){

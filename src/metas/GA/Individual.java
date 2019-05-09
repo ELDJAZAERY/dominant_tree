@@ -2,6 +2,8 @@ package metas.GA;
 
 import data.reader.Instances;
 import data.representations.Solutions.Solution;
+import metas.Controller;
+
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -78,7 +80,7 @@ public class Individual implements Comparable {
     }
 
     public void display(){
-        solLocal.display();
+        Controller.majFitness(solLocal);
     }
 
     @Override

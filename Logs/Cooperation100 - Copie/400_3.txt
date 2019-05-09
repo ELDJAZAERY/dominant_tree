@@ -1,0 +1,57 @@
+
+
+ Best {
+	 Fitness    : 1263.23
+	 Vertices   : 23
+	 Iteration  : 0
+	 nb Sols    : 1657274
+	 Secs       : 0.0
+}
+ ------- Fin -------- Ieration N 0 
+
+
+
+
+
+
+ Best {
+	 Fitness    : 1255.87
+	 Vertices   : 21
+	 Iteration  : 0
+	 nb Sols    : 1844971
+	 Secs       : 0.0
+}
+ ------- Fin -------- Ieration N 1 
+
+
+
+
+
+
+ Best {
+	 Fitness    : 1262.6799
+	 Vertices   : 22
+	 Iteration  : 0
+	 nb Sols    : 1621535
+	 Secs       : 0.0
+}
+ ------- Fin -------- Ieration N 2 
+
+
+
+
+
+
+ Best {
+	 Fitness    : 1262.5399
+	 Vertices   : 22
+	 Iteration  : 0
+	 nb Sols    : 2080512
+	 Secs       : 0.0
+}
+ ------- Fin -------- Ieration N 3 
+
+
+
+
+

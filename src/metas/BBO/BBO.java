@@ -53,8 +53,9 @@ public class BBO {
     private static void Exec() {
 
         Best = Collections.max(population);
-        Controller.majFitness(Best.fitness);
-        Best.display();
+        Controller.majFitness(Best);
+
+
 
         nbIteration = 0;
 
@@ -72,7 +73,7 @@ public class BBO {
                 ArrayList<Integer> currentSolutions = new ArrayList<>(population.get(j).permutation);
 
 				// Random 0% --> 100%
-				if(random(100) < ImmigrationsPbs.get(j)) {
+				if(random() < ImmigrationsPbs.get(j)) {
 				    /** Permutations **/
 				    _Crossing(currentSolutions,j);
 				}else{
@@ -100,8 +101,8 @@ public class BBO {
 
 			if ( Best.fitness - population.get(0).fitness > 0) {
 			    Best = population.get(0);
-                Controller.majFitness(Best.fitness);
-			    Best.display(nbIteration);
+                Controller.majFitness(Best);
+
 			} else {
 				diversification++;
 			}
@@ -117,7 +118,7 @@ public class BBO {
 
 
         Logger.PersistanceLog("\n\n ------- Best --------> \n");
-        Best.display();
+        Controller.majFitness(Best);
         System.out.println(" --------- BBO FIN ----------");
 	}
 
@@ -189,7 +190,7 @@ public class BBO {
 
         for (int l = 0; l < populationSize && l != j; l++) {
 
-            if (random(100) < EmigrationsPbs.get(l)) {
+            if (random() < EmigrationsPbs.get(l)) {
 
                 int rand = random(population.get(l).verticesDT.size() - 1 );
 
@@ -216,7 +217,7 @@ public class BBO {
         float mi = PMutate * ( (1 - (IndividualPMutate.get(j))) / Collections.max(IndividualPMutate));
         for (int i = 0; i < Instances.NbVertices ; i++) {
 
-            if (random(100) < mi) {
+            if (random() < mi) {
 
                 int rand;
                 while((rand = random(Instances.NbVertices - 1)) ==
@@ -349,6 +350,10 @@ public class BBO {
     }
 
 
+    private static float random(){
+        return ThreadLocalRandom.current().nextFloat();
+    }
+
     private static int random(int range){
         range = (range == 0) ? 1 : range;
         return ThreadLocalRandom.current().nextInt(0,range);
@@ -402,7 +407,7 @@ public class BBO {
         InitializePopulation(null);
 
         Best = (Solution) solInitial.clone();
-        Controller.majFitness(Best.fitness);
+        Controller.majFitness(Best);
         population.set(populationSize-1,Best);
 
         return CooperationBBO();
@@ -415,7 +420,7 @@ public class BBO {
         InitializePopulation(populations);
 
         Best = Collections.max(population);
-        Controller.majFitness(Best.fitness);
+        Controller.majFitness(Best);
 
         return CooperationBBO();
     }
@@ -427,7 +432,7 @@ public class BBO {
         InitializePopulation(null);
 
         Best = Collections.max(population);
-        Controller.majFitness(Best.fitness);
+        Controller.majFitness(Best);
 
         return CooperationBBO();
     }
@@ -478,8 +483,7 @@ public class BBO {
 
             if ( Best.fitness - population.get(0).fitness > 0) {
                 Best = population.get(0);
-                Controller.majFitness(Best.fitness);
-                Best.display(nbIteration);
+                Controller.majFitness(Best);
             } else {
                 diversification++;
             }

@@ -15,9 +15,13 @@ public class Demo {
 
 	// TODO connect and isConnected Function optimisation
 
-	public static void main(String[] args) {
 
-        String path = "bench_marks\\100\\300_3.txt";
+	public static void main(String[] args) {
+	    start();
+    }
+
+    private static void start(){
+        String path = "bench_marks\\100\\200_1.txt";
         new Instances(path);
 
         //cooperation();
@@ -34,16 +38,17 @@ public class Demo {
         */
 
         /**  TEST FOR LOGS  **/
-        BBODemo();
+        //BBODemo();
         //BBOTime();
-
-
 
         /** Cooperation Demo **/
         //Coopertaion.Cooperate();
+        CooperationDemo("400_3",10);
+        CooperationDemo("500_2",6);
+        CooperationDemo("500_1",6);
+        //CooperationDemo();
 
     }
-
 
     private static void MetasDemo(String meta){
         switch (meta){
@@ -77,7 +82,7 @@ public class Demo {
 	private static void BBODemo(){
 
         for(int vertices = 500 ; vertices <= 500 ; vertices += 100){
-            for(int id = 2 ; id <= 3 ; id++){
+            for(int id = 1 ; id <= 3 ; id++){
 
                 String path = "bench_marks\\100\\"+vertices+"_"+id+".txt";
                 new Instances(path);
@@ -111,6 +116,63 @@ public class Demo {
 
     }
 
+    private static void CooperationDemo(int nbVertices , int id){
+
+        String path = "bench_marks\\100\\"+nbVertices+"_"+id+".txt";
+        new Instances(path);
+
+        Logger.LoggerFileName = "Logs/Cooperation100/"+nbVertices+"_"+id+".txt";
+
+        for(int i=0;i<20;i++) {
+            Coopertaion.Cooperate();
+            Solution.NbEvalsTotal = 0;
+            Solution.StartTime = System.currentTimeMillis();
+        }
+
+    }
+
+    private static void CooperationDemo(){
+
+        for(int vertices = 500 ; vertices <= 500 ; vertices += 100){
+            for(int id = 3 ; id <= 3 ; id++){
+
+                String path = "bench_marks\\100\\"+vertices+"_"+id+".txt";
+                new Instances(path);
+
+                Logger.LoggerFileName = "Logs/Cooperation100/"+vertices+"_"+id+".txt";
+
+                for(int i=0;i<10;i++) {
+                    Solution best = Coopertaion.Cooperate();
+                    Solution.NbEvalsTotal = 0;
+                    Solution.StartTime = System.currentTimeMillis();
+
+                    Logger.PersistanceLog("\n\n "+best.toString());
+                    Logger.PersistanceLog(" ------- Fin -------- Ieration N " + i + " \n\n\n\n");
+                    System.out.println(" ------- Fin -------- Ieration N " + i);
+                }
+            }
+        }
+
+    }
+
+    private static void CooperationDemo(String nameFile , int nbIteration){
+
+        String path = "bench_marks\\100\\"+nameFile+".txt";
+        new Instances(path);
+
+        Logger.LoggerFileName = "Logs/Cooperation100/"+nameFile+".txt";
+
+        for(int i=0;i<nbIteration;i++) {
+            Solution best = Coopertaion.Cooperate();
+            Solution.NbEvalsTotal = 0;
+            Solution.StartTime = System.currentTimeMillis();
+
+            Logger.PersistanceLog("\n\n "+best.toString());
+            Logger.PersistanceLog(" ------- Fin -------- Ieration N " + i + " \n\n\n\n");
+            System.out.println(" ------- Fin -------- Ieration N " + i);
+        }
+
+    }
 
     private static void BBOTime(){
 	    BBO.BBOTime();

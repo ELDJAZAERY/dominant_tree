@@ -25,8 +25,8 @@ public class ACO {
 
 
     private static void setParams(){
-        ACO.nbIter = 10;
-        ACO.nbAnts = 10;
+        ACO.nbIter = 150;
+        ACO.nbAnts = 25;
         ACO.raux = (float) 0.05;
         ACO.q0 = (float) 0.05;
     }
@@ -45,7 +45,7 @@ public class ACO {
     public static Solution ACO_As_LocalSearch(Solution solInitial) {
 
         BestSol = (Solution) solInitial.clone();
-        Controller.majFitness(BestSol.fitness);
+        Controller.majFitness(BestSol);
 
 
         setParams(10,10,0.05,0.05);
@@ -75,7 +75,7 @@ public class ACO {
     public static Solution CooperationExec(Solution solInitial) {
 
         BestSol = (Solution) solInitial.clone();
-        Controller.majFitness(BestSol.fitness);
+        Controller.majFitness(BestSol);
 
 
         setParams(1,10,0.05,0.05);
@@ -96,14 +96,17 @@ public class ACO {
 
     public static Solution CooperationExec(ArrayList<Solution> populations) {
 
+        if( Ant.pheromone_table == null)
+            Ant.Initials_Pheromones();
+
         BestSol = (Solution) Collections.max(populations).clone();
-        Controller.majFitness(BestSol.fitness);
+        Controller.majFitness(BestSol);
 
         for(Solution s:populations){
             Ant.MAJ_OffLine(s);
         }
 
-        setParams(1,10,0.05,0.05);
+        setParams(1,1,0.05,0.05);
 
         init_Ants();
 
@@ -135,7 +138,7 @@ public class ACO {
     private static void Exec(){
 
         BestSol = new Solution();
-        Controller.majFitness(BestSol.fitness);
+        Controller.majFitness(BestSol);
 
 
         init_Ants();
@@ -168,7 +171,7 @@ public class ACO {
             final int ant = a;
             Callable<Void> callable = () -> {
                 Ants.get(ant).build_Solution();
-                //Ants.get(ant).MAJ_OnLine();
+                Ants.get(ant).MAJ_OnLine();
                 return null;
             };
             taskList.add(callable);

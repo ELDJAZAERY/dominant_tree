@@ -34,7 +34,7 @@ public class Coopertaion {
 
     /** Cooperation @Params **/
     public static int populationSize = 20;
-    public static int nbIterations = 50;
+    public static int nbIterations = 25;
 
 
     public static Solution Cooperate(){
@@ -64,12 +64,13 @@ public class Coopertaion {
 
                 if((currentSol = MetasExec(methaName)).fitness < BestGeneral.fitness){
                     BestGeneral = currentSol;
-                    BestGeneral.display();
+                    Controller.majFitness(BestGeneral);
                     MAJProba(methaName);
                 }
             }
 
             MAJProba();
+            System.out.println(" ----- Iteration Of Cooperation N " + nbIterations);
         }
 
         return BestGeneral;
@@ -77,28 +78,30 @@ public class Coopertaion {
 
     private static void MAJProba(){
 
-        if(MetaProba.get(MetasEnum.ACO.name()) <= 0)
-            MetaProba.remove(MetasEnum.ACO.name());
-        else if(MetaProba.containsKey(MetasEnum.ACO.name()))
-            MetaProbInitial.put(MetasEnum.ACO.name(),MetaProba.get(MetasEnum.ACO.name())-0.05);
+        if(MetaProba.containsKey(MetasEnum.ACO.name()))
+            if(MetaProba.get(MetasEnum.ACO.name()) <= 0)
+                MetaProba.remove(MetasEnum.ACO.name());
+            else if(MetaProba.containsKey(MetasEnum.ACO.name()))
+                MetaProbInitial.put(MetasEnum.ACO.name(),MetaProba.get(MetasEnum.ACO.name())-0.05);
 
-        if(MetaProba.get(MetasEnum.BBO.name()) <= 0)
-            MetaProba.remove(MetasEnum.BBO.name());
-        else if(MetaProba.containsKey(MetasEnum.ACO.name()))
-            MetaProbInitial.put(MetasEnum.BBO.name(),MetaProba.get(MetasEnum.BBO.name())-0.05);
+        if(MetaProba.containsKey(MetasEnum.BBO.name()))
+            if(MetaProba.get(MetasEnum.BBO.name()) <= 0)
+                MetaProba.remove(MetasEnum.BBO.name());
+            else if(MetaProba.containsKey(MetasEnum.ACO.name()))
+                MetaProbInitial.put(MetasEnum.BBO.name(),MetaProba.get(MetasEnum.BBO.name())-0.05);
+
+        if(MetaProba.containsKey(MetasEnum.BSO.name()))
+            if(MetaProba.get(MetasEnum.BSO.name()) <= 0)
+                MetaProba.remove(MetasEnum.BSO.name());
+            else if(MetaProba.containsKey(MetasEnum.ACO.name()))
+                MetaProbInitial.put(MetasEnum.BSO.name(),MetaProba.get(MetasEnum.BSO.name())-0.05);
 
 
-        if(MetaProba.get(MetasEnum.BSO.name()) <= 0)
-            MetaProba.remove(MetasEnum.BSO.name());
-        else if(MetaProba.containsKey(MetasEnum.ACO.name()))
-            MetaProbInitial.put(MetasEnum.BSO.name(),MetaProba.get(MetasEnum.BSO.name())-0.05);
-
-
-        if(MetaProba.get(MetasEnum.GA.name()) <= 0)
-            MetaProba.remove(MetasEnum.GA.name());
-        else if(MetaProba.containsKey(MetasEnum.ACO.name()))
-            MetaProbInitial.put(MetasEnum.GA.name(),MetaProba.get(MetasEnum.GA.name())-0.05);
-
+        if(MetaProba.containsKey(MetasEnum.GA.name()))
+            if(MetaProba.get(MetasEnum.GA.name()) <= 0)
+                MetaProba.remove(MetasEnum.GA.name());
+            else if(MetaProba.containsKey(MetasEnum.ACO.name()))
+                MetaProbInitial.put(MetasEnum.GA.name(),MetaProba.get(MetasEnum.GA.name())-0.05);
     }
 
     private static void MAJProba(String meta){
@@ -132,7 +135,6 @@ public class Coopertaion {
 
         return  BestLocal;
     }
-
 
     private static Solution BSO(){
         //Solution BestLocal = BSO.CooperationExec(PopulationGeneral);
