@@ -25,13 +25,13 @@ public class ACO {
 
 
     private static void setParams(){
-        ACO.nbIter = 150;
-        ACO.nbAnts = 25;
+        ACO.nbIter = 5;
+        ACO.nbAnts = 15;
         ACO.raux = (float) 0.05;
         ACO.q0 = (float) 0.05;
     }
 
-    private static void setParams( int nbIteration , int nbAnts , double raux , double q0){
+    public static void setParams( int nbIteration , int nbAnts , double raux , double q0){
         ACO.nbIter = nbIteration;
         ACO.nbAnts = nbAnts;
         ACO.raux = (float) raux;
@@ -59,11 +59,6 @@ public class ACO {
         }
 
         return (Solution) BestSol.clone();
-    }
-
-    public static void ACO_Exec( int nbIteration , int nbAnts , double raux , double q0){
-        setParams(nbIteration,nbAnts,raux,q0);
-        Exec();
     }
 
     public static void ACO_Exec(){
@@ -136,6 +131,8 @@ public class ACO {
 
 
     private static void Exec(){
+
+        Controller.init();
 
         BestSol = new Solution();
         Controller.majFitness(BestSol);

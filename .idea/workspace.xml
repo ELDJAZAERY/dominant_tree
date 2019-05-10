@@ -3,24 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Logs/ACO100/500_1.txt" afterPath="$PROJECT_DIR$/Logs/ACO100/500_1.txt" />
-      <change beforePath="$PROJECT_DIR$/Logs/Logs.txt" afterPath="$PROJECT_DIR$/Logs/Logs.txt" />
-      <change beforePath="$PROJECT_DIR$/out/production/promo - version/metas/ACO/ACO.class" afterPath="$PROJECT_DIR$/out/production/promo - version/metas/ACO/ACO.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/promo - version/metas/ACO/Ant.class" afterPath="$PROJECT_DIR$/out/production/promo - version/metas/ACO/Ant.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/promo - version/metas/BBO/BBO.class" afterPath="$PROJECT_DIR$/out/production/promo - version/metas/BBO/BBO.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/promo - version/metas/Controller.class" afterPath="$PROJECT_DIR$/out/production/promo - version/metas/Controller.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/promo - version/metas/Coopertaion.class" afterPath="$PROJECT_DIR$/out/production/promo - version/metas/Coopertaion.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/promo - version/metas/Demo.class" afterPath="$PROJECT_DIR$/out/production/promo - version/metas/Demo.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/promo - version/metas/GA/Individual.class" afterPath="$PROJECT_DIR$/out/production/promo - version/metas/GA/Individual.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/promo - version/sample/App.fxml" afterPath="$PROJECT_DIR$/out/production/promo - version/sample/App.fxml" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100 - Copie/400_3.txt" afterPath="$PROJECT_DIR$/Logs/Cooperation100 - Copie/400_3.txt" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100 - Copie/500_2.txt" afterPath="$PROJECT_DIR$/Logs/Cooperation100 - Copie/500_2.txt" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100/400_3.txt" afterPath="$PROJECT_DIR$/Logs/Cooperation100/400_3.txt" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100/500_2.txt" afterPath="$PROJECT_DIR$/Logs/Cooperation100/500_2.txt" />
+      <change beforePath="$PROJECT_DIR$/src/data/representations/Solutions/Solution.java" afterPath="$PROJECT_DIR$/src/data/representations/Solutions/Solution.java" />
       <change beforePath="$PROJECT_DIR$/src/metas/ACO/ACO.java" afterPath="$PROJECT_DIR$/src/metas/ACO/ACO.java" />
-      <change beforePath="$PROJECT_DIR$/src/metas/ACO/Ant.java" afterPath="$PROJECT_DIR$/src/metas/ACO/Ant.java" />
-      <change beforePath="$PROJECT_DIR$/src/metas/BBO/BBO.java" afterPath="$PROJECT_DIR$/src/metas/BBO/BBO.java" />
-      <change beforePath="$PROJECT_DIR$/src/metas/Controller.java" afterPath="$PROJECT_DIR$/src/metas/Controller.java" />
-      <change beforePath="$PROJECT_DIR$/src/metas/Coopertaion.java" afterPath="$PROJECT_DIR$/src/metas/Coopertaion.java" />
       <change beforePath="$PROJECT_DIR$/src/metas/Demo.java" afterPath="$PROJECT_DIR$/src/metas/Demo.java" />
-      <change beforePath="$PROJECT_DIR$/src/metas/GA/Individual.java" afterPath="$PROJECT_DIR$/src/metas/GA/Individual.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/App.fxml" afterPath="$PROJECT_DIR$/src/sample/App.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -106,8 +95,8 @@
       <file leaf-file-name="Demo.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/metas/Demo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="161" column="0" lean-forward="true" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+            <state relative-caret-position="306">
+              <caret line="223" column="0" lean-forward="true" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#MetasDemo#0;class#Demo#0" expanded="false" />
@@ -116,8 +105,54 @@
                 <element signature="method#BBODemo#1;class#Demo#0" expanded="false" />
                 <element signature="method#CooperationDemo#0;class#Demo#0" expanded="false" />
                 <element signature="method#CooperationDemo#1;class#Demo#0" expanded="false" />
-                <element signature="e#5115#5116#0" expanded="true" />
-                <element signature="e#5141#5142#0" expanded="true" />
+                <element signature="method#ACODemo#0;class#Demo#0" expanded="false" />
+                <element signature="method#BBODemo#2;class#Demo#0" expanded="false" />
+                <element signature="method#CooperationDemo#2;class#Demo#0" expanded="false" />
+                <element signature="e#6580#6581#0" expanded="true" />
+                <element signature="e#6606#6607#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/metas/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/data/representations/Solutions/Solution.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="151">
+              <caret line="442" column="0" lean-forward="true" selection-start-line="442" selection-start-column="0" selection-end-line="442" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ant.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/metas/ACO/Ant.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-14">
+              <caret line="50" column="23" lean-forward="true" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ACO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/metas/ACO/ACO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="106">
+              <caret line="131" column="0" lean-forward="false" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+              <folding>
+                <element signature="e#4812#4813#0" expanded="true" />
+                <element signature="e#4852#4853#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -135,7 +170,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>node</find>
       <find>nbEvaluations</find>
       <find>false</find>
       <find>methas.GA.GA_Solution</find>
@@ -165,6 +199,7 @@
       <find>display</find>
       <find>dis</find>
       <find>MetaProba</find>
+      <find>Syste</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -230,18 +265,18 @@
         <option value="$PROJECT_DIR$/src/metas/hebride/BBO_ACO/BBO.java" />
         <option value="$PROJECT_DIR$/src/metas/GA/GA.java" />
         <option value="$PROJECT_DIR$/src/data/Logger.java" />
-        <option value="$PROJECT_DIR$/src/data/representations/Solutions/Solution.java" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/sample/App.fxml" />
         <option value="$PROJECT_DIR$/src/data/reader/Instances.java" />
         <option value="$PROJECT_DIR$/Logs/ACO100 - Copie/500_2.txt" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
-        <option value="$PROJECT_DIR$/src/metas/ACO/ACO.java" />
         <option value="$PROJECT_DIR$/src/metas/Controller.java" />
         <option value="$PROJECT_DIR$/src/metas/ACO/Ant.java" />
         <option value="$PROJECT_DIR$/src/metas/BBO/BBO.java" />
         <option value="$PROJECT_DIR$/src/metas/GA/Individual.java" />
         <option value="$PROJECT_DIR$/src/metas/Coopertaion.java" />
+        <option value="$PROJECT_DIR$/src/data/representations/Solutions/Solution.java" />
+        <option value="$PROJECT_DIR$/src/metas/ACO/ACO.java" />
         <option value="$PROJECT_DIR$/src/metas/Demo.java" />
       </list>
     </option>
@@ -295,17 +330,6 @@
             <path>
               <item name="dominate_tree" type="b2602c69:ProjectViewProjectNode" />
               <item name="dominate_tree" type="462c0819:PsiDirectoryNode" />
-              <item name="Logs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dominate_tree" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dominate_tree" type="462c0819:PsiDirectoryNode" />
-              <item name="Logs" type="462c0819:PsiDirectoryNode" />
-              <item name="Cooperation100" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dominate_tree" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dominate_tree" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -313,13 +337,6 @@
               <item name="dominate_tree" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dominate_tree" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dominate_tree" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="reader" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dominate_tree" type="b2602c69:ProjectViewProjectNode" />
@@ -657,16 +674,15 @@
       <workItem from="1556807953833" duration="12265000" />
       <workItem from="1556828291136" duration="4585000" />
       <workItem from="1556902031575" duration="14132000" />
-      <workItem from="1557161308730" duration="5773000" />
+      <workItem from="1557161308730" duration="11799000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="384580000" />
+    <option name="totallyTimeSpent" value="390606000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1040" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -677,7 +693,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5581633" sideWeight="0.49131513" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.61247945" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.67487687" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.67487687" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -929,6 +945,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="89">
           <caret line="31" column="9" lean-forward="false" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder">
@@ -1024,16 +1041,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/metas/ACO/ACO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1760">
-          <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
           <folding>
-            <element signature="e#4947#4948#0" expanded="true" />
-            <element signature="e#4987#4988#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#3556#3557#0" expanded="false" />
+            <element signature="e#3584#3585#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1053,6 +1064,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="163" column="21" lean-forward="false" selection-start-line="163" selection-start-column="21" selection-end-line="163" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1060,6 +1072,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="46" column="21" lean-forward="false" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1067,30 +1080,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/representations/Solutions/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="417" column="19" lean-forward="false" selection-start-line="417" selection-start-column="19" selection-end-line="417" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/metas/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/metas/ACO/Ant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1122,10 +1111,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/representations/Solutions/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="442" column="0" lean-forward="true" selection-start-line="442" selection-start-column="0" selection-end-line="442" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/metas/ACO/Ant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-14">
+          <caret line="50" column="23" lean-forward="true" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/metas/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/metas/ACO/ACO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="131" column="0" lean-forward="false" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+          <folding>
+            <element signature="e#4812#4813#0" expanded="true" />
+            <element signature="e#4852#4853#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/metas/Demo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="161" column="0" lean-forward="true" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+        <state relative-caret-position="306">
+          <caret line="223" column="0" lean-forward="true" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#MetasDemo#0;class#Demo#0" expanded="false" />
@@ -1134,8 +1158,11 @@
             <element signature="method#BBODemo#1;class#Demo#0" expanded="false" />
             <element signature="method#CooperationDemo#0;class#Demo#0" expanded="false" />
             <element signature="method#CooperationDemo#1;class#Demo#0" expanded="false" />
-            <element signature="e#5115#5116#0" expanded="true" />
-            <element signature="e#5141#5142#0" expanded="true" />
+            <element signature="method#ACODemo#0;class#Demo#0" expanded="false" />
+            <element signature="method#BBODemo#2;class#Demo#0" expanded="false" />
+            <element signature="method#CooperationDemo#2;class#Demo#0" expanded="false" />
+            <element signature="e#6580#6581#0" expanded="true" />
+            <element signature="e#6606#6607#0" expanded="true" />
           </folding>
         </state>
       </provider>

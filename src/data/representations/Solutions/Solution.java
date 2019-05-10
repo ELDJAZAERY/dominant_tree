@@ -30,7 +30,7 @@ public class Solution implements Cloneable , Comparable<Solution> {
 
     /** #Static Timer **/
     public static long StartTime = System.currentTimeMillis();
-    protected float sec = 0;
+    protected double sec = 0;
     protected int   nbIteration = 0;
 
 
@@ -419,7 +419,7 @@ public class Solution implements Cloneable , Comparable<Solution> {
         if(sec == 0 ) {
             long endTime_best = System.currentTimeMillis();
             sec = (endTime_best - StartTime);
-            sec = (float) (sec / 1000.1);
+            sec = (sec / 1000.1);
         }
         System.out.println(toString());
 
