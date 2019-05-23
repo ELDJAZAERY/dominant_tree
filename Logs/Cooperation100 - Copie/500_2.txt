@@ -54,15 +54,14 @@
 
 
 
-
-
- Best {
-	 Fitness    : 1224.29
-	 Vertices   : 23
+Best {
+	 Fitness    : 1220.4701
+	 Vertices   : 24
 	 Iteration  : 0
-	 nb Sols    : 1907167
+	 nb Sols    : 2861352
 	 Secs       : 0.0
 }
+
  ------- Fin -------- Ieration N 4 
 
 
@@ -297,16 +296,6 @@ Best {
 }
  ------- Fin -------- Ieration N 1 
 
-
-
-
-Best {
-	 Fitness    : 1234.15
-	 Vertices   : 20
-	 Iteration  : 0
-	 nb Sols    : 2934442
-	 Secs       : 3740.061
-}
 
 
  Best {

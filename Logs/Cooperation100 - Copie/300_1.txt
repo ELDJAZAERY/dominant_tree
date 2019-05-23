@@ -393,7 +393,7 @@ Best {
 
 
  Best {
-	 Fitness    : 1222.94
+	 Fitness    : 1215.4801
 	 Vertices   : 21
 	 Iteration  : 0
 	 nb Sols    : 1142908

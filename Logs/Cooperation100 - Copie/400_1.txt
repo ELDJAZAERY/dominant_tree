@@ -72,7 +72,7 @@
 
  Best {
 	 Fitness    : 1211.39
-	 Vertices   : 21
+	 Vertices   : 20
 	 Iteration  : 0
 	 nb Sols    : 2126322
 	 Secs       : 0.0
@@ -141,7 +141,7 @@
 
 
  Best {
-	 Fitness    : 1225.6699
+	 Fitness    : 1211.39
 	 Vertices   : 21
 	 Iteration  : 0
 	 nb Sols    : 1969513
@@ -253,8 +253,8 @@
 
 
  Best {
-	 Fitness    : 1222.27
-	 Vertices   : 22
+	 Fitness    : 1221.4198
+	 Vertices   : 23
 	 Iteration  : 0
 	 nb Sols    : 2287857
 	 Secs       : 0.0

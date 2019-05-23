@@ -1,53 +1,11 @@
-Best {
-	 Fitness    : 1820.4001
-	 Vertices   : 33
-	 Iteration  : 0
-	 nb Sols    : 20
-	 Secs       : 0.2209779
-}
-Best {
-	 Fitness    : 1513.2799
-	 Vertices   : 25
-	 Iteration  : 0
-	 nb Sols    : 1724
-	 Secs       : 2.3257675
-}
-Best {
-	 Fitness    : 1316.1399
-	 Vertices   : 20
-	 Iteration  : 0
-	 nb Sols    : 13674
-	 Secs       : 6.317368
-}
-Best {
-	 Fitness    : 1262.1699
-	 Vertices   : 19
-	 Iteration  : 0
-	 nb Sols    : 30312
-	 Secs       : 8.959105
-}
-Best {
-	 Fitness    : 1257.21
-	 Vertices   : 20
-	 Iteration  : 0
-	 nb Sols    : 59791
-	 Secs       : 13.173682
-}
-Best {
-	 Fitness    : 1252.99
-	 Vertices   : 20
-	 Iteration  : 0
-	 nb Sols    : 72898
-	 Secs       : 15.441456
-}
 
 
  Best {
-	 Fitness    : 1252.99
-	 Vertices   : 20
+	 Fitness    : 1253.49
+	 Vertices   : 19
 	 Iteration  : 0
-	 nb Sols    : 72898
-	 Secs       : 15.441456
+	 nb Sols    : 146245
+	 Secs       : 0.0
 }
  ------- Fin -------- Ieration N 0 
 
@@ -57,125 +15,13 @@ Best {
 
 
  Best {
-	 Fitness    : 1253.49
+	 Fitness    : 1256.82
 	 Vertices   : 19
 	 Iteration  : 0
-	 nb Sols    : 16983
+	 nb Sols    : 390031
 	 Secs       : 0.0
 }
  ------- Fin -------- Ieration N 1 
-
-
-
-
-
-
- Best {
-	 Fitness    : 1253.49
-	 Vertices   : 19
-	 Iteration  : 0
-	 nb Sols    : 156777
-	 Secs       : 0.0
-}
- ------- Fin -------- Ieration N 2 
-
-
-
-
-
-
- Best {
-	 Fitness    : 1252.99
-	 Vertices   : 20
-	 Iteration  : 0
-	 nb Sols    : 60601
-	 Secs       : 0.0
-}
- ------- Fin -------- Ieration N 3 
-
-
-
-
-
-
- Best {
-	 Fitness    : 1253.49
-	 Vertices   : 19
-	 Iteration  : 0
-	 nb Sols    : 63639
-	 Secs       : 0.0
-}
- ------- Fin -------- Ieration N 4 
-
-
-
-
-
-
- Best {
-	 Fitness    : 1252.99
-	 Vertices   : 20
-	 Iteration  : 0
-	 nb Sols    : 108570
-	 Secs       : 0.0
-}
- ------- Fin -------- Ieration N 5 
-
-
-
-
-
-
- Best {
-	 Fitness    : 1253.49
-	 Vertices   : 19
-	 Iteration  : 0
-	 nb Sols    : 124911
-	 Secs       : 0.0
-}
- ------- Fin -------- Ieration N 6 
-
-
-
-
-
-
- Best {
-	 Fitness    : 1253.49
-	 Vertices   : 19
-	 Iteration  : 0
-	 nb Sols    : 183403
-	 Secs       : 0.0
-}
- ------- Fin -------- Ieration N 7 
-
-
-
-
-
-
- Best {
-	 Fitness    : 1252.99
-	 Vertices   : 20
-	 Iteration  : 0
-	 nb Sols    : 221847
-	 Secs       : 0.0
-}
- ------- Fin -------- Ieration N 8 
-
-
-
-
-
-
- Best {
-	 Fitness    : 1253.49
-	 Vertices   : 19
-	 Iteration  : 0
-	 nb Sols    : 257462
-	 Secs       : 0.0
-}
- ------- Fin -------- Ieration N 9 
 
 
 

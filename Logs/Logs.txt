@@ -1,85 +1,50 @@
 Best {
-	 Fitness    : 1852.44
-	 Vertices   : 37
+	 Fitness    : 1501.8099
+	 Vertices   : 24
 	 Iteration  : 0
-	 nb Sols    : 20
-	 Secs       : 0.21197881
+	 nb Sols    : 4163
+	 Secs       : 5.589441055894411
 }
 Best {
-	 Fitness    : 3194.061
-	 Vertices   : 100
+	 Fitness    : 1488.31
+	 Vertices   : 24
 	 Iteration  : 0
-	 nb Sols    : 55
-	 Secs       : 0.7629237
+	 nb Sols    : 22709
+	 Secs       : 28.44015598440156
 }
 Best {
-	 Fitness    : 1687.84
-	 Vertices   : 26
+	 Fitness    : 1450.18
+	 Vertices   : 25
 	 Iteration  : 0
-	 nb Sols    : 3906
-	 Secs       : 6.0543947
+	 nb Sols    : 36562
+	 Secs       : 45.2984701529847
 }
 Best {
-	 Fitness    : 1298.94
-	 Vertices   : 18
+	 Fitness    : 1424.1901
+	 Vertices   : 23
 	 Iteration  : 0
-	 nb Sols    : 29954
-	 Secs       : 20.162983
+	 nb Sols    : 76704
+	 Secs       : 102.61673832616738
 }
 Best {
-	 Fitness    : 1262.1699
-	 Vertices   : 21
+	 Fitness    : 1378.56
+	 Vertices   : 25
 	 Iteration  : 0
-	 nb Sols    : 79606
-	 Secs       : 35.126488
+	 nb Sols    : 119096
+	 Secs       : 156.21137886211378
 }
 Best {
-	 Fitness    : 1257.85
-	 Vertices   : 21
+	 Fitness    : 1312.23
+	 Vertices   : 20
 	 Iteration  : 0
-	 nb Sols    : 114346
-	 Secs       : 48.051193
+	 nb Sols    : 140599
+	 Secs       : 184.42955704429556
 }
 Best {
-	 Fitness    : 1247.13
-	 Vertices   : 19
+	 Fitness    : 1309.84
+	 Vertices   : 20
 	 Iteration  : 0
-	 nb Sols    : 141984
-	 Secs       : 63.196682
-}
-Best {
-	 Fitness    : 1227.29
-	 Vertices   : 19
-	 Iteration  : 0
-	 nb Sols    : 189712
-	 Secs       : 78.67913
-}
-Best {
-	 Fitness    : 1213.17
-	 Vertices   : 17
-	 Iteration  : 0
-	 nb Sols    : 260647
-	 Secs       : 110.340965
-}
-Best {
-	 Fitness    : 1213.09
-	 Vertices   : 17
-	 Iteration  : 0
-	 nb Sols    : 427762
-	 Secs       : 189.925
-}
-Best {
-	 Fitness    : 1210.4701
-	 Vertices   : 19
-	 Iteration  : 0
-	 nb Sols    : 561536
-	 Secs       : 235.20947
-}
-Best {
-	 Fitness    : 1206.79
-	 Vertices   : 18
-	 Iteration  : 0
-	 nb Sols    : 623341
-	 Secs       : 264.96152
+	 nb Sols    : 667277
+	 Secs       : 774.8525147485251
 }
 

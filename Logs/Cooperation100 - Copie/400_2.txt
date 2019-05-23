@@ -225,8 +225,8 @@
 
 
  Best {
-	 Fitness    : 1207.0302
-	 Vertices   : 20
+	 Fitness    : 1199.92
+	 Vertices   : 19
 	 Iteration  : 0
 	 nb Sols    : 1334129
 	 Secs       : 0.0
