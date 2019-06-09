@@ -99,4 +99,35 @@ Best {
 	 nb Sols    : 472922
 	 Secs       : 787.004299570043
 }
+Best {
+	 Fitness    : 1360.82
+	 Vertices   : 22
+	 Iteration  : 0
+	 nb Sols    : 638735
+	 Secs       : 1069.4550544945505
+}
+Best {
+	 Fitness    : 1356.97
+	 Vertices   : 20
+	 Iteration  : 0
+	 nb Sols    : 766424
+	 Secs       : 1301.816818318168
+}
+Best {
+	 Fitness    : 1342.93
+	 Vertices   : 22
+	 Iteration  : 0
+	 nb Sols    : 1057803
+	 Secs       : 1867.798220177982
+}
+Best {
+	 Fitness    : 2133.4602
+	 Vertices   : 52
+	 Iteration  : 0
+	 nb Sols    : 1147479
+	 Secs       : 2144.3565643435654
+}
+ ------- Fin -------- Ieration N 
+
+1
 

@@ -12,6 +12,7 @@ public class Controller {
     public static int CurrentTimeEnSecs = 0;
 
     public static void lance(MetasEnum meta){
+        Controller.init();
         switch (meta.name()){
              case "ACO" :
                 /** ACO TEST **/

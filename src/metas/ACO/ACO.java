@@ -67,28 +67,6 @@ public class ACO {
     }
 
 
-    public static Solution CooperationExec(Solution solInitial) {
-
-        BestSol = (Solution) solInitial.clone();
-        Controller.majFitness(BestSol);
-
-
-        setParams(1,10,0.05,0.05);
-
-        init_Ants();
-
-        for(int iteration = 0; iteration < nbIter; iteration++) {
-            for (Ant ant : Ants) {
-                ant.build_Solution();
-                ant.MAJ_OnLine();
-            }
-            maj_global();
-        }
-
-        return (Solution) BestSol.clone();
-    }
-
-
     public static Solution CooperationExec(ArrayList<Solution> populations) {
 
         if( Ant.pheromone_table == null)
@@ -132,8 +110,6 @@ public class ACO {
 
     private static void Exec(){
 
-        Controller.init();
-
         BestSol = new Solution();
         Controller.majFitness(BestSol);
 
@@ -147,19 +123,8 @@ public class ACO {
                 ant.MAJ_OnLine();
             }
             maj_global();
-            System.out.println(" Iteration N -- > " + iteration);
         }
 
-
-        long endTime_best = System.currentTimeMillis();
-        float sec = (endTime_best - Solution.StartTime);
-        sec = (float) (sec / 1000.1);
-
-        System.out.println(" ----- ACO end in ---> " + sec);
-
-        Logger.PersistanceLog(" ----------- END  ------------- \n\n\n");
-        Logger.PersistanceLog(BestSol.toString());
-        Logger.PersistanceLog(" ----------- END  ------------- \n\n\n");
     }
 
     private static void MultiThreadAnts(){

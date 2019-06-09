@@ -48,6 +48,12 @@ public class Controller {
             metasChoice.getItems().add(meta.name());
         }
 
+        for(MetasEnum meta:MetasEnum.values()){
+            metasChoice.setValue(meta.name());
+            metaActuel = meta;
+            break;
+        }
+
         metasChoice.getSelectionModel().selectedIndexProperty().addListener(
             (ObservableValue<? extends Number> observableValue, Number number, Number number2) -> {
                 metaActuel = MetasEnum.valueOf(metasChoice.getItems().get((Integer) number2));

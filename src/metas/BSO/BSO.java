@@ -1,6 +1,7 @@
 package metas.BSO;
 
 import data.representations.Solutions.Solution;
+import metas.ACO.ACO;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -34,7 +35,7 @@ public class BSO {
 
     public static void Exec(){
         setParams(300, 5, 5);
-        BSO_Exec();
+        ACO.ACO_Exec();
     }
 
     public static void Exec(Solution solutionInitial){

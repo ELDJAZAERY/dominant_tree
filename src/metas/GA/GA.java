@@ -1,6 +1,8 @@
 package metas.GA;
 
 import data.representations.Solutions.Solution;
+import metas.ACO.ACO;
+import metas.Controller;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -21,16 +23,18 @@ public class GA {
         GA_Exec();
     }
 
-    public static void Exec(){
-        GA.nbIteration = 500;
-        GA.populationSize = 50;
+    public static Solution Exec(){
+        Individual.withLocalSearch = true;
+        GA.nbIteration = 15;
+        GA.populationSize = 15;
         population = new ArrayList<>();
         initialzePopulation(null);
-        GA_Exec();
+        ACO.ACO_Exec();
+        return Collections.max(population).solLocal;
     }
 
     public static void Exec(ArrayList<Solution> populationInitial){
-        GA.nbIteration = 500;
+        GA.nbIteration = 30;
         GA.populationSize = 50;
         population = new ArrayList<>();
         initialzePopulation(populationInitial);
@@ -65,6 +69,7 @@ public class GA {
     }
 
     public static  ArrayList<Solution> GA_ForInitializatoinPopulation(int PopulationSize){
+        Individual.withLocalSearch = false;
         Exec(3,PopulationSize);
         return getPopulation();
     }
@@ -76,6 +81,7 @@ public class GA {
         int nbIter = nbIteration;
 
         ArrayList<Individual> newPopulation ;
+        Controller.init();
 
 
         while(--nbIter != 0){
@@ -106,7 +112,7 @@ public class GA {
                 //nstar.LocalSearch();
                 if(BestSol.compareTo(nstar) > 0 ){
                     BestSol = nstar;
-                    BestSol.display();
+                    Controller.majFitness(BestSol.solLocal);
                 }
 
                 newPopulation.add(nstar);

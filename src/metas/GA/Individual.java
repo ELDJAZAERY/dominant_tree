@@ -9,7 +9,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Individual implements Comparable {
 
-
+    protected static boolean withLocalSearch = false ;
     protected Solution solLocal;
 
 
@@ -37,7 +37,8 @@ public class Individual implements Comparable {
             }
         }
 
-        this.solLocal = new Solution(new ArrayList<>(crossed));
+        solLocal = new Solution(new ArrayList<>(crossed));
+        if(withLocalSearch) LocalSearch();
     }
 
     public static Individual crossOver(Individual one,Individual otherOne){

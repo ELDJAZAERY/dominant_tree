@@ -116,10 +116,7 @@ public class BBO {
 			UpdatePopulations();
 		}
 
-
-        Logger.PersistanceLog("\n\n ------- Best --------> \n");
         Controller.majFitness(Best);
-        System.out.println(" --------- BBO FIN ----------");
 	}
 
 
@@ -325,29 +322,6 @@ public class BBO {
 
 
     /** Cooperation Helpers **/
-
-
-
-    /** Timer Comperation  **/
-    public static void BBOTime(){
-        long startTime = System.currentTimeMillis();
-
-        Solution best = new Solution(), current;
-        for(int i = 0 ; i< 100 ; i++){
-            current = new Solution();
-            System.out.println(current.fitness);
-            current = new Solution(current.permutation);
-            System.out.println(current.fitness);
-            if(current.compareTo(best)<0){
-                best = current;
-            }
-        }
-
-        System.out.println(best.fitness);
-        long endTime_best = System.currentTimeMillis();
-        long t = (endTime_best - startTime) / 1000;
-        System.out.println(t);
-    }
 
 
     private static float random(){

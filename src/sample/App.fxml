@@ -16,7 +16,7 @@
 
 <AnchorPane prefHeight="704.0" prefWidth="1330.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <children>
-        <LineChart fx:id="chart" axisSortingPolicy="NONE" createSymbols="false" layoutX="380.0" layoutY="128.0" prefHeight="556.0" prefWidth="641.0">
+        <LineChart fx:id="chart" alternativeColumnFillVisible="true" axisSortingPolicy="NONE" cacheShape="false" centerShape="false" layoutX="232.0" layoutY="128.0" legendVisible="false" pickOnBounds="false" prefHeight="556.0" prefWidth="641.0" scaleShape="false">
             <xAxis>
                 <NumberAxis prefHeight="54.0" prefWidth="871.0" side="BOTTOM" style="-fx-tick-label-fill: #FFF;" tickLabelRotation="-18.4">
                <tickLabelFont>
@@ -31,8 +31,8 @@
                </tickLabelFont></NumberAxis>
             </yAxis>
         </LineChart>
-        <Separator layoutX="336.0" layoutY="95.0" orientation="VERTICAL" prefHeight="583.0" prefWidth="35.0" />
-        <TextArea fx:id="instanceContiant" editable="false" layoutX="14.0" layoutY="94.0" prefHeight="583.0" prefWidth="321.0" />
+        <Separator layoutX="197.0" layoutY="95.0" orientation="VERTICAL" prefHeight="583.0" prefWidth="35.0" />
+        <TextArea fx:id="instanceContiant" editable="false" layoutX="14.0" layoutY="94.0" prefHeight="583.0" prefWidth="166.0" />
         <ChoiceBox id="choiceBox" fx:id="instanceChoice" cache="true" cacheHint="QUALITY" layoutX="237.0" layoutY="28.0" prefWidth="150.0">
             <effect>
                 <Bloom threshold="1.0" />
@@ -67,7 +67,7 @@
             </RadialGradient>
          </textFill>
       </Label>
-      <Label layoutX="798.0" layoutY="94.0" styleClass="main-text" text="Line Chart">
+      <Label layoutX="523.0" layoutY="95.0" styleClass="main-text" text="Line Chart">
          <textFill>
             <RadialGradient centerX="0.5055555555555555" centerY="0.5428571428571428" cycleMethod="REFLECT" radius="0.5">
                <stops>
@@ -77,7 +77,7 @@
             </RadialGradient>
          </textFill>
       </Label>
-      <Label layoutX="345.0" layoutY="371.0" prefHeight="31.0" prefWidth="70.0" style="-fx-rotate: -90;" styleClass="main-text" text="Fitness" textFill="#eaf287" />
-      <Label layoutX="731.0" layoutY="653.0" prefHeight="31.0" prefWidth="121.0" style="-fx-rotate: 0;" styleClass="main-text" text="Temp / sec" textFill="#eaf287" />
+      <Label layoutX="202.0" layoutY="368.0" prefHeight="31.0" prefWidth="70.0" style="-fx-rotate: -90;" styleClass="main-text" text="Fitness" textFill="#eaf287" />
+      <Label layoutX="490.0" layoutY="655.0" prefHeight="31.0" prefWidth="121.0" style="-fx-rotate: 0;" styleClass="main-text" text="Temp / sec" textFill="#eaf287" />
     </children>
 </AnchorPane>
