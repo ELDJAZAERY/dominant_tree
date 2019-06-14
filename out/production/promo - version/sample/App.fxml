@@ -17,7 +17,7 @@
 
 <AnchorPane prefHeight="704.0" prefWidth="1330.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <children>
-        <LineChart fx:id="chart" alternativeColumnFillVisible="true" axisSortingPolicy="NONE" cacheShape="false" centerShape="false" layoutX="244.0" layoutY="318.0" legendVisible="false" pickOnBounds="false" prefHeight="366.0" prefWidth="740.0" scaleShape="false">
+        <LineChart fx:id="chart" alternativeColumnFillVisible="true" axisSortingPolicy="NONE" cacheShape="false" centerShape="false" layoutX="244.0" layoutY="142.0" legendVisible="false" pickOnBounds="false" prefHeight="542.0" prefWidth="740.0" scaleShape="false">
             <xAxis>
                 <NumberAxis prefHeight="54.0" prefWidth="871.0" side="BOTTOM" style="-fx-tick-label-fill: #FFF;" tickLabelRotation="-18.4">
                <tickLabelFont>
@@ -34,7 +34,7 @@
         </LineChart>
         <Separator layoutX="197.0" layoutY="95.0" orientation="VERTICAL" prefHeight="583.0" prefWidth="35.0" />
         <TextArea fx:id="instanceContiant" editable="false" layoutX="14.0" layoutY="94.0" prefHeight="583.0" prefWidth="166.0" />
-        <ChoiceBox id="choiceBox" fx:id="instanceChoice" cache="true" cacheHint="QUALITY" layoutX="11.0" layoutY="42.0" prefHeight="25.0" prefWidth="115.0">
+        <ChoiceBox id="choiceBox" fx:id="instanceChoice" cache="true" cacheHint="QUALITY" layoutX="30.0" layoutY="42.0" prefHeight="25.0" prefWidth="132.0">
             <effect>
                 <Bloom threshold="1.0" />
             </effect>
@@ -42,7 +42,7 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </ChoiceBox>
-        <Label layoutX="33.0" layoutY="6.0" styleClass="main-text" text="BenchMarks">
+        <Label layoutX="41.0" layoutY="6.0" styleClass="main-text" text="BenchMarks">
          <textFill>
             <RadialGradient centerX="0.5055555555555555" centerY="0.5428571428571428" cycleMethod="REFLECT" radius="0.5">
                <stops>
@@ -52,12 +52,12 @@
             </RadialGradient>
          </textFill></Label>
         <Separator layoutX="14.0" layoutY="81.0" prefHeight="4.0" prefWidth="1296.0" />
-        <ChoiceBox fx:id="metasChoice" layoutX="615.0" layoutY="46.0" prefHeight="25.0" prefWidth="108.0">
+        <ChoiceBox fx:id="metasChoice" layoutX="613.0" layoutY="42.0" prefHeight="25.0" prefWidth="108.0">
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor>
         </ChoiceBox>
-        <Button fx:id="solver" layoutX="808.0" layoutY="21.0" mnemonicParsing="false" onAction="#solve" text="Résudre ">
+        <Button fx:id="solver" layoutX="750.0" layoutY="35.0" mnemonicParsing="false" onAction="#solve" text="Résudre ">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
@@ -71,7 +71,7 @@
             </RadialGradient>
          </textFill>
       </Label>
-      <Label layoutX="523.0" layoutY="95.0" styleClass="main-text" text="Line Chart">
+      <Label layoutX="577.0" layoutY="111.0" styleClass="main-text" text="Line Chart">
          <textFill>
             <RadialGradient centerX="0.5055555555555555" centerY="0.5428571428571428" cycleMethod="REFLECT" radius="0.5">
                <stops>
@@ -81,21 +81,13 @@
             </RadialGradient>
          </textFill>
       </Label>
-      <Label layoutX="200.0" layoutY="475.0" prefHeight="31.0" prefWidth="70.0" style="-fx-rotate: -90;" styleClass="main-text" text="Fitness" textFill="#eaf287" />
+      <Label layoutX="206.0" layoutY="417.0" prefHeight="31.0" prefWidth="70.0" style="-fx-rotate: -90;" styleClass="main-text" text="Fitness" textFill="#eaf287" />
       <Label layoutX="490.0" layoutY="655.0" prefHeight="31.0" prefWidth="121.0" style="-fx-rotate: 0;" styleClass="main-text" text="Temp / sec" textFill="#eaf287" />
-      <ChoiceBox id="choiceBox" cache="true" cacheHint="QUALITY" layoutX="138.0" layoutY="42.0" prefHeight="25.0" prefWidth="102.0">
-         <effect>
-            <Bloom threshold="1.0" />
-         </effect>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </ChoiceBox>
-      <Button fx:id="resumer" layoutX="911.0" layoutY="22.0" mnemonicParsing="false" onAction="#stopSolving" text="Résume">
+      <Button fx:id="resumer" layoutX="859.0" layoutY="35.0" mnemonicParsing="false" onAction="#stopSolving" text="Résume">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Label layoutX="615.0" layoutY="653.0" prefHeight="31.0" prefWidth="60.0" text="20 s">
+      <Label fx:id="timeEnSec" layoutX="615.0" layoutY="653.0" prefHeight="36.0" prefWidth="149.0" text="0 Sec">
          <font>
             <Font size="25.0" />
          </font>
@@ -108,7 +100,7 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <Label layoutX="207.0" layoutY="399.0" prefHeight="31.0" prefWidth="60.0" style="-fx-rotate: -90;" text="20 s">
+      <Label fx:id="fitnessLabel" layoutX="170.0" layoutY="293.0" prefHeight="36.0" prefWidth="148.0" style="-fx-rotate: -90;" text="0">
          <font>
             <Font size="25.0" />
          </font>

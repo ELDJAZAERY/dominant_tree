@@ -96,7 +96,9 @@ public class Ant {
 
 
         for (int d = 0; d < solLocal.verticesDT.size(); d++) {
+            if(Controller.isStoped()) break;
             for (int v = solLocal.verticesDT.size(); v < Instances.NbVertices ; v++) {
+                if(Controller.isStoped()) break;
                 permutationTemp = new ArrayList<>(solLocal.permutation);
                 temp = permutationTemp.get(d);
                 permutationTemp.set(d, permutationTemp.get(v));

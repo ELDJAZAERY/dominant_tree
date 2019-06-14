@@ -294,8 +294,11 @@ public class BBO {
         Solution LocalBest = individual;
 
         for (int d = 0; d < individual.verticesDT.size(); d++) {
+            if(Controller.isStoped()) break;
             //for (int v = 0; v < Instances.NbVertices ; v++) {
             for (int v = individual.verticesDT.size(); v < Instances.NbVertices ; v++) {
+                if(Controller.isStoped()) break;
+
                 permutation = new ArrayList<>(individual.permutation);
                 temp = permutation.get(d);
                 permutation.set(d, permutation.get(v));

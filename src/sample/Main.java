@@ -18,8 +18,9 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("App.fxml"));
         primaryStage.setTitle("Cooperation DTP");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setScene(new Scene(root));
         primaryStage.show();
+        primaryStage.setFullScreen(true);
 
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override

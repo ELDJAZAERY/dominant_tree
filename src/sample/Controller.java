@@ -12,10 +12,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonBar;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.*;
 import javafx.util.Duration;
 import metas.MetasEnum;
 
@@ -51,16 +48,24 @@ public class Controller {
 
     static XYChart.Series<Number,Number> series ;
 
+    @FXML
+    public Label timeEnSec;
 
+    @FXML
+    public Label fitnessLabel;
 
     private static MetasEnum metaActuel ;
 
     @FXML
     public void initialize() {
 
+        fitnessLabel.setText("0");
+        timeEnSec.setText("0 Sec");
+
         for(MetasEnum meta:MetasEnum.values()){
             metasChoice.getItems().add(meta.name());
         }
+
 
         for(MetasEnum meta:MetasEnum.values()){
             metasChoice.setValue(meta.name());
@@ -86,6 +91,7 @@ public class Controller {
                 afficheInstance(fileList[0].getName());
             }
         }
+        instanceChoice.getItems().add("BenchMarks externe");
 
         instanceChoice.getSelectionModel().selectedIndexProperty().addListener(
                 (ObservableValue<? extends Number> observableValue, Number number, Number number2) -> {
@@ -112,8 +118,12 @@ public class Controller {
     public void solve() {
         if(systemBusy) return;
         systemBusy=true;
+
+
         solver.setDisable(true);
         resumer.setDisable(false);
+        fitnessLabel.setText("0");
+        timeEnSec.setText("0 Sec");
 
         series = new XYChart.Series<>();
         //series.setName("Fitness");
@@ -166,7 +176,7 @@ public class Controller {
     private static Timer timer = new Timer();
     private static int sec = 0 ;
 
-    public static void ChartUpdateLifeCycle(){
+    public void ChartUpdateLifeCycle(){
         metas.Controller.init();
         sec = 0 ;
         timer = new Timer();
@@ -184,8 +194,10 @@ public class Controller {
        timer.cancel();
    }
 
-    public static void updateChart(int x,int y) {
+    public void updateChart(int x,int y) {
         Platform.runLater(() -> {
+            timeEnSec.setText(x+" Sec");
+            fitnessLabel.setText(""+y);
             series.getData().add(new XYChart.Data<>(x,y));
         });
     }
