@@ -405,3 +405,12 @@
     -fx-fill: #2869ed;
     -fx-text-fill: #2869ed;
 }
+
+
+.resultText {
+    -fx-font-size: 2em;
+    -fx-stroke: #4c8bf5;
+    -fx-fill: #4c8bf5;
+    -fx-text-fill: #4c8bf5;
+    /* -fx-background-color:  #FFF; */
+}

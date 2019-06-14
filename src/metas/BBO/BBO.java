@@ -60,8 +60,7 @@ public class BBO {
         nbIteration = 0;
 
         /**\// ## Updating Population Loop ## \//**/
-		for (int i = 0; i < MaxIterations; i++) {
-            nbIteration++;
+        while(nbIteration++ < MaxIterations && !Controller.isStoped()) {
 
 			ArrayList<Solution> elitism = new ArrayList<>();
 			elitism.add(population.get(0));

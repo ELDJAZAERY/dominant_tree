@@ -2,7 +2,8 @@ package metas;
 
 public enum MetasEnum {
     ACO,
-    BSO,
+    //BSO,
     BBO,
     GA,
+    Cooperation,
 }

@@ -28,8 +28,8 @@ public class Coopertaion {
         MetaProbInitial = new HashMap<>();
         MetaProbInitial.put(MetasEnum.ACO.name(),0.25);
         MetaProbInitial.put(MetasEnum.BBO.name(),0.25);
-        MetaProbInitial.put(MetasEnum.BSO.name(),0.25);
         MetaProbInitial.put(MetasEnum.GA.name() ,0.25);
+        //MetaProbInitial.put(MetasEnum.BSO.name(),0.25);
     }
 
     /** Cooperation @Params **/
@@ -50,7 +50,7 @@ public class Coopertaion {
         Solution currentSol ;
 
         int nbIterations = Coopertaion.nbIterations;
-        while(nbIterations-- > 0){
+        while(nbIterations-- > 0 && !Controller.isStoped()){
             MetaProba = MetaProba
                     .entrySet()
                     .stream()
@@ -90,12 +90,13 @@ public class Coopertaion {
             else if(MetaProba.containsKey(MetasEnum.ACO.name()))
                 MetaProbInitial.put(MetasEnum.BBO.name(),MetaProba.get(MetasEnum.BBO.name())-0.05);
 
+/*
         if(MetaProba.containsKey(MetasEnum.BSO.name()))
             if(MetaProba.get(MetasEnum.BSO.name()) <= 0)
                 MetaProba.remove(MetasEnum.BSO.name());
             else if(MetaProba.containsKey(MetasEnum.ACO.name()))
                 MetaProbInitial.put(MetasEnum.BSO.name(),MetaProba.get(MetasEnum.BSO.name())-0.05);
-
+*/
 
         if(MetaProba.containsKey(MetasEnum.GA.name()))
             if(MetaProba.get(MetasEnum.GA.name()) <= 0)
@@ -116,9 +117,9 @@ public class Coopertaion {
             case "BBO" :
                 /** BBO TEST **/
                 return BBO();
-            case "BSO" :
-                /**  BSO TEST **/
-                return BSO();
+            case "GA" :
+                /**  GA TEST **/
+                return GA();
             default: return new Solution();
         }
     }
@@ -141,5 +142,8 @@ public class Coopertaion {
         return  new Solution();
     }
 
+    private static Solution GA(){
+        return  new Solution();
+    }
 
 }

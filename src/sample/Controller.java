@@ -1,6 +1,9 @@
 package sample;
 
 import data.reader.Instances;
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.application.Platform;
 import javafx.beans.value.ObservableValue;
 import javafx.concurrent.Service;
@@ -9,11 +12,15 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
+import javafx.scene.control.Button;
+import javafx.scene.control.ButtonBar;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextArea;
+import javafx.util.Duration;
 import metas.MetasEnum;
 
 import java.io.File;
+import java.time.LocalTime;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -36,7 +43,14 @@ public class Controller {
     public LineChart<Number, Number> chart;
 
 
+    @FXML
+    public Button solver ;
+
+    @FXML
+    public Button resumer ;
+
     static XYChart.Series<Number,Number> series ;
+
 
 
     private static MetasEnum metaActuel ;
@@ -93,10 +107,13 @@ public class Controller {
 
 
     private boolean systemBusy = false;
+
     @FXML
-    public void solve(ActionEvent actionEvent) {
+    public void solve() {
         if(systemBusy) return;
         systemBusy=true;
+        solver.setDisable(true);
+        resumer.setDisable(false);
 
         series = new XYChart.Series<>();
         //series.setName("Fitness");
@@ -104,33 +121,60 @@ public class Controller {
         chart.getData().clear();
         chart.getData().add(series);
 
-        Service service = new Service() {
+        Main.service = new Service() {
             @Override
             protected Task<Void> createTask() {
                 return new Task<Void>() {
                     @Override
                     protected Void call() {
+                        System.out.println(" ----> new Call <----");
                         ChartUpdateLifeCycle();
-                        metas.Controller.lance(metaActuel);
+                        metas.Controller.lance(metaActuel,this);
                         stopUpdateChartLifCycle();
+                        systemBusy=false;
+                        solver.setDisable(false);
                         return null;
                     }
                 };
             }
         };
 
-        service.start();
+        Main.service.start();
+        System.out.println(" ---------- \n\n\n  Started  \n\n\n ----------");
+        //stopSolv();
+        //service.cancel();
+
     }
+
+    @FXML
+    public void stopSolving(){
+        stopSolv();
+    }
+
+    private void stopSolv(){
+        if(Main.service != null ){
+            System.out.println(" ---------- \n\n\n  Stopped  \n\n\n ----------");
+            Main.service.cancel();
+            Main.service = null;
+
+            resumer.setDisable(true);
+        }
+    }
+
 
 
     private static Timer timer = new Timer();
     private static int sec = 0 ;
+
     public static void ChartUpdateLifeCycle(){
         metas.Controller.init();
         sec = 0 ;
+        timer = new Timer();
+        updateChart(0,0);
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
+                if(metas.Controller.isStoped()) return;
                 updateChart(sec++,(int)metas.Controller.getCurrentFitness());
             }
         },5,1000);
@@ -145,7 +189,6 @@ public class Controller {
             series.getData().add(new XYChart.Data<>(x,y));
         });
     }
-
 
 }
 

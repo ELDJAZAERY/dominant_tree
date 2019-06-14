@@ -1,64 +1,36 @@
 Best {
-	 Fitness    : 3123.53
-	 Vertices   : 85
+	 Fitness    : 2748.1094
+	 Vertices   : 67
 	 Iteration  : 0
-	 nb Sols    : 1
-	 Secs       : 0.065993400659934
+	 nb Sols    : 7
+	 Secs       : 0.08099190080991901
 }
 Best {
-	 Fitness    : 1590.75
-	 Vertices   : 29
+	 Fitness    : 1237.13
+	 Vertices   : 20
 	 Iteration  : 0
-	 nb Sols    : 1777
-	 Secs       : 3.6416358364163584
+	 nb Sols    : 11602
+	 Secs       : 3.9246075392460753
 }
 Best {
-	 Fitness    : 1336.8301
-	 Vertices   : 23
-	 Iteration  : 0
-	 nb Sols    : 3757
-	 Secs       : 4.938506149385061
-}
-Best {
-	 Fitness    : 1308.09
-	 Vertices   : 21
-	 Iteration  : 0
-	 nb Sols    : 5476
-	 Secs       : 5.877412258774123
-}
-Best {
-	 Fitness    : 1236.8799
+	 Fitness    : 1218.11
 	 Vertices   : 18
 	 Iteration  : 0
-	 nb Sols    : 6425
-	 Secs       : 6.532346765323467
+	 nb Sols    : 24662
+	 Secs       : 6.8493150684931505
 }
 Best {
-	 Fitness    : 1236.4299
+	 Fitness    : 1218.0
 	 Vertices   : 18
 	 Iteration  : 0
-	 nb Sols    : 8047
-	 Secs       : 7.087291270872912
-}
-Best {
-	 Fitness    : 1236.2599
-	 Vertices   : 18
-	 Iteration  : 0
-	 nb Sols    : 14617
-	 Secs       : 10.634936506349364
+	 nb Sols    : 32796
+	 Secs       : 9.630036996300369
 }
 Best {
 	 Fitness    : 1217.4701
 	 Vertices   : 19
 	 Iteration  : 0
-	 nb Sols    : 18663
-	 Secs       : 12.506749325067492
-}
-Best {
-	 Fitness    : 1217.47
-	 Vertices   : 19
-	 Iteration  : 0
-	 nb Sols    : 19087
-	 Secs       : 13.22967703229677
+	 nb Sols    : 51686
+	 Secs       : 12.232776722327767
 }
 

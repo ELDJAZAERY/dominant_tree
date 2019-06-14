@@ -84,7 +84,7 @@ public class GA {
         Controller.init();
 
 
-        while(--nbIter != 0){
+        while(--nbIter != 0 && !Controller.isStoped()){
 
             Collections.sort(population);
 

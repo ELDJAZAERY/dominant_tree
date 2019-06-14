@@ -2,6 +2,7 @@ package metas.BSO;
 
 import data.representations.Solutions.Solution;
 import metas.ACO.ACO;
+import metas.Controller;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -64,12 +65,11 @@ public class BSO {
         initBee(nbBees);
         int iterations = 0;
 
-        while (--iterations < nbIteration){
+        while (--iterations < nbIteration && !Controller.isStoped()){
             selectZone();
             lanceBees();
         }
 
-        System.out.print(" --- BSO Terminated --- ");
         BestSol.display();
     }
 

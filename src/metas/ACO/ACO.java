@@ -113,11 +113,11 @@ public class ACO {
         BestSol = new Solution();
         Controller.majFitness(BestSol);
 
-
         init_Ants();
         Ant.Initials_Pheromones();
 
-        for(int iteration = 0; iteration < nbIter; iteration++) {
+        int iter = nbIter;
+        while(iter-- > 0 && !Controller.isStoped()) {
             for (Ant ant : Ants) {
                 ant.build_Solution();
                 ant.MAJ_OnLine();
