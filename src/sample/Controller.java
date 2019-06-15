@@ -54,6 +54,12 @@ public class Controller {
     @FXML
     public Label fitnessLabel;
 
+    @FXML
+    public Spinner limitationTimeSpiner;
+
+    @FXML
+    public CheckBox limitationTime;
+
     private static MetasEnum metaActuel ;
 
     @FXML
@@ -100,6 +106,19 @@ public class Controller {
             );
         });
 
+        limitationTimeSpiner.setValueFactory(
+                new SpinnerValueFactory.IntegerSpinnerValueFactory(0,5000)
+        );
+
+        limitationTime.selectedProperty().addListener((observable, oldValue, newValue) -> {
+            limitationTimeSpiner.setDisable(!newValue);
+        });
+
+        series = new XYChart.Series<>();
+        //series.setName("Fitness");
+
+        chart.getData().clear();
+        chart.getData().add(series);
     }
 
 
@@ -180,14 +199,21 @@ public class Controller {
         metas.Controller.init();
         sec = 0 ;
         timer = new Timer();
-        updateChart(0,0);
+
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
                 if(metas.Controller.isStoped()) return;
-                updateChart(sec++,(int)metas.Controller.getCurrentFitness());
+                if(limitationTime.isSelected() && Integer.parseInt(limitationTimeSpiner.getValue().toString()) < sec){
+                    Platform.runLater( () -> {
+                        stopSolv();
+                    });
+                    return;
+                }else{
+                    updateChart(sec++,(int)metas.Controller.getCurrentFitness());
+                }
             }
-        },5,1000);
+        },999,1000);
    }
 
    public static void stopUpdateChartLifCycle(){

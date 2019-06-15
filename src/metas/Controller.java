@@ -51,7 +51,6 @@ public class Controller {
     public static boolean isStoped(){
         boolean stopped = false;
         stopped = (task != null && task.isCancelled());
-        System.out.println(" ISSTOPPED ? --> " + stopped);
         return stopped;
     }
 
