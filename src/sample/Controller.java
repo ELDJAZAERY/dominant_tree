@@ -110,9 +110,28 @@ public class Controller {
                 new SpinnerValueFactory.IntegerSpinnerValueFactory(0,5000)
         );
 
+        limitationTimeSpiner.getEditor().textProperty().addListener((obs, oldValue, newValue) -> {
+            try{
+                // parsingTest
+                Integer.parseInt(newValue);
+            }catch (Exception e) {
+                limitationTimeSpiner.getEditor().setText(oldValue);
+            }
+        });
+
+        limitationTimeSpiner.focusedProperty().addListener((obs, oldValue, newValue) -> {
+            if (newValue == false) {
+                limitationTimeSpiner.increment(0);
+            }
+        });
+
+
         limitationTime.selectedProperty().addListener((observable, oldValue, newValue) -> {
             limitationTimeSpiner.setDisable(!newValue);
         });
+
+
+
 
         series = new XYChart.Series<>();
         //series.setName("Fitness");
@@ -120,7 +139,6 @@ public class Controller {
         chart.getData().clear();
         chart.getData().add(series);
     }
-
 
     private void afficheInstance(String instance) {
 
@@ -172,8 +190,8 @@ public class Controller {
         System.out.println(" ---------- \n\n\n  Started  \n\n\n ----------");
         //stopSolv();
         //service.cancel();
-
     }
+
 
     @FXML
     public void stopSolving(){
@@ -204,6 +222,7 @@ public class Controller {
             @Override
             public void run() {
                 if(metas.Controller.isStoped()) return;
+                System.out.println("Compared Value ---> "+Integer.parseInt(limitationTimeSpiner.getValue().toString()));
                 if(limitationTime.isSelected() && Integer.parseInt(limitationTimeSpiner.getValue().toString()) < sec){
                     Platform.runLater( () -> {
                         stopSolv();
