@@ -42,6 +42,7 @@ public class ACO {
         return BestSol;
     }
 
+
     public static Solution ACO_As_LocalSearch(Solution solInitial) {
 
         BestSol = (Solution) solInitial.clone();
@@ -92,6 +93,11 @@ public class ACO {
         }
 
         return (Solution) BestSol.clone();
+    }
+
+    public static void Cooperate(){
+        setParams();
+        Exec();
     }
 
     public static Solution CooperationFinalExec() {

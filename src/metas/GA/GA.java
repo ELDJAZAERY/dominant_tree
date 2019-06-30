@@ -1,9 +1,8 @@
 package metas.GA;
 
 import data.representations.Solutions.Solution;
-import metas.ACO.ACO;
 import metas.Controller;
-
+import metas.Coopertaion;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.concurrent.ThreadLocalRandom;
@@ -27,26 +26,30 @@ public class GA {
         Individual.withLocalSearch = true;
         GA.nbIteration = 15;
         GA.populationSize = 15;
-        population = new ArrayList<>();
+        ArrayList<Solution> population = new ArrayList<>();
         initialzePopulation(null);
-        ACO.ACO_Exec();
-        return Collections.max(population).solLocal;
+        Exec(population);
+        return population.get(populationSize-1);
     }
+
 
     public static void Exec(ArrayList<Solution> populationInitial){
-        GA.nbIteration = 30;
-        GA.populationSize = 50;
+        GA.nbIteration = 15;
+        GA.populationSize = 15;
         population = new ArrayList<>();
         initialzePopulation(populationInitial);
-        GA_Exec();
+        Coopertaion.cooper();
     }
 
+    public static Solution Exec(int nbIter , ArrayList<Solution> populationInitial ){
+        return new Individual().solLocal;
+    }
 
     private static void initialzePopulation(ArrayList<Solution> populationInitial){
         int init = populationSize ;
 
         if(populationInitial == null ){
-            while(--init != 0) {
+            while(init-- != 0) {
                 population.add(new Individual());
             }
         }else{
@@ -54,7 +57,7 @@ public class GA {
                 init--;
                 population.add(new Individual(sol));
             }
-            while(--init != 0) {
+            while(init-- != 0) {
                 population.add(new Individual());
             }
         }

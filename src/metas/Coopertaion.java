@@ -137,13 +137,22 @@ public class Coopertaion {
         return  BestLocal;
     }
 
+    private static Solution GA(){
+        Solution BestLocal = GA.Exec(5,PopulationGeneral);
+        return  BestLocal;
+    }
+
+
+    // @SuppressWarnings("unused")
     private static Solution BSO(){
         //Solution BestLocal = BSO.CooperationExec(PopulationGeneral);
         return  new Solution();
     }
 
-    private static Solution GA(){
-        return  new Solution();
+
+    // @SuppressWarnings("unused")
+    public static void cooper(){
+        ACO.ACO_Exec();
     }
 
 }

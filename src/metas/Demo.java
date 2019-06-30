@@ -1,4 +1,4 @@
- package metas;
+package metas;
 
 import data.Logger;
 import data.reader.Instances;

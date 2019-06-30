@@ -1,29 +1,30 @@
 package sample;
 
 import data.reader.Instances;
-import javafx.animation.Animation;
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
 import javafx.application.Platform;
 import javafx.beans.value.ObservableValue;
 import javafx.concurrent.Service;
 import javafx.concurrent.Task;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.*;
-import javafx.util.Duration;
+import javafx.stage.DirectoryChooser;
+import javafx.stage.Stage;
 import metas.MetasEnum;
-
 import java.io.File;
-import java.time.LocalTime;
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class Controller {
 
-    private static String LocalPath = "bench_marks/100/";
+    private static String LocalPath ;
+    private static String BenchMarksPath ;
+
+    static {
+        LocalPath = new java.io.File(".").getPath()+"/bench_marks/100/";
+        BenchMarksPath = LocalPath;
+    }
 
     @FXML
     private ChoiceBox<String> instanceChoice;
@@ -62,6 +63,10 @@ public class Controller {
 
     private static MetasEnum metaActuel ;
 
+
+    final DirectoryChooser directoryChooser = new DirectoryChooser();
+
+
     @FXML
     public void initialize() {
 
@@ -71,7 +76,6 @@ public class Controller {
         for(MetasEnum meta:MetasEnum.values()){
             metasChoice.getItems().add(meta.name());
         }
-
 
         for(MetasEnum meta:MetasEnum.values()){
             metasChoice.setValue(meta.name());
@@ -85,19 +89,8 @@ public class Controller {
         });
 
 
-        File repo = new File(LocalPath);
-        if (repo.isDirectory()) {
-            File[] fileList = repo.listFiles();
-            for (File f : fileList) {
-                instanceChoice.getItems().add(f.getName());
-            }
-
-            if(fileList.length > 0) {
-                instanceChoice.setValue(fileList[0].getName());
-                afficheInstance(fileList[0].getName());
-            }
-        }
-        instanceChoice.getItems().add("BenchMarks externe");
+        directoryChooser.setTitle("choisissez le dossier du benchmarks");
+        directoryChooser.setInitialDirectory(new java.io.File("."));
 
         instanceChoice.getSelectionModel().selectedIndexProperty().addListener(
                 (ObservableValue<? extends Number> observableValue, Number number, Number number2) -> {
@@ -105,6 +98,8 @@ public class Controller {
                     instanceChoice.getItems().get((Integer) number2)
             );
         });
+
+        chooseFile();
 
         limitationTimeSpiner.setValueFactory(
                 new SpinnerValueFactory.IntegerSpinnerValueFactory(0,5000)
@@ -125,13 +120,9 @@ public class Controller {
             }
         });
 
-
         limitationTime.selectedProperty().addListener((observable, oldValue, newValue) -> {
             limitationTimeSpiner.setDisable(!newValue);
         });
-
-
-
 
         series = new XYChart.Series<>();
         //series.setName("Fitness");
@@ -141,13 +132,38 @@ public class Controller {
     }
 
     private void afficheInstance(String instance) {
+        try{
+            String path = BenchMarksPath+"//"+instance;
 
-        String path = "bench_marks\\100\\"+instance;
-        new Instances(path);
+            new Instances(path);
 
-        instanceContiant.setText(Instances.instanceString);
+            instanceContiant.setText(Instances.instanceString);
+        }catch (Exception e){instanceChoice.getItems().clear();}
     }
 
+    @FXML
+    private void chooseFile(){
+        update_Benchmarks(directoryChooser.showDialog(new Stage()));
+    }
+
+    private void update_Benchmarks(File repo){
+        if(repo == null) return;
+        try{
+            BenchMarksPath = repo.getPath();
+            instanceChoice.getItems().clear();
+            if (repo.isDirectory()) {
+                File[] fileList = repo.listFiles();
+                for (File f : fileList) {
+                    instanceChoice.getItems().add(f.getName());
+                }
+
+                if(fileList.length > 0) {
+                    instanceChoice.setValue(fileList[0].getName());
+                    afficheInstance(fileList[0].getName());
+                }
+            }
+        }catch (Exception e){instanceChoice.getItems().clear();}
+    }
 
     private boolean systemBusy = false;
 
@@ -155,7 +171,6 @@ public class Controller {
     public void solve() {
         if(systemBusy) return;
         systemBusy=true;
-
 
         solver.setDisable(true);
         resumer.setDisable(false);
