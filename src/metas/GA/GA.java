@@ -24,8 +24,8 @@ public class GA {
 
     public static Solution Exec(){
         Individual.withLocalSearch = true;
-        GA.nbIteration = 15;
-        GA.populationSize = 15;
+        GA.nbIteration = 1000;
+        GA.populationSize = 25;
         ArrayList<Solution> population = new ArrayList<>();
         initialzePopulation(null);
         Exec(population);
@@ -87,7 +87,7 @@ public class GA {
         Controller.init();
 
 
-        while(--nbIter != 0 && !Controller.isStoped()){
+        while(!Controller.isStopped()){
 
             Collections.sort(population);
 

@@ -1,9 +1,7 @@
 package metas.BBO;
 
-import data.Logger;
 import data.reader.Instances;
 import data.representations.Solutions.Solution;
-import metas.ACO.Ant;
 import metas.Controller;
 
 import java.util.ArrayList;
@@ -44,7 +42,7 @@ public class BBO {
 
 
     public static void BBO_Exec(){
-        setParams(50,10,(float)0.05);
+        setParams(1000,10,(float)0.05);
         InitializePopulation(null);
         Exec();
     }
@@ -56,11 +54,8 @@ public class BBO {
         Controller.majFitness(Best);
 
 
-
-        nbIteration = 0;
-
         /**\// ## Updating Population Loop ## \//**/
-        while(nbIteration++ < MaxIterations && !Controller.isStoped()) {
+        while(!Controller.isStopped()) {
 
 			ArrayList<Solution> elitism = new ArrayList<>();
 			elitism.add(population.get(0));
@@ -294,10 +289,10 @@ public class BBO {
         Solution LocalBest = individual;
 
         for (int d = 0; d < individual.verticesDT.size(); d++) {
-            if(Controller.isStoped()) break;
+            if(Controller.isStopped()) break;
             //for (int v = 0; v < Instances.NbVertices ; v++) {
             for (int v = individual.verticesDT.size(); v < Instances.NbVertices ; v++) {
-                if(Controller.isStoped()) break;
+                if(Controller.isStopped()) break;
 
                 permutation = new ArrayList<>(individual.permutation);
                 temp = permutation.get(d);

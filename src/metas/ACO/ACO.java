@@ -1,11 +1,9 @@
 package metas.ACO;
 
-import data.Logger;
 import data.representations.Solutions.Solution;
 import metas.Controller;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
@@ -15,7 +13,7 @@ import java.util.concurrent.Executors;
 public class ACO {
 
 
-    private static int nbIter = 500 , nbAnts = 100 ;
+    private static int nbIter = 1000 , nbAnts = 100 ;
     protected static float raux = (float) 0.05;
     protected static float q0 = (float) 0.1;
 
@@ -122,8 +120,7 @@ public class ACO {
         init_Ants();
         Ant.Initials_Pheromones();
 
-        int iter = nbIter;
-        while(iter-- > 0 && !Controller.isStoped()) {
+        while(!Controller.isStopped()) {
             for (Ant ant : Ants) {
                 ant.build_Solution();
                 ant.MAJ_OnLine();

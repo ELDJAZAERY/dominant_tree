@@ -1,5 +1,6 @@
 package sample;
 
+import data.Logger;
 import data.reader.Instances;
 import javafx.application.Platform;
 import javafx.beans.value.ObservableValue;
@@ -99,8 +100,6 @@ public class Controller {
             );
         });
 
-        chooseFile();
-
         limitationTimeSpiner.setValueFactory(
                 new SpinnerValueFactory.IntegerSpinnerValueFactory(0,5000)
         );
@@ -133,6 +132,9 @@ public class Controller {
 
     private void afficheInstance(String instance) {
         try{
+
+            Logger.initPersistanceLogs(instance);
+
             String path = BenchMarksPath+"//"+instance;
 
             new Instances(path);
@@ -236,7 +238,7 @@ public class Controller {
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
-                if(metas.Controller.isStoped()) return;
+                if(metas.Controller.isStopped()) return;
                 System.out.println("Compared Value ---> "+Integer.parseInt(limitationTimeSpiner.getValue().toString()));
                 if(limitationTime.isSelected() && Integer.parseInt(limitationTimeSpiner.getValue().toString()) < sec){
                     Platform.runLater( () -> {

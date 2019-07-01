@@ -3,7 +3,6 @@ package metas;
 import data.representations.Solutions.Solution;
 import metas.ACO.ACO;
 import metas.BBO.BBO;
-import metas.BSO.BSO;
 import metas.GA.GA;
 
 import java.util.*;
@@ -34,14 +33,12 @@ public class Coopertaion {
 
     /** Cooperation @Params **/
     public static int populationSize = 20;
-    public static int nbIterations = 25;
+    public static int nbIterations = 1000;
 
 
     public static Solution Cooperate(){
 
-        System.out.println(" -- Cooperate ---");
         PopulationGeneral = GA.GA_ForInitializatoinPopulation(populationSize);
-        System.out.println(" --- GA FIN ---");
 
         BestGeneral = new Solution();
         MetaProba = new HashMap<>(MetaProbInitial);
@@ -49,8 +46,7 @@ public class Coopertaion {
 
         Solution currentSol ;
 
-        int nbIterations = Coopertaion.nbIterations;
-        while(nbIterations-- > 0 && !Controller.isStoped()){
+        while(!Controller.isStopped()){
             MetaProba = MetaProba
                     .entrySet()
                     .stream()
@@ -60,8 +56,6 @@ public class Coopertaion {
                                     LinkedHashMap::new));
 
             for(String methaName:MetaProba.keySet()){
-                System.out.println("meta --> "+ methaName);
-
                 if((currentSol = MetasExec(methaName)).fitness < BestGeneral.fitness){
                     BestGeneral = currentSol;
                     Controller.majFitness(BestGeneral);
@@ -70,7 +64,6 @@ public class Coopertaion {
             }
 
             MAJProba();
-            System.out.println(" ----- Iteration Of Cooperation N " + nbIterations);
         }
 
         return BestGeneral;

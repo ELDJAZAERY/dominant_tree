@@ -65,7 +65,7 @@ public class BSO {
         initBee(nbBees);
         int iterations = 0;
 
-        while (--iterations < nbIteration && !Controller.isStoped()){
+        while (--iterations < nbIteration && !Controller.isStopped()){
             selectZone();
             lanceBees();
         }

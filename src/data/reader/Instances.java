@@ -44,7 +44,7 @@ public class Instances {
         }
 
 
-        Logger.Logs = "";
+        Logger.initPersistanceLogs();
     }
 
     private void initVertices(){

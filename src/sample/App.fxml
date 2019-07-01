@@ -145,10 +145,9 @@
          </textFill>
       </Label>
       <Label layoutX="239.0" layoutY="113.0" prefHeight="31.0" prefWidth="166.0" styleClass="main-text" text="Meilleur Fitness :" textFill="#eaf287" />
-      <FontAwesomeIconView glyphName="UPLOAD" layoutX="197.0" layoutY="70.0" onMousePressed="#chooseFile" size="25">
+      <FontAwesomeIconView glyphName="UPLOAD" layoutX="194.0" layoutY="68.0" onMouseClicked="#chooseFile" size="25">
          <cursor>
             <Cursor fx:constant="HAND" />
-         </cursor>
-      </FontAwesomeIconView>
+         </cursor></FontAwesomeIconView>
     </children>
 </AnchorPane>

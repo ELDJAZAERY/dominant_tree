@@ -1,5 +1,6 @@
 package metas;
 
+import data.Logger;
 import data.representations.Solutions.Solution;
 import javafx.concurrent.Task;
 import metas.ACO.ACO;
@@ -16,8 +17,8 @@ public class Controller {
 
     private static Task task;
 
-    private static int nbIterationTotal = 0;
     private static HashMap<MetasEnum,Integer> fonctionPerCen;
+
 
     public static void init(){
         fonctionPerCen = new HashMap<>();
@@ -48,10 +49,8 @@ public class Controller {
         }
     }
 
-    public static boolean isStoped(){
-        boolean stopped = false;
-        stopped = (task != null && task.isCancelled());
-        return stopped;
+    public static boolean isStopped(){
+        return (task != null && task.isCancelled());
     }
 
     public static void majFitness(Solution sol){
