@@ -191,7 +191,6 @@ public class Controller {
                 return new Task<Void>() {
                     @Override
                     protected Void call() {
-                        System.out.println(" ----> new Call <----");
                         ChartUpdateLifeCycle();
                         metas.Controller.lance(metaActuel,this);
                         stopUpdateChartLifCycle();
@@ -217,7 +216,6 @@ public class Controller {
 
     private void stopSolv(){
         if(Main.service != null ){
-            System.out.println(" ---------- \n\n\n  Stopped  \n\n\n ----------");
             Main.service.cancel();
             Main.service = null;
 
@@ -239,7 +237,6 @@ public class Controller {
             @Override
             public void run() {
                 if(metas.Controller.isStopped()) return;
-                System.out.println("Compared Value ---> "+Integer.parseInt(limitationTimeSpiner.getValue().toString()));
                 if(limitationTime.isSelected() && Integer.parseInt(limitationTimeSpiner.getValue().toString()) < sec){
                     Platform.runLater( () -> {
                         stopSolv();

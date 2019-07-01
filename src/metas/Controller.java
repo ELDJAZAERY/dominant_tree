@@ -24,6 +24,7 @@ public class Controller {
         fonctionPerCen = new HashMap<>();
         CurrentFitness = 0;
         CurrentTimeEnSecs = 0;
+        Logger.Logs += "\n\n\n ######## NEW Execution ####### \n\n\n";
     }
 
     public static void lance(MetasEnum meta , Task newTask){

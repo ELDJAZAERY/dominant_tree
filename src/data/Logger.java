@@ -46,17 +46,17 @@ public class Logger {
 
     public static void initPersistanceLogs(String instance){
 
-        System.out.println(instance);
-        
         Logs = "";
         LoggerFileName = instance ;
 
         String localRep = Paths.get(".").toAbsolutePath().normalize().toString();
-        System.out.println(localRep);
-        new File(localRep+"\\LOGS").mkdirs();
-        LogsRepos = new File(localRep+"\\LOGS").getPath();
+        new File(localRep+"\\NEWLOGS\\").mkdirs();
 
-        LoggerFile = LogsRepos+"/LOGS-"+LoggerFileName;
+        LogsRepos = new File(localRep+"\\NEWLOGS\\").getPath();
+
+        LoggerFile = LogsRepos+"\\LOGS-"+LoggerFileName;
+
+        System.out.println(LoggerFile);
     }
 
 }
