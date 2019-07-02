@@ -12,11 +12,9 @@ public class Logger {
     public static String LoggerFileName = "Logs.txt";
     public static String LoggerFile;
     static {
-/*
         String localRep = Paths.get(".").toAbsolutePath().normalize().toString();
-        new File(localRep+"\\LOGS").mkdirs();
-        LogsRepos = new File(localRep+"\\LOGS").getPath();
-*/
+        new File(localRep+"\\NEWLOGS\\").mkdirs();
+        LogsRepos = new File(localRep+"\\LOGS\\").getPath();
     }
 
     public static void Log(String fileName , String log){
@@ -48,12 +46,7 @@ public class Logger {
 
         Logs = "";
         LoggerFileName = instance ;
-
-        String localRep = Paths.get(".").toAbsolutePath().normalize().toString();
-        new File(localRep+"\\NEWLOGS\\").mkdirs();
-
-        LogsRepos = new File(localRep+"\\NEWLOGS\\").getPath();
-
+        new File(LogsRepos).mkdirs();
         LoggerFile = LogsRepos+"\\LOGS-"+LoggerFileName;
 
         System.out.println(LoggerFile);

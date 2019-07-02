@@ -1,0 +1,88 @@
+
+
+
+ ######## NEW Execution ####### 
+
+
+
+
+
+ ######## NEW Execution ####### 
+
+
+Best {
+	 Fitness    : 2107.5803
+	 Vertices   : 39
+	 Iteration  : 0
+	 nb Sols    : 1
+	 Secs       : 0.028997100289971003
+}
+Best {
+	 Fitness    : 1342.9398
+	 Vertices   : 20
+	 Iteration  : 0
+	 nb Sols    : 320
+	 Secs       : 1.040895910408959
+}
+Best {
+	 Fitness    : 1319.9698
+	 Vertices   : 18
+	 Iteration  : 0
+	 nb Sols    : 779
+	 Secs       : 1.3438656134386562
+}
+Best {
+	 Fitness    : 1317.8398
+	 Vertices   : 18
+	 Iteration  : 0
+	 nb Sols    : 12755
+	 Secs       : 4.9145085491450855
+}
+
+
+
+ ######## NEW Execution ####### 
+
+
+
+
+
+ ######## NEW Execution ####### 
+
+
+Best {
+	 Fitness    : 1778.0199
+	 Vertices   : 30
+	 Iteration  : 0
+	 nb Sols    : 12859
+	 Secs       : 23.588641135886412
+}
+Best {
+	 Fitness    : 1338.7397
+	 Vertices   : 19
+	 Iteration  : 0
+	 nb Sols    : 13157
+	 Secs       : 23.810618938106188
+}
+Best {
+	 Fitness    : 1319.9698
+	 Vertices   : 18
+	 Iteration  : 0
+	 nb Sols    : 13413
+	 Secs       : 24.043595640435957
+}
+Best {
+	 Fitness    : 1317.4199
+	 Vertices   : 20
+	 Iteration  : 0
+	 nb Sols    : 17891
+	 Secs       : 25.02249775022498
+}
+Best {
+	 Fitness    : 1316.3898
+	 Vertices   : 19
+	 Iteration  : 0
+	 nb Sols    : 18047
+	 Secs       : 25.14748525147485
+}
+

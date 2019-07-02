@@ -58,16 +58,16 @@
             <Cursor fx:constant="HAND" />
          </cursor></Label>
         <Separator layoutX="14.0" layoutY="91.0" prefHeight="4.0" prefWidth="1296.0" />
-        <ChoiceBox fx:id="metasChoice" layoutX="861.0" layoutY="42.0" prefHeight="25.0" prefWidth="108.0">
+        <ChoiceBox fx:id="metasChoice" layoutX="861.0" layoutY="54.0" prefHeight="25.0" prefWidth="108.0">
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor>
         </ChoiceBox>
-        <Button fx:id="solver" layoutX="998.0" layoutY="32.0" mnemonicParsing="false" onAction="#solve" text="Résudre ">
+        <Button fx:id="solver" layoutX="998.0" layoutY="42.0" mnemonicParsing="false" onAction="#solve" text="Résudre ">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Label layoutX="873.0" layoutY="6.0" style="-fx-rotate: 0;" styleClass="main-text" text="Méthods">
+      <Label layoutX="873.0" layoutY="10.0" style="-fx-rotate: 0;" styleClass="main-text" text="Méthods">
          <textFill>
             <RadialGradient centerX="0.5055555555555555" centerY="0.5428571428571428" cycleMethod="REFLECT" radius="0.5">
                <stops>
@@ -89,7 +89,7 @@
       </Label>
       <Label layoutX="206.0" layoutY="378.0" prefHeight="31.0" prefWidth="70.0" style="-fx-rotate: -90;" styleClass="main-text" text="Fitness" textFill="#eaf287" />
       <Label layoutX="605.0" layoutY="663.0" prefHeight="31.0" prefWidth="121.0" style="-fx-rotate: 0;" styleClass="main-text" text="Temp / sec" textFill="#eaf287" />
-      <Button fx:id="resumer" layoutX="1102.0" layoutY="32.0" mnemonicParsing="false" onAction="#stopSolving" text="Résume">
+      <Button fx:id="resumer" layoutX="1102.0" layoutY="43.0" mnemonicParsing="false" onAction="#stopSolving" text="Résume">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
@@ -106,7 +106,7 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <Label layoutX="555.0" layoutY="6.0" style="-fx-rotate: 0;" styleClass="main-text" text="Limitation du temps">
+      <Label layoutX="361.0" layoutY="10.0" style="-fx-rotate: 0;" styleClass="main-text" text="Limitation du temps">
          <textFill>
             <RadialGradient centerX="0.5055555555555555" centerY="0.5428571428571428" cycleMethod="REFLECT" radius="0.5">
                <stops>
@@ -116,9 +116,9 @@
             </RadialGradient>
          </textFill>
       </Label>
-      <CheckBox fx:id="limitationTime" layoutX="545.0" layoutY="45.0" mnemonicParsing="false" />
-      <Spinner fx:id="limitationTimeSpiner" disable="true" editable="true" layoutX="575.0" layoutY="42.0" prefHeight="25.0" prefWidth="115.0" />
-      <Label fx:id="timeEnSec1" layoutX="704.0" layoutY="37.0" prefHeight="36.0" prefWidth="76.0" text="Seconds">
+      <CheckBox fx:id="limitationTime" layoutX="350.0" layoutY="58.0" mnemonicParsing="false" />
+      <Spinner fx:id="limitationTimeSpiner" disable="true" editable="true" layoutX="380.0" layoutY="55.0" prefHeight="25.0" prefWidth="115.0" />
+      <Label fx:id="timeEnSec1" layoutX="506.0" layoutY="46.0" prefHeight="36.0" prefWidth="76.0" text="Seconds">
          <font>
             <Font size="18.0" />
          </font>
@@ -149,5 +149,29 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></FontAwesomeIconView>
+      <Label layoutX="622.0" layoutY="10.0" style="-fx-rotate: 0;" styleClass="main-text" text="Relancer">
+         <textFill>
+            <RadialGradient centerX="0.5055555555555555" centerY="0.5428571428571428" cycleMethod="REFLECT" radius="0.5">
+               <stops>
+                  <Stop color="#7b8619" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="timeEnSec11" layoutX="730.0" layoutY="47.0" prefHeight="36.0" prefWidth="44.0" text="Fois">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.45238095238095233" endY="1.0" startX="0.5047619047619047">
+               <stops>
+                  <Stop color="#40afff" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Spinner fx:id="MultiLancementsSpiner" disable="true" editable="true" layoutX="605.0" layoutY="55.0" prefHeight="25.0" prefWidth="115.0" />
     </children>
 </AnchorPane>

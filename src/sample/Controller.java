@@ -27,6 +27,7 @@ public class Controller {
         BenchMarksPath = LocalPath;
     }
 
+
     @FXML
     private ChoiceBox<String> instanceChoice;
 
@@ -40,7 +41,7 @@ public class Controller {
 
     @FXML
     public LineChart<Number, Number> chart;
-
+    public static LineChart<Number, Number> staticChart;
 
     @FXML
     public Button solver ;
@@ -55,6 +56,9 @@ public class Controller {
 
     @FXML
     public Label fitnessLabel;
+
+    @FXML
+    public Spinner MultiLancementsSpiner;
 
     @FXML
     public Spinner limitationTimeSpiner;
@@ -121,25 +125,48 @@ public class Controller {
 
         limitationTime.selectedProperty().addListener((observable, oldValue, newValue) -> {
             limitationTimeSpiner.setDisable(!newValue);
+            MultiLancementsSpiner.setDisable(!newValue);
         });
+
+        MultiLancementsSpiner.setValueFactory(
+                new SpinnerValueFactory.IntegerSpinnerValueFactory(0,100)
+        );
+
+        MultiLancementsSpiner.getEditor().textProperty().addListener((obs, oldValue, newValue) -> {
+            try{
+                // parsingTest
+                Integer.parseInt(newValue);
+            }catch (Exception e) {
+                MultiLancementsSpiner.getEditor().setText(oldValue);
+            }
+        });
+
+        MultiLancementsSpiner.focusedProperty().addListener((obs, oldValue, newValue) -> {
+            if (newValue == false) {
+                MultiLancementsSpiner.increment(0);
+            }
+        });
+
 
         series = new XYChart.Series<>();
         //series.setName("Fitness");
 
         chart.getData().clear();
         chart.getData().add(series);
+
+        staticChart = chart;
     }
 
     private void afficheInstance(String instance) {
         try{
-
-            Logger.initPersistanceLogs(instance);
 
             String path = BenchMarksPath+"//"+instance;
 
             new Instances(path);
 
             instanceContiant.setText(Instances.instanceString);
+
+            Logger.initPersistanceLogs(instance);
         }catch (Exception e){instanceChoice.getItems().clear();}
     }
 
@@ -152,6 +179,8 @@ public class Controller {
         if(repo == null) return;
         try{
             BenchMarksPath = repo.getPath();
+            Logger.LogsRepos = BenchMarksPath+"\\LOGS";
+
             instanceChoice.getItems().clear();
             if (repo.isDirectory()) {
                 File[] fileList = repo.listFiles();
@@ -163,6 +192,7 @@ public class Controller {
                     instanceChoice.setValue(fileList[0].getName());
                     afficheInstance(fileList[0].getName());
                 }
+
             }
         }catch (Exception e){instanceChoice.getItems().clear();}
     }
@@ -171,19 +201,13 @@ public class Controller {
 
     @FXML
     public void solve() {
-        if(systemBusy) return;
+        if(systemBusy || instanceChoice.getItems().size() == 0) return;
         systemBusy=true;
-
         solver.setDisable(true);
         resumer.setDisable(false);
-        fitnessLabel.setText("0");
-        timeEnSec.setText("0 Sec");
 
-        series = new XYChart.Series<>();
-        //series.setName("Fitness");
+        reintializeChart();
 
-        chart.getData().clear();
-        chart.getData().add(series);
 
         Main.service = new Service() {
             @Override
@@ -193,9 +217,9 @@ public class Controller {
                     protected Void call() {
                         ChartUpdateLifeCycle();
                         metas.Controller.lance(metaActuel,this);
-                        stopUpdateChartLifCycle();
                         systemBusy=false;
                         solver.setDisable(false);
+                        stopUpdateChartLifCycle();
                         return null;
                     }
                 };
@@ -228,6 +252,17 @@ public class Controller {
     private static Timer timer = new Timer();
     private static int sec = 0 ;
 
+    public void reintializeChart(){
+        fitnessLabel.setText("0");
+        timeEnSec.setText("0 Sec");
+
+        series = new XYChart.Series<>();
+        //series.setName("Fitness");
+
+        chart.getData().clear();
+        chart.getData().add(series);
+    }
+
     public void ChartUpdateLifeCycle(){
         metas.Controller.init();
         sec = 0 ;
@@ -249,8 +284,20 @@ public class Controller {
         },999,1000);
    }
 
-   public static void stopUpdateChartLifCycle(){
-       timer.cancel();
+    int nbLance = 0;
+    public void stopUpdateChartLifCycle(){
+        timer.cancel();
+        boolean MultiLance = !MultiLancementsSpiner.isDisabled();
+        System.out.println(MultiLance + " --- " + nbLance + " ---- " + Integer.parseInt(MultiLancementsSpiner.getValue().toString()));
+        if(MultiLance){
+            if(++nbLance > Integer.parseInt(MultiLancementsSpiner.getValue().toString())){
+                nbLance = 0;
+            }else{
+                Platform.runLater( () -> {
+                    solve();
+                });
+            }
+        }
    }
 
     public void updateChart(int x,int y) {

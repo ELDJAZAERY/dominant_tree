@@ -437,6 +437,7 @@ public class Solution implements Cloneable , Comparable<Solution> {
         out += "\n\t Iteration  : " + nbIteration;
         out += "\n\t nb Sols    : " + nbEvaluations;
         out += "\n\t Secs       : " + sec;
+        out += "\n\t Sol       : "  + path.toString();
         out += "\n}";
         return out;
     }
