@@ -14,6 +14,7 @@ import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 import metas.MetasEnum;
 import java.io.File;
+import java.nio.file.Paths;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -23,8 +24,8 @@ public class Controller {
     private static String BenchMarksPath ;
 
     static {
-        LocalPath = new java.io.File(".").getPath()+"/bench_marks/100/";
-        BenchMarksPath = LocalPath;
+        LocalPath = Paths.get(".").toAbsolutePath().normalize().toString();
+        BenchMarksPath = LocalPath + "/bench_marks/";
     }
 
 
@@ -155,6 +156,8 @@ public class Controller {
         chart.getData().add(series);
 
         staticChart = chart;
+
+        update_Benchmarks(null);
     }
 
     private void afficheInstance(String instance) {
@@ -176,16 +179,21 @@ public class Controller {
     }
 
     private void update_Benchmarks(File repo){
-        if(repo == null) return;
         try{
-            BenchMarksPath = repo.getPath();
+
+            if(repo != null)
+                BenchMarksPath = repo.getPath();
+            else
+                repo = new File(BenchMarksPath);
+
             Logger.LogsRepos = BenchMarksPath+"\\LOGS";
 
             instanceChoice.getItems().clear();
             if (repo.isDirectory()) {
                 File[] fileList = repo.listFiles();
                 for (File f : fileList) {
-                    instanceChoice.getItems().add(f.getName());
+                    if(!f.getName().contains("LOGS"))
+                        instanceChoice.getItems().add(f.getName());
                 }
 
                 if(fileList.length > 0) {
@@ -288,7 +296,6 @@ public class Controller {
     public void stopUpdateChartLifCycle(){
         timer.cancel();
         boolean MultiLance = !MultiLancementsSpiner.isDisabled();
-        System.out.println(MultiLance + " --- " + nbLance + " ---- " + Integer.parseInt(MultiLancementsSpiner.getValue().toString()));
         if(MultiLance){
             if(++nbLance > Integer.parseInt(MultiLancementsSpiner.getValue().toString())){
                 nbLance = 0;

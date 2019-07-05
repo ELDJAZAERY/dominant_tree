@@ -1,12 +1,303 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="promo - version:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/NEWLOGS/LOGS-100_1.txt" afterPath="$PROJECT_DIR$/NEWLOGS/LOGS-100_1.txt" />
-      <change beforePath="$PROJECT_DIR$/NEWLOGS/LOGS-50_2.txt" afterPath="$PROJECT_DIR$/NEWLOGS/LOGS-50_2.txt" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Instances/100/100_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/100/100_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/100/100_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/100/200_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/100/200_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/100/200_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/100/300_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/100/300_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/100/300_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/100/400_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/100/400_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/100/400_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/100/500_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/100/500_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/100/500_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/100/50_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/100/50_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/100/50_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/100/PP/ins_050_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/100/PP/ins_050_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/100/PP/ins_050_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/100/PP/ins_100_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/100/PP/ins_100_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/100/PP/ins_100_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/100/PP/ins_200_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/100/PP/ins_200_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/100/PP/ins_200_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/125/100_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/125/100_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/125/100_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/125/200_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/125/200_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/125/200_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/125/300_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/125/300_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/125/300_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/125/400_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/125/400_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/125/400_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/125/500_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/125/500_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/125/500_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/125/50_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/125/50_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/125/50_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/150/100_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/150/100_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/150/100_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/150/200_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/150/200_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/150/200_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/150/300_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/150/300_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/150/300_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/150/400_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/150/400_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/150/400_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/150/500_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/150/500_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/150/500_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/150/50_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/150/50_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/150/50_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Instances/ins.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/LOGS-50_1.txt.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/100/100.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/100/50.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/100/50/50_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/100/500.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/100/500/500_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/100/500/500_2" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/100/500/500_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/100_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/300_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/50_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100 - Copie/100_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100 - Copie/100_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100 - Copie/100_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100 - Copie/200_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100 - Copie/200_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100 - Copie/200_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100 - Copie/300_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100 - Copie/300_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100 - Copie/300_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100 - Copie/400_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100 - Copie/400_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100 - Copie/400_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100 - Copie/500_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100 - Copie/500_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100 - Copie/500_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100 - Copie/50_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100 - Copie/50_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100 - Copie/50_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100/100_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100/100_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100/100_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100/200_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100/200_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100/200_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100/300_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100/300_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100/300_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100/400_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100/400_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100/400_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100/500_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100/500_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100/500_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100/50_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100/50_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100/50_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/ACO100/table.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100 - Copie/100_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100 - Copie/100_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100 - Copie/100_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100 - Copie/200_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100 - Copie/200_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100 - Copie/200_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100 - Copie/300_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100 - Copie/300_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100 - Copie/300_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100 - Copie/400_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100 - Copie/400_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100 - Copie/400_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100 - Copie/500_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100 - Copie/500_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100 - Copie/table - Copie.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100/100_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100/100_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100/100_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100/200_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100/200_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100/200_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100/300_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100/300_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100/300_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100/400_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100/400_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100/400_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100/500_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100/500_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100/500_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100/table - Copie.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100Past/100_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100Past/100_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100Past/100_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100Past/200_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/BBO100Past/200_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100 - Copie/100_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100 - Copie/100_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100 - Copie/100_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100 - Copie/200_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100 - Copie/200_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100 - Copie/200_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100 - Copie/300_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100 - Copie/300_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100 - Copie/300_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100 - Copie/400_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100 - Copie/400_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100 - Copie/400_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100 - Copie/500_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100 - Copie/500_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100 - Copie/500_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100 - Copie/50_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100 - Copie/50_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100 - Copie/50_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100 - Copie/table.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100/100_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100/100_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100/100_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100/200_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100/200_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100/200_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100/300_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100/300_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100/300_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100/400_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100/400_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100/400_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100/500_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100/500_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100/500_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100/50_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100/50_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Cooperation100/50_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/LOGS-100_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/LOGS-50_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/Logs.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/resultats 27-05.rar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/resultats 27-05/ACO LOGS.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/resultats 27-05/BBO LOGS.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/resultats 27-05/COOPERATIONS LOGS.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/resultats 27-05/GA LOGS.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/resultats 27-05/PARAMETRES.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Logs/table.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/NEWLOGS/LOGS-100_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/NEWLOGS/LOGS-50_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/NEWLOGS/LOGS-50_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/NEWLOGS/LOGS-50_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/100/100_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/100/100_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/100/100_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/100/200_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/100/200_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/100/200_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/100/300_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/100/300_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/100/300_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/100/400_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/100/400_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/100/400_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/100/500_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/100/500_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/100/500_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/100/50_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/100/50_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/100/50_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/125/ins_100_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/125/ins_100_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/125/ins_100_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/125/ins_200_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/125/ins_200_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/125/ins_200_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/125/ins_300_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/125/ins_300_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/125/ins_300_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/125/ins_400_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/125/ins_400_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/125/ins_400_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/125/ins_500_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/125/ins_500_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/125/ins_500_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/125/ins_50_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/125/ins_50_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/125/ins_50_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/150/ins_100_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/150/ins_100_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/150/ins_100_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/150/ins_200_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/150/ins_200_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/150/ins_200_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/150/ins_300_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/150/ins_300_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/150/ins_300_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/150/ins_400_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/150/ins_400_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/150/ins_400_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/150/ins_500_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/150/ins_500_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/150/ins_500_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/150/ins_50_1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/150/ins_50_2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bench_marks/150/ins_50_3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/data/Logger.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/data/reader/Instances.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/data/representations/Edge.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/data/representations/Graph.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/data/representations/Solutions/Binary_Solution.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/data/representations/Solutions/Solution.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/data/representations/Vertex.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/metas/ACO/ACO.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/metas/ACO/Ant.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/metas/BBO/BBO.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/metas/BSO/BSO.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/metas/BSO/BSO_Solution.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/metas/BSO/Bee.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/metas/Controller.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/metas/Coopertaion.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/metas/Demo.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/metas/GA/GA.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/metas/GA/Individual.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/metas/MetasEnum.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/metas/hebride/ACO_BBO/ACO.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/metas/hebride/ACO_BBO/Ant.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/metas/hebride/ACO_BBO/BBO.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/metas/hebride/BBO_ACO/BBO.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/sample/App.fxml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/sample/Controller$1$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/sample/Controller$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/sample/Controller$2.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/sample/Controller.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/sample/Main$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/sample/Main.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/promo - version/sample/main.css" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/data/Logger.java" afterPath="$PROJECT_DIR$/src/data/Logger.java" />
       <change beforePath="$PROJECT_DIR$/src/data/representations/Solutions/Solution.java" afterPath="$PROJECT_DIR$/src/data/representations/Solutions/Solution.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/App.fxml" afterPath="$PROJECT_DIR$/src/sample/App.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/metas/BBO/BBO.java" afterPath="$PROJECT_DIR$/src/metas/BBO/BBO.java" />
+      <change beforePath="$PROJECT_DIR$/src/metas/Coopertaion.java" afterPath="$PROJECT_DIR$/src/metas/Coopertaion.java" />
+      <change beforePath="$PROJECT_DIR$/src/metas/GA/GA.java" afterPath="$PROJECT_DIR$/src/metas/GA/GA.java" />
       <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" afterPath="$PROJECT_DIR$/src/sample/Controller.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -96,15 +387,32 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="176" column="0" lean-forward="true" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
+            <state relative-caret-position="66">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#4726#4727#0" expanded="true" />
-                <element signature="e#4801#4802#0" expanded="true" />
-                <element signature="e#6599#6600#0" expanded="true" />
-                <element signature="e#6625#6626#0" expanded="true" />
+                <element signature="e#4809#4810#0" expanded="true" />
+                <element signature="e#4884#4885#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/metas/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="43" column="22" lean-forward="false" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GA.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/metas/GA/GA.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -112,30 +420,8 @@
       <file leaf-file-name="Logger.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/data/Logger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Instances.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/data/reader/Instances.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="647">
-              <caret line="46" column="15" lean-forward="false" selection-start-line="46" selection-start-column="15" selection-end-line="46" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/data/representations/Solutions/Solution.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="429" column="0" lean-forward="false" selection-start-line="429" selection-start-column="0" selection-end-line="429" selection-end-column="0" />
+            <state relative-caret-position="275">
+              <caret line="48" column="26" lean-forward="false" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -154,11 +440,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>remove</find>
-      <find>dSolution</find>
-      <find>methas.BSO</find>
-      <find>methas.BSO.</find>
-      <find>permutationInitial.get</find>
       <find>stop</find>
       <find>find</find>
       <find>SpeciesCount</find>
@@ -180,10 +461,15 @@
       <find>display</find>
       <find>dis</find>
       <find>MetaProba</find>
-      <find>Syste</find>
       <find>Sys</find>
       <find>raux</find>
       <find>isStopped</find>
+      <find>---</find>
+      <find>System.out.</find>
+      <find>Syste</find>
+      <find>BenchMarksPath</find>
+      <find>LocalPath</find>
+      <find>System.out</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -255,12 +541,12 @@
         <option value="$PROJECT_DIR$/src/data/reader/Instances.java" />
         <option value="$PROJECT_DIR$/src/sample/App.fxml" />
         <option value="$PROJECT_DIR$/src/metas/ACO/ACO.java" />
-        <option value="$PROJECT_DIR$/src/metas/BBO/BBO.java" />
-        <option value="$PROJECT_DIR$/src/metas/GA/GA.java" />
-        <option value="$PROJECT_DIR$/src/metas/Coopertaion.java" />
         <option value="$PROJECT_DIR$/src/metas/Controller.java" />
-        <option value="$PROJECT_DIR$/src/data/Logger.java" />
+        <option value="$PROJECT_DIR$/src/metas/BBO/BBO.java" />
         <option value="$PROJECT_DIR$/src/data/representations/Solutions/Solution.java" />
+        <option value="$PROJECT_DIR$/src/metas/Coopertaion.java" />
+        <option value="$PROJECT_DIR$/src/data/Logger.java" />
+        <option value="$PROJECT_DIR$/src/metas/GA/GA.java" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
       </list>
     </option>
@@ -303,9 +589,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -318,38 +603,12 @@
               <item name="dominate_tree" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="dominate_tree" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dominate_tree" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dominate_tree" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dominate_tree" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="representations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dominate_tree" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dominate_tree" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="representations" type="462c0819:PsiDirectoryNode" />
-              <item name="Solutions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dominate_tree" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dominate_tree" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -364,8 +623,8 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
-    <property name="last_opened_file_path" value="C:/SceneBuilder javafx/fontawesomefx-8.9.jar!/" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -661,11 +920,13 @@
       <workItem from="1561921001083" duration="13429000" />
       <workItem from="1562009257981" duration="11995000" />
       <workItem from="1562094804521" duration="8917000" />
+      <workItem from="1562182886290" duration="2476000" />
+      <workItem from="1562281138452" duration="7631000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="497577000" />
+    <option name="totallyTimeSpent" value="507684000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1040" height="744" extended-state="6" />
@@ -680,11 +941,10 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5581633" sideWeight="0.48177084" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.61247945" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.88013136" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.5260417" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22244897" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22653061" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.47395834" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.43489584" order="4" side_tool="false" content_ui="tabs" />
@@ -700,6 +960,7 @@
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.5260417" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.54679805" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -949,7 +1210,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -957,14 +1217,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/metas/GA/Individual.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -976,60 +1228,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/App.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/metas/ACO/Ant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="101" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/metas/ACO/ACO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-97">
-          <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/metas/BBO/BBO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="333" column="24" lean-forward="false" selection-start-line="333" selection-start-column="24" selection-end-line="333" selection-end-column="24" />
-          <folding>
-            <element signature="method#InitializePopulation#0;class#BBO#0" expanded="false" />
-            <element signature="method#UpdatePopulations#0;class#BBO#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/metas/GA/GA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="43" column="30" lean-forward="false" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/metas/Coopertaion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <element signature="method#MAJProba#0;class#Coopertaion#0" expanded="false" />
-            <element signature="e#4621#4622#0" expanded="false" />
-            <element signature="e#4651#4652#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1063,10 +1268,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="285" column="19" lean-forward="false" selection-start-line="285" selection-start-column="19" selection-end-line="285" selection-end-column="19" />
-          <folding>
-            <element signature="e#10398#10399#0" expanded="false" />
-            <element signature="e#10430#10431#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1086,54 +1287,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/representations/Solutions/Solution.java">
+    <entry file="file://$PROJECT_DIR$/src/data/reader/Instances.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="429" column="0" lean-forward="false" selection-start-line="429" selection-start-column="0" selection-end-line="429" selection-end-column="0" />
+        <state relative-caret-position="902">
+          <caret line="46" column="15" lean-forward="false" selection-start-line="46" selection-start-column="15" selection-end-line="46" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/reader/Instances.java">
+    <entry file="file://$PROJECT_DIR$/src/metas/BBO/BBO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="647">
-          <caret line="46" column="15" lean-forward="false" selection-start-line="46" selection-start-column="15" selection-end-line="46" selection-end-column="15" />
+        <state relative-caret-position="133">
+          <caret line="228" column="0" lean-forward="true" selection-start-line="228" selection-start-column="0" selection-end-line="228" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/metas/ACO/Ant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/metas/GA/Individual.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/representations/Solutions/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="441" column="0" lean-forward="true" selection-start-line="441" selection-start-column="0" selection-end-line="441" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/metas/ACO/ACO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1562">
+          <caret line="80" column="8" lean-forward="false" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/metas/Coopertaion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1032">
+          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/Logger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="48" column="26" lean-forward="false" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/metas/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="method#lance#0;class#Controller#0" expanded="false" />
-            <element signature="e#1325#1326#0" expanded="true" />
-            <element signature="e#1384#1385#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="187">
+          <caret line="43" column="22" lean-forward="false" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/Logger.java">
+    <entry file="file://$PROJECT_DIR$/src/metas/GA/GA.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="66">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="176" column="0" lean-forward="true" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
+        <state relative-caret-position="66">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4726#4727#0" expanded="true" />
-            <element signature="e#4801#4802#0" expanded="true" />
-            <element signature="e#6599#6600#0" expanded="true" />
-            <element signature="e#6625#6626#0" expanded="true" />
+            <element signature="e#4809#4810#0" expanded="true" />
+            <element signature="e#4884#4885#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1144,10 +1384,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>promo - version:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1195,6 +1437,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

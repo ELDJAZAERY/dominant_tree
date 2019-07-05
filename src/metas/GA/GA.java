@@ -25,7 +25,7 @@ public class GA {
     public static Solution Exec(){
         Individual.withLocalSearch = true;
         GA.nbIteration = 1000;
-        GA.populationSize = 25;
+        GA.populationSize = 20;
         ArrayList<Solution> population = new ArrayList<>();
         initialzePopulation(null);
         Exec(population);
@@ -48,19 +48,12 @@ public class GA {
     private static void initialzePopulation(ArrayList<Solution> populationInitial){
         int init = populationSize ;
 
-        if(populationInitial == null ){
-            while(init-- != 0) {
-                population.add(new Individual());
-            }
-        }else{
-            for(Solution sol:populationInitial){
-                init--;
-                population.add(new Individual(sol));
-            }
-            while(init-- != 0) {
-                population.add(new Individual());
-            }
+        population = new ArrayList<>();
+
+        while(init-- != 0) {
+            population.add(new Individual());
         }
+
     }
 
     public static ArrayList<Solution> getPopulation(){
@@ -68,13 +61,24 @@ public class GA {
         for(Individual ind:population){
             popSolutions.add(ind.solLocal);
         }
+        Exec(5,3);
         return popSolutions;
     }
 
     public static  ArrayList<Solution> GA_ForInitializatoinPopulation(int PopulationSize){
-        Individual.withLocalSearch = false;
-        Exec(3,PopulationSize);
-        return getPopulation();
+        int init = PopulationSize ;
+        ArrayList<Individual> population = new ArrayList<>();
+
+        while(init-- != 0) {
+            population.add(new Individual());
+        }
+
+        ArrayList<Solution> popSolutions = new ArrayList<>();
+        for(Individual ind:population){
+            popSolutions.add(ind.solLocal);
+        }
+
+        return popSolutions;
     }
 
 
@@ -128,7 +132,6 @@ public class GA {
             population = newPopulation;
         }
 
-        System.out.println(" ---- GA END ---- "+nbIteration + " Iterations ");
     }
 
 

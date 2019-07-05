@@ -228,7 +228,6 @@ public class BBO {
 
 
     private static void _Diversity(ArrayList<Solution> elitism){
-        System.out.println(" ---- @Diversification ----");
         diversification = 0;
 
         // Generate new Population

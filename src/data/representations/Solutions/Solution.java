@@ -421,7 +421,6 @@ public class Solution implements Cloneable , Comparable<Solution> {
             sec = (endTime_best - StartTime);
             sec = (sec / 1000.1);
         }
-        System.out.println(toString());
 
         /** Logs file **/
         Logger.PersistanceLog(toString());
@@ -434,7 +433,6 @@ public class Solution implements Cloneable , Comparable<Solution> {
         out += "Best {";
         out += "\n\t Fitness    : " + fitness;
         out += "\n\t Vertices   : " + verticesDT.size();
-        out += "\n\t Iteration  : " + nbIteration;
         out += "\n\t nb Sols    : " + nbEvaluations;
         out += "\n\t Secs       : " + sec;
         out += "\n\t Sol       : "  + path.toString();
