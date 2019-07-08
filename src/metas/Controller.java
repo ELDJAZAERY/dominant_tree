@@ -22,8 +22,9 @@ public class Controller {
 
     public static void init(){
         fonctionPerCen = new HashMap<>();
-        CurrentFitness = 0;
+        CurrentFitness = new Solution().fitness;
         CurrentTimeEnSecs = 0;
+        Solution.StartTime = System.currentTimeMillis();
         Logger.Logs += "\n\n\n ######## NEW Execution ####### \n\n\n";
     }
 

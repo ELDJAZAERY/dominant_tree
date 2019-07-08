@@ -2,9 +2,11 @@
   <artifact type="jar" name="promo - version:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/promo___version_jar</output-path>
     <root id="archive" name="promo - version.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/out/META-INF/MANIFEST.MF" />
+      </element>
       <element id="module-output" name="promo - version" />
       <element id="extracted-dir" path="C:/SceneBuilder javafx/fontawesomefx-8.9.jar" path-in-jar="/" />
-      <element id="file-copy" path="C:/SceneBuilder javafx/fontawesomefx-8.9.jar" />
     </root>
   </artifact>
 </component>

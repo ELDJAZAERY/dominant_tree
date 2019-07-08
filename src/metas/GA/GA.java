@@ -14,81 +14,11 @@ public class GA {
     private static ArrayList<Individual> population ;
 
 
-    public static void Exec(int nbIteration , int populationSize){
-        GA.populationSize = populationSize;
-        GA.nbIteration = nbIteration;
-        population = new ArrayList<>();
-        initialzePopulation(null);
-        GA_Exec();
-    }
-
-    public static Solution Exec(){
-        Individual.withLocalSearch = true;
-        GA.nbIteration = 1000;
-        GA.populationSize = 20;
-        ArrayList<Solution> population = new ArrayList<>();
-        initialzePopulation(null);
-        Exec(population);
-        return population.get(populationSize-1);
-    }
-
-
-    public static void Exec(ArrayList<Solution> populationInitial){
-        GA.nbIteration = 15;
-        GA.populationSize = 15;
-        population = new ArrayList<>();
-        initialzePopulation(populationInitial);
-        Coopertaion.cooper();
-    }
-
-    public static Solution Exec(int nbIter , ArrayList<Solution> populationInitial ){
-        return new Individual().solLocal;
-    }
-
-    private static void initialzePopulation(ArrayList<Solution> populationInitial){
-        int init = populationSize ;
-
-        population = new ArrayList<>();
-
-        while(init-- != 0) {
-            population.add(new Individual());
-        }
-
-    }
-
-    public static ArrayList<Solution> getPopulation(){
-        ArrayList<Solution> popSolutions = new ArrayList<>();
-        for(Individual ind:population){
-            popSolutions.add(ind.solLocal);
-        }
-        Exec(5,3);
-        return popSolutions;
-    }
-
-    public static  ArrayList<Solution> GA_ForInitializatoinPopulation(int PopulationSize){
-        int init = PopulationSize ;
-        ArrayList<Individual> population = new ArrayList<>();
-
-        while(init-- != 0) {
-            population.add(new Individual());
-        }
-
-        ArrayList<Solution> popSolutions = new ArrayList<>();
-        for(Individual ind:population){
-            popSolutions.add(ind.solLocal);
-        }
-
-        return popSolutions;
-    }
-
-
     public static void GA_Exec(){
 
         Individual n , n1 , nstar , BestSol = Collections.max(population);
-        int nbIter = nbIteration;
 
         ArrayList<Individual> newPopulation ;
-        Controller.init();
 
 
         while(!Controller.isStopped()){
@@ -98,7 +28,7 @@ public class GA {
             newPopulation = new ArrayList<>();
 
 
-            for(int i = 0 ; i < populationSize-3 ; i++){
+            for(int i = 0 ; i < populationSize - 3 ; i++){
 
                 // get Have Max fitness
                 n = population.get(i);
@@ -133,6 +63,87 @@ public class GA {
         }
 
     }
+
+    private static void initialzePopulation(ArrayList<Solution> populationInitial){
+        int init = populationSize ;
+
+        population = new ArrayList<>();
+
+        while(init-- != 0) {
+            population.add(new Individual());
+        }
+    }
+
+    private static void initialzePopulation(int populationSize){
+        int init = populationSize ;
+
+        population = new ArrayList<>();
+
+        while(init-- != 0) {
+            population.add(new Individual());
+        }
+    }
+
+
+    public static void Exec(int nbIteration , int populationSize){
+        GA.populationSize = populationSize;
+        GA.nbIteration = nbIteration;
+        population = new ArrayList<>();
+        initialzePopulation(nbIteration);
+        GA_Exec();
+    }
+
+    public static Solution Exec(){
+        Individual.withLocalSearch = true;
+        GA.nbIteration = 100000;
+        population = new ArrayList<>();
+        populationSize = 20;
+        initialzePopulation(20);
+        Exec(20);
+        //GA_Exec();
+        return new Individual().solLocal;
+    }
+
+
+    public static void Exec(int populationSize){
+        GA.nbIteration = 3000;
+        GA.populationSize = populationSize;
+        population = new ArrayList<>();
+        initialzePopulation(nbIteration);
+        Coopertaion.cooper();
+    }
+
+    public static Solution Exec(int nbIter , ArrayList<Solution> populationInitial ){
+        return new Individual().solLocal;
+    }
+
+
+
+    public static ArrayList<Solution> getPopulation(){
+        ArrayList<Solution> popSolutions = new ArrayList<>();
+        for(Individual ind:population){
+            popSolutions.add(ind.solLocal);
+        }
+        Exec(5,3);
+        return popSolutions;
+    }
+
+    public static  ArrayList<Solution> GA_ForInitializatoinPopulation(int PopulationSize){
+        int init = PopulationSize ;
+        ArrayList<Individual> population = new ArrayList<>();
+
+        while(init-- != 0) {
+            population.add(new Individual());
+        }
+
+        ArrayList<Solution> popSolutions = new ArrayList<>();
+        for(Individual ind:population){
+            popSolutions.add(ind.solLocal);
+        }
+
+        return popSolutions;
+    }
+
 
 
 }
